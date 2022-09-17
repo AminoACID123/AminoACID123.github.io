@@ -8,4 +8,3 @@ date: 2022-01-01
 location: "Nanjing, China"
 ---
 
-Teaching Assistant

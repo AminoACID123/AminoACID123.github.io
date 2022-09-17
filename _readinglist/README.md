@@ -1,3 +1,9 @@
+---
+title: "Reading List"
+collection: readinglist
+permalink: /readinglist/README.md
+---
+
 # Recent Papers Related To Fuzzing
 
 Remark: This website is only used for collecting and grouping the related paper. If there are any paper need to be updated, you can contribute PR.
