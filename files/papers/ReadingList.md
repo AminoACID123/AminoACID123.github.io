@@ -9,7 +9,7 @@ This Website contains papers relevant to my research interest.
 # All Papers (Classification according to Publication)
 
 - **ISSTA 2022**  
-  - A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware
+  - [A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware](#a-large-scale-empirical-analysis-of-the-vulnerabilities-introduced-by-third-party-components-in-iot-firmware)
   - An Empirical Study on the Effectiveness of Static C Code Analyzers for Vulnerability Detection
   - BET: Black-Box Efficient Testing for Convolutional Neural Networks
   - Detecting Multi-sensor Fusion Errors in Advanced Driver-Assistance Systems
@@ -67,7 +67,7 @@ This Website contains papers relevant to my research interest.
 
 
 ### A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware (ISSTA 2022)
-* <img src="image/pdf_24px.png">[Paper](https://AminoACID123.github.io/files/papers/A_large_scale_empirical_analysis_of_the_vulnerabilities_introduced_by_third_party_components_in_IOT_firmware.pdf)
+* <img src="../images/pdf_24px.png">[Paper](https://AminoACID123.github.io/files/papers/A_large_scale_empirical_analysis_of_the_vulnerabilities_introduced_by_third_party_components_in_IOT_firmware.pdf)
 
 
 **Abstract:** Android has become the most popular mobile OS, as it enables device manufacturers to introduce customizations to compete with value-added services. However, customizations make the OS less dependable and secure, since they can introduce software flaws. Such flaws can be found by using fuzzing, a popular testing technique among security researchers.This paper presents Chizpurfle, a novel "gray-box" fuzzing tool for vendor-specific Android services. Testing these services is challenging for existing tools, since vendors do not provide source code and the services cannot be run on a device emulator. Chizpurfle has been designed to run on an unmodified Android OS on an actual device. The tool automatically discovers, fuzzes, and profiles proprietary services. This work evaluates the applicability and performance of Chizpurfle on the Samsung Galaxy S6 Edge, and discusses software bugs found in privileged vendor services
