@@ -1,4 +1,9 @@
-# Detecting Multi-sensor Fusion Errors in Advanced Driver-Assistance Systems
+---
+title: "Detecting Multi-sensor Fusion Errors in Advanced Driver-Assistance Systems"
+collection: readinglist
+permalink: /readinglist/issta22Detecting
+---
+
 ## Motivation
 - Multi-sensor Fusion (MSF) is widely used in ADS/ADAS to smooth out the uncertainties brought by sensor outputs  
 - Sometimes MSF results are unreliable since it does not know which sensor output to trust, leading to serious consequences.
