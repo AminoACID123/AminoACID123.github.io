@@ -93,7 +93,7 @@ design a tunable objective function to guide our testing process for thoroughly 
 
 {% include base_path %}
 
-{% for post in site.readinglist reversed %}
+{% for post in site.readinglist %}
   {% include archive-single.html %}
 {% endfor %}
 
