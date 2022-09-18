@@ -19,10 +19,11 @@ My research interest is in the area of Software Engineering and Cyber Security. 
 Publications
 =====
 - [High-precision Data Race Detection Method for Large Scale Programs](https://kns.cnki.net/kcms/detail/detail.aspx?doi=10.13328/j.cnki.jos.006260)  
-Fengjuan Gao, Yu Wang Jinguo Zhou, **Anzi Xu**, Linzhang Wang, Rongxin Wu, Charles Zhang, Zhen-dong Su  
+Fengjuan Gao, Yu Wang Jinguo Zhou, **Anzi Xu**, Linzhang Wang, Rongxin Wu, Charles Zhang, Zhendong Su  
 Journal of Software 32, no. 7 (2021): 2039-2055.
 
 Resources
 =====
-- [CCF Conference/Journal Ranking](http://AminoACID123.github.io/files/ccf.pdf)
+- [CCF Conference/Journal Ranking](../files/ccf.pdf)
+- [Reading List](../files/papers/ReadingList.md)
 - CS Learning Materials

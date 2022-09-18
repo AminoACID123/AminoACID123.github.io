@@ -6,9 +6,6 @@ main:
   - title: "Teaching"
     url: /teaching/    
     
-  - title: "Reading List"
-    url: /readinglist/
-        
   - title: "CV"
     url: /cv/
     
