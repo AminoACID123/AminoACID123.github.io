@@ -25,5 +25,4 @@ Journal of Software 32, no. 7 (2021): 2039-2055.
 Resources
 =====
 - [CCF Conference/Journal Ranking](../files/ccf.pdf)
-- [Reading List](../files/papers/ReadingList.md)
 - CS Learning Materials
