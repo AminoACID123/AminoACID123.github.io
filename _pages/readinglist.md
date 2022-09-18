@@ -5,12 +5,6 @@ permalink: /readinglist/
 author_profile: true
 ---
 
----
-title: "Reading List"
-collection: readinglist
-permalink: /readinglist/README.md
----
-
 This Website contains papers relevant to my research interest.
 
 # All Papers (Classification according to Publication)
