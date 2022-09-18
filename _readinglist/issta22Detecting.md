@@ -4,7 +4,7 @@ collection: readinglist
 permalink: /readinglist/issta22Detecting
 ---
 
-{% include base_path %}
+{% include archive-single.html %}
 
 ## Motivation
 - Multi-sensor Fusion (MSF) is widely used in ADS/ADAS to smooth out the uncertainties brought by sensor outputs  
