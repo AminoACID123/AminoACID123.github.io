@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/default.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="file:////home/xaz/.vscode/extensions/goessner.mdmath-2.7.4/themes/default/style.css">
+
+</head>
+<body class="markdown-body">
+
+<h1 dir="auto" id="detecting-multi-sensor-fusion-errors-in-advanced-driver-assistance-systems-issta-2022">Detecting multi sensor fusion errors in advanced driver assistance systems (ISSTA 2022)</h1>
+<div  dir="auto" ></div>
+<img src="../files/images/authors.png">  
+<h2 dir="auto" id="motivation">Motivation</h2>
+<ul dir="auto">
+<li dir="auto">Multi-sensor Fusion (MSF) is widely used in ADS/ADAS to smooth out the uncertainties brought by sensor outputs</li>
+<li dir="auto">Sometimes MSF results are unreliable since it does not know which sensor output to trust, leading to serious consequences.</li>
+<li dir="auto">Popular MSF methods in an industry-grade ADAS can mislead the
+car control and result in serious safety hazards</li>
+</ul>
+<h2 dir="auto" id="contributions">Contributions</h2>
+<ul dir="auto">
+<li dir="auto">Provide a definition for <em>fusion error</em></li>
+<li dir="auto"><strong>FusED</strong>: A novel grey-box fuzzing technique for detecting <em>fusion error</em></li>
+<li dir="auto">Analyze the causes of the fusion errors using causal analysis</li>
+<li dir="auto">Source Code: <a href="https://github.com/AIasd/FusED">https://github.com/AIasd/FusED</a></li>
+</ul>
+<h1 dir="auto" id="background">Background</h1>
+<h3 dir="auto" id="fusion-in-driving-automation">Fusion in Driving Automation</h3>
+<ul dir="auto">
+<li dir="auto">Fused sensors include camera, radar, lidar</li>
+<li dir="auto">High Level Fusion: Fuse the high-level object attributes produced by different sensors (most widely used)</li>
+<li dir="auto">Low Level Fusion: Fuse raw sensor data</li>
+</ul>
+<h3 dir="auto" id="fusion-in-openpilot">Fusion in OpenPilot</h3>
+<ul dir="auto">
+<li dir="auto">Fuse data from Camera and Radar to detect the leading vehicle, based on which longtitudinal control is decided</li>
+<li dir="auto">Latitudinal control is decided solely by camera inputs, no fusion is used</li>
+<li dir="auto">Fusion error can be introduced by faulty logics in the implementation of the fusion algorithm
+<img src="../files/images/fusion.png"></li>
+</ul>
+<h3 dir="auto" id="challenges">Challenges</h3>
+<ol dir="auto">
+<li dir="auto">Hard to trigger failure (i.e. crash) in commercial ADAS</li>
+<li dir="auto">When a failure occurs, it is hard to conclude its root cause
+is an incorrect fusion logic</li>
+</ol>
+<h1 dir="auto" id="approach">Approach</h1>
+<p dir="auto"><strong>Fusion Fault:</strong></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>min</mi><mrow><mi>j</mi><mo>∈</mo><mo>{</mo><mn>1</mn><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo separator="true">,</mo><mi>m</mi><mo>}</mo></mrow></msub><mrow><mi mathvariant="bold">d</mi><mi mathvariant="bold">i</mi><mi mathvariant="bold">s</mi><mi mathvariant="bold">t</mi></mrow><mo>(</mo><msub><mi>S</mi><mrow><mi>t</mi><mi>j</mi></mrow></msub><mo separator="true">,</mo><mi>G</mi><msub><mi>T</mi><mi>t</mi></msub><mo>)</mo><mo>+</mo><mi>t</mi><msub><mi>h</mi><mrow><mi>e</mi><mi>r</mi><mi>r</mi></mrow></msub><mo>&lt;</mo><mrow><mi mathvariant="bold">d</mi><mi mathvariant="bold">i</mi><mi mathvariant="bold">s</mi><mi mathvariant="bold">t</mi></mrow><mo>(</mo><msub><mi>F</mi><mi>t</mi></msub><mo separator="true">,</mo><mi>G</mi><msub><mi>T</mi><mi>t</mi></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">\min_{j \in \{1,...,m\}}\bold{dist}(S_{tj},GT_t)+th_{err} &lt;\bold{dist}(F_t, GT_t)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.716em;vertical-align:-0.966em;"></span><span class="base displaystyle textstyle uncramped"><span class="mop op-limits"><span class="vlist"><span style="top:0.6910000000000001em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mrel">∈</span><span class="mopen">{</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mpunct">,</span><span class="mord mathit">m</span><span class="mclose">}</span></span></span></span><span style="top:2.7755575615628914e-17em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span><span class="mop">min</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathbf">d</span><span class="mord mathbf">i</span><span class="mord mathbf">s</span><span class="mord mathbf">t</span></span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05764em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">t</span><span class="mord mathit" style="margin-right:0.05724em;">j</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mpunct">,</span><span class="mord mathit">G</span><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.13889em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">t</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span><span class="mbin">+</span><span class="mord mathit">t</span><span class="mord"><span class="mord mathit">h</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">e</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">&lt;</span><span class="mord displaystyle textstyle uncramped"><span class="mord mathbf">d</span><span class="mord mathbf">i</span><span class="mord mathbf">s</span><span class="mord mathbf">t</span></span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">F</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.13889em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">t</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mpunct">,</span><span class="mord mathit">G</span><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.13889em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">t</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span></span></span></span></span></p>
+</math>
+<p dir="auto"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="bold">d</mi><mi mathvariant="bold">i</mi><mi mathvariant="bold">s</mi><mi mathvariant="bold">t</mi></mrow><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo><mo>:</mo></mrow><annotation encoding="application/x-tex">\bold{dist}(x, y):</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathbf">d</span><span class="mord mathbf">i</span><span class="mord mathbf">s</span><span class="mord mathbf">t</span></span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mrel">:</span></span></span></span> l1 Distance<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>S</mi><mi>t</mi></msub><mi>j</mi><mo>:</mo></mrow><annotation encoding="application/x-tex">S_tj:</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05764em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">t</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mrel">:</span></span></span></span> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05724em;">j</span></span></span></span>-th sensor output at timestamp <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.61508em;"></span><span class="strut bottom" style="height:0.61508em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">t</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi><msub><mi>T</mi><mi>t</mi></msub><mo>:</mo></mrow><annotation encoding="application/x-tex">GT_t:</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord mathit">G</span><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.13889em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">t</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">:</span></span></span></span> Ground-truth at timestamp <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.61508em;"></span><span class="strut bottom" style="height:0.61508em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">t</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>F</mi><mi>t</mi></msub><mo>:</mo></mrow><annotation encoding="application/x-tex">F_t:</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">F</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.13889em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">t</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">:</span></span></span></span> Fusion result at timestamp <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.61508em;"></span><span class="strut bottom" style="height:0.61508em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">t</span></span></span></span></p>
+<p dir="auto"><strong>Fusion Error:</strong>
+Must satisfy two properties:</p>
+<ol dir="auto">
+<li dir="auto">Failure-inducing</li>
+<li dir="auto">Fusion-induced</li>
+</ol>
+<div  dir="auto" ></div>
+<img src="../files/images/fused.png">  
+<h2 dir="auto" id="fuzzing-to-find-collisions">Fuzzing to Find Collisions</h2>
+<p dir="auto">FusED adopts an evolutionary-based search algorithm with a domain-specific fitness function promoting fusion errors finding.<br>
+<strong>Fitness Function:</strong> Three objectives</p>
+<ul dir="auto">
+<li dir="auto">Minimizing the distance between
+the ego car and the leading vehicle (subtracted by the ego car’s minimum stopping distance)</li>
+<li dir="auto">Maximizing the occurence of collisions</li>
+<li dir="auto">Maximizing the number of fusion-fault frames</li>
+</ul>
+<p dir="auto"><strong>Selection:</strong>  Binary tournament selection, which has shown effectiveness in previous ADAS testing<br>
+<strong>Crossover and Mutation:</strong> Simulated binary crossover &amp; polynomial mutation</p>
+<h2 dir="auto" id="root-cause-analysis">Root Cause Analysis</h2>
+<p dir="auto">To identify whether the root cause is sensor error, the authors develop an alternative <em>best fusion method</em>: an ideal fusion that always returns the minimal distance of the leading vehicles. If replacing the original fusion method with the <em>best fusion method</em> eliminates the collisions, then the root cause should be fusion error.<br>
+One major problem with the above method is that some uncontrollable factors other than fusion methods (i.e. communication delays between different SUT components) affect the test outcome. To cope with this issue, the authors set the communication delay to a fixed value (feasible in Carla).</p>
+<h1 dir="auto" id="experiment">Experiment</h1>
+<p dir="auto"><strong>Environment.</strong> Carla 0.9.11 + OpenPilot 0.8.5<br>
+<strong>Baselines and Metrics.</strong> We use random search (random) and
+genetic algorithm without Ffusion in the fitness function (ga) as two baselines. We set the number of scenarios causing fusion errors and distinct fusion errorsas two evaluation metrics.<br>
+<strong>RQ1:Evaluating Performance.</strong> How effectively can FusED
+find fusion errors in comparison to baselines?<br>
+<strong>Result 1</strong> Under each of the four settings, at the 0.05 significance level, FusED finds more distinct fusion errors (as well as
+fusion errors) than the best baseline method. The difference has a medium effect size at 90% confidence interval.<br>
+<strong>RQ2:Case Study of Fusion Errors.</strong> What are the representative causes of the fusion errors found?<br>
+<strong>Result 2.</strong> The representative fusion errors found by FusED for
+the two fusion methods are due to the dominance of camera over
+radar, their mismatch, or the faulty prediction selection method.<br>
+<strong>RO3:Evaluating Repair Impact.</strong> How to improve MSF in
+Openpilot based on our observations on found fusion errors?<br>
+<strong>Result 3:</strong> Based on the observations of the found fusion errors,
+we adjust the fusion method we study and enable it to avoid
+more than 50% of the initial fusion errors.</p>
+<h1 dir="auto" id="conclusion">Conclusion</h1>
+<p dir="auto">In this work, we formally define, expose, and analyze the root causes
+of fusion errors on two widely used MSF methods in a commercial
+ADAS. To the best of our knowledge, our work is the first study on
+finding and analyzing failures causally induced by MSF in an end-
+to-end system. We propose a grey-box fuzzing framework, FusED,
+that effectively detects fusion errors. Lastly, based on the analysis
+of the found fusion errors, we provide several learned suggestions
+on how to improve the studied fusion methods.</p>
+<h1 dir="auto" id="questions">Questions</h1>
+<ol dir="auto">
+<li dir="auto">The target of this work is an ADAS OpenPilot whose function is simple lane-keeping and fuses only radar and camera. Is their approach applicable to more complex ADSs that have much richer functionalities and fuse more sensors?</li>
+<li dir="auto">In root cause analysis the authors only consider the communication delay as the sole factor of influencing the test outcome other than the fusion method, but is there any other factor that the authors do not take into consideration?</li>
+</ol>
+
+</body>
+</html>
