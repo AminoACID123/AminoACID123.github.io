@@ -35,10 +35,17 @@ Reasons why AFL+QEMU user-mode emulation fail:
 ### Hybrid Emulation
 FirmAFL executes user-space code in user-mode, and redirect syscalls to full-system emulation. However, a program with many syscalls significantly decreases FirmAFL's performance. 
 
+### Notions
+- PUT: Program Under Test
+- PGD: Page Global Directory
+- PID: Process Identifier
+- PPID: PID of Parent Process
+
 ## Approach
 <img src="../images/issta22Efficient_workflow.png">  
 
-The overall workflow of EQUAFL includes two steps: **observe** and **replay**.  
+The overall workflow of EQUAFL includes two steps: **observe** and **replay**.
+
 **Observe:** Record key system behaviors that are related to failure reasons listed above.   
 **Replay:** Deploy system resources such as dynamic configuration files on the host machine or perform the interception of system calls execution during the user-mode emulation.  
 
@@ -48,6 +55,17 @@ Launch variables are arguments and environment variables required to launch the 
 - Hard-coded in binaries
 - Passed by the parent process  
 
-*Static pattern analysis* and *run-time analysis* are used to identify launch variables.  
-**Observation:** Instrument Linux kernel function `do_execve` to dump the required launch variables.  
-**Replay:** 
+**Solution:** *Static pattern analysis* for Linux Kernel and *run-time analysis* during full-system emulation are used to identify launch variables.  
+
+**Observation:** Instrument Linux kernel function `do_execve` to dump the required launch variables.
+
+**Replay:**  Execute the target application in user-mode using the observed launch variables.
+
+### Filesystem State Synchronization
+Some applications may require some files such as configuration files before execution. In IoT devices, most of such files are generated dynamically during the booting process. However, user-mode emulation cannot correctly model updates in filesystems without the initialization of firmware.  
+
+**Solution:** Observe file-related syscalls in the guest machine and re-execute it on host host machine. Repeat until PUT starts to run. Process-awareness is needed to get the correct syscall arguments (e.g. file discriptors).
+
+**Process Identification:**
+- Process Collection: Instrument `fork` and `execve` to obtain PGD, PID, PPID from each newly generated `task_struct`. 
+- Process Inference: Identify the current executing process by PGD value stored in the specific register or memory regions.
