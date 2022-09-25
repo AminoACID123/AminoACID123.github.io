@@ -5,7 +5,7 @@ permalink: /readinglist/
 author_profile: true
 ---
 
-This Website contains papers relevant to my research interest.
+This page contains papers relevant to my research interest.
 
 # All Papers (Classification according to Publication)
 
