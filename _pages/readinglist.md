@@ -63,6 +63,9 @@ This page contains papers relevant to my research interest.
 
 - **SANER 2022**
 
+- **CCS 2022**
+  - What Your Firmware Tells You Is Not How You Should Emulate It: A Speciﬁcation-Guided Approach for Firmware Emulation
+
 
 - **Others 2022**  
 
@@ -106,3 +109,23 @@ applications under user-mode emulation. EQUAFL first executes
 the application under full-system emulation and observe for the key points where the program may get stuck or even crash during user-mode emulation. With the observed information, EQUAFL can migrate the needed environment for user-mode emulation. Then, EQUAFL uses an enhanced user-mode emulation to replay system calls of network, and resource management behaviors to fulfill the needs of the embedded application during its execution.  
 We evaluate EQUAFL on 70 network applications from different
 series of IoT devices. The result shows EQUAFL outperforms the state-of-the-arts in fuzzing efficiency (on average, 26 times faster than AFL-QEMU with full-system emulation, 14 times than FirmAFL). We have also discovered ten vulnerabilities including six CVEs from the tested firmware images.
+
+### What Your Firmware Tells You Is Not How You Should Emulate It: A Speciﬁcation-Guided Approach for Firmware Emulation
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/What_your_firmware_tells_you_is_not_how_you_should_emulate_it.pdf)
+
+* **Abstract:** Emulating firmware of microcontrollers is challenging due to the
+lack of peripheral models. Existing work finds out how to respond
+to peripheral read operations by analyzing the target firmware. This
+is problematic because the firmware sometimes does not contain
+enough clues to support the emulation or even contains misleading information (e.g., a buggy firmware). In this work, we propose
+a new approach that builds peripheral models from the peripheral specification. Using NLP, we translate peripheral behaviors in
+human language (documented in chip manuals) into a set of structured condition-action rules. By checking, executing, and chaining
+them at runtime, we can dynamically synthesize a peripheral model
+for each firmware execution. The extracted condition-action rules
+might not be complete or even be wrong. We, therefore, propose incorporating symbolic execution to quickly pinpoint the root cause.
+This assists us in the manual correction of the problematic rules.
+We have implemented our idea for five popular MCU boards spanning three different chip vendors. Using a new edit-distance-based
+algorithm to calculate trace differences, our evaluation against a
+large firmware corpus confirmed that our prototype achieves much
+higher fidelity compared with state-of-the-art solutions. Benefiting
+from the accurate emulation, our emulator effectively avoids false positives observed in existing fuzzing work. We also designed a new dynamic analysis method to perform driver code compliance checks against the specification. We found some non-compliance which we later confirmed to be bugs caused by race conditions.

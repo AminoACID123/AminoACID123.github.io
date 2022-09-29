@@ -24,9 +24,9 @@ This page contains useful CS learning resources
 - [LLVM Language Reference Manual](https://llvm.org/docs/LangRef.html)
 - [Bluetooth Core Specification v4.2](../files/bluetooth/Core_v4.2.pdf)
 - [Bluetooth Core Specification v5.0](../files/bluetooth/Core_v5.0.pdf)
-- [Bluetooth Core Specification v5.1]
-- [Bluetooth Core Specification v5.2]
-- [Bluetooth Core Specification v5.3]
+- [Bluetooth Core Specification v5.1](../files/bluetooth/Core_v5.1.pdf)
+- [Bluetooth Core Specification v5.2](../files/bluetooth/Core_v5.2.pdf)
+- [Bluetooth Core Specification v5.3](../files/bluetooth/Core_v5.3.pdf)
 
 
 ## Useful Websites
