@@ -67,7 +67,8 @@ This page contains papers relevant to my research interest.
   - What Your Firmware Tells You Is Not How You Should Emulate It: A Speciﬁcation-Guided Approach for Firmware Emulation
 
 
-- **Others 2022**  
+- **Other**
+  - [Automatic Vulnerability Detection in Embedded Devices and Firmware: Survey and Layered Taxonomies](#automatic-vulnerability-detection-in-embedded-devices-and-firmware-survey-and-layered-taxonomies)  
 
 
 ### A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware (ISSTA 2022)
@@ -129,3 +130,21 @@ algorithm to calculate trace differences, our evaluation against a
 large firmware corpus confirmed that our prototype achieves much
 higher fidelity compared with state-of-the-art solutions. Benefiting
 from the accurate emulation, our emulator effectively avoids false positives observed in existing fuzzing work. We also designed a new dynamic analysis method to perform driver code compliance checks against the specification. We found some non-compliance which we later confirmed to be bugs caused by race conditions.
+
+### Automatic Vulnerability Detection in Embedded Devices and Firmware: Survey and Layered Taxonomies
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Automatic_Vulnerability_Detection_in_Embedded_Devices_and_Firmware_Survey_and_Layered_Taxonomies.pdf)
+
+* **Abstract:** In the era of the internet of things (IoT), software-enabled inter-connected devices are of paramount impor-
+tance. The embedded systems are very frequently used in both security and privacy-sensitive applications.
+However, the underlying software (a.k.a. firmware) very often suffers from a wide range of security vulnera-
+bilities, mainly due to their outdated systems or reusing existing vulnerable libraries; which is evident by the
+surprising rise in the number of attacks against embedded systems. Therefore, to protect those embedded sys-
+tems, detecting the presence of vulnerabilities in the large pool of embedded devices and their firmware plays
+a vital role. To this end, there exist several approaches to identify and trigger potential vulnerabilities within
+deployed embedded systems firmware. In this survey, we provide a comprehensive review of the state-of-the-
+art proposals, which detect vulnerabilities in embedded systems and firmware images by employing various
+analysis techniques, including static analysis, dynamic analysis, symbolic execution, and hybrid approaches.
+Furthermore, we perform both quantitative and qualitative comparisons among the surveyed approaches.
+Moreover, we devise taxonomies based on the applications of those approaches, the features used in the liter-
+ature, and the type of the analysis. Finally, we identify the unresolved challenges and discuss possible future
+directions in this field of research.
