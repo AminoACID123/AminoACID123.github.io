@@ -136,8 +136,7 @@ from the accurate emulation, our emulator effectively avoids false positives obs
 
 * **Abstract:** In the era of the internet of things (IoT), software-enabled inter-connected devices are of paramount impor-
 tance. The embedded systems are very frequently used in both security and privacy-sensitive applications.
-However, the underlying software (a.k.a. firmware) very often suffers from a wide range of security vulnera-
-bilities, mainly due to their outdated systems or reusing existing vulnerable libraries; which is evident by the
+However, the underlying software (a.k.a. firmware) very often suffers from a wide range of security vulnerabilities, mainly due to their outdated systems or reusing existing vulnerable libraries; which is evident by the
 surprising rise in the number of attacks against embedded systems. Therefore, to protect those embedded sys-
 tems, detecting the presence of vulnerabilities in the large pool of embedded devices and their firmware plays
 a vital role. To this end, there exist several approaches to identify and trigger potential vulnerabilities within
