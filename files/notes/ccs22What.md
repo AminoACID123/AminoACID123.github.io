@@ -1,7 +1,5 @@
+# What Your Firmware Tells You Is Not How You Should Emulate It: A Specification-Guided Approach for Firmware Emulation (CCS 2022)
 
-What Your Firmware Tells You Is Not How You Should Emulate
-It: A Specification-Guided Approach for Firmware Emulation (CCS 2022)
-=====
 <img src="../images/ccs22What_authors.png">  
 
 ## Motivation
@@ -77,7 +75,7 @@ between an unknown noun phrase with each of the initial set of named entities to
 **How to represent C-A rules?**  
 **Solution:** First translate conditions and actions into predicates and assignment functions using Stanford Dependency Parser. Then formulate rule triggers and actions. Last, formulate the C-A rules. For example:
 $$
-𝐵 #D[R] ≥ RWFIFO[RXWATER] → S1[𝑅𝐷𝑅𝐹] := 1
+𝐵  \#D[R] ≥ RWFIFO[RXWATER] → S1[𝑅𝐷𝑅𝐹] := 1
 $$
 
 ## Synthesizing Peripheral Models with C-A rules
@@ -85,32 +83,51 @@ Use QEMU to emulate the basic ARM ISA and core peripherals (e.g., NVIC). During 
 Three types of conditions should be checked during firmware execution. Type-2 and Type-3 condition can be easily checked. For type-1 condition (external hardware triggered conditions), SEmu can only emulate buffer-based and timer-based hardware signals.  
 
 ## Diagnosing Faulty/Missing C-A rules
+Reasons why C-A rules may be imprecise:  
+- SEmu cannot emulate certain hardware
+- NLP techniques cannot handle some complex centences  
 
-**Environment.** Carla 0.9.11 + OpenPilot 0.8.5  
-**Baselines and Metrics.** We use random search (random) and
-genetic algorithm without Ffusion in the fitness function (ga) as two baselines. We set the number of scenarios causing fusion errors and distinct fusion errorsas two evaluation metrics.  
-**RQ1:Evaluating Performance.** How effectively can FusED
-find fusion errors in comparison to baselines?  
-**Result 1** Under each of the four settings, at the 0.05 significance level, FusED finds more distinct fusion errors (as well as
-fusion errors) than the best baseline method. The difference has a medium effect size at 90% confidence interval.  
-**RQ2:Case Study of Fusion Errors.** What are the representative causes of the fusion errors found?  
-**Result 2.** The representative fusion errors found by FusED for
-the two fusion methods are due to the dominance of camera over
-radar, their mismatch, or the faulty prediction selection method.  
-**RO3:Evaluating Repair Impact.** How to improve MSF in
-Openpilot based on our observations on found fusion errors?  
-**Result 3:** Based on the observations of the found fusion errors,
-we adjust the fusion method we study and enable it to avoid
-more than 50% of the initial fusion errors.  
+**Solution:** Use symbolic execution to dectect root cause for emulation failure.
+- Select a firmware and corresponding valid test cases that run normally on real devices.
+- Use symbolic execution to detect invalid states during emulation with synthesized peripherals.
+
+## Evaluation
+Target five chip manuals that cover more than twenty
+popular MCU series
+- STM32F103, STM32F429, STM32L152
+- NXP K64F series
+- Atmel SAM3X series
+
+**RQ1: Can our NLP engine automatically extract C-A rules to describe peripheral behaviors?**  
+For each manual, we extracted C-A rules for 26 popular peripherals,
+including ADC, I2C, SPI, GPIO, UART, Ethernet, etc.  
+<img src="../images/ccs22What_table5.png">  
+
+**RQ2: Can the diagnosis tool help correct incorrect rules?**  
+In total, we added 26
+rules (0.6%) and fixed 21 rules (0.5%) as shown in the brackets in
+the last columns of Table 5. To be specific, we added 5 C-A rules to
+I2C (F103, F429 and L152, 15 rules in total), 3 rules to ADC DMA
+mode (SAM3X), 3 rules for Ethernet (F429), 4 rules for MCG (K64),
+and 1 rule for PMC (SMA3); we also modified 6 rules for RCC (F103,
+F429 and L152, 18 rules in total) and remove 3 useless rules for SPI
+debug mode (K64).  
+
+**RQ3: Are the extracted C-A rules complete and sound?**  
+<img src="../images/ccs22What_table1.png">  
+
+**RQ4: Can peripheral models dynamically built with C-A rules provide higher fidelity compared with firmware-guided approaches?**  
+To collect traces on real devices, we used
+OpenOCD and an external debugging dongle to connect the target boards to the remote gdbserver provided by the chip vendors.  
+Three types of traces are considered: initialization trace, main loop trace and interrupt trace. Use edit distance to measure trace fidelity.
+
+<img src="../images/ccs22What_table6.png">  
+
+**RQ5: Will the improved emulation fidelity provide better performance?**  
+SEmu successfully reproduced all the bugs mentioned in previous work, but did not report any false crashes or hangs.
+
+<img src="../images/ccs22What_table2.png"> 
 
 # Conclusion
-
-In this work, we formally define, expose, and analyze the root causes
-of fusion errors on two widely used MSF methods in a commercial
-ADAS. To the best of our knowledge, our work is the first study on
-finding and analyzing failures causally induced by MSF in an end-
-to-end system. We propose a grey-box fuzzing framework, FusED,
-that effectively detects fusion errors. Lastly, based on the analysis
-of the found fusion errors, we provide several learned suggestions
-on how to improve the studied fusion methods.
-
+Instead of proposing yet another firmware-guided emulation solution, in this work we propose the first specification-based firmware emulation solution. The new approach leverages NLP techniques
+to translate peripheral behaviors (specified) in human language (documented in chip manuals) into a set of structured condition-action rules. By properly executing and chaining these rules at runtime, we can dynamically synthesize a peripheral model for each peripheral accessed during firmware execution. We found some non-compliance which we later confirmed to be bugs caused by race condition.
