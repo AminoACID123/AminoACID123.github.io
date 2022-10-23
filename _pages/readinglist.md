@@ -147,3 +147,32 @@ Furthermore, we perform both quantitative and qualitative comparisons among the 
 Moreover, we devise taxonomies based on the applications of those approaches, the features used in the liter-
 ature, and the type of the analysis. Finally, we identify the unresolved challenges and discuss possible future
 directions in this field of research.
+
+### Nessie: Automatically Testing JavaScript APIs with Asynchronous Callbacks
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Nessie_automatically_testing_JavaScript_APIs_with_asynchronous_callbacks.pdf)
+* <img src="../files/images/youdao_note_24px.png">[Reading Note](../files/notes/icse22nessie.md)
+
+* **Abstract:** Previous algorithms for feedback-directed unit test generation iter-
+atively create sequences of API calls by executing partial tests and
+by adding new API calls at the end of the test. These algorithms
+are challenged by a popular class of APIs: higher-order functions
+that receive callback arguments, which often are invoked asyn-
+chronously. Existing test generators cannot effectively test such
+APIs because they only sequence API calls, but do not nest one call
+into the callback function of another. This paper presents Nessie,
+the first feedback-directed unit test generator that supports nesting
+of API calls and that tests asynchronous callbacks. Nesting API calls
+enables a test to use values produced by an API that are available
+only once a callback has been invoked, and is often necessary to
+ensure that methods are invoked in a specific order. The core con-
+tributions of our approach are a tree-based representation of unit
+tests with callbacks and a novel algorithm to iteratively generate
+such tests in a feedback-directed manner. We evaluate our approach
+on ten popular JavaScript libraries with both asynchronous and
+synchronous callbacks. The results show that, in a comparison with
+LambdaTester, a state of the art test generation technique that only
+considers sequencing of method calls, Nessie finds more behavioral
+differences and achieves slightly higher coverage. Notably, Nessie
+needs to generate significantly fewer tests to achieve and exceed
+the coverage achieved by the state of the art.
+
