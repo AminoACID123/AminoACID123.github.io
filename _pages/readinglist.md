@@ -69,6 +69,7 @@ This page contains papers relevant to my research interest.
 
 - **Other**
   - [Automatic Vulnerability Detection in Embedded Devices and Firmware: Survey and Layered Taxonomies](#automatic-vulnerability-detection-in-embedded-devices-and-firmware-survey-and-layered-taxonomies)  
+  - [Challenges in Firmware Re-Hosting, Emulation, and Analysis]()
 
 
 ### A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware (ISSTA 2022)
@@ -176,3 +177,16 @@ differences and achieves slightly higher coverage. Notably, Nessie
 needs to generate significantly fewer tests to achieve and exceed
 the coverage achieved by the state of the art.
 
+### Challenges in Firmware Re-Hosting, Emulation, and Analysis
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Challenges_in_firmware_rehosting_emulation_and_analysis.pdf)
+
+* **Abstract:** System emulation and firmware re-hosting have become popular techniques to answer various security and
+performance related questions, such as determining whether a firmware contain security vulnerabilities or
+meet timing requirements when run on a specific hardware platform. While this motivation for emulation
+and binary analysis has previously been explored and reported, starting to either work or research in the field
+is difficult. To this end, we provide a comprehensive guide for the practitioner or system emulation researcher.
+We layout common challenges faced during firmware re-hosting, explaining successive steps and surveying
+common tools used to overcome these challenges. We provide classification techniques on five different axes,
+including emulator methods, system type, fidelity, emulator purpose, and control. These classifications and
+comparison criteria enable the practitioner to determine the appropriate tool for emulation. We use our classifications to categorize popular works in the field and present 28 common challenges faced when creating,
+emulating, and analyzing a system from obtaining firmwares to post emulation analysis.
