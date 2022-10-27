@@ -69,7 +69,8 @@ This page contains papers relevant to my research interest.
 
 - **Other**
   - [Automatic Vulnerability Detection in Embedded Devices and Firmware: Survey and Layered Taxonomies](#automatic-vulnerability-detection-in-embedded-devices-and-firmware-survey-and-layered-taxonomies)  
-  - [Challenges in Firmware Re-Hosting, Emulation, and Analysis]()
+  - [Challenges in Firmware Re-Hosting, Emulation, and Analysis](#challenges-in-firmware-re-hosting-emulation-and-analysis)
+  - [Systematic Testing of Autonomous Driving Systems Using Map Topology-Based Scenario Classification]
 
 
 ### A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware (ISSTA 2022)
@@ -190,3 +191,11 @@ common tools used to overcome these challenges. We provide classification techni
 including emulator methods, system type, fidelity, emulator purpose, and control. These classifications and
 comparison criteria enable the practitioner to determine the appropriate tool for emulation. We use our classifications to categorize popular works in the field and present 28 common challenges faced when creating,
 emulating, and analyzing a system from obtaining firmwares to post emulation analysis.
+
+### Systematic Testing of Autonomous Driving Systems Using Map Topology-Based Scenario Classification
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Systematica_testing_of_autonomous_driving_systems_using_map_topology_based_scenario_classification.pdf)
+
+* **Abstract:** Autonomous Driving Systems (ADSs), which replace humans to drive vehicles, are complex software systems deployed in autonomous vehicles (AVs). Since the execution of ADSs highly relies on maps, it is essential to perform global map-based testing for ADSs to guarantee their correctness and AVs’ safety in different situations. Existing methods focus more on specific
+scenarios rather than global testing throughout the map. Testing on a global map is challenging since the complex lane connections in a map can generate enormous scenarios. In this work, we propose ATLAS, an approach to ADSs’ collision avoidance testing using map topology-based scenario classification. The core insight
+of ATLAS is to generate diverse testing scenarios by classifying junction lanes according to their topology-based interaction patterns. First, ATLAS divides the junction lanes into different classes such that an ADS can execute similar collision avoidance maneuvers on the lanes in the same class. Second, for each class,
+ATLAS selects one junction lane to construct the testing scenario and generate test cases using a genetic algorithm. Finally, we implement and evaluate ATLAS on Baidu Apollo with the LGSVL simulator on the San Francisco map. Results show that ATLAS exposes nine types of real issues in Apollo 6.0 and reduces the number of junction lanes for testing by 98%.
