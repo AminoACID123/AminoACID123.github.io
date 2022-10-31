@@ -37,6 +37,8 @@ This page contains papers relevant to my research interest.
   - Unveiling the Hidden Defection of DNN Testing with Decision-Based Metamorphic Oracle
   - FIRMGUIDE: Boosting the Capability of Rehosting Embedded Linux Kernels through Model-Guided Kernel Execution
 
+- **ASE 2021**  
+  - [FIRMGUIDE: Boosting the Capability of Rehosting Embedded Linux Kernels through Model-Guided Kernel Execution](#firmguide-boosting-the-capability-of-rehosting-embedded-linux-kernels-through-model-guided-kernel-execution)
 
 - **ICSE 2022**
   - Adaptive Test Selection for Deep Neural Networks
