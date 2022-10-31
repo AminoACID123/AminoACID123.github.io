@@ -35,6 +35,7 @@ This page contains papers relevant to my research interest.
   - LawBreaker: An Approach for Specifying Traffic Laws and Fuzzing Autonomous Vehicles
   - ThirdEye: Attention Maps for Safe Autonomous Driving Systems
   - Unveiling the Hidden Defection of DNN Testing with Decision-Based Metamorphic Oracle
+  - FIRMGUIDE: Boosting the Capability of Rehosting Embedded Linux Kernels through Model-Guided Kernel Execution
 
 
 - **ICSE 2022**
@@ -199,3 +200,30 @@ emulating, and analyzing a system from obtaining firmwares to post emulation ana
 scenarios rather than global testing throughout the map. Testing on a global map is challenging since the complex lane connections in a map can generate enormous scenarios. In this work, we propose ATLAS, an approach to ADSs’ collision avoidance testing using map topology-based scenario classification. The core insight
 of ATLAS is to generate diverse testing scenarios by classifying junction lanes according to their topology-based interaction patterns. First, ATLAS divides the junction lanes into different classes such that an ADS can execute similar collision avoidance maneuvers on the lanes in the same class. Second, for each class,
 ATLAS selects one junction lane to construct the testing scenario and generate test cases using a genetic algorithm. Finally, we implement and evaluate ATLAS on Baidu Apollo with the LGSVL simulator on the San Francisco map. Results show that ATLAS exposes nine types of real issues in Apollo 6.0 and reduces the number of junction lanes for testing by 98%.
+
+### FIRMGUIDE: Boosting the Capability of Rehosting Embedded Linux Kernels through Model-Guided Kernel Execution
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/FirmGuide.pdf)
+
+* **Abstract:** Linux kernel is widely used in embedded systems.To understand practical threats to the Linux kernel, we need to perform dynamic analysis with a full-system emulator, e.g., QEMU. However, due to hardware fragmentation, e.g., various
+types of peripherals, most embedded systems are not currently
+supported by QEMU. Though some progress has been made on
+rehosting firmware, it mainly focuses on user space programs or
+simple real-time operating systems.  
+The goal of this work is to boost the capability of rehosting
+the embedded Linux kernels in QEMU. By doing so, dynamic
+analysis systems can be firstly applied on embedded Linux kernels
+by leveraging off-the-shelf tools upon QEMU. Accordingly, we
+proposed a new technique called model-guided kernel execution.
+It combines the peripheral abstractions in the Linux kernel
+and kernel-peripheral interactions to semi-automatically generate
+peripheral models that are then used to synthesize new QEMU
+virtual machines to start the dynamic analysis.  
+We have implemented a prototype called FirmGuide. It generates 9 peripheral models with full functionality and 64 with
+minimum functionality covering 26 SoCs. Our evaluation with
+6, 188 firmware images shows that it can successfully rehost
+more than 95% of Linux kernels in 2 architectures and 22
+versions. None of them can be rehosted in the vanilla QEMU.
+The result of the LTP benchmark shows the reliability and
+robustness of the rehosted Linux kernels. We further conduct
+two security applications, i.e., vulnerability analysis and fuzzing,
+on the rehosted Linux kernels to demonstrate the usage scenarios.
