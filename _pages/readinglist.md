@@ -60,20 +60,21 @@ This page contains papers relevant to my research interest.
 
 - **S&P 2022**
 
-- **NDSS 2022**
+- **NDSS 2021**
+  - From Library Portability to Para-rehosting: Natively Executing Microcontroller Software on Commodity Hardware
 
 - **USENIX SEC 2022**
 
 - **SANER 2022**
 
 - **CCS 2022**
-  - What Your Firmware Tells You Is Not How You Should Emulate It: A Speciﬁcation-Guided Approach for Firmware Emulation
+  - [What Your Firmware Tells You Is Not How You Should Emulate It: A Speciﬁcation-Guided Approach for Firmware Emulation](#what-your-firmware-tells-you-is-not-how-you-should-emulate-it-a-speciﬁcation-guided-approach-for-firmware-emulation)
 
 
 - **Other**
   - [Automatic Vulnerability Detection in Embedded Devices and Firmware: Survey and Layered Taxonomies](#automatic-vulnerability-detection-in-embedded-devices-and-firmware-survey-and-layered-taxonomies)  
   - [Challenges in Firmware Re-Hosting, Emulation, and Analysis](#challenges-in-firmware-re-hosting-emulation-and-analysis)
-  - [Systematic Testing of Autonomous Driving Systems Using Map Topology-Based Scenario Classification]
+  - [Systematic Testing of Autonomous Driving Systems Using Map Topology-Based Scenario Classification](#systematic-testing-of-autonomous-driving-systems-using-map-topology-based-scenario-classification)
 
 
 ### A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware (ISSTA 2022)
@@ -229,3 +230,34 @@ The result of the LTP benchmark shows the reliability and
 robustness of the rehosted Linux kernels. We further conduct
 two security applications, i.e., vulnerability analysis and fuzzing,
 on the rehosted Linux kernels to demonstrate the usage scenarios.
+
+
+### From Library Portability to Para-rehosting: Natively Executing Microcontroller Software on Commodity Hardware
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/From_library_portibility_to_para_rehosting.pdf)
+
+* **Abstract:** Finding bugs in microcontroller (MCU) firmware
+is challenging, even for device manufacturers who own the
+source code. The MCU runs different instruction sets than x86
+and exposes a very different development environment. This
+invalidates many existing sophisticated software testing tools on
+x86. To maintain a unified developing and testing environment,
+a straightforward way is to re-compile the source code into the
+native executable for a commodity machine (called rehosting).
+However, ad-hoc re-hosting is a daunting and tedious task and
+subject to many issues (library-dependence, kernel-dependence
+and hardware-dependence). In this work, we systematically explore the portability problem of MCU software and propose pararehosting to ease the porting process. Specifically, we abstract and
+implement a portable MCU (PMCU) using the POSIX interface.
+It models common functions of the MCU cores. For peripheral
+specific logic, we propose HAL-based peripheral function replacement, in which high-level hardware functions are replaced
+with an equivalent backend driver on the host. These backend
+drivers are invoked by well-designed para-APIs and can be reused
+across many MCU OSs. We categorize common HAL functions
+into four types and implement templates for quick backend
+development. Using the proposed approach, we have successfully
+rehosted nine MCU OSs including the widely deployed Amazon
+FreeRTOS, ARM Mbed OS, Zephyr and LiteOS. To demonstrate
+the superiority of our approach in terms of security testing, we
+used off-the-shelf dynamic analysis tools (AFL and ASAN) against
+the rehosted programs and discovered 28 previously-unknown
+bugs, among which 5 were confirmed by CVE and the other 19
+were confirmed by vendors at the time of writing.
