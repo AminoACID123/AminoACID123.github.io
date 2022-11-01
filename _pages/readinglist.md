@@ -58,7 +58,8 @@ This page contains papers relevant to my research interest.
 - **OOPSLA 2022**  
   - Coverage-guided tensor compiler fuzzing with joint IR-pass mutation  
 
-- **S&P 2022**
+- **S&P**
+  - [KARONTE: Detecting Insecure Multi-binary Interactions in Embedded Firmware]()
 
 - **NDSS 2021**
   - From Library Portability to Para-rehosting: Natively Executing Microcontroller Software on Commodity Hardware
@@ -261,3 +262,32 @@ used off-the-shelf dynamic analysis tools (AFL and ASAN) against
 the rehosted programs and discovered 28 previously-unknown
 bugs, among which 5 were confirmed by CVE and the other 19
 were confirmed by vendors at the time of writing.
+
+### KARONTE: Detecting Insecure Multi-binary Interactions in Embedded Firmware (S&P S&P 2020)
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Karonte_Detecting_Insecure_Multi-binary_Interactions_in_Embedded_Firmware.pdf)
+
+* **Abstract:** Low-power, single-purpose embedded devices (e.g.,
+routers and IoT devices) have become ubiquitous. While they
+automate and simplify many aspects of users’ lives, recent
+large-scale attacks have shown that their sheer number poses a
+severe threat to the Internet infrastructure. Unfortunately, the
+software on these systems is hardware-dependent, and typically
+executes in unique, minimal environments with non-standard
+configurations, making security analysis particularly challenging.
+Many of the existing devices implement their functionality
+through the use of multiple binaries. This multi-binary service
+implementation renders current static and dynamic analysis
+techniques either ineffective or inefficient, as they are unable
+to identify and adequately model the communication between
+the various executables. In this paper, we present KARONTE, a
+static analysis approach capable of analyzing embedded-device
+firmware by modeling and tracking multi-binary interactions.
+Our approach propagates taint information between binaries
+to detect insecure interactions and identify vulnerabilities. We
+first evaluated KARONTE on 53 firmware samples from various
+vendors, showing that our prototype tool can successfully track
+and constrain multi-binary interactions. This led to the discovery
+of 46 zero-day bugs. Then, we performed a large-scale experiment
+on 899 different samples, showing that KARONTE scales well
+with firmware samples of different size and complexity.
+
