@@ -70,7 +70,7 @@ This page contains papers relevant to my research interest.
 
 - **CCS 2022**
   - [What Your Firmware Tells You Is Not How You Should Emulate It: A Speciﬁcation-Guided Approach for Firmware Emulation](#what-your-firmware-tells-you-is-not-how-you-should-emulate-it-a-speciﬁcation-guided-approach-for-firmware-emulation)
-
+  - [ECMO: Peripheral Transplantation to Rehost Embedded Linux Kernels](#ecmo-peripheral-transplantation-to-rehost-embedded-linux-kernels-ccs-2021)
 
 - **Other**
   - [Automatic Vulnerability Detection in Embedded Devices and Firmware: Survey and Layered Taxonomies](#automatic-vulnerability-detection-in-embedded-devices-and-firmware-survey-and-layered-taxonomies)  
@@ -290,4 +290,29 @@ and constrain multi-binary interactions. This led to the discovery
 of 46 zero-day bugs. Then, we performed a large-scale experiment
 on 899 different samples, showing that KARONTE scales well
 with firmware samples of different size and complexity.
+
+### ECMO: Peripheral Transplantation to Rehost Embedded Linux Kernels (CCS 2021)
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/ecmo-ccs21.pdf)
+* **Abstract:** Dynamic analysis based on the full-system emulator QEMU is
+widely used for various purposes. However, it is challenging to
+run firmware images of embedded devices in QEMU, especially the
+process to boot the Linux kernel (we call this process rehosting
+the Linux kernel in this paper). That’s because embedded devices
+usually use different system-on-chips (SoCs) from multiple vendors and only a limited number of SoCs are currently supported in
+QEMU.  
+In this work, we propose a technique called peripheral transplantation. The main idea is to transplant the device drivers of
+designated peripherals into the Linux kernel binary. By doing so,
+it can replace the peripherals in the kernel that are currently unsupported in QEMU with supported ones, thus making the Linux
+kernel rehostable. After that, various applications can be built.  
+We implemented this technique inside a prototype system called
+ECMO and applied it to 815 firmware images, which consist of 20
+kernel versions and 37 device models. The result shows that ECMO
+can successfully transplant peripherals for all the 815 Linux kernels.
+Among them, 710 kernels can be successfully rehosted, i.e., launching a user-space shell (87.1% success rate). The failed cases are
+mainly because the root file system format (ramfs) is not supported
+by the kernel. Meanwhile, we are able to inject rather complex
+drivers (i.e., NIC driver) for all the rehosted Linux kernels by installing kernel modules. We further build three applications, i.e.,
+kernel crash analysis, rootkit forensic analysis, and kernel fuzzing,
+based on the rehosted kernels to demonstrate the usage scenarios
+of ECMO.
 
