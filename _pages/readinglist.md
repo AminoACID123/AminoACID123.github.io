@@ -70,6 +70,7 @@ This page contains papers relevant to my research interest.
 
 - **CCS 2022**
   - [What Your Firmware Tells You Is Not How You Should Emulate It: A Speciﬁcation-Guided Approach for Firmware Emulation](#what-your-firmware-tells-you-is-not-how-you-should-emulate-it-a-speciﬁcation-guided-approach-for-firmware-emulation)
+  - [MetaEmu: An Architecture Agnostic Rehosting Framework for Automotive Firmware](#metaemu-an-architecture-agnostic-rehosting-framework-for-automotive-firmware)
   - [ECMO: Peripheral Transplantation to Rehost Embedded Linux Kernels](#ecmo-peripheral-transplantation-to-rehost-embedded-linux-kernels-ccs-2021)
 
 - **Other**
@@ -293,6 +294,7 @@ with firmware samples of different size and complexity.
 
 ### ECMO: Peripheral Transplantation to Rehost Embedded Linux Kernels (CCS 2021)
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/ecmo-ccs21.pdf)
+
 * **Abstract:** Dynamic analysis based on the full-system emulator QEMU is
 widely used for various purposes. However, it is challenging to
 run firmware images of embedded devices in QEMU, especially the
@@ -316,3 +318,26 @@ kernel crash analysis, rootkit forensic analysis, and kernel fuzzing,
 based on the rehosted kernels to demonstrate the usage scenarios
 of ECMO.
 
+### MetaEmu: An Architecture Agnostic Rehosting Framework for Automotive Firmware
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/METAEMU.pdf)
+
+* **Abstract:** In this paper we present MetaEmu, an architecture-agnostic emulator synthesizer geared towards rehosting and security analysis
+of automotive firmware. MetaEmu improves over existing rehosting environments in two ways: Firstly, it solves the hitherto openproblem of a lack of generic Virtual Execution Environments (VXEs)
+for rehosting by synthesizing processor simulators from Ghidra’s
+language definitions. In doing so, MetaEmu can simulate any processor supported by a vast and growing library of open-source
+definitions. In MetaEmu, we use a specification-based approach to
+cover peripherals, execution models, and analyses, which allows our
+framework to be easily extended. Secondly, MetaEmu can rehost
+and analyze multiple targets, each of different architecture, simultaneously, and share analysis facts between each target’s analysis
+environment, a technique we call inter-device analysis.  
+We show that the flexibility afforded by our approach does not
+lead to a performance trade-off—MetaEmu lifts rehosted firmware
+to an optimized intermediate representation, and provides performance comparable to existing emulation tools, such as Unicorn.
+Our evaluation spans five different architectures, bare-metal and
+RTOS-based firmware, and three kinds of automotive Electronic
+Control Unit (ECU) from four distinct vendors—none of which can
+be rehosted or emulated by current tools, due to lack of processor
+support. Further, we show how MetaEmu enables a diverse set of
+analyses by implementing a fuzzer, a symbolic executor for solving
+peripheral access checks, a CAN ID reverse engineering tool, and
+an inter-device coverage tracker
