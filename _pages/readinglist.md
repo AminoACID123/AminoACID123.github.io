@@ -9,7 +9,7 @@ This page contains papers relevant to my research interest.
 
 # All Papers (Classification according to Publication)
 
-- **ISSTA 2022**  
+- **ISSTA**  
   - [A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware](#a-large-scale-empirical-analysis-of-the-vulnerabilities-introduced-by-third-party-components-in-iot-firmware-issta-2022)
   - [An Empirical Study on the Effectiveness of Static C Code Analyzers for Vulnerability Detection](#an-empirical-study-on-the-effectiveness-of-static-c-code-analyzers-for-vulnerability-detection-issta-2022)
   - [BET: Black-Box Efficient Testing for Convolutional Neural Networks](#bet-black-box-efficient-testing-for-convolutional-neural-networks-issta-2022)
@@ -17,28 +17,27 @@ This page contains papers relevant to my research interest.
   - [Efficient greybox fuzzing of applications in Linux-based IoT devices via enhanced user-mode emulation](#efficient-greybox-fuzzing-of-applications-in-linux-based-iot-devices-via-enhanced-user-mode-emulation-issta-2022)
   - LiRTest: augmenting LiDAR point clouds for automated testing of autonomous driving systems
 
-- **PLDI 2022**
+- **PLDI**
   - Finding typing compiler bugs
   - Odin: On-Demand Instrumentation with On-the-Fly Recompilation
 
-- **ESEC/FSE 2022**
+- **ESEC/FSE**
   - Fuzzing Deep-Learning Libraries via Automated Relational API Inference
   - Generating Realistic Vulnerabilities via Neural Code Editing: An Empirical Study
   - MOSAT: Finding Safety Violations of Autonomous Driving Systems Using Multi-Objective Genetic Algorithm
   - Scenario-based Test Reduction and Prioritization for Multi-Module Autonomous Driving Systems
   - Static Executes-Before Analysis for Event Driven Programs
   - Understanding Performance Problems in Deep Learning Systems
+  - Fuzzing Deep-Learning Libraries via Automated Relational API Inference
   
-- **ASE 2022**  
+- **ASE**  
   - B-AIS: An Automated Process for Black-box Evaluation of AI-enabled Software Systems against Domain Semantics
   - Boosting the Revealing of Detected Violations in Deep Learning Testing: A Diversity-Guided Method
   - LawBreaker: An Approach for Specifying Traffic Laws and Fuzzing Autonomous Vehicles
   - ThirdEye: Attention Maps for Safe Autonomous Driving Systems
   - Unveiling the Hidden Defection of DNN Testing with Decision-Based Metamorphic Oracle
-  - FIRMGUIDE: Boosting the Capability of Rehosting Embedded Linux Kernels through Model-Guided Kernel Execution
-
-- **ASE 2021**  
   - [FIRMGUIDE: Boosting the Capability of Rehosting Embedded Linux Kernels through Model-Guided Kernel Execution](#firmguide-boosting-the-capability-of-rehosting-embedded-linux-kernels-through-model-guided-kernel-execution)
+  - [Sorry, I don't understand: Improving Voice User Interface Testing](#sorry-i-dont-understand-improving-voice-user-interface-testing-ase-2022)
 
 - **ICSE 2022**
   - Adaptive Test Selection for Deep Neural Networks
@@ -73,6 +72,9 @@ This page contains papers relevant to my research interest.
   - [MetaEmu: An Architecture Agnostic Rehosting Framework for Automotive Firmware](#metaemu-an-architecture-agnostic-rehosting-framework-for-automotive-firmware)
   - [ECMO: Peripheral Transplantation to Rehost Embedded Linux Kernels](#ecmo-peripheral-transplantation-to-rehost-embedded-linux-kernels-ccs-2021)
 
+- **DSN**
+  - [L2Fuzz: Discovering Bluetooth L2CAP Vulnerabilities Using Stateful Fuzz Testing](#l2fuzz-discovering-bluetooth-l2cap-vulnerabilities-using-stateful-fuzz-testing-dsn-2022)
+
 - **Other**
   - [Automatic Vulnerability Detection in Embedded Devices and Firmware: Survey and Layered Taxonomies](#automatic-vulnerability-detection-in-embedded-devices-and-firmware-survey-and-layered-taxonomies)  
   - [Challenges in Firmware Re-Hosting, Emulation, and Analysis](#challenges-in-firmware-re-hosting-emulation-and-analysis)
@@ -93,13 +95,7 @@ To fill in the knowledge gap, we design and implement FirmSec, which leverages s
 ### BET: Black-Box Efficient Testing for Convolutional Neural Networks (ISSTA 2022)
 * <img src="../files/images/pdf_24px.png">[Paper](/files/papers/BET_black_box_efficient_testing_for_convolutional_neural_networks.pdf)
 
-* **Abstract:** It is important to test convolutional neural networks (CNNs) to
-identify defects (e.g. error-inducing inputs) before deploying them in security-sensitive scenarios. Although existing white-box testing methods can effectively test CNN models with high neuron
-coverage, they are not applicable to privacy-sensitive scenarios
-where full knowledge of target CNN models is lacking. In this work, we propose a novel Black-box Efficient Testing (BET) method for CNN models. The core insight of BET is that CNNs are generally
-prone to be affected by continuous perturbations. Thus, by gener-
-ating such continuous perturbations in a black-box manner, we
-design a tunable objective function to guide our testing process for thoroughly exploring defects in different decision boundaries of the target CNN models. We further design an efficiency-centric policy to find more error-inducing inputs within a fixed query budget. We conduct extensive evaluations with three well-known datasets and five popular CNN structures. The results show that BET significantly outperforms existing white-box and black-box testing methods considering the effective error-inducing inputs found in a fixed query/inference budget. We further show that the error-inducing inputs found by BET can be used to fine-tune the target model, improving its accuracy by up to 3%.
+* **Abstract:** It is important to test convolutional neural networks (CNNs) to identify defects (e.g. error-inducing inputs) before deploying them in security-sensitive scenarios. Although existing white-box testing methods can effectively test CNN models with high neuron coverage, they are not applicable to privacy-sensitive scenarios where full knowledge of target CNN models is lacking. In this work, we propose a novel Black-box Efficient Testing (BET) method for CNN models. The core insight of BET is that CNNs are generally prone to be affected by continuous perturbations. Thus, by generating such continuous perturbations in a black-box manner, we design a tunable objective function to guide our testing process for thoroughly exploring defects in different decision boundaries of the target CNN models. We further design an efficiency-centric policy to find more error-inducing inputs within a fixed query budget. We conduct extensive evaluations with three well-known datasets and five popular CNN structures. The results show that BET significantly outperforms existing white-box and black-box testing methods considering the effective error-inducing inputs found in a fixed query/inference budget. We further show that the error-inducing inputs found by BET can be used to fine-tune the target model, improving its accuracy by up to 3%.
 
 ### Detecting Multi-sensor Fusion Errors in Advanced Driver-Assistance Systems (ISSTA 2022)
 * <img src="../files/images/pdf_24px.png">[Paper](/files/papers/Detecting_multi_sensor_fusion_errors_in_advanced_driver_assistance_systems.pdf)
@@ -112,232 +108,90 @@ design a tunable objective function to guide our testing process for thoroughly 
 * <img src="../files/images/youdao_note_24px.png">[Reading Note](../files/notes/issta22Efficient.pdf)
 
 * **Abstract:** Greybox fuzzing has become one of the most effective vulnerability discovery techniques. However, greybox fuzzing techniques cannot be directly applied to applications in IoT devices. The main reason is that executing these applications highly relies on specific system environments and hardware. To execute the applications in Linux-based IoT devices, most existing fuzzing techniques use full-system emulation for the purpose of maximizing compatibility. However, compared with user-mode emulation, full-system emulation suffers from great overhead. Therefore, some previous works, such as FirmAFL, propose to combine full-system emulation and user-mode emulation to speed up the fuzzing process. Despite the attempts of trying to shift the application towards user-mode emulation, no existing technique supports to execute these applications fully in the user-mode emulation.  
-To address this issue, we propose EQUAFL, which can auto-
-matically set up the execution environment to execute embedded
-applications under user-mode emulation. EQUAFL first executes
-the application under full-system emulation and observe for the key points where the program may get stuck or even crash during user-mode emulation. With the observed information, EQUAFL can migrate the needed environment for user-mode emulation. Then, EQUAFL uses an enhanced user-mode emulation to replay system calls of network, and resource management behaviors to fulfill the needs of the embedded application during its execution.  
-We evaluate EQUAFL on 70 network applications from different
-series of IoT devices. The result shows EQUAFL outperforms the state-of-the-arts in fuzzing efficiency (on average, 26 times faster than AFL-QEMU with full-system emulation, 14 times than FirmAFL). We have also discovered ten vulnerabilities including six CVEs from the tested firmware images.
+To address this issue, we propose EQUAFL, which can automatically set up the execution environment to execute embedded applications under user-mode emulation. EQUAFL first executes the application under full-system emulation and observe for the key points where the program may get stuck or even crash during user-mode emulation. With the observed information, EQUAFL can migrate the needed environment for user-mode emulation. Then, EQUAFL uses an enhanced user-mode emulation to replay system calls of network, and resource management behaviors to fulfill the needs of the embedded application during its execution.  
+We evaluate EQUAFL on 70 network applications from different series of IoT devices. The result shows EQUAFL outperforms the state-of-the-arts in fuzzing efficiency (on average, 26 times faster than AFL-QEMU with full-system emulation, 14 times than FirmAFL). We have also discovered ten vulnerabilities including six CVEs from the tested firmware images.
 
 ### What Your Firmware Tells You Is Not How You Should Emulate It: A Speciﬁcation-Guided Approach for Firmware Emulation
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/What_your_firmware_tells_you_is_not_how_you_should_emulate_it.pdf)
 
-* **Abstract:** Emulating firmware of microcontrollers is challenging due to the
-lack of peripheral models. Existing work finds out how to respond
-to peripheral read operations by analyzing the target firmware. This
-is problematic because the firmware sometimes does not contain
-enough clues to support the emulation or even contains misleading information (e.g., a buggy firmware). In this work, we propose
-a new approach that builds peripheral models from the peripheral specification. Using NLP, we translate peripheral behaviors in
-human language (documented in chip manuals) into a set of structured condition-action rules. By checking, executing, and chaining
-them at runtime, we can dynamically synthesize a peripheral model
-for each firmware execution. The extracted condition-action rules
-might not be complete or even be wrong. We, therefore, propose incorporating symbolic execution to quickly pinpoint the root cause.
-This assists us in the manual correction of the problematic rules.
-We have implemented our idea for five popular MCU boards spanning three different chip vendors. Using a new edit-distance-based
-algorithm to calculate trace differences, our evaluation against a
-large firmware corpus confirmed that our prototype achieves much
-higher fidelity compared with state-of-the-art solutions. Benefiting
-from the accurate emulation, our emulator effectively avoids false positives observed in existing fuzzing work. We also designed a new dynamic analysis method to perform driver code compliance checks against the specification. We found some non-compliance which we later confirmed to be bugs caused by race conditions.
+* **Abstract:** Emulating firmware of microcontrollers is challenging due to the lack of peripheral models. Existing work finds out how to respond to peripheral read operations by analyzing the target firmware. This is problematic because the firmware sometimes does not contain enough clues to support the emulation or even contains misleading information (e.g., a buggy firmware). In this work, we propose a new approach that builds peripheral models from the peripheral specification. Using NLP, we translate peripheral behaviors in human language (documented in chip manuals) into a set of structured condition-action rules. By checking, executing, and chaining them at runtime, we can dynamically synthesize a peripheral model for each firmware execution. The extracted condition-action rules might not be complete or even be wrong. We, therefore, propose incorporating symbolic execution to quickly pinpoint the root cause.  
+This assists us in the manual correction of the problematic rules. We have implemented our idea for five popular MCU boards spanning three different chip vendors. Using a new edit-distance-based algorithm to calculate trace differences, our evaluation against a large firmware corpus confirmed that our prototype achieves much higher fidelity compared with state-of-the-art solutions. Benefiting from the accurate emulation, our emulator effectively avoids false positives observed in existing fuzzing work. We also designed a new dynamic analysis method to perform driver code compliance checks against the specification. We found some non-compliance which we later confirmed to be bugs caused by race conditions.
 
 ### Automatic Vulnerability Detection in Embedded Devices and Firmware: Survey and Layered Taxonomies
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Automatic_Vulnerability_Detection_in_Embedded_Devices_and_Firmware_Survey_and_Layered_Taxonomies.pdf)
 
 * **Abstract:** In the era of the internet of things (IoT), software-enabled inter-connected devices are of paramount impor-
-tance. The embedded systems are very frequently used in both security and privacy-sensitive applications.
-However, the underlying software (a.k.a. firmware) very often suffers from a wide range of security vulnerabilities, mainly due to their outdated systems or reusing existing vulnerable libraries; which is evident by the
-surprising rise in the number of attacks against embedded systems. Therefore, to protect those embedded sys-
-tems, detecting the presence of vulnerabilities in the large pool of embedded devices and their firmware plays
-a vital role. To this end, there exist several approaches to identify and trigger potential vulnerabilities within
-deployed embedded systems firmware. In this survey, we provide a comprehensive review of the state-of-the-
-art proposals, which detect vulnerabilities in embedded systems and firmware images by employing various
-analysis techniques, including static analysis, dynamic analysis, symbolic execution, and hybrid approaches.
-Furthermore, we perform both quantitative and qualitative comparisons among the surveyed approaches.
-Moreover, we devise taxonomies based on the applications of those approaches, the features used in the liter-
-ature, and the type of the analysis. Finally, we identify the unresolved challenges and discuss possible future
-directions in this field of research.
+tance. The embedded systems are very frequently used in both security and privacy-sensitive applications. However, the underlying software (a.k.a. firmware) very often suffers from a wide range of security vulnerabilities, mainly due to their outdated systems or reusing existing vulnerable libraries; which is evident by the surprising rise in the number of attacks against embedded systems. Therefore, to protect those embedded systems, detecting the presence of vulnerabilities in the large pool of embedded devices and their firmware plays a vital role. To this end, there exist several approaches to identify and trigger potential vulnerabilities within deployed embedded systems firmware. In this survey, we provide a comprehensive review of the state-of-the-art proposals, which detect vulnerabilities in embedded systems and firmware images by employing various analysis techniques, including static analysis, dynamic analysis, symbolic execution, and hybrid approaches. Furthermore, we perform both quantitative and qualitative comparisons among the surveyed approaches. Moreover, we devise taxonomies based on the applications of those approaches, the features used in the literature, and the type of the analysis. Finally, we identify the unresolved challenges and discuss possible future directions in this field of research.
 
 ### Nessie: Automatically Testing JavaScript APIs with Asynchronous Callbacks
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Nessie_automatically_testing_JavaScript_APIs_with_asynchronous_callbacks.pdf)
 * <img src="../files/images/youdao_note_24px.png">[Reading Note](../files/notes/icse22nessie.md)
 
-* **Abstract:** Previous algorithms for feedback-directed unit test generation iter-
-atively create sequences of API calls by executing partial tests and
-by adding new API calls at the end of the test. These algorithms
-are challenged by a popular class of APIs: higher-order functions
-that receive callback arguments, which often are invoked asyn-
-chronously. Existing test generators cannot effectively test such
-APIs because they only sequence API calls, but do not nest one call
-into the callback function of another. This paper presents Nessie,
-the first feedback-directed unit test generator that supports nesting
-of API calls and that tests asynchronous callbacks. Nesting API calls
-enables a test to use values produced by an API that are available
-only once a callback has been invoked, and is often necessary to
-ensure that methods are invoked in a specific order. The core con-
-tributions of our approach are a tree-based representation of unit
-tests with callbacks and a novel algorithm to iteratively generate
-such tests in a feedback-directed manner. We evaluate our approach
-on ten popular JavaScript libraries with both asynchronous and
-synchronous callbacks. The results show that, in a comparison with
-LambdaTester, a state of the art test generation technique that only
-considers sequencing of method calls, Nessie finds more behavioral
-differences and achieves slightly higher coverage. Notably, Nessie
-needs to generate significantly fewer tests to achieve and exceed
-the coverage achieved by the state of the art.
+* **Abstract:** Previous algorithms for feedback-directed unit test generation iteratively create sequences of API calls by executing partial tests and by adding new API calls at the end of the test. These algorithms are challenged by a popular class of APIs: higher-order functions that receive callback arguments, which often are invoked asynchronously. Existing test generators cannot effectively test such APIs because they only sequence API calls, but do not nest one call into the callback function of another. This paper presents Nessie, the first feedback-directed unit test generator that supports nesting of API calls and that tests asynchronous callbacks. Nesting API calls enables a test to use values produced by an API that are available only once a callback has been invoked, and is often necessary to ensure that methods are invoked in a specific order. The core contributions of our approach are a tree-based representation of unit tests with callbacks and a novel algorithm to iteratively generate such tests in a feedback-directed manner. We evaluate our approach on ten popular JavaScript libraries with both asynchronous and
+synchronous callbacks. The results show that, in a comparison with LambdaTester, a state of the art test generation technique that only considers sequencing of method calls, Nessie finds more behavioral differences and achieves slightly higher coverage. Notably, Nessie needs to generate significantly fewer tests to achieve and exceed the coverage achieved by the state of the art.
 
 ### Challenges in Firmware Re-Hosting, Emulation, and Analysis
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Challenges_in_firmware_rehosting_emulation_and_analysis.pdf)
 
 * **Abstract:** System emulation and firmware re-hosting have become popular techniques to answer various security and
-performance related questions, such as determining whether a firmware contain security vulnerabilities or
-meet timing requirements when run on a specific hardware platform. While this motivation for emulation
-and binary analysis has previously been explored and reported, starting to either work or research in the field
-is difficult. To this end, we provide a comprehensive guide for the practitioner or system emulation researcher.
-We layout common challenges faced during firmware re-hosting, explaining successive steps and surveying
-common tools used to overcome these challenges. We provide classification techniques on five different axes,
-including emulator methods, system type, fidelity, emulator purpose, and control. These classifications and
-comparison criteria enable the practitioner to determine the appropriate tool for emulation. We use our classifications to categorize popular works in the field and present 28 common challenges faced when creating,
-emulating, and analyzing a system from obtaining firmwares to post emulation analysis.
+performance related questions, such as determining whether a firmware contain security vulnerabilities or meet timing requirements when run on a specific hardware platform. While this motivation for emulation and binary analysis has previously been explored and reported, starting to either work or research in the field is difficult. To this end, we provide a comprehensive guide for the practitioner or system emulation researcher. We layout common challenges faced during firmware re-hosting, explaining successive steps and surveying common tools used to overcome these challenges. We provide classification techniques on five different axes,
+including emulator methods, system type, fidelity, emulator purpose, and control. These classifications and comparison criteria enable the practitioner to determine the appropriate tool for emulation. We use our classifications to categorize popular works in the field and present 28 common challenges faced when creating, emulating, and analyzing a system from obtaining firmwares to post emulation analysis.
 
 ### Systematic Testing of Autonomous Driving Systems Using Map Topology-Based Scenario Classification
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Systematica_testing_of_autonomous_driving_systems_using_map_topology_based_scenario_classification.pdf)
 
 * **Abstract:** Autonomous Driving Systems (ADSs), which replace humans to drive vehicles, are complex software systems deployed in autonomous vehicles (AVs). Since the execution of ADSs highly relies on maps, it is essential to perform global map-based testing for ADSs to guarantee their correctness and AVs’ safety in different situations. Existing methods focus more on specific
-scenarios rather than global testing throughout the map. Testing on a global map is challenging since the complex lane connections in a map can generate enormous scenarios. In this work, we propose ATLAS, an approach to ADSs’ collision avoidance testing using map topology-based scenario classification. The core insight
-of ATLAS is to generate diverse testing scenarios by classifying junction lanes according to their topology-based interaction patterns. First, ATLAS divides the junction lanes into different classes such that an ADS can execute similar collision avoidance maneuvers on the lanes in the same class. Second, for each class,
-ATLAS selects one junction lane to construct the testing scenario and generate test cases using a genetic algorithm. Finally, we implement and evaluate ATLAS on Baidu Apollo with the LGSVL simulator on the San Francisco map. Results show that ATLAS exposes nine types of real issues in Apollo 6.0 and reduces the number of junction lanes for testing by 98%.
+scenarios rather than global testing throughout the map. Testing on a global map is challenging since the complex lane connections in a map can generate enormous scenarios. In this work, we propose ATLAS, an approach to ADSs’ collision avoidance testing using map topology-based scenario classification. The core insight of ATLAS is to generate diverse testing scenarios by classifying junction lanes according to their topology-based interaction patterns. First, ATLAS divides the junction lanes into different classes such that an ADS can execute similar collision avoidance maneuvers on the lanes in the same class. Second, for each class, ATLAS selects one junction lane to construct the testing scenario and generate test cases using a genetic algorithm. Finally, we implement and evaluate ATLAS on Baidu Apollo with the LGSVL simulator on the San Francisco map. Results show that ATLAS exposes nine types of real issues in Apollo 6.0 and reduces the number of junction lanes for testing by 98%.
 
 ### FIRMGUIDE: Boosting the Capability of Rehosting Embedded Linux Kernels through Model-Guided Kernel Execution
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/FirmGuide.pdf)
 
-* **Abstract:** Linux kernel is widely used in embedded systems.To understand practical threats to the Linux kernel, we need to perform dynamic analysis with a full-system emulator, e.g., QEMU. However, due to hardware fragmentation, e.g., various
-types of peripherals, most embedded systems are not currently
-supported by QEMU. Though some progress has been made on
-rehosting firmware, it mainly focuses on user space programs or
-simple real-time operating systems.  
-The goal of this work is to boost the capability of rehosting
-the embedded Linux kernels in QEMU. By doing so, dynamic
-analysis systems can be firstly applied on embedded Linux kernels
-by leveraging off-the-shelf tools upon QEMU. Accordingly, we
-proposed a new technique called model-guided kernel execution.
-It combines the peripheral abstractions in the Linux kernel
-and kernel-peripheral interactions to semi-automatically generate
-peripheral models that are then used to synthesize new QEMU
-virtual machines to start the dynamic analysis.  
-We have implemented a prototype called FirmGuide. It generates 9 peripheral models with full functionality and 64 with
-minimum functionality covering 26 SoCs. Our evaluation with
-6, 188 firmware images shows that it can successfully rehost
-more than 95% of Linux kernels in 2 architectures and 22
-versions. None of them can be rehosted in the vanilla QEMU.
-The result of the LTP benchmark shows the reliability and
-robustness of the rehosted Linux kernels. We further conduct
-two security applications, i.e., vulnerability analysis and fuzzing,
-on the rehosted Linux kernels to demonstrate the usage scenarios.
+* **Abstract:** Linux kernel is widely used in embedded systems.To understand practical threats to the Linux kernel, we need to perform dynamic analysis with a full-system emulator, e.g., QEMU. However, due to hardware fragmentation, e.g., various types of peripherals, most embedded systems are not currently supported by QEMU. Though some progress has been made on rehosting firmware, it mainly focuses on user space programs or simple real-time operating systems.   The goal of this work is to boost the capability of rehosting the embedded Linux kernels in QEMU. By doing so, dynamic analysis systems can be firstly applied on embedded Linux kernels by leveraging off-the-shelf tools upon QEMU. Accordingly, we proposed a new technique called model-guided kernel execution. It combines the peripheral abstractions in the Linux kernel and kernel-peripheral interactions to semi-automatically generate peripheral models that are then used to synthesize new QEMU virtual machines to start the dynamic analysis.   We have implemented a prototype called FirmGuide. It generates 9 peripheral models with full functionality and 64 with minimum functionality covering 26 SoCs. Our evaluation with 6, 188 firmware images shows that it can successfully rehost more than 95% of Linux kernels in 2 architectures and 22 versions. None of them can be rehosted in the vanilla QEMU. The result of the LTP benchmark shows the reliability and robustness of the rehosted Linux kernels. We further conduct two security applications, i.e., vulnerability analysis and fuzzing, on the rehosted Linux kernels to demonstrate the usage scenarios.
 
 
 ### From Library Portability to Para-rehosting: Natively Executing Microcontroller Software on Commodity Hardware
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/From_library_portibility_to_para_rehosting.pdf)
 
-* **Abstract:** Finding bugs in microcontroller (MCU) firmware
-is challenging, even for device manufacturers who own the
-source code. The MCU runs different instruction sets than x86
-and exposes a very different development environment. This
-invalidates many existing sophisticated software testing tools on
-x86. To maintain a unified developing and testing environment,
-a straightforward way is to re-compile the source code into the
-native executable for a commodity machine (called rehosting).
-However, ad-hoc re-hosting is a daunting and tedious task and
-subject to many issues (library-dependence, kernel-dependence
-and hardware-dependence). In this work, we systematically explore the portability problem of MCU software and propose pararehosting to ease the porting process. Specifically, we abstract and
-implement a portable MCU (PMCU) using the POSIX interface.
-It models common functions of the MCU cores. For peripheral
-specific logic, we propose HAL-based peripheral function replacement, in which high-level hardware functions are replaced
-with an equivalent backend driver on the host. These backend
-drivers are invoked by well-designed para-APIs and can be reused
-across many MCU OSs. We categorize common HAL functions
-into four types and implement templates for quick backend
-development. Using the proposed approach, we have successfully
-rehosted nine MCU OSs including the widely deployed Amazon
-FreeRTOS, ARM Mbed OS, Zephyr and LiteOS. To demonstrate
-the superiority of our approach in terms of security testing, we
-used off-the-shelf dynamic analysis tools (AFL and ASAN) against
-the rehosted programs and discovered 28 previously-unknown
-bugs, among which 5 were confirmed by CVE and the other 19
-were confirmed by vendors at the time of writing.
+* **Abstract:** Finding bugs in microcontroller (MCU) firmware is challenging, even for device manufacturers who own the source code. The MCU runs different instruction sets than x86 and exposes a very different development environment. This invalidates many existing sophisticated software testing tools on x86. To maintain a unified developing and testing environment, a straightforward way is to re-compile the source code into the native executable for a commodity machine (called rehosting). However, ad-hoc re-hosting is a daunting and tedious task and subject to many issues (library-dependence, kernel-dependence and hardware-dependence). In this work, we systematically explore the portability problem of MCU software and propose pararehosting to ease the porting process. Specifically, we abstract and implement a portable MCU (PMCU) using the POSIX interface. It models common functions of the MCU cores. For peripheral specific logic, we propose HAL-based peripheral function replacement, in which high-level hardware functions are replaced with an equivalent backend driver on the host. These backend drivers are invoked by well-designed para-APIs and can be reused across many MCU OSs. We categorize common HAL functions into four types and implement templates for quick backend development. Using the proposed approach, we have successfully rehosted nine MCU OSs including the widely deployed Amazon FreeRTOS, ARM Mbed OS, Zephyr and LiteOS. To demonstrate the superiority of our approach in terms of security testing, we used off-the-shelf dynamic analysis tools (AFL and ASAN) against the rehosted programs and discovered 28 previously-unknown bugs, among which 5 were confirmed by CVE and the other 19 were confirmed by vendors at the time of writing.
 
 ### KARONTE: Detecting Insecure Multi-binary Interactions in Embedded Firmware (S&P S&P 2020)
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Karonte_Detecting_Insecure_Multi-binary_Interactions_in_Embedded_Firmware.pdf)
 
-* **Abstract:** Low-power, single-purpose embedded devices (e.g.,
-routers and IoT devices) have become ubiquitous. While they
-automate and simplify many aspects of users’ lives, recent
-large-scale attacks have shown that their sheer number poses a
-severe threat to the Internet infrastructure. Unfortunately, the
-software on these systems is hardware-dependent, and typically
-executes in unique, minimal environments with non-standard
-configurations, making security analysis particularly challenging.
-Many of the existing devices implement their functionality
-through the use of multiple binaries. This multi-binary service
-implementation renders current static and dynamic analysis
-techniques either ineffective or inefficient, as they are unable
-to identify and adequately model the communication between
-the various executables. In this paper, we present KARONTE, a
-static analysis approach capable of analyzing embedded-device
-firmware by modeling and tracking multi-binary interactions.
-Our approach propagates taint information between binaries
-to detect insecure interactions and identify vulnerabilities. We
-first evaluated KARONTE on 53 firmware samples from various
-vendors, showing that our prototype tool can successfully track
-and constrain multi-binary interactions. This led to the discovery
-of 46 zero-day bugs. Then, we performed a large-scale experiment
-on 899 different samples, showing that KARONTE scales well
-with firmware samples of different size and complexity.
+* **Abstract:** Low-power, single-purpose embedded devices (e.g., routers and IoT devices) have become ubiquitous. While they automate and simplify many aspects of users’ lives, recent large-scale attacks have shown that their sheer number poses a severe threat to the Internet infrastructure. Unfortunately, the software on these systems is hardware-dependent, and typically executes in unique, minimal environments with non-standard configurations, making security analysis particularly challenging. Many of the existing devices implement their functionality through the use of multiple binaries. This multi-binary service implementation renders current static and dynamic analysis techniques either ineffective or inefficient, as they are unable to identify and adequately model the communication between the various executables. In this paper, we present KARONTE, a static analysis approach capable of analyzing embedded-device firmware by modeling and tracking multi-binary interactions.  
+Our approach propagates taint information between binaries to detect insecure interactions and identify vulnerabilities. We first evaluated KARONTE on 53 firmware samples from various vendors, showing that our prototype tool can successfully track and constrain multi-binary interactions. This led to the discovery of 46 zero-day bugs. Then, we performed a large-scale experiment on 899 different samples, showing that KARONTE scales well with firmware samples of different size and complexity.
 
 ### ECMO: Peripheral Transplantation to Rehost Embedded Linux Kernels (CCS 2021)
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/ecmo-ccs21.pdf)
 
-* **Abstract:** Dynamic analysis based on the full-system emulator QEMU is
-widely used for various purposes. However, it is challenging to
-run firmware images of embedded devices in QEMU, especially the
-process to boot the Linux kernel (we call this process rehosting
-the Linux kernel in this paper). That’s because embedded devices
-usually use different system-on-chips (SoCs) from multiple vendors and only a limited number of SoCs are currently supported in
-QEMU.  
+* **Abstract:** Dynamic analysis based on the full-system emulator QEMU is widely used for various purposes. However, it is challenging to run firmware images of embedded devices in QEMU, especially the process to boot the Linux kernel (we call this process rehosting the Linux kernel in this paper). That’s because embedded devices usually use different system-on-chips (SoCs) from multiple vendors and only a limited number of SoCs are currently supported in QEMU.  
 In this work, we propose a technique called peripheral transplantation. The main idea is to transplant the device drivers of
-designated peripherals into the Linux kernel binary. By doing so,
-it can replace the peripherals in the kernel that are currently unsupported in QEMU with supported ones, thus making the Linux
-kernel rehostable. After that, various applications can be built.  
-We implemented this technique inside a prototype system called
-ECMO and applied it to 815 firmware images, which consist of 20
-kernel versions and 37 device models. The result shows that ECMO
-can successfully transplant peripherals for all the 815 Linux kernels.
-Among them, 710 kernels can be successfully rehosted, i.e., launching a user-space shell (87.1% success rate). The failed cases are
-mainly because the root file system format (ramfs) is not supported
-by the kernel. Meanwhile, we are able to inject rather complex
-drivers (i.e., NIC driver) for all the rehosted Linux kernels by installing kernel modules. We further build three applications, i.e.,
-kernel crash analysis, rootkit forensic analysis, and kernel fuzzing,
-based on the rehosted kernels to demonstrate the usage scenarios
-of ECMO.
+designated peripherals into the Linux kernel binary. By doing so, it can replace the peripherals in the kernel that are currently unsupported in QEMU with supported ones, thus making the Linux kernel rehostable. After that, various applications can be built.  
+We implemented this technique inside a prototype system called ECMO and applied it to 815 firmware images, which consist of 20
+kernel versions and 37 device models. The result shows that ECMO can successfully transplant peripherals for all the 815 Linux kernels. Among them, 710 kernels can be successfully rehosted, i.e., launching a user-space shell (87.1% success rate). The failed cases are mainly because the root file system format (ramfs) is not supported by the kernel. Meanwhile, we are able to inject rather complex drivers (i.e., NIC driver) for all the rehosted Linux kernels by installing kernel modules. We further build three applications, i.e., kernel crash analysis, rootkit forensic analysis, and kernel fuzzing, based on the rehosted kernels to demonstrate the usage scenarios of ECMO.
 
-### MetaEmu: An Architecture Agnostic Rehosting Framework for Automotive Firmware
+### MetaEmu: An Architecture Agnostic Rehosting Framework for Automotive Firmware (CCS 2022)
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/METAEMU.pdf)
 
-* **Abstract:** In this paper we present MetaEmu, an architecture-agnostic emulator synthesizer geared towards rehosting and security analysis
-of automotive firmware. MetaEmu improves over existing rehosting environments in two ways: Firstly, it solves the hitherto openproblem of a lack of generic Virtual Execution Environments (VXEs)
-for rehosting by synthesizing processor simulators from Ghidra’s
-language definitions. In doing so, MetaEmu can simulate any processor supported by a vast and growing library of open-source
-definitions. In MetaEmu, we use a specification-based approach to
-cover peripherals, execution models, and analyses, which allows our
-framework to be easily extended. Secondly, MetaEmu can rehost
-and analyze multiple targets, each of different architecture, simultaneously, and share analysis facts between each target’s analysis
-environment, a technique we call inter-device analysis.  
-We show that the flexibility afforded by our approach does not
-lead to a performance trade-off—MetaEmu lifts rehosted firmware
-to an optimized intermediate representation, and provides performance comparable to existing emulation tools, such as Unicorn.
-Our evaluation spans five different architectures, bare-metal and
-RTOS-based firmware, and three kinds of automotive Electronic
-Control Unit (ECU) from four distinct vendors—none of which can
-be rehosted or emulated by current tools, due to lack of processor
-support. Further, we show how MetaEmu enables a diverse set of
-analyses by implementing a fuzzer, a symbolic executor for solving
-peripheral access checks, a CAN ID reverse engineering tool, and
-an inter-device coverage tracker
+* **Abstract:** In this paper we present MetaEmu, an architecture-agnostic emulator synthesizer geared towards rehosting and security analysis of automotive firmware. MetaEmu improves over existing rehosting environments in two ways: Firstly, it solves the hitherto openproblem of a lack of generic Virtual Execution Environments (VXEs) for rehosting by synthesizing processor simulators from Ghidra’s language definitions. In doing so, MetaEmu can simulate any processor supported by a vast and growing library of open-source definitions. In MetaEmu, we use a specification-based approach to cover peripherals, execution models, and analyses, which allows our framework to be easily extended. Secondly, MetaEmu can rehost and analyze multiple targets, each of different architecture, simultaneously, and share analysis facts between each target’s analysis environment, a technique we call inter-device analysis.  
+We show that the flexibility afforded by our approach does not lead to a performance trade-off—MetaEmu lifts rehosted firmware to an optimized intermediate representation, and provides performance comparable to existing emulation tools, such as Unicorn. Our evaluation spans five different architectures, bare-metal and RTOS-based firmware, and three kinds of automotive Electronic
+Control Unit (ECU) from four distinct vendors—none of which can be rehosted or emulated by current tools, due to lack of processor support. Further, we show how MetaEmu enables a diverse set of analyses by implementing a fuzzer, a symbolic executor for solving
+peripheral access checks, a CAN ID reverse engineering tool, and an inter-device coverage tracker
+
+### L2Fuzz: Discovering Bluetooth L2CAP Vulnerabilities Using Stateful Fuzz Testing (DSN 2022)
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/L2Fuzz_Discovering_Bluetooth_L2CAP_Vulnerabilities_Using_Stateful_Fuzz_Testing.pdf)
+
+* **Abstract:** Bluetooth Basic Rate/Enhanced Data Rate (BR/EDR) is a wireless technology used in billions of devices. Recently, several Bluetooth fuzzing studies have been conducted to detect vulnerabilities in Bluetooth devices, but they fall short of effectively generating malformed packets. In this paper, we propose L2FUZZ, a stateful fuzzer to detect vulnerabilities in Bluetooth BR/EDR Logical Link Control and Adaptation Protocol (L2CAP) layer. By selecting valid commands for each state and mutating only the core fields of packets, L2FUZZ can generate valid malformed packets that are less likely to be rejected by the target device. Our experimental results confirmed that: (1) L2FUZZ generates up to 46 times more malformed packets with a much less packet rejection ratio compared to the existing techniques, and (2) L2FUZZ detected five zero-day vulnerabilities from eight real-world Bluetooth devices.
+
+### Sorry, I don’t Understand: Improving Voice User Interface Testing (ASE 2022)
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/ASE2022VUI.pdf)
+
+* **Abstract:** Voice-based virtual assistants are becoming increasingly popular. Such systems provide frameworks to developers on which they can build their own apps. End-users can interact with such apps through a Voice User Interface (VUI), which allows to use natural language commands to perform actions. Testing such apps is far from trivial: The same command can be expressed in different ways. To support developers in testing VUIs, Deep Learning (DL)-based tools have been integrated in the development environments (e.g., the Alexa Developer Console, or ADC) to generate paraphrases for the commands (seed utterances) specified by the developers. Such tools, however, generate few paraphrases that do not always cover corner cases. In this paper, we introduce VUIUPSET, a novel approach that aims at adapting chatbot-testing approaches to VUI-testing. Both systems, indeed, provide a similar
+natural-language-based interface to users. We conducted an empirical study to understand how VUI-UPSET compares to existing approaches in terms of (i) correctness of the generated paraphrases, and (ii) capability of revealing bugs. Multiple authors analyzed 5,872 generated paraphrases, with a total of 13,310 manual evaluations required for such a process. Our results show that, while the DLbased tool integrated in the ADC generates a higher percentage of meaningful paraphrases compared to VUI-UPSET, VUI-UPSET generates more bug-revealing paraphrases. This allows developers to test more thoroughly their apps at the cost of discarding a higher number of irrelevant paraphrases.
+
+
+### Fuzzing Deep-Learning Libraries via Automated Relational API Inference
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Fuzzing_deep_learning_libraries_via_automated_relational_api_inference.pdf)
+
+* **Abstract:** Deep Learning (DL) has gained wide attention in recent years. Meanwhile, bugs in DL systems can lead to serious consequences, and may even threaten human lives. As a result, a growing body of research has been dedicated to DL model testing. However, there is still limited work on testing DL libraries, e.g., PyTorch and TensorFlow, which serve as the foundations for building, training, and running DL models. Prior work on fuzzing DL libraries can only generate tests for APIs which have been invoked by documentation examples, developer tests, or DL models, leaving a large number of APIs untested. In this paper, we propose DeepREL, the first approach to automatically inferring relational APIs for more effective DL library fuzzing. Our basic hypothesis is that for a DL library under test, there may exist a number of APIs sharing similar input parameters and outputs; in this way, we can easily “borrow” test inputs from invoked APIs to test other relational APIs. Furthermore, we formalize the notion of value equivalence and status equivalence for relational APIs to serve as the oracle for effective bug finding.  
+We have implemented DeepREL as a fully automated end-to-end relational API inference and fuzzing technique for DL libraries, which
+1) automatically infers potential API relations based on API syntactic/semantic information, 2) synthesizes concrete test programs for invoking relational APIs, 3) validates the inferred relational APIs via representative test inputs, and finally 4) performs fuzzing on the verified relational APIs to find potential inconsistencies. Our evaluation on two of the most popular DL libraries, PyTorch and TensorFlow, demonstrates that DeepREL can cover 157% more APIs than state-of-the-art FreeFuzz. To date, DeepREL has detected 162 bugs in total, with 106 already confirmed by the developers as previously unknown bugs. Surprisingly, DeepREL has detected 13.5% of the high-priority bugs for the entire PyTorch issue-tracking system in a three-month period. Also, besides the 162 code bugs, we have also detected 14 documentation bugs (all confirmed).
