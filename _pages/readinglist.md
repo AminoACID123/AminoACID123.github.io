@@ -80,6 +80,9 @@ This page contains papers relevant to my research interest.
   - [Challenges in Firmware Re-Hosting, Emulation, and Analysis](#challenges-in-firmware-re-hosting-emulation-and-analysis)
   - [Systematic Testing of Autonomous Driving Systems Using Map Topology-Based Scenario Classification](#systematic-testing-of-autonomous-driving-systems-using-map-topology-based-scenario-classification)
 
+  - [Fingerprinting Bluetooth Low Energy Devices via Active Automata Learning](#fingerprinting-bluetooth-low-energy-devices-via-active-automata-learning)
+  - [Stateful Black-Box Fuzzing of Bluetooth Devices Using Automata Learning]()
+
 
 ### A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware (ISSTA 2022)
 * <img src="../files/images/pdf_24px.png">[Paper](/files/papers/A_large_scale_empirical_analysis_of_the_vulnerabilities_introduced_by_third_party_components_in_IOT_firmware.pdf)
@@ -195,3 +198,40 @@ natural-language-based interface to users. We conducted an empirical study to un
 * **Abstract:** Deep Learning (DL) has gained wide attention in recent years. Meanwhile, bugs in DL systems can lead to serious consequences, and may even threaten human lives. As a result, a growing body of research has been dedicated to DL model testing. However, there is still limited work on testing DL libraries, e.g., PyTorch and TensorFlow, which serve as the foundations for building, training, and running DL models. Prior work on fuzzing DL libraries can only generate tests for APIs which have been invoked by documentation examples, developer tests, or DL models, leaving a large number of APIs untested. In this paper, we propose DeepREL, the first approach to automatically inferring relational APIs for more effective DL library fuzzing. Our basic hypothesis is that for a DL library under test, there may exist a number of APIs sharing similar input parameters and outputs; in this way, we can easily “borrow” test inputs from invoked APIs to test other relational APIs. Furthermore, we formalize the notion of value equivalence and status equivalence for relational APIs to serve as the oracle for effective bug finding.  
 We have implemented DeepREL as a fully automated end-to-end relational API inference and fuzzing technique for DL libraries, which
 1) automatically infers potential API relations based on API syntactic/semantic information, 2) synthesizes concrete test programs for invoking relational APIs, 3) validates the inferred relational APIs via representative test inputs, and finally 4) performs fuzzing on the verified relational APIs to find potential inconsistencies. Our evaluation on two of the most popular DL libraries, PyTorch and TensorFlow, demonstrates that DeepREL can cover 157% more APIs than state-of-the-art FreeFuzz. To date, DeepREL has detected 162 bugs in total, with 106 already confirmed by the developers as previously unknown bugs. Surprisingly, DeepREL has detected 13.5% of the high-priority bugs for the entire PyTorch issue-tracking system in a three-month period. Also, besides the 162 code bugs, we have also detected 14 documentation bugs (all confirmed).
+
+### Fingerprinting Bluetooth Low Energy Devices via Active Automata Learning
+
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Fingerprinting_Bluetooth_Low_Energy_Devices_via_Active_Automata_Learning.pdf)
+
+* **Abstract:** Active automata learning is a technique to automatically infer behavioral models of black-box systems. Today’s learning algorithms
+enable the deduction of models that describe complex system properties, e.g., timed or stochastic behavior. Despite recent improvements in
+the scalability of learning algorithms, their practical applicability is still
+an open issue. Little work exists that actually learns models of physical black-box systems. To fill this gap in the literature, we present a
+case study on applying automata learning on the Bluetooth Low Energy (BLE) protocol. It shows that not the size of the system limits
+the applicability of automata learning. Instead, the interaction with the
+system under learning, is a major bottleneck that is rarely discussed.
+In this paper, we propose a general automata learning architecture for
+learning a behavioral model of the BLE protocol implemented by a physical device. With this framework, we can successfully learn the behavior
+of five investigated BLE devices. The learned models reveal several behavioral differences. This shows that automata learning can be used for
+fingerprinting black-box devices, i.e., identifying systems via their specific learned models. Based on the fingerprint, an attacker may exploit
+vulnerabilities specific to a device.
+
+### Stateful Black-Box Fuzzing of Bluetooth Devices Using Automata Learning
+
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/BLE_Automata.pdf)
+
+* **Abstract:** Fuzzing (aka fuzz testing) shows promising results in security testing. The advantage of fuzzing is the relatively simple applicability compared to comprehensive manual security analysis. However,
+the eﬀectiveness of black-box fuzzing is hard to judge since the internal
+structure of the system under test is unknown. Hence, in-depth behav-
+ior might not be covered by fuzzing. This paper aims at overcoming the
+limitations of black-box fuzzing. We present a stateful black-box fuzzing
+technique that uses a behavioral model of the system under test. Instead
+of manually creating the model, we apply active automata learning to
+automatically infer the model. Our framework generates a test suite for
+fuzzing that includes valid and invalid inputs. The goal is to explore unex-
+pected behavior. For this, we test for conformance between the learned
+model and the system under test. Additionally, we analyze behavioral
+diﬀerences using the learned state information. In a case study, we eval-
+uate implementations of the Bluetooth Low Energy (BLE) protocol on
+physical devices. The results reveal security and dependability issues in
+the tested devices leading to crashes of four out of six devices.
