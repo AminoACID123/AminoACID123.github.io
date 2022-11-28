@@ -39,7 +39,7 @@ This page contains papers relevant to my research interest.
   - [FIRMGUIDE: Boosting the Capability of Rehosting Embedded Linux Kernels through Model-Guided Kernel Execution](#firmguide-boosting-the-capability-of-rehosting-embedded-linux-kernels-through-model-guided-kernel-execution)
   - [Sorry, I don't understand: Improving Voice User Interface Testing](#sorry-i-dont-understand-improving-voice-user-interface-testing-ase-2022)
 
-- **ICSE 2022**
+- **ICSE**
   - Adaptive Test Selection for Deep Neural Networks
   - A Grounded Theory Based Approach to Characterize Software Attack Surfaces
   - BeDivFuzz: Integrating Behavioral Diversity into Generator-based Fuzzing
@@ -53,6 +53,7 @@ This page contains papers relevant to my research interest.
   - MVD: Memory-Related Vulnerability Detection Based on Flow-Sensitive Graph Neural Networks
   - Nessie: Automatically Testing JavaScript APIs with Asynchronous Callbacks
   - PerfSig: Extracting Performance Bug Signatures via Multi-modality Causal Analysis
+  - [Testing File System Implementations on Layered Models](#testing-file-system-implementations-on-layered-models)
 
 - **OOPSLA 2022**  
   - Coverage-guided tensor compiler fuzzing with joint IR-pass mutation  
@@ -235,3 +236,9 @@ diﬀerences using the learned state information. In a case study, we eval-
 uate implementations of the Bluetooth Low Energy (BLE) protocol on
 physical devices. The results reveal security and dependability issues in
 the tested devices leading to crashes of four out of six devices.
+
+### Testing File System Implementations on Layered Models
+
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Testing_file_system_implementations_on_layered_models.pdf)
+
+* **Abstract:** Generating high-quality system call sequences is not only important to testing file system implementations, but also challenging due to the astronomically large input space. This paper introduces a new approach to the workload generation problem by building layered models and abstract workloads refinement. This approach is instantiated as a three-layer file system model for file system workload generation. In a short-period experiment run, sequential workloads (system call sequences) manifested over a thousand crashes in mainline Linux Kernel file systems, with 12 previously unknown bugs being reported. We also provide evidence that such workloads benefit other domain-specific testing techniques including crash consistency testing and concurrency testing.
