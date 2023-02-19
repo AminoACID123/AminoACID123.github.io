@@ -55,20 +55,23 @@ This page contains papers relevant to my research interest.
   - PerfSig: Extracting Performance Bug Signatures via Multi-modality Causal Analysis
   - [Testing File System Implementations on Layered Models](#testing-file-system-implementations-on-layered-models)
 
-- **OOPSLA 2022**  
+- **OOPSLA**  
   - Coverage-guided tensor compiler fuzzing with joint IR-pass mutation  
 
 - **S&P**
-  - [KARONTE: Detecting Insecure Multi-binary Interactions in Embedded Firmware]()
+  - [KARONTE: Detecting Insecure Multi-binary Interactions in Embedded Firmware (2020)](#karonte-detecting-insecure-multi-binary-interactions-in-embedded-firmware-sp-sp-2020)
 
-- **NDSS 2021**
+- **NDSS**
   - From Library Portability to Para-rehosting: Natively Executing Microcontroller Software on Commodity Hardware
 
-- **USENIX SEC 2022**
+- **USENIX SEC**
+  - [UNIFUZZ: A Holistic and Pragmatic Metrics-Driven Platform for Evaluating Fuzzers (2022)](#unifuzz-a-holistic-and-pragmatic-metrics-driven-platform-for-evaluating-fuzzers)
+  - [Arbiter: Bridging the Static and Dynamic Divide in Vulnerability Discovery on Binary Programs (2022)](#arbiter-bridging-the-static-and-dynamic-divide-in-vulnerability-discovery-on-binary-programs)
 
-- **SANER 2022**
+- **SANER**
+  - [RIBDetector: an RFC-guided Inconsistency Bug Detecting Approach for Protocol Implementations](#ribdetector-an-rfc-guided-inconsistency-bug-detecting-approach-for-protocol-implementations)
 
-- **CCS 2022**
+- **CCS**
   - [What Your Firmware Tells You Is Not How You Should Emulate It: A Speciﬁcation-Guided Approach for Firmware Emulation](#what-your-firmware-tells-you-is-not-how-you-should-emulate-it-a-speciﬁcation-guided-approach-for-firmware-emulation)
   - [MetaEmu: An Architecture Agnostic Rehosting Framework for Automotive Firmware](#metaemu-an-architecture-agnostic-rehosting-framework-for-automotive-firmware)
   - [ECMO: Peripheral Transplantation to Rehost Embedded Linux Kernels](#ecmo-peripheral-transplantation-to-rehost-embedded-linux-kernels-ccs-2021)
@@ -242,6 +245,25 @@ the tested devices leading to crashes of four out of six devices.
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Testing_file_system_implementations_on_layered_models.pdf)
 
 * **Abstract:** Generating high-quality system call sequences is not only important to testing file system implementations, but also challenging due to the astronomically large input space. This paper introduces a new approach to the workload generation problem by building layered models and abstract workloads refinement. This approach is instantiated as a three-layer file system model for file system workload generation. In a short-period experiment run, sequential workloads (system call sequences) manifested over a thousand crashes in mainline Linux Kernel file systems, with 12 previously unknown bugs being reported. We also provide evidence that such workloads benefit other domain-specific testing techniques including crash consistency testing and concurrency testing.
+
+### RIBDetector: an RFC-guided Inconsistency Bug Detecting Approach for Protocol Implementations
+
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/RIBDetector_an_RFC-guided_Inconsistency_Bug_Detecting_Approach_for_Protocol_Implementations.pdf)
+* **Abstract:** The implementations of network protocols must comply with rules described in their Request For Comments (RFC) Standards. Developers’ misunderstanding or negligence of RFCs may bring in inconsistency bugs, which could further cause incorrect behaviors, interoperability issues, or critical security implications. Detecting such bugs is difficult as they usually result in silent erroneous effect. Prior work on RFC-directed inconsistency bug detection usually deal with a certain protocol or
+ad-hoc properties in RFCs. In this paper, we present RIBDetector, an approach focusing on statically and efficiently locating inconsistency bugs that could be triggered by hand-crafted network packets in protocol implementations. Given an implementation, its corresponding RFCs and a user-provided configuration file, our approach automatically extracts rules about packet format, state transition and error handling from RFCs into a uniform format which dictates condition checks that must be performed before taking particular operations. Then we leverage common programming conventions to identify corresponding locations of the conditions and operations in implementations and use a light-weight predominator-based algorithm to detect violations of RFC rules. We implemented a prototype of RIBDetector and demonstrated its efficacy by applying it on 14 implementations of 5 network protocols. For implementations varying in size from 1.5 to 141.3 KLOC, RIBDetector consumes 17.57 seconds on average to finish its analysis. We have detected 23 new inconsistency bugs, 6 of which are confirmed and fixed by developers.
+
+### UNIFUZZ: A Holistic and Pragmatic Metrics-Driven Platform for Evaluating Fuzzers
+
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/UNIFUZZ%20A%20Holistic%20and%20Pragmatic%20Metrics-Driven%20Platform%20for%20Evaluating%20Fuzzers.pdf)
+* **Abstract:** A flurry of fuzzing tools (fuzzers) have been proposed in the literature, aiming at detecting software vulnerabilities effectively and efficiently. To date, it is however still challenging to compare fuzzers due to the inconsistency of the benchmarks, performance metrics, and/or environments for evaluation, which buries the useful insights and thus impedes the discovery of promising fuzzing primitives. In this paper, we design and develop UNIFUZZ, an open-source and metrics-driven platform for assessing fuzzers in a comprehensive and quantitative manner. Specifically, UNIFUZZ to date has incorporated 35 usable fuzzers, a benchmark of 20 real-world programs, and six categories of performance metrics. We first systematically study the usability of existing fuzzers, find and fix a number of flaws, and integrate them into UNIFUZZ. Based on the study, we propose a collection of pragmatic performance metrics to evaluate fuzzers from six complementary perspectives. Using UNIFUZZ, we conduct in-depth evaluations of several prominent fuzzers including AFL, AFLFast, Angora, Honggfuzz, MOPT,
+QSYM, T-Fuzz and VUzzer64. We find that none of them outperforms the others across all the target programs, and that using a single metric to assess the performance of a fuzzer may lead to unilateral conclusions, which demonstrates the significance of comprehensive metrics. Moreover, we identify and investigate previously overlooked factors that may significantly affect a fuzzer’s performance, including instrumentation methods and crash analysis tools. Our empirical results show that they are critical to the evaluation of a fuzzer. We hope that our findings can shed light on reliable fuzzing evaluation, so that we can discover promising fuzzing primitives to effectively facilitate fuzzer designs in the future.
+
+### Arbiter: Bridging the Static and Dynamic Divide in Vulnerability Discovery on Binary Programs
+
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Arbiter_Bridging_the_Static_and_Dynamic_Divide.pdf)
+* **Abstract:** In spite of their effectiveness in the context of vulnerability
+discovery, current state-of-the-art binary program analysis approaches are limited by inherent trade-offs between accuracy and scalability. In this paper, we identify a set of vulnerability properties that can aid both static and dynamic vulnerability detection techniques, improving the precision of the former and the scalability of the latter. By carefully integrating static and dynamic techniques, we detect vulnerabilities that exhibit these properties in real-world programs at a large scale.
+We implemented our technique, making several advancements in the analysis of binary code, and created a prototype called ARBITER. We demonstrate the effectiveness of our approach with a large-scale evaluation on four common vulnerability classes: CWE-131 (Incorrect Calculation of Buffer Size), CWE-252 (Unchecked Return Value), CWE-134 (Uncontrolled Format String), and CWE-337 (Predictable Seed in Pseudo-Random Number Generator). We evaluated our approach on more than 76,516 x86-64 binaries in the Ubuntu repositories and discovered new vulnerabilities, including a flaw inserted into programs during compilation.
 
 
 # Researchers
