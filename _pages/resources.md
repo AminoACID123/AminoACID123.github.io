@@ -27,6 +27,7 @@ This page contains useful CS learning resources
 - [Bluetooth Core Specification v5.1](../files/bluetooth/Core_v5.1.pdf)
 - [Bluetooth Core Specification v5.2](../files/bluetooth/Core_v5.2.pdf)
 - [Bluetooth Core Specification v5.3](../files/bluetooth/Core_v5.3.pdf)
+- [Bluetooth Core Specification v5.3 HCI(1-500)](../files/bluetooth/Core_v5.3_1_500.pdf)
 
 
 ## Useful Websites
