@@ -67,6 +67,8 @@ This page contains papers relevant to my research interest.
 - **USENIX SEC**
   - [UNIFUZZ: A Holistic and Pragmatic Metrics-Driven Platform for Evaluating Fuzzers (2022)](#unifuzz-a-holistic-and-pragmatic-metrics-driven-platform-for-evaluating-fuzzers)
   - [Arbiter: Bridging the Static and Dynamic Divide in Vulnerability Discovery on Binary Programs (2022)](#arbiter-bridging-the-static-and-dynamic-divide-in-vulnerability-discovery-on-binary-programs)
+  - [Automatic Firmware Emulation through Invalidity-guided Knowledge Inference (2021)](#automatic-firmware-emulation-through-invalidity-guided-knowledge-inference)
+  - [FIRM-AFL: High-Throughput Greybox Fuzzing of IoT Firmware via Augmented Process Emulation (2019)](#firm-afl-high-throughput-greybox-fuzzing-of-iot-firmware-via-augmented-process-emulation)
 
 - **SANER**
   - [RIBDetector: an RFC-guided Inconsistency Bug Detecting Approach for Protocol Implementations](#ribdetector-an-rfc-guided-inconsistency-bug-detecting-approach-for-protocol-implementations)
@@ -265,6 +267,49 @@ QSYM, T-Fuzz and VUzzer64. We find that none of them outperforms the others acro
 discovery, current state-of-the-art binary program analysis approaches are limited by inherent trade-offs between accuracy and scalability. In this paper, we identify a set of vulnerability properties that can aid both static and dynamic vulnerability detection techniques, improving the precision of the former and the scalability of the latter. By carefully integrating static and dynamic techniques, we detect vulnerabilities that exhibit these properties in real-world programs at a large scale.
 We implemented our technique, making several advancements in the analysis of binary code, and created a prototype called ARBITER. We demonstrate the effectiveness of our approach with a large-scale evaluation on four common vulnerability classes: CWE-131 (Incorrect Calculation of Buffer Size), CWE-252 (Unchecked Return Value), CWE-134 (Uncontrolled Format String), and CWE-337 (Predictable Seed in Pseudo-Random Number Generator). We evaluated our approach on more than 76,516 x86-64 binaries in the Ubuntu repositories and discovered new vulnerabilities, including a flaw inserted into programs during compilation.
 
+### FIRM-AFL: High-Throughput Greybox Fuzzing of IoT Firmware via Augmented Process Emulation
+
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/firmafl.pdf)
+* **Abstract:** Cyber attacks against IoT devices are a severe threat. These
+attacks exploit software vulnerabilities in IoT firmware.
+Fuzzing is an effective software testing technique for vulnerability discovery. In this work, we present FIRM-AFL, the
+first high-throughput greybox fuzzer for IoT firmware. FIRMAFL addresses two fundamental problems in IoT fuzzing.
+First, it addresses compatibility issues by enabling fuzzing for
+POSIX-compatible firmware that can be emulated in a system
+emulator. Second, it addresses the performance bottleneck
+caused by system-mode emulation with a novel technique
+called augmented process emulation. By combining systemmode emulation and user-mode emulation in a novel way,
+augmented process emulation provides high compatibility as
+system-mode emulation and high throughput as user-mode
+emulation. Our evaluation results show that (1) FIRM-AFL is
+fully functional and capable of finding real-world vulnerabilities in IoT programs; (2) the throughput of FIRM-AFL is on
+average 8.2 times higher than system-mode emulation based
+fuzzing; and (3) FIRM-AFL is able to find 1-day vulnerabilities much faster than system-mode emulation based fuzzing,
+and is able to find 0-day vulnerabilities.
+
+
+### Automatic Firmware Emulation through Invalidity-guided Knowledge Inference
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/uemu.pdf)
+* **Abstract:** Emulating firmware for microcontrollers is challenging due
+to the tight coupling between the hardware and firmware.
+This has greatly impeded the application of dynamic analysis
+tools to firmware analysis. The state-of-the-art work automatically models unknown peripherals by observing their
+access patterns, and then leverages heuristics to calculate the
+appropriate responses when unknown peripheral registers are
+accessed. However, we empirically found that this approach
+and the corresponding heuristics are frequently insufficient to
+emulate firmware. In this work, we propose a new approach
+called µEmu to emulate firmware with unknown peripherals.
+Unlike existing work that attempts to build a general model
+for each peripheral, our approach learns how to correctly emulate firmware execution at individual peripheral access points.
+It takes the image as input and symbolically executes it by
+representing unknown peripheral registers as symbols. During
+symbolic execution, it infers the rules to respond to unknown
+peripheral accesses. These rules are stored in a knowledge
+base, which is referred to during the dynamic firmware analysis. µEmu achieved a passing rate of 95% in a set of unit tests
+for peripheral drivers without any manual assistance. We also
+evaluated µEmu with real-world firmware samples and new
+bugs were discovered.
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
