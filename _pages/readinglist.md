@@ -230,21 +230,7 @@ vulnerabilities specific to a device.
 
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/BLE_Automata.pdf)
 
-* **Abstract:** Fuzzing (aka fuzz testing) shows promising results in security testing. The advantage of fuzzing is the relatively simple applicability compared to comprehensive manual security analysis. However,
-the eﬀectiveness of black-box fuzzing is hard to judge since the internal
-structure of the system under test is unknown. Hence, in-depth behav-
-ior might not be covered by fuzzing. This paper aims at overcoming the
-limitations of black-box fuzzing. We present a stateful black-box fuzzing
-technique that uses a behavioral model of the system under test. Instead
-of manually creating the model, we apply active automata learning to
-automatically infer the model. Our framework generates a test suite for
-fuzzing that includes valid and invalid inputs. The goal is to explore unex-
-pected behavior. For this, we test for conformance between the learned
-model and the system under test. Additionally, we analyze behavioral
-diﬀerences using the learned state information. In a case study, we eval-
-uate implementations of the Bluetooth Low Energy (BLE) protocol on
-physical devices. The results reveal security and dependability issues in
-the tested devices leading to crashes of four out of six devices.
+* **Abstract:** Fuzzing (aka fuzz testing) shows promising results in security testing. The advantage of fuzzing is the relatively simple applicability compared to comprehensive manual security analysis. However, the eﬀectiveness of black-box fuzzing is hard to judge since the internal structure of the system under test is unknown. Hence, in-depth behavior might not be covered by fuzzing. This paper aims at overcoming the limitations of black-box fuzzing. We present a stateful black-box fuzzing technique that uses a behavioral model of the system under test. Instead of manually creating the model, we apply active automata learning to automatically infer the model. Our framework generates a test suite for fuzzing that includes valid and invalid inputs. The goal is to explore unexpected behavior. For this, we test for conformance between the learned model and the system under test. Additionally, we analyze behavioral diﬀerences using the learned state information. In a case study, we evaluate implementations of the Bluetooth Low Energy (BLE) protocol on physical devices. The results reveal security and dependability issues in the tested devices leading to crashes of four out of six devices.
 
 ### Testing File System Implementations on Layered Models
 
@@ -255,8 +241,7 @@ the tested devices leading to crashes of four out of six devices.
 ### RIBDetector: an RFC-guided Inconsistency Bug Detecting Approach for Protocol Implementations
 
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/RIBDetector_an_RFC-guided_Inconsistency_Bug_Detecting_Approach_for_Protocol_Implementations.pdf)
-* **Abstract:** The implementations of network protocols must comply with rules described in their Request For Comments (RFC) Standards. Developers’ misunderstanding or negligence of RFCs may bring in inconsistency bugs, which could further cause incorrect behaviors, interoperability issues, or critical security implications. Detecting such bugs is difficult as they usually result in silent erroneous effect. Prior work on RFC-directed inconsistency bug detection usually deal with a certain protocol or
-ad-hoc properties in RFCs. In this paper, we present RIBDetector, an approach focusing on statically and efficiently locating inconsistency bugs that could be triggered by hand-crafted network packets in protocol implementations. Given an implementation, its corresponding RFCs and a user-provided configuration file, our approach automatically extracts rules about packet format, state transition and error handling from RFCs into a uniform format which dictates condition checks that must be performed before taking particular operations. Then we leverage common programming conventions to identify corresponding locations of the conditions and operations in implementations and use a light-weight predominator-based algorithm to detect violations of RFC rules. We implemented a prototype of RIBDetector and demonstrated its efficacy by applying it on 14 implementations of 5 network protocols. For implementations varying in size from 1.5 to 141.3 KLOC, RIBDetector consumes 17.57 seconds on average to finish its analysis. We have detected 23 new inconsistency bugs, 6 of which are confirmed and fixed by developers.
+* **Abstract:** The implementations of network protocols must comply with rules described in their Request For Comments (RFC) Standards. Developers’ misunderstanding or negligence of RFCs may bring in inconsistency bugs, which could further cause incorrect behaviors, interoperability issues, or critical security implications. Detecting such bugs is difficult as they usually result in silent erroneous effect. Prior work on RFC-directed inconsistency bug detection usually deal with a certain protocol or ad-hoc properties in RFCs. In this paper, we present RIBDetector, an approach focusing on statically and efficiently locating inconsistency bugs that could be triggered by hand-crafted network packets in protocol implementations. Given an implementation, its corresponding RFCs and a user-provided configuration file, our approach automatically extracts rules about packet format, state transition and error handling from RFCs into a uniform format which dictates condition checks that must be performed before taking particular operations. Then we leverage common programming conventions to identify corresponding locations of the conditions and operations in implementations and use a light-weight predominator-based algorithm to detect violations of RFC rules. We implemented a prototype of RIBDetector and demonstrated its efficacy by applying it on 14 implementations of 5 network protocols. For implementations varying in size from 1.5 to 141.3 KLOC, RIBDetector consumes 17.57 seconds on average to finish its analysis. We have detected 23 new inconsistency bugs, 6 of which are confirmed and fixed by developers.
 
 ### UNIFUZZ: A Holistic and Pragmatic Metrics-Driven Platform for Evaluating Fuzzers
 
@@ -294,8 +279,7 @@ and is able to find 0-day vulnerabilities.
 
 ### Automatic Firmware Emulation through Invalidity-guided Knowledge Inference
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/uemu.pdf)
-* **Abstract:** Emulating firmware for microcontrollers is challenging due
-to the tight coupling between the hardware and firmware.
+* **Abstract:** Emulating firmware for microcontrollers is challenging due to the tight coupling between the hardware and firmware.
 This has greatly impeded the application of dynamic analysis
 tools to firmware analysis. The state-of-the-art work automatically models unknown peripherals by observing their
 access patterns, and then leverages heuristics to calculate the
