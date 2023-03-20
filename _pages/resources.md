@@ -17,6 +17,7 @@ This page contains useful CS learning resources
 - C++ Primer Plus
 - Discrete Mathematics and Its Applications
 - Computer Systems: A Programmers's Perspective
+- [Linux Insides](https://0xax.gitbooks.io/linux-insides/content/) [(pdf)](../files/linux.pdf)
 
 
 ## RTFM
