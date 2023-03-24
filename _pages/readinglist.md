@@ -68,6 +68,7 @@ This page contains papers relevant to my research interest.
   - [UNIFUZZ: A Holistic and Pragmatic Metrics-Driven Platform for Evaluating Fuzzers (2022)](#unifuzz-a-holistic-and-pragmatic-metrics-driven-platform-for-evaluating-fuzzers)
   - [Arbiter: Bridging the Static and Dynamic Divide in Vulnerability Discovery on Binary Programs (2022)](#arbiter-bridging-the-static-and-dynamic-divide-in-vulnerability-discovery-on-binary-programs)
   - [Automatic Firmware Emulation through Invalidity-guided Knowledge Inference (2021)](#automatic-firmware-emulation-through-invalidity-guided-knowledge-inference)
+  - [Sharing More and Checking Less: Leveraging Common Input Keywords to Detect Bugs in Embedded Systems](#sharing-more-and-checking-less-leveraging-common-input-keywords-to-detect-bugs-in-embedded-systems)
   - [FIRM-AFL: High-Throughput Greybox Fuzzing of IoT Firmware via Augmented Process Emulation (2019)](#firm-afl-high-throughput-greybox-fuzzing-of-iot-firmware-via-augmented-process-emulation)
 
 **USENIX ATC**
@@ -308,6 +309,20 @@ In this paper, we design a novel fuzzing framework named TCP-Fuzz, to effectivel
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/bt.pdf)
 * **Abstract:** The Bluetooth Low Energy (BLE) is a promising short-range communication technology for Internet-of-Things (IoT) with reduced energy consumption. Vendors implement BLE protocols in their manufactured devices compliant to Bluetooth Core Specification. Recently, several vulnerabilities were discovered in the BLE protocol implementations of a few specific products via a manual approach. Considering the diversity and usage of BLE devices as well as the complexity of BLE protocols, we have developed a systematic and comprehensive testing framework, which, as an automated and general-purpose approach, can effectively fuzz any BLE protocol implementation. Our framework runs in a central device and tests a BLE device when the latter gets connected to the central as a peripheral. Our framework incorporates a state machine model of the suite of BLE protocols and monitors the peripheral’s state through its responses. With the state machine and current state of the central, our framework either sends malformed packets or normal packets at a wrong time, or both, to the peripheral and awaits an expected response. Anomalous behaviours of the peripheral, e.g., a non-compliant response or unresponsiveness, indicate potential vulnerabilities in its BLE protocol implementation. To maximally expose such anomalies for a BLE device, our framework employs an optimization function to direct the fuzzing process. As of today, we have tested 12 devices from eight vendors and four IoT products, with a total of 11 new vulnerabilities discovered and 13 new Common  Vulnerability Exposure (CVE) IDs assigned. We call such a bunch of vulnerabilities as SWEYNTOOTH, which highlights the efficacy of our framework.
 
+### Sharing More and Checking Less: Leveraging Common Input Keywords to Detect Bugs in Embedded Systems
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/SaTC.pdf)
+* **Abstract:** IoT devices have brought invaluable convenience to our daily life. However, their pervasiveness also amplifies the impact of security vulnerabilities. Many popular vulnerabilities of embedded systems reside in their vulnerable web services. Unfortunately, existing vulnerability detection methods cannot effectively nor efficiently analyze such web services: they either introduce heavy execution overheads or have many
+false positives and false negatives.  
+In this paper, we propose a novel static taint checking solution, SaTC, to effectively detect security vulnerabilities in
+web services provided by embedded devices. Our key insight
+is that, string literals on web interfaces are commonly shared
+between front-end files and back-end binaries to encode user
+input. We thus extract such common keywords from the frontend, and use them to locate reference points in the back-end,
+which indicate the input entry. Then, we apply targeted dataflow analysis to accurately detect dangerous uses of the untrusted user input. We implemented a prototype of SaTC and
+evaluated it on 39 embedded system firmwares from six popular vendors. SaTC discovered 33 unknown bugs, of which 30
+are confirmed by CVE/CNVD/PSV. Compared to the state-ofthe-art tool KARONTE, SaTC found significantly more bugs
+on the test set. It shows that, SaTC is effective in discovering
+bugs in embedded systems.
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
