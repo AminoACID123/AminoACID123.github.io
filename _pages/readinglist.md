@@ -71,9 +71,9 @@ This page contains papers relevant to my research interest.
   - [Sharing More and Checking Less: Leveraging Common Input Keywords to Detect Bugs in Embedded Systems](#sharing-more-and-checking-less-leveraging-common-input-keywords-to-detect-bugs-in-embedded-systems)
   - [FIRM-AFL: High-Throughput Greybox Fuzzing of IoT Firmware via Augmented Process Emulation (2019)](#firm-afl-high-throughput-greybox-fuzzing-of-iot-firmware-via-augmented-process-emulation)
 
-**USENIX ATC**
-- [TCP-Fuzz: Detecting Memory and Semantic Bugs in TCP Stacks with Fuzzing (2021)](#tcp-fuzz-detecting-memory-and-semantic-bugs-in-tcp-stacks-with-fuzzing)
-- [SweynTooth: Unleashing Mayhem over Bluetooth Low Energy (2020)]
+- **USENIX ATC**
+  - [TCP-Fuzz: Detecting Memory and Semantic Bugs in TCP Stacks with Fuzzing (2021)](#tcp-fuzz-detecting-memory-and-semantic-bugs-in-tcp-stacks-with-fuzzing)
+  - [SweynTooth: Unleashing Mayhem over Bluetooth Low Energy (2020)]
 
 - **SANER**
   - [RIBDetector: an RFC-guided Inconsistency Bug Detecting Approach for Protocol Implementations](#ribdetector-an-rfc-guided-inconsistency-bug-detecting-approach-for-protocol-implementations)
@@ -86,6 +86,9 @@ This page contains papers relevant to my research interest.
 - **DSN**
   - [L2Fuzz: Discovering Bluetooth L2CAP Vulnerabilities Using Stateful Fuzz Testing](#l2fuzz-discovering-bluetooth-l2cap-vulnerabilities-using-stateful-fuzz-testing-dsn-2022)
 
+- **ACSAC**
+  - [FirmAE: Towards Large-Scale Emulation of IoT Firmware for Dynamic Analysis (2020)](#firmae-towards-large-scale-emulation-of-iot-firmware-for-dynamic-analysis)
+  
 - **Other**
   - [Automatic Vulnerability Detection in Embedded Devices and Firmware: Survey and Layered Taxonomies](#automatic-vulnerability-detection-in-embedded-devices-and-firmware-survey-and-layered-taxonomies)  
   - [Challenges in Firmware Re-Hosting, Emulation, and Analysis](#challenges-in-firmware-re-hosting-emulation-and-analysis)
@@ -323,6 +326,33 @@ evaluated it on 39 embedded system firmwares from six popular vendors. SaTC disc
 are confirmed by CVE/CNVD/PSV. Compared to the state-ofthe-art tool KARONTE, SaTC found significantly more bugs
 on the test set. It shows that, SaTC is effective in discovering
 bugs in embedded systems.
+
+### FirmAE: Towards Large-Scale Emulation of IoT Firmware for Dynamic Analysis
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/FirmAE.pdf)
+* **Abstract:** One approach to assess the security of embedded IoT devices is
+applying dynamic analysis such as fuzz testing to their firmware in
+scale. To this end, existing approaches aim to provide an emulation
+environment that mimics the behavior of real hardware/peripherals.
+Nonetheless, in practice, such approaches can emulate only a small
+fraction of firmware images. For example, Firmadyne, a state-of-the-
+art tool, can only run 183 (16.28%) of 1,124 wireless router/IP-camera
+images that we collected from the top eight manufacturers. Such a
+low emulation success rate is caused by discrepancy in the real and
+emulated firmware execution environment.  
+In this study, we analyzed the emulation failure cases in a large-
+scale dataset to figure out the causes of the low emulation rate. We
+found that widespread failure cases often avoided by simple heuris-
+tics despite having different root causes, significantly increasing the
+emulation success rate. Based on these findings, we propose a tech-
+nique, arbitrated emulation, and we systematize several heuristics
+as arbitration techniques to address these failures. Our automated
+prototype, FirmAE, successfully ran 892 (79.36%) of 1,124 firmware
+images, including web servers, which is significantly (≈4.8x) more
+images than that run by Firmadyne. Finally, by applying dynamic
+testing techniques on the emulated images, FirmAE could check
+320 known vulnerabilities (306 more than Firmadyne), and also find
+12 new 0-days in 23 devices.
+
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
