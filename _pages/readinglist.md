@@ -16,7 +16,7 @@ This page contains papers relevant to my research interest.
   - [Detecting Multi-sensor Fusion Errors in Advanced Driver-Assistance Systems (2022)](#detecting-multi-sensor-fusion-errors-in-advanced-driver-assistance-systems-issta-2022)
   - [Efficient greybox fuzzing of applications in Linux-based IoT devices via enhanced user-mode emulation (2022)](#efficient-greybox-fuzzing-of-applications-in-linux-based-iot-devices-via-enhanced-user-mode-emulation-issta-2022)
   - LiRTest: augmenting LiDAR point clouds for automated testing of autonomous driving systems
-  - [Binary Code Is Not Easy]
+  - [Binary Code Is Not Easy](#binary-code-is-not-easy)
 
 - **PLDI**
   - Finding typing compiler bugs
@@ -90,13 +90,14 @@ This page contains papers relevant to my research interest.
 - **ACSAC**
   - [FirmAE: Towards Large-Scale Emulation of IoT Firmware for Dynamic Analysis (2020)](#firmae-towards-large-scale-emulation-of-iot-firmware-for-dynamic-analysis)
   
-- **Other**
+- **MISC**
   - [Automatic Vulnerability Detection in Embedded Devices and Firmware: Survey and Layered Taxonomies](#automatic-vulnerability-detection-in-embedded-devices-and-firmware-survey-and-layered-taxonomies)  
   - [Challenges in Firmware Re-Hosting, Emulation, and Analysis](#challenges-in-firmware-re-hosting-emulation-and-analysis)
   - [Systematic Testing of Autonomous Driving Systems Using Map Topology-Based Scenario Classification](#systematic-testing-of-autonomous-driving-systems-using-map-topology-based-scenario-classification)
 
   - [Fingerprinting Bluetooth Low Energy Devices via Active Automata Learning](#fingerprinting-bluetooth-low-energy-devices-via-active-automata-learning)
-  - [Stateful Black-Box Fuzzing of Bluetooth Devices Using Automata Learning]()
+  - [Stateful Black-Box Fuzzing of Bluetooth Devices Using Automata Learning]
+  - [Decompilation of Binaries into LLVM IR for Automated Analysis]
 
 
 ### A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware (ISSTA 2022)
@@ -357,6 +358,10 @@ testing techniques on the emulated images, FirmAE could check
 ### Binary Code Is Not Easy
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Binary_Code_Is_Not_Easy.pdf)
 * **Abstract:** Binary code analysis is an enabling technique for many applications. Modern compilers and run-time libraries have introduced significant complexities to binary code, which negatively affect the capabilities of binary analysis tool kits to analyze binary code, and may cause tools to report inaccurate information about binary code. Analysts may hence be confused and applications based on these tool kits may have degrading quality. We examine the problem of constructing control flow graphs from binary code and labeling the graphs with accurate function boundary annotations. We identified several challenging code constructs that represent hard-toanalyze aspects of binary code, and show code examples for each code construct. As part of this discussion, we present new code parsing algorithms in our open source Dyninst tool kit that support these constructs, including a new model for describing jump tables that improves our ability to precisely determine the control flow targets, a new interprocedural analysis to determine when a function is non-returning, and techniques for handling tail calls. We evaluated how various tool kits fare when handling these code constructs with real software as well as test binaries patterned after each challenging code construct we found in real software.
+
+
+### Decompilation of Binaries into LLVM IR for Automated Analysis
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/ghidra2llvm.pdf)
 
 
 # Researchers
