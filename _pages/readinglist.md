@@ -60,6 +60,7 @@ This page contains papers relevant to my research interest.
   - Coverage-guided tensor compiler fuzzing with joint IR-pass mutation  
 
 - **S&P**
+  - [Recovery of Variable and Data Structure via Probabilistic Analysis for Stripped Binary](#recovery-of-variable-and-data-structure-via-probabilistic-analysis-for-stripped-binary)
   - [KARONTE: Detecting Insecure Multi-binary Interactions in Embedded Firmware (2020)](#karonte-detecting-insecure-multi-binary-interactions-in-embedded-firmware-sp-sp-2020)
 
 - **NDSS**
@@ -358,6 +359,27 @@ testing techniques on the emulated images, FirmAE could check
 ### Binary Code Is Not Easy
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Binary_Code_Is_Not_Easy.pdf)
 * **Abstract:** Binary code analysis is an enabling technique for many applications. Modern compilers and run-time libraries have introduced significant complexities to binary code, which negatively affect the capabilities of binary analysis tool kits to analyze binary code, and may cause tools to report inaccurate information about binary code. Analysts may hence be confused and applications based on these tool kits may have degrading quality. We examine the problem of constructing control flow graphs from binary code and labeling the graphs with accurate function boundary annotations. We identified several challenging code constructs that represent hard-toanalyze aspects of binary code, and show code examples for each code construct. As part of this discussion, we present new code parsing algorithms in our open source Dyninst tool kit that support these constructs, including a new model for describing jump tables that improves our ability to precisely determine the control flow targets, a new interprocedural analysis to determine when a function is non-returning, and techniques for handling tail calls. We evaluated how various tool kits fare when handling these code constructs with real software as well as test binaries patterned after each challenging code construct we found in real software.
+
+### Recovery of Variable and Data Structure via Probabilistic Analysis for Stripped Binary
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/OSPREY_Recovery_of_Variable_and_Data_Structure_via_Probabilistic_Analysis_for_Stripped_Binary.pdf)
+* **Abstract:** Recovering variables and data structure information
+from stripped binary is a prominent challenge in binary program
+analysis. While various state-of-the-art techniques are effective
+in specific settings, such effectiveness may not generalize. This
+is mainly because the problem is inherently uncertain due to
+the information loss in compilation. Most existing techniques
+are deterministic and lack a systematic way of handling such
+uncertainty. We propose a novel probabilistic technique for variable and structure recovery. Random variables are introduced
+to denote the likelihood of an abstract memory location having
+various types and structural properties such as being a field
+of some data structure. These random variables are connected
+through probabilistic constraints derived through program analysis. Solving these constraints produces the posterior probabilities
+of the random variables, which essentially denote the recovery
+results. Our experiments show that our technique substantially
+outperforms a number of state-of-the-art systems, including
+IDA, Ghidra, Angr, and Howard. Our case studies demonstrate
+the recovered information improves binary code hardening and
+binary decompilation.
 
 
 ### Decompilation of Binaries into LLVM IR for Automated Analysis
