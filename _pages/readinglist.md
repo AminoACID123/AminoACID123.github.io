@@ -98,7 +98,8 @@ This page contains papers relevant to my research interest.
 
   - [Fingerprinting Bluetooth Low Energy Devices via Active Automata Learning](#fingerprinting-bluetooth-low-energy-devices-via-active-automata-learning)
   - [Stateful Black-Box Fuzzing of Bluetooth Devices Using Automata Learning]
-  - [Decompilation of Binaries into LLVM IR for Automated Analysis]
+  - [Decompilation of Binaries into LLVM IR for Automated Analysis](#decompilation-of-binaries-into-llvm-ir-for-automated-analysis)
+  - [Analyzing Memory Accesses in x86 Executables]
 
 
 ### A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware (ISSTA 2022)
@@ -385,6 +386,16 @@ binary decompilation.
 ### Decompilation of Binaries into LLVM IR for Automated Analysis
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/ghidra2llvm.pdf)
 
+
+### Analyzing Memory Accesses in x86 Executables
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Analyzing_Memory_Accesses_in_x86_Executables.pdf)
+* **Abstract:** This paper concerns static-analysis algorithms for analyzing x86 executables.
+The aim of the work is to recover intermediate representations that are similar to those that
+can be created for a program written in a high-level language. Our goal is to perform this
+task for programs such as plugins, mobile code, worms, and virus-infected code. For such
+programs, symbol-table and debugging information is either entirely absent, or cannot be
+relied upon if present; hence, the technique described in the paper makes no use of symboltable/debugging information. Instead, an analysis is carried out to recover information about
+the contents of memory locations and how they are manipulated by the executable.
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
