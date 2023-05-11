@@ -62,6 +62,7 @@ This page contains papers relevant to my research interest.
 - **S&P**
   - [Recovery of Variable and Data Structure via Probabilistic Analysis for Stripped Binary](#recovery-of-variable-and-data-structure-via-probabilistic-analysis-for-stripped-binary)
   - [KARONTE: Detecting Insecure Multi-binary Interactions in Embedded Firmware (2020)](#karonte-detecting-insecure-multi-binary-interactions-in-embedded-firmware-sp-sp-2020)
+  - [All You Ever Wanted to Know About Dynamic Taint Analysis and Forward Symbolic Execution (2010)]
 
 - **NDSS**
   - From Library Portability to Para-rehosting: Natively Executing Microcontroller Software on Commodity Hardware
@@ -410,6 +411,13 @@ application in the context of program understanding and automated bug hunting.
 Unlike algorithms for analyzing executables that existed prior to our work, the ones presented
 in this article provide useful information about memory accesses, even in the absence of debugging
 information. The ideas described in the article are incorporated in a tool for analyzing Intel x86
+
+
+### All You Ever Wanted to Know About Dynamic Taint Analysis and Forward Symbolic Execution
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/All_You_Ever_Wanted_to_Know_about_Dynamic_Taint_Analysis_and_Forward_Symbolic_Execution_but_Might_Have_Been_Afraid_to_Ask.pdf)
+* **Abstract:** Dynamic taint analysis and forward symbolic execution are quickly becoming staple techniques in security
+analyses. Example applications of dynamic taint analysis and forward symbolic execution include malware analysis, input filter generation, test case generation, and vulnerability discovery. Despite the widespread usage of these two techniques, there has been little effort to formally define the algorithms and summarize the critical issues that arise when these techniques are used in typical security contexts.  
+The contributions of this paper are two-fold. First, we precisely describe the algorithms for dynamic taint analysis and forward symbolic execution as extensions to the run-time semantics of a general language. Second, we highlight important implementation choices, common pitfalls, and considerations when using these techniques in a security context.
 
 
 # Researchers
