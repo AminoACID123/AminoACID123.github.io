@@ -90,6 +90,9 @@ This page contains papers relevant to my research interest.
 
 - **ACSAC**
   - [FirmAE: Towards Large-Scale Emulation of IoT Firmware for Dynamic Analysis (2020)](#firmae-towards-large-scale-emulation-of-iot-firmware-for-dynamic-analysis)
+
+  **TOPLAS**
+  - [WYSINWYX: What you see is not what you eXecute]
   
 - **MISC**
   - [Automatic Vulnerability Detection in Embedded Devices and Firmware: Survey and Layered Taxonomies](#automatic-vulnerability-detection-in-embedded-devices-and-firmware-survey-and-layered-taxonomies)  
@@ -396,6 +399,18 @@ task for programs such as plugins, mobile code, worms, and virus-infected code. 
 programs, symbol-table and debugging information is either entirely absent, or cannot be
 relied upon if present; hence, the technique described in the paper makes no use of symboltable/debugging information. Instead, an analysis is carried out to recover information about
 the contents of memory locations and how they are manipulated by the executable.
+
+### WYSINWYX: What you see is not what you eXecute
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/What_your_firmware_tells_you_is_not_how_you_should_emulate_it.pdf)
+* **Abstract:** Over the last seven years, we have developed static-analysis methods to recover a good approximation to the variables and dynamically allocated memory objects of a stripped executable, and
+to track the flow of values through them. The article presents the algorithms that we developed,
+explains how they are used to recover Intermediate Representations (IRs) from executables that
+are similar to the IRs that would be available if one started from source code, and describes their
+application in the context of program understanding and automated bug hunting.
+Unlike algorithms for analyzing executables that existed prior to our work, the ones presented
+in this article provide useful information about memory accesses, even in the absence of debugging
+information. The ideas described in the article are incorporated in a tool for analyzing Intel x86
+
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
