@@ -103,8 +103,8 @@ This page contains papers relevant to my research interest.
   - [Fingerprinting Bluetooth Low Energy Devices via Active Automata Learning](#fingerprinting-bluetooth-low-energy-devices-via-active-automata-learning)
   - [Stateful Black-Box Fuzzing of Bluetooth Devices Using Automata Learning]
   - [Decompilation of Binaries into LLVM IR for Automated Analysis](#decompilation-of-binaries-into-llvm-ir-for-automated-analysis)
-  - [Analyzing Memory Accesses in x86 Executables]
-
+  - [Analyzing Memory Accesses in x86 Executables](#analyzing-memory-accesses-in-x86-executables)
+  - [A Formal Semantics for P-Code]
 
 ### A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware (ISSTA 2022)
 * <img src="../files/images/pdf_24px.png">[Paper](/files/papers/A_large_scale_empirical_analysis_of_the_vulnerabilities_introduced_by_third_party_components_in_IOT_firmware.pdf)
@@ -419,6 +419,29 @@ information. The ideas described in the article are incorporated in a tool for a
 analyses. Example applications of dynamic taint analysis and forward symbolic execution include malware analysis, input filter generation, test case generation, and vulnerability discovery. Despite the widespread usage of these two techniques, there has been little effort to formally define the algorithms and summarize the critical issues that arise when these techniques are used in typical security contexts.  
 The contributions of this paper are two-fold. First, we precisely describe the algorithms for dynamic taint analysis and forward symbolic execution as extensions to the run-time semantics of a general language. Second, we highlight important implementation choices, common pitfalls, and considerations when using these techniques in a security context.
 
+
+### A Formal Semantics for P-Code
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Pcode.pdf)
+* **Abstract:** Decompilation is currently a widely used tool in reverse
+engineering and exploit detection in binaries. Ghidra, developed by the
+National Security Agency, is one of the most popular decompilers. It
+decompiles binaries to high P-Code, from which the final decompila-
+tion output in C code is generated. Ghidra allows users to work with
+P-Code, so users can analyze the intermediate representation directly.
+Several projects make use of this to build tools that perform verifica-
+tion, decompilation, taint analysis and emulation, to name a few. P-
+Code lacks a formal semantics, and its documentation is limited. It has
+a notoriously subtle semantics, which makes it hard to do any sort of
+analysis on P-Code. We show that P-Code, as-is, cannot be given an
+executable semantics. In this paper, we augment P-Code and define a
+complete, executable, formal semantics for it. This is done by looking at
+the documentation and the decompilation results of binaries with known
+source code. The development of a formal P-Code semantics uncovered
+several issues in Ghidra, P-Code, and the documentation. We show that
+these issues affect projects that rely on Ghidra and P-Code. We evaluate
+the executability of our semantics by building a P-Code interpreter that
+directly uses our semantics. Our work uncovered several issues in Ghidra
+and allows Ghidra users to better leverage P-Code.
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
