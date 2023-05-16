@@ -71,6 +71,7 @@ This page contains papers relevant to my research interest.
   - [UNIFUZZ: A Holistic and Pragmatic Metrics-Driven Platform for Evaluating Fuzzers (2022)](#unifuzz-a-holistic-and-pragmatic-metrics-driven-platform-for-evaluating-fuzzers)
   - [Arbiter: Bridging the Static and Dynamic Divide in Vulnerability Discovery on Binary Programs (2022)](#arbiter-bridging-the-static-and-dynamic-divide-in-vulnerability-discovery-on-binary-programs)
   - [Automatic Firmware Emulation through Invalidity-guided Knowledge Inference (2021)](#automatic-firmware-emulation-through-invalidity-guided-knowledge-inference)
+  - [Selectivetaint: Efficient Data Flow Tracking With Static Binary Rewriting]()
   - [Sharing More and Checking Less: Leveraging Common Input Keywords to Detect Bugs in Embedded Systems](#sharing-more-and-checking-less-leveraging-common-input-keywords-to-detect-bugs-in-embedded-systems)
   - [FIRM-AFL: High-Throughput Greybox Fuzzing of IoT Firmware via Augmented Process Emulation (2019)](#firm-afl-high-throughput-greybox-fuzzing-of-iot-firmware-via-augmented-process-emulation)
 
@@ -442,6 +443,34 @@ these issues affect projects that rely on Ghidra and P-Code. We evaluate
 the executability of our semantics by building a P-Code interpreter that
 directly uses our semantics. Our work uncovered several issues in Ghidra
 and allows Ghidra users to better leverage P-Code.
+
+
+### Selectivetaint: Efficient Data Flow Tracking With Static Binary Rewriting
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/SelectiveTaint.pdf)
+* **Abstract:** Taint analysis has been widely used in many security applica-
+tions such as exploit detection, information flow tracking, mal-
+ware analysis, and protocol reverse engineering. State-of-the-
+art taint analysis tools are usually built atop dynamic binary
+instrumentation, which instruments at every possible instruc-
+tion, and rely on runtime information to decide whether a par-
+ticular instruction involves taint or not, thereby usually having
+high performance overhead. This paper presents SELECTIVE-
+TAINT, an efficient selective taint analysis framework for bi-
+nary executables. The key idea is to selectively instrument the
+instructions involving taint analysis using static binary rewrit-
+ing instead of dynamic binary instrumentation. At a high level,
+SELECTIVETAINT statically scans taint sources of interest in
+the binary code, leverages value set analysis to conservatively
+determine whether an instruction operand needs to be tainted
+or not, and then selectively taints the instructions of interest.
+We have implemented SELECTIVETAINT and evaluated it
+with a set of binary programs including 16 coreutils (focusing
+on file I/O) and five network daemon programs (focusing
+on network I/O) such as nginx web server. Our evaluation
+results show that the binaries statically instrumented by SE-
+LECTIVETAINT has superior performance compared to the
+state-of-the-art dynamic taint analysis frameworks (e.g., 1.7x
+faster than that of libdft).
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
