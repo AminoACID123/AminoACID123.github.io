@@ -19,6 +19,7 @@ This page contains papers relevant to my research interest.
   - [Binary Code Is Not Easy](#binary-code-is-not-easy)
 
 - **PLDI**
+  - [Context Sensitivity without Contexts](#context-sensitivity-without-contexts)
   - Finding typing compiler bugs
   - Odin: On-Demand Instrumentation with On-the-Fly Recompilation
 
@@ -71,7 +72,7 @@ This page contains papers relevant to my research interest.
   - [UNIFUZZ: A Holistic and Pragmatic Metrics-Driven Platform for Evaluating Fuzzers (2022)](#unifuzz-a-holistic-and-pragmatic-metrics-driven-platform-for-evaluating-fuzzers)
   - [Arbiter: Bridging the Static and Dynamic Divide in Vulnerability Discovery on Binary Programs (2022)](#arbiter-bridging-the-static-and-dynamic-divide-in-vulnerability-discovery-on-binary-programs)
   - [Automatic Firmware Emulation through Invalidity-guided Knowledge Inference (2021)](#automatic-firmware-emulation-through-invalidity-guided-knowledge-inference)
-  - [Selectivetaint: Efficient Data Flow Tracking With Static Binary Rewriting]()
+  - [Selectivetaint: Efficient Data Flow Tracking With Static Binary Rewriting](#selectivetaint-efficient-data-flow-tracking-with-static-binary-rewriting)
   - [Sharing More and Checking Less: Leveraging Common Input Keywords to Detect Bugs in Embedded Systems](#sharing-more-and-checking-less-leveraging-common-input-keywords-to-detect-bugs-in-embedded-systems)
   - [FIRM-AFL: High-Throughput Greybox Fuzzing of IoT Firmware via Augmented Process Emulation (2019)](#firm-afl-high-throughput-greybox-fuzzing-of-iot-firmware-via-augmented-process-emulation)
 
@@ -471,6 +472,38 @@ results show that the binaries statically instrumented by SE-
 LECTIVETAINT has superior performance compared to the
 state-of-the-art dynamic taint analysis frameworks (e.g., 1.7x
 faster than that of libdft).
+
+### Context Sensitivity without Contexts
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Context_Sensitivity_without_Contexts.pdf)
+* **Abstract:** Over the past decades, context sensitivity has been considered as one of the most effective ideas for improving
+the precision of pointer analysis for Java. Different from the extremely fast context-insensitivity approach,
+context sensitivity requires every program method to be analyzed under different contexts for separating
+the static abstractions of different dynamic instantiations of the method’s variables and heap objects, and
+thus reducing spurious object flows introduced by method calls. However, despite great precision benefits,
+as each method is equivalently cloned and analyzed under each context, context sensitivity brings heavy
+efficiency costs. Recently, numerous selective context-sensitive approaches have been put forth for scaling
+pointer analysis to large and complex Java programs by applying contexts only to the selected methods
+while analyzing the remaining ones context-insensitively; however, because the selective approaches do not
+fundamentally alter the primary methodology of context sensitivity (and do not thus remove its efficiency
+bottleneck), they produce much improved but still limited results.  
+In this work, we present a fundamentally different approach called Cut-Shortcut for fast and precise
+pointer analysis for Java. Its insight is simple: the main effect of cloning methods under different contexts is to
+filter spurious object flows that have been merged inside a callee method; from the view of a typical pointer
+flow graph (PFG), such effect can be simulated by cutting off (Cut) the edges that introduce precision loss to
+certain pointers and adding Shortcut edges directly from source pointers to the target ones circumventing the
+method on PFG. As a result, we can achieve the effect of context sensitivity without contexts. We identify three
+general program patterns and develop algorithms based on them to safely cut off and add shortcut edges on PFG,
+formalize them and formally prove the soundness. To comprehensively validate Cut-Shortcut’s effectiveness,
+we implement two versions of Cut-Shortcut for two state-of-the-art pointer analysis frameworks for Java,
+one in Datalog for the declarative Doop and the other in Java for the imperative Tai-e, and we consider all
+the large and complex programs used in recent literatures that meet the experimental requirements. The
+evaluation results are extremely promising: Cut-Shortcut is even able to run faster than context insensitivity
+for most evaluated programs while obtaining high precision that is comparable to context sensitivity (if
+scalable) in both frameworks. This is for the first time that we have been able to achieve such a good efficiency
+and precision trade-off for those hard-to-analyze programs, and we hope Cut-Shortcut could offer new
+perspectives for developing more effective pointer analysis for Java in the future.
+
+
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
