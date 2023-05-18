@@ -59,6 +59,7 @@ This page contains papers relevant to my research interest.
 
 - **OOPSLA**  
   - Coverage-guided tensor compiler fuzzing with joint IR-pass mutation  
+  - [BDA: Practical Dependence Analysis for Binary Executables by Unbiased Whole-Program Path Sampling and Per-Path Abstract Interpretation (2019)](#bda-practical-dependence-analysis-for-binary-executables-by-unbiased-whole-program-path-sampling-and-per-path-abstract-interpretation)
 
 - **S&P**
   - [Recovery of Variable and Data Structure via Probabilistic Analysis for Stripped Binary](#recovery-of-variable-and-data-structure-via-probabilistic-analysis-for-stripped-binary)
@@ -503,6 +504,27 @@ scalable) in both frameworks. This is for the first time that we have been able 
 and precision trade-off for those hard-to-analyze programs, and we hope Cut-Shortcut could offer new
 perspectives for developing more effective pointer analysis for Java in the future.
 
+
+### BDA: Practical Dependence Analysis for Binary Executables by Unbiased Whole-Program Path Sampling and Per-Path Abstract Interpretation
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/BDA.pdf)
+* **Abstract:** Binary program dependence analysis determines dependence between instructions and hence is important for
+many applications that have to deal with executables without any symbol information. A key challenge is to
+identify if multiple memory read/write instructions access the same memory location. The state-of-the-art
+solution is the value set analysis (VSA) that uses abstract interpretation to determine the set of addresses
+that are possibly accessed by memory instructions. However, VSA is conservative and hence leads to a large
+number of bogus dependences and then substantial false positives in downstream analyses such as malware
+behavior analysis. Furthermore, existing public VSA implementations have difficulty scaling to complex
+binaries. In this paper, we propose a new binary dependence analysis called BDA enabled by a randomized
+abstract interpretation technique. It features a novel whole program path sampling algorithm that is not
+biased by path length, and a per-path abstract interpretation avoiding precision loss caused by merging paths
+in traditional analyses. It also provides probabilistic guarantees. Our evaluation on SPECINT2000 programs
+shows that it can handle complex binaries such as gcc whereas VSA implementations from the-state-of-art
+platforms have difficulty producing results for many SPEC binaries. In addition, the dependences reported by
+BDA are 75 and 6 times smaller than Alto, a scalable binary dependence analysis tool, and VSA, respectively,
+with only 0.19% of true dependences observed during dynamic execution missed (by BDA). Applying BDA to
+call graph generation and malware analysis shows that BDA substantially supersedes the commercial tool
+IDA in recovering indirect call targets and outperforms a state-of-the-art malware analysis tool Cuckoo by
+disclosing 3 times more hidden payloads.
 
 
 # Researchers
