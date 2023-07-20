@@ -18,6 +18,8 @@ This page contains useful CS learning resources
 - Discrete Mathematics and Its Applications
 - Computer Systems: A Programmers's Perspective
 - [Linux Insides](https://0xax.gitbooks.io/linux-insides/content/) [(pdf)](../files/linux.pdf)
+- [Software Foundations](../files/software_foundations.pdf)
+- [Practical Foundations for Programming Languages](../files/practical_foundations_for_programming_languages.pdf)
 
 
 ## RTFM
