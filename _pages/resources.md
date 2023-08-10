@@ -32,6 +32,7 @@ This page contains useful CS learning resources
 - [Bluetooth Core Specification v5.2](../files/bluetooth/Core_v5.2.pdf)
 - [Bluetooth Core Specification v5.3](../files/bluetooth/Core_v5.3.pdf)
 - [Bluetooth Assigned Numbers](../files/bluetooth/Assigned_Numbers.pdf)
+- [Bluetooth Mesh Profile Specification](../files/bluetooth/MshPRFv1.0.1.pdf)
 - [Stanford typed dependencies manual](../files/dependencies_manual.pdf)
 
 
