@@ -112,6 +112,7 @@ This page contains papers relevant to my research interest.
   - [Decompilation of Binaries into LLVM IR for Automated Analysis](#decompilation-of-binaries-into-llvm-ir-for-automated-analysis)
   - [Analyzing Memory Accesses in x86 Executables](#analyzing-memory-accesses-in-x86-executables)
   - [A Formal Semantics for P-Code]
+  - [Challenges and Solutions for Embedded and Networked Aerospace Software Systems](#challenges-and-solutions-for-embedded-and-networked-aerospace-software-systems)
 
 ### A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware (ISSTA 2022)
 * <img src="../files/images/pdf_24px.png">[Paper](/files/papers/A_large_scale_empirical_analysis_of_the_vulnerabilities_introduced_by_third_party_components_in_IOT_firmware.pdf)
@@ -576,6 +577,27 @@ named VulHawk and conduct experiments under seven different
 tasks to evaluate its performance and robustness. The experiments
 show VulHawk outperforms Asm2Vec, Asteria, BinDiff, GMN,
 PalmTree, SAFE, and Trex.
+
+
+### Challenges and Solutions for Embedded and Networked Aerospace Software Systems
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Challenges_and_Solutions_for_Embedded_and_Networked_Aerospace_Software_Systems.pdf)
+* **Abstract:** Aerospace systems are increasingly dependent
+upon software for their functionality, with associated software
+spanning a wide range of application domains. These include
+aircraft and spacecraft flight controls, mission computing,
+weapons management, command and control, surveillance,
+sensor management and processing, telemetry, and more.
+Understanding of their unique challenges has driven technol-
+ogy development on many fronts associated both with the
+productsVsuch as real-time component-based application
+frameworks, supporting middleware, and algorithmsVand
+the processes and tools by which they are createdVsuch as
+model-based development and integration, automated code
+generation, simulations, and desktop test environments. This
+paper describes a number of these domains and challenges,
+future directions associated with networking and systems of
+systems, and technologies facilitating their development within
+The Boeing Company.
 
 #Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
