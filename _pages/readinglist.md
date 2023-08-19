@@ -7,7 +7,7 @@ author_profile: true
 
 This page contains papers relevant to my research interest.
 
-# All Papers (Classification according to Publication)
+#All Papers(Classification according to Publication)
 
 - **ISSTA**  
   - [A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware](#a-large-scale-empirical-analysis-of-the-vulnerabilities-introduced-by-third-party-components-in-iot-firmware-issta-2022)
@@ -67,7 +67,8 @@ This page contains papers relevant to my research interest.
   - [All You Ever Wanted to Know About Dynamic Taint Analysis and Forward Symbolic Execution (2010)]
 
 - **NDSS**
-  - From Library Portability to Para-rehosting: Natively Executing Microcontroller Software on Commodity Hardware
+  - [From Library Portability to Para-rehosting: Natively Executing Microcontroller Software on Commodity Hardware](#from-library-portability-to-para-rehosting-natively-executing-microcontroller-software-on-commodity-hardware)
+  - [VulHawk: Cross-architecture Vulnerability Detection with Entropy-based Binary Code Search](#vulhawk-cross-architecture-vulnerability-detection-with-entropy-based-binary-code-search)
 
 - **USENIX SEC**
   - [UNIFUZZ: A Holistic and Pragmatic Metrics-Driven Platform for Evaluating Fuzzers (2022)](#unifuzz-a-holistic-and-pragmatic-metrics-driven-platform-for-evaluating-fuzzers)
@@ -97,6 +98,9 @@ This page contains papers relevant to my research interest.
 
   **TOPLAS**
   - [WYSINWYX: What you see is not what you eXecute]
+
+- **Computers & Security**
+  - [VERI: A Large-scale Open-Source Components Vulnerability Detection in IoT Firmware](#veri-a-large-scale-open-source-components-vulnerability-detection-in-iot-firmware)
   
 - **MISC**
   - [Automatic Vulnerability Detection in Embedded Devices and Firmware: Survey and Layered Taxonomies](#automatic-vulnerability-detection-in-embedded-devices-and-firmware-survey-and-layered-taxonomies)  
@@ -526,8 +530,54 @@ call graph generation and malware analysis shows that BDA substantially supersed
 IDA in recovering indirect call targets and outperforms a state-of-the-art malware analysis tool Cuckoo by
 disclosing 3 times more hidden payloads.
 
+### VERI: A Large-scale Open-Source Components Vulnerability Detection in IoT Firmware
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/veri.pdf)
+* **Abstract:** IoT device manufacturers integrate open-source components (OSCs) to serve necessary and common func-
+tions for facilitating firmware development. However, outdated versions of OSC conceal N-day vulnera-
+bilities and continue to function on IoT devices. The security risks can be predicted once we can identify
+the OSC versions employed in the firmware. Existing works make attempts at OSC version identifica-
+tion but fail to perform vulnerability detection on a large-scale IoT firmware due to i) unsuitable version
+identification method for IoT firmware scenario. ii) the lack of a large-scale version-vulnerability rela-
+tion database. To this end, we propose a system VERI for large-scale vulnerability detection based on
+lightweight version identification. First, for OSC version identification, VERI leverages symbolic execution
+with static analysis to identify exact OSC versions even though there are many version-like strings in OSC.
+Second, VERI employs a deep learning-based method to extract OSC names and vulnerable version ranges
+from vulnerability descriptions, constructs and maintains an OSC version-vulnerability relation database
+to serve the vulnerability detection. Finally, VERI polls the relation database to confirm the N-day security
+risk of the OSC with identified version. The evaluation results show that VERI achieves 96.43% accuracy
+with high efficiency in OSC version identification. Meanwhile, the deep learning model accurately extracts
+the OSC names and versions from vulnerability descriptions dataset with 97.19% precision and 96.56% re-
+call. Based on the model, we build a large-scale version-vulnerability relation database. Furthermore, we
+utilize VERI to conduct a large-scale analysis on 28,890 firmware and find 38,654 vulnerable OSCs with
+266,109 N-day vulnerabilities, most of which are with high risks. From the detection results, we find that
+after the official patch for the vulnerability is released, manufacturers delay an average of 473 days to
+patch the firmware.
 
-# Researchers
+### VulHawk: Cross-architecture Vulnerability Detection with Entropy-based Binary Code Search
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/vulhawk.pdf)
+* **Abstract:** Code reuse is widespread in software development. It brings a heavy spread of vulnerabilities, threatening software security. Unfortunately, with the development and deployment of the Internet of Things (IoT), the harms of code reuse are magnified. Binary code search is a viable way to find these hidden vulnerabilities. Facing IoT firmware images compiled by different compilers with different optimization levels from different architectures, the existing methods are hard to fit these
+complex scenarios. In this paper, we propose a novel intermediate representation function model, which is an architecture-agnostic model for cross-architecture binary code search. It lifts binary
+code into microcode and preserves the main semantics of binary
+functions via complementing implicit operands and pruning
+redundant instructions. Then, we use natural language processing
+techniques and graph convolutional networks to generate function
+embeddings. We call the combination of a compiler, architecture,
+and optimization level as a file environment, and take a divide-
+and-conquer strategy to divide a similarity calculation problem
+of C^2_N cross-file-environment scenarios into N − 1 embedding
+transferring sub-problems. We propose an entropy-based adapter
+to transfer function embeddings from different file environments
+into the same file environment to alleviate the differences caused
+by various file environments. To precisely identify vulnerable
+functions, we propose a progressive search strategy to supplement
+function embeddings with fine-grained features to reduce false
+positives caused by patched functions. We implement a prototype
+named VulHawk and conduct experiments under seven different
+tasks to evaluate its performance and robustness. The experiments
+show VulHawk outperforms Asm2Vec, Asteria, BinDiff, GMN,
+PalmTree, SAFE, and Trex.
+
+#Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
 - [Wei Huo](https://people.ucas.ac.cn/~0034331#%20408273)
 - [Limin Sun](https://people.ucas.ac.cn/~0002848#%20786254)
