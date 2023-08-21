@@ -113,6 +113,7 @@ This page contains papers relevant to my research interest.
   - [Analyzing Memory Accesses in x86 Executables](#analyzing-memory-accesses-in-x86-executables)
   - [A Formal Semantics for P-Code]
   - [Challenges and Solutions for Embedded and Networked Aerospace Software Systems](#challenges-and-solutions-for-embedded-and-networked-aerospace-software-systems)
+  - [Physical Devices-Agnostic Hybrid Fuzzing of IoT Firmware](#physical-devices-agnostic-hybrid-fuzzing-of-iot-firmware)
 
 ### A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware (ISSTA 2022)
 * <img src="../files/images/pdf_24px.png">[Paper](/files/papers/A_large_scale_empirical_analysis_of_the_vulnerabilities_introduced_by_third_party_components_in_IOT_firmware.pdf)
@@ -598,6 +599,37 @@ paper describes a number of these domains and challenges,
 future directions associated with networking and systems of
 systems, and technologies facilitating their development within
 The Boeing Company.
+
+
+### Physical Devices-Agnostic Hybrid Fuzzing of IoT Firmware
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Physical_Devices-Agnostic_Hybrid_Fuzzing_of_IoT_Firmware.pdf)
+* **Abstract:** With the rapid expansion of the Internet of Things,
+a vast number of microcontroller-based IoT devices are now
+susceptible to attacks through the Internet. Vulnerabilities within
+the firmware are one of the most important attack surfaces.
+Fuzzing has emerged as one of the most effective techniques for
+identifying such vulnerabilities. However, when applied to IoT
+firmware, several challenges arise, including: (1) the inability
+of firmware to execute properly in the absence of peripherals,
+(2) the lack of support for exploring input spaces of multiple
+peripherals, (3) difficulties in instrumenting and gathering feed-
+back, and (4) the absence of a fault detection mechanism. To
+address these challenges, we have developed and implemented
+an innovative peripheral-independent hybrid fuzzing tool called
+FirmHybirdFuzzer. This tool enables testing of microcontroller-
+based firmware without reliance on specific peripheral hardware.
+First, a unified virtual peripheral was integrated to model the be-
+haviors of various peripherals, thus enabling the physical devices-
+agnostic firmware execution. Then, a hybrid event generation
+approach was used to generate inputs for different peripheral
+accesses. Furthermore, two-level coverage feedback was collected
+to optimize the testcase generation. Finally, a plugin-based
+fault detection mechanism was implemented to identify typical
+memory corruption vulnerabilities. A Large-scale experimental
+evaluation has been performed to show FirmHybirdFuzzer’s
+effectiveness and efficiency.
+
+
 
 #Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
