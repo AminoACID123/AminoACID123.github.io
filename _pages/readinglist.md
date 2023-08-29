@@ -114,6 +114,7 @@ This page contains papers relevant to my research interest.
   - [A Formal Semantics for P-Code]
   - [Challenges and Solutions for Embedded and Networked Aerospace Software Systems](#challenges-and-solutions-for-embedded-and-networked-aerospace-software-systems)
   - [Physical Devices-Agnostic Hybrid Fuzzing of IoT Firmware](#physical-devices-agnostic-hybrid-fuzzing-of-iot-firmware)
+  - [Adaptive and Effective Fuzzing: A Data-Driven Approach](#adaptive-and-effective-fuzzing-a-data-driven-approach)
 
 ### A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware (ISSTA 2022)
 * <img src="../files/images/pdf_24px.png">[Paper](/files/papers/A_large_scale_empirical_analysis_of_the_vulnerabilities_introduced_by_third_party_components_in_IOT_firmware.pdf)
@@ -629,6 +630,33 @@ memory corruption vulnerabilities. A Large-scale experimental
 evaluation has been performed to show FirmHybirdFuzzer’s
 effectiveness and efficiency.
 
+### Adaptive and Effective Fuzzing: A Data-Driven Approach
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Adaptive_and_effective_fuzzing_a_data_driven_approach.pdf)
+* **Abstract:** Security vulnerabilities have a large real-world impact, from ransomware attacks costing
+billions of dollars every year to sensitive data breaches in government, military and industry.
+Fuzzing is a popular technique to discover these vulnerabilities in an automated fashion. Industries
+have poured tons of resources into building large-scale fuzzing factories (e.g., Google’s ClusterFuzz
+and Microsoft’s OneFuzz) to test their products and make their product more secure. Despite the
+wide application of fuzzing in industry, there remain many issues constraining its performance. One
+fundamental limitation is the rule-based design in fuzzing. Rule-based fuzzers heavily rely on a set
+of static rules or heuristics. These fixed rules are summarized from human experience, hence failing
+to generalize on a diverse set of programs.
+In this dissertation, we present an adaptive and effective fuzzing framework in data-driven approach.
+A data-driven fuzzer makes decisions based on the analysis and reasoning of data rather than the
+static rules. Hence it is more adaptive, effective, and flexible than a typical rule-based fuzzer. More
+interestingly, the data-driven approach can bridge the connection from fuzzing to various
+data-centric domains (e.g., machine learning, optimizations and social network), enabling
+sophisticated designs in the fuzzing framework.
+A general fuzzing framework consists of two major components: seed scheduling and seed
+mutation. The seed scheduling module selects a seed from a seed corpus that includes multiple
+testcases. Then seed mutation module applies perturbation on the selected seed to generate a newtestcase. First, we present Neuzz, the first machine learning (ML) based general-purpose fuzzer that
+adopts ML to seed mutation and greatly improves fuzzing performance. Then we present MTFuzz,
+a follow-up work of Neuzz by including diverse data into ML to generate effective seed mutations.
+In the end, we present K-Scheduler, a fuzzer-agnostic seed scheduling algorithm in data-driven
+approach. K-Scheduler leverages the graph data (i.e., inter-procedural control flow graph) and
+dynamic coverage data (i.e., code coverage bitmap) to construct a dynamic graph and schedule
+seeds by the graph centrality scores on that graph. It can significantly improve the fuzzing
+performance than the-state-of-art seed schedulers on various fuzzers widely-used in the industry.
 
 
 #Researchers
