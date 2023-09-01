@@ -62,6 +62,7 @@ This page contains papers relevant to my research interest.
   - [BDA: Practical Dependence Analysis for Binary Executables by Unbiased Whole-Program Path Sampling and Per-Path Abstract Interpretation (2019)](#bda-practical-dependence-analysis-for-binary-executables-by-unbiased-whole-program-path-sampling-and-per-path-abstract-interpretation)
 
 - **S&P**
+  - [SoK: All You Ever Wanted to Know About x86/x64 Binary Disassembly But Were Afraid to Ask]
   - [Recovery of Variable and Data Structure via Probabilistic Analysis for Stripped Binary](#recovery-of-variable-and-data-structure-via-probabilistic-analysis-for-stripped-binary)
   - [KARONTE: Detecting Insecure Multi-binary Interactions in Embedded Firmware (2020)](#karonte-detecting-insecure-multi-binary-interactions-in-embedded-firmware-sp-sp-2020)
   - [All You Ever Wanted to Know About Dynamic Taint Analysis and Forward Symbolic Execution (2010)]
@@ -657,6 +658,36 @@ approach. K-Scheduler leverages the graph data (i.e., inter-procedural control f
 dynamic coverage data (i.e., code coverage bitmap) to construct a dynamic graph and schedule
 seeds by the graph centrality scores on that graph. It can significantly improve the fuzzing
 performance than the-state-of-art seed schedulers on various fuzzers widely-used in the industry.
+
+### SoK: All You Ever Wanted to Know About x86/x64 Binary Disassembly But Were Afraid to Ask
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/SoK_All_You_Ever_Wanted_to_Know_About_x86_x64_Binary_Disassembly_But_Were_Afraid_to_Ask.pdf)
+* **Abstract:** Disassembly of binary code is hard, but necessary
+for improving the security of binary software. Over the past
+few decades, research in binary disassembly has produced many
+tools and frameworks, which have been made available to
+researchers and security professionals. These tools employ a
+variety of strategies that grant them different characteristics.
+The lack of systematization, however, impedes new research in
+the area and makes selecting the right tool hard, as we do
+not understand the strengths and weaknesses of existing tools.
+In this paper, we systematize binary disassembly through the
+study of nine popular, open-source tools. We couple the manual
+examination of their code bases with the most comprehensive
+experimental evaluation (thus far) using 3,788 binaries. Our
+study yields a comprehensive description and organization of
+strategies for disassembly, classifying them as either algorithm
+or else heuristic. Meanwhile, we measure and report the impact
+of individual algorithms on the results of each tool. We find that
+while principled algorithms are used by all tools, they still heavily
+rely on heuristics to increase code coverage. Depending on the
+heuristics used, different coverage-vs-correctness trade-offs come
+in play, leading to tools with different strengths and weaknesses.
+We envision that these findings will help users pick the right tool
+and assist researchers in improving binary disassembly.
+
+
+
+
 
 
 #Researchers
