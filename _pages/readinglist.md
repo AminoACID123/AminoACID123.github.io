@@ -62,7 +62,8 @@ This page contains papers relevant to my research interest.
   - [BDA: Practical Dependence Analysis for Binary Executables by Unbiased Whole-Program Path Sampling and Per-Path Abstract Interpretation (2019)](#bda-practical-dependence-analysis-for-binary-executables-by-unbiased-whole-program-path-sampling-and-per-path-abstract-interpretation)
 
 - **S&P**
-  - [SoK: All You Ever Wanted to Know About x86/x64 Binary Disassembly But Were Afraid to Ask]
+  - [SoK: All You Ever Wanted to Know About x86/x64 Binary Disassembly But Were Afraid to Ask](#sok-all-you-ever-wanted-to-know-about-x86x64-binary-disassembly-but-were-afraid-to-ask)
+  - [Compiler-assisted Code Randomization]
   - [Recovery of Variable and Data Structure via Probabilistic Analysis for Stripped Binary](#recovery-of-variable-and-data-structure-via-probabilistic-analysis-for-stripped-binary)
   - [KARONTE: Detecting Insecure Multi-binary Interactions in Embedded Firmware (2020)](#karonte-detecting-insecure-multi-binary-interactions-in-embedded-firmware-sp-sp-2020)
   - [All You Ever Wanted to Know About Dynamic Taint Analysis and Forward Symbolic Execution (2010)]
@@ -685,9 +686,36 @@ in play, leading to tools with different strengths and weaknesses.
 We envision that these findings will help users pick the right tool
 and assist researchers in improving binary disassembly.
 
-
-
-
+### Compiler-assisted Code Randomization
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Compiler-Assisted_Code_Randomization.pdf)
+* **Abstract:** Despite decades of research on software diversi-
+fication, only address space layout randomization has seen
+widespread adoption. Code randomization, an effective defense
+against return-oriented programming exploits, has remained an
+academic exercise mainly due to i) the lack of a transparent
+and streamlined deployment model that does not disrupt existing
+software distribution norms, and ii) the inherent incompatibility
+of program variants with error reporting, whitelisting, patching,
+and other operations that rely on code uniformity. In this
+work we present compiler-assisted code randomization (CCR), a
+hybrid approach that relies on compiler–rewriter cooperation
+to enable fast and robust fine-grained code randomization on
+end-user systems, while maintaining compatibility with existing
+software distribution models. The main concept behind CCR
+is to augment binaries with a minimal set of transformation-
+assisting metadata, which i) facilitate rapid fine-grained code
+transformation at installation or load time, and ii) form the basis
+for reversing any applied code transformation when needed, to
+maintain compatibility with existing mechanisms that rely on
+referencing the original code. We have implemented a prototype
+of this approach by extending the LLVM compiler toolchain,
+and developing a simple binary rewriter that leverages the
+embedded metadata to generate randomized variants using basic
+block reordering. The results of our experimental evaluation
+demonstrate the feasibility and practicality of CCR, as on average
+it incurs a modest file size increase of 11.46% and a negligible
+runtime overhead of 0.28%, while it is compatible with link-time
+optimization and control flow integrity
 
 
 #Researchers
