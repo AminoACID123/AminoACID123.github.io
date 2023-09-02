@@ -108,6 +108,7 @@ This page contains papers relevant to my research interest.
   - [Decompilation of Binaries into LLVM IR for Automated Analysis](#decompilation-of-binaries-into-llvm-ir-for-automated-analysis)
   - [Analyzing Memory Accesses in x86 Executables](#analyzing-memory-accesses-in-x86-executables)
   - [A Formal Semantics for P-Code]
+  - [Generating models of infinite-state communication protocols using regular inference with abstraction]
 
 ### A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware (ISSTA 2022)
 * <img src="../files/images/pdf_24px.png">[Paper](/files/papers/A_large_scale_empirical_analysis_of_the_vulnerabilities_introduced_by_third_party_components_in_IOT_firmware.pdf)
@@ -526,6 +527,22 @@ call graph generation and malware analysis shows that BDA substantially supersed
 IDA in recovering indirect call targets and outperforms a state-of-the-art malware analysis tool Cuckoo by
 disclosing 3 times more hidden payloads.
 
+### Generating models of infinite-state communication protocols using regular inference with abstraction
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Generating_models_of_infinite_state_communication_protocols_using_regular_inference_with_abstraction.pdf)
+* **Abstract:** In order to facilitate model-based verification and validation, effort is underway
+to develop techniques for generating models of communication system components from
+observations of their external behavior. Most previous such work has employed regular
+inference techniques which generate modest-size finite-state models. They typically sup-
+press parameters of messages, although these have a significant impact on control flow in
+many communication protocols. We present a framework, which adapts regular inference
+to include data parameters in messages and states for generating components with large or
+infinite message alphabets. A main idea is to adapt the framework of predicate abstraction,
+successfully used in formal verification. Since we are in a black-box setting, the abstraction
+must be supplied externally, using information about how the component manages data para-
+meters. We have implemented our techniques by connecting the LearnLib tool for regular
+inference with an implementation of session initiation protocol (SIP) in ns-2 and an imple-
+mentation of transmission control protocol (TCP) in Windows 8, and generated models of
+SIP and TCP components.
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
