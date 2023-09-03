@@ -108,19 +108,16 @@ This page contains papers relevant to my research interest.
   - [Automatic Vulnerability Detection in Embedded Devices and Firmware: Survey and Layered Taxonomies](#automatic-vulnerability-detection-in-embedded-devices-and-firmware-survey-and-layered-taxonomies)  
   - [Challenges in Firmware Re-Hosting, Emulation, and Analysis](#challenges-in-firmware-re-hosting-emulation-and-analysis)
   - [Systematic Testing of Autonomous Driving Systems Using Map Topology-Based Scenario Classification](#systematic-testing-of-autonomous-driving-systems-using-map-topology-based-scenario-classification)
-
   - [Fingerprinting Bluetooth Low Energy Devices via Active Automata Learning](#fingerprinting-bluetooth-low-energy-devices-via-active-automata-learning)
-  - [Stateful Black-Box Fuzzing of Bluetooth Devices Using Automata Learning]
+  - [Stateful Black-Box Fuzzing of Bluetooth Devices Using Automata Learning](#stateful-black-box-fuzzing-of-bluetooth-devices-using-automata-learning)
+  - [Learning Regular Sets from Queries and Counterexamples]
   - [Decompilation of Binaries into LLVM IR for Automated Analysis](#decompilation-of-binaries-into-llvm-ir-for-automated-analysis)
   - [Analyzing Memory Accesses in x86 Executables](#analyzing-memory-accesses-in-x86-executables)
   - [A Formal Semantics for P-Code]
-<<<<<<< HEAD
   - [Generating models of infinite-state communication protocols using regular inference with abstraction]
-=======
   - [Challenges and Solutions for Embedded and Networked Aerospace Software Systems](#challenges-and-solutions-for-embedded-and-networked-aerospace-software-systems)
   - [Physical Devices-Agnostic Hybrid Fuzzing of IoT Firmware](#physical-devices-agnostic-hybrid-fuzzing-of-iot-firmware)
   - [Adaptive and Effective Fuzzing: A Data-Driven Approach](#adaptive-and-effective-fuzzing-a-data-driven-approach)
->>>>>>> 616a35f8d0953a26ea694ed2da29f2fcfbd55366
 
 ### A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware (ISSTA 2022)
 * <img src="../files/images/pdf_24px.png">[Paper](/files/papers/A_large_scale_empirical_analysis_of_the_vulnerabilities_introduced_by_third_party_components_in_IOT_firmware.pdf)
@@ -738,6 +735,20 @@ it incurs a modest file size increase of 11.46% and a negligible
 runtime overhead of 0.28%, while it is compatible with link-time
 optimization and control flow integrity
 
+### Learning Regular Sets from Queries and Counterexamples*
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Learning_regular_sets_from_queries_and_counterexamples.pdf)
+* **Abstract:** The problem of identifying an unknown regular set from examples of its members
+and nonmembers is addressed. It is assumed that the regular set is presented by a
+minimaMy adequate Teacher, which can answer membership queries about the set
+and can also test a conjecture and indicate whether it is equal to the unknown set
+and provide a counterexample if not. (A counterexample is a string in the sym-
+metric difference of the correct set and the conjectured set.) A learning algorithm
+L* is described that correctly learns any regular set from any minimally adequate
+Teacher in time polynomial in the number of states of the minimum dfa for the set
+and the maximum length of any counterexample provided by the Teacher. It is
+shown that in a stochastic setting the ability of the Teacher to test conjectures may
+be replaced by a random sampling oracle, EX( ). A polynomial-time learning
+algorithm is shown for a particular problem of context-free language identification.
 
 #Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
