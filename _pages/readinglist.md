@@ -67,6 +67,7 @@ This page contains papers relevant to my research interest.
   - [Recovery of Variable and Data Structure via Probabilistic Analysis for Stripped Binary](#recovery-of-variable-and-data-structure-via-probabilistic-analysis-for-stripped-binary)
   - [KARONTE: Detecting Insecure Multi-binary Interactions in Embedded Firmware (2020)](#karonte-detecting-insecure-multi-binary-interactions-in-embedded-firmware-sp-sp-2020)
   - [All You Ever Wanted to Know About Dynamic Taint Analysis and Forward Symbolic Execution (2010)]
+  - [Back in Black: Towards Formal, Black Box Analysis of Sanitizers and Filters](#back-in-black-towards-formal-black-box-analysis-of-sanitizers-and-filters)
 
 - **NDSS**
   - [From Library Portability to Para-rehosting: Natively Executing Microcontroller Software on Commodity Hardware](#from-library-portability-to-para-rehosting-natively-executing-microcontroller-software-on-commodity-hardware)
@@ -91,6 +92,7 @@ This page contains papers relevant to my research interest.
   - [What Your Firmware Tells You Is Not How You Should Emulate It: A Speciﬁcation-Guided Approach for Firmware Emulation](#what-your-firmware-tells-you-is-not-how-you-should-emulate-it-a-speciﬁcation-guided-approach-for-firmware-emulation)
   - [MetaEmu: An Architecture Agnostic Rehosting Framework for Automotive Firmware](#metaemu-an-architecture-agnostic-rehosting-framework-for-automotive-firmware)
   - [ECMO: Peripheral Transplantation to Rehost Embedded Linux Kernels](#ecmo-peripheral-transplantation-to-rehost-embedded-linux-kernels-ccs-2021)
+  - [SFADiff: Automated Evasion Attacks and Fingerprinting Using Black-box Differential Automata Learning](#sfadiff-automated-evasion-attacks-and-fingerprinting-using-black-box-differential-automata-learning)
 
 - **DSN**
   - [L2Fuzz: Discovering Bluetooth L2CAP Vulnerabilities Using Stateful Fuzz Testing](#l2fuzz-discovering-bluetooth-l2cap-vulnerabilities-using-stateful-fuzz-testing-dsn-2022)
@@ -114,13 +116,10 @@ This page contains papers relevant to my research interest.
   - [Decompilation of Binaries into LLVM IR for Automated Analysis](#decompilation-of-binaries-into-llvm-ir-for-automated-analysis)
   - [Analyzing Memory Accesses in x86 Executables](#analyzing-memory-accesses-in-x86-executables)
   - [A Formal Semantics for P-Code]
-<<<<<<< HEAD
   - [Generating models of infinite-state communication protocols using regular inference with abstraction]
-=======
   - [Challenges and Solutions for Embedded and Networked Aerospace Software Systems](#challenges-and-solutions-for-embedded-and-networked-aerospace-software-systems)
   - [Physical Devices-Agnostic Hybrid Fuzzing of IoT Firmware](#physical-devices-agnostic-hybrid-fuzzing-of-iot-firmware)
   - [Adaptive and Effective Fuzzing: A Data-Driven Approach](#adaptive-and-effective-fuzzing-a-data-driven-approach)
->>>>>>> 616a35f8d0953a26ea694ed2da29f2fcfbd55366
 
 ### A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware (ISSTA 2022)
 * <img src="../files/images/pdf_24px.png">[Paper](/files/papers/A_large_scale_empirical_analysis_of_the_vulnerabilities_introduced_by_third_party_components_in_IOT_firmware.pdf)
@@ -737,6 +736,21 @@ demonstrate the feasibility and practicality of CCR, as on average
 it incurs a modest file size increase of 11.46% and a negligible
 runtime overhead of 0.28%, while it is compatible with link-time
 optimization and control flow integrity
+
+### SFADiff: Automated Evasion Attacks and Fingerprinting Using Black-box Differential Automata Learning
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/SFADiff.pdf)
+* **Abstract:** Finding differences between programs with similar functionality is an important security problem as such differences can be used for fingerprinting or creating evasion attacks against security software like Web Application Firewalls (WAFs)
+which are designed to detect malicious inputs to web applications. In this paper, we present SFADiff, a black-box
+differential testing framework based on Symbolic Finite Automata (SFA) learning. SFADiff can automatically find differences between a set of programs with comparable functionality. Unlike existing differential testing techniques, instead of searching for each difference individually, SFADiff infers SFA models of the target programs using black-box queries and systematically enumerates the differences between the inferred SFA models. All differences between the inferred models are checked against the corresponding programs. Any difference between the models, that does not result in a difference between the corresponding programs,
+is used as a counterexample for further refinement of the inferred models. SFADiff’s model-based approach, unlike existing differential testing tools, also support fully automated root cause analysis in a domain-independent manner.  
+We evaluate SFADiff in three different settings for finding discrepancies between: (i) three TCP implementations,
+(ii) four WAFs, and (iii) HTML/JavaScript parsing implementations in WAFs and web browsers. Our results demonstrate that SFADiff is able to identify and enumerate the differences systematically and eciently in all these settings. We show that SFADiff is able to find differences not only between different WAFs but also between different versions of the same WAF. SFADiff is also able to discover three previously-unknown differences between the HTML/JavaScript parsers of two popular WAFs (PHPIDS 0.7 and Expose 2.4.0) and the corresponding parsers of Google Chrome, Firefox, Safari, and Internet Explorer. We confirm that all these differences can be used to evade the WAFs and launch successful cross-site scripting attacks.
+
+
+### Back in Black: Towards Formal, Black Box Analysis of Sanitizers and Filters
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/SFADiff.pdf)
+We tackle the problem of analyzing filter and sanitizer programs remotely, i.e. given only the ability to query the targeted program and observe the output. We focus on two important and widely used program classes: regular expression (RE) filters and string sanitizers. We demonstrate that existing tools from machine learning that are available for analyzing RE filters, namely automata learning algorithms, require a very large number of queries in order to infer real life RE filters. Motivated by this, we develop the first algorithm that infers symbolic representations of automata in the standard membership/equivalence query model. We show that our algorithm provides an improvement of x15 times in the number of queries required to learn real life XSS and SQL filters of popular web application firewall systems such as mod-security and PHPIDS. Active learning algorithms require the usage of an equivalence oracle, i.e. an oracle that tests the equivalence of a hypothesis with the target machine. We show that when the goal is to audit a target filter with respect to a set of attack strings from a context free grammar, i.e. find an attack or infer that none exists, we can use the attack grammar to implement the equivalence oracle with a single query to the filter. Our construction finds on average 90% of the target filter states when no attack exists and is very effective in finding attacks when they are present.  
+For the case of string sanitizers, we show that existing algorithms for inferring sanitizers modelled as Mealy Machines are not only inefficient, but lack the expressive power to be able to infer real life sanitizers. We design two novel extensions to existing algorithms that allow one to infer sanitizers represented as single-valued transducers. Our algorithms are able to infer many common sanitizer functions such as HTML encoders and decoders. Furthermore, we design an algorithm to convert the inferred models into BEK programs, which allows for further applications such as cross checking different sanitizer implementations and cross compiling sanitizers into different languages supported by the BEK backend. We showcase the power of our techniques by utilizing our black-box inference algorithms to perform an equivalence checking between different HTML encoders including the encoders from Twitter, Facebook and Microsoft Outlook email, for which no implementation is publicly available.
 
 
 #Researchers
