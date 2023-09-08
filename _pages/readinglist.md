@@ -110,9 +110,9 @@ This page contains papers relevant to my research interest.
   - [Automatic Vulnerability Detection in Embedded Devices and Firmware: Survey and Layered Taxonomies](#automatic-vulnerability-detection-in-embedded-devices-and-firmware-survey-and-layered-taxonomies)  
   - [Challenges in Firmware Re-Hosting, Emulation, and Analysis](#challenges-in-firmware-re-hosting-emulation-and-analysis)
   - [Systematic Testing of Autonomous Driving Systems Using Map Topology-Based Scenario Classification](#systematic-testing-of-autonomous-driving-systems-using-map-topology-based-scenario-classification)
-
   - [Fingerprinting Bluetooth Low Energy Devices via Active Automata Learning](#fingerprinting-bluetooth-low-energy-devices-via-active-automata-learning)
-  - [Stateful Black-Box Fuzzing of Bluetooth Devices Using Automata Learning]
+  - [Stateful Black-Box Fuzzing of Bluetooth Devices Using Automata Learning](#stateful-black-box-fuzzing-of-bluetooth-devices-using-automata-learning)
+  - [Learning Regular Sets from Queries and Counterexamples]
   - [Decompilation of Binaries into LLVM IR for Automated Analysis](#decompilation-of-binaries-into-llvm-ir-for-automated-analysis)
   - [Analyzing Memory Accesses in x86 Executables](#analyzing-memory-accesses-in-x86-executables)
   - [A Formal Semantics for P-Code]
@@ -752,6 +752,20 @@ We evaluate SFADiff in three different settings for finding discrepancies betwee
 We tackle the problem of analyzing filter and sanitizer programs remotely, i.e. given only the ability to query the targeted program and observe the output. We focus on two important and widely used program classes: regular expression (RE) filters and string sanitizers. We demonstrate that existing tools from machine learning that are available for analyzing RE filters, namely automata learning algorithms, require a very large number of queries in order to infer real life RE filters. Motivated by this, we develop the first algorithm that infers symbolic representations of automata in the standard membership/equivalence query model. We show that our algorithm provides an improvement of x15 times in the number of queries required to learn real life XSS and SQL filters of popular web application firewall systems such as mod-security and PHPIDS. Active learning algorithms require the usage of an equivalence oracle, i.e. an oracle that tests the equivalence of a hypothesis with the target machine. We show that when the goal is to audit a target filter with respect to a set of attack strings from a context free grammar, i.e. find an attack or infer that none exists, we can use the attack grammar to implement the equivalence oracle with a single query to the filter. Our construction finds on average 90% of the target filter states when no attack exists and is very effective in finding attacks when they are present.  
 For the case of string sanitizers, we show that existing algorithms for inferring sanitizers modelled as Mealy Machines are not only inefficient, but lack the expressive power to be able to infer real life sanitizers. We design two novel extensions to existing algorithms that allow one to infer sanitizers represented as single-valued transducers. Our algorithms are able to infer many common sanitizer functions such as HTML encoders and decoders. Furthermore, we design an algorithm to convert the inferred models into BEK programs, which allows for further applications such as cross checking different sanitizer implementations and cross compiling sanitizers into different languages supported by the BEK backend. We showcase the power of our techniques by utilizing our black-box inference algorithms to perform an equivalence checking between different HTML encoders including the encoders from Twitter, Facebook and Microsoft Outlook email, for which no implementation is publicly available.
 
+### Learning Regular Sets from Queries and Counterexamples*
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Learning_regular_sets_from_queries_and_counterexamples.pdf)
+* **Abstract:** The problem of identifying an unknown regular set from examples of its members
+and nonmembers is addressed. It is assumed that the regular set is presented by a
+minimaMy adequate Teacher, which can answer membership queries about the set
+and can also test a conjecture and indicate whether it is equal to the unknown set
+and provide a counterexample if not. (A counterexample is a string in the sym-
+metric difference of the correct set and the conjectured set.) A learning algorithm
+L* is described that correctly learns any regular set from any minimally adequate
+Teacher in time polynomial in the number of states of the minimum dfa for the set
+and the maximum length of any counterexample provided by the Teacher. It is
+shown that in a stochastic setting the ability of the Teacher to test conjectures may
+be replaced by a random sampling oracle, EX( ). A polynomial-time learning
+algorithm is shown for a particular problem of context-free language identification.
 
 #Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)

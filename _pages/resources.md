@@ -26,6 +26,8 @@ This page contains useful CS learning resources
 - Intel® 64 and IA-32 Architectures Software Developer’s Manual
 - [ARM Cortex-A Series Programmer's Guide for ARMv7-A](../files/arm-cortex-v7A.pdf)
 - [LLVM Language Reference Manual](https://llvm.org/docs/LangRef.html)
+- [Bluetooth Core Specification v4.0](../files/bluetooth/Core_v4.0.pdf)
+- [Bluetooth Core Specification v4.1](../files/bluetooth/Core_v4.1.pdf)
 - [Bluetooth Core Specification v4.2](../files/bluetooth/Core_v4.2.pdf)
 - [Bluetooth Core Specification v5.0](../files/bluetooth/Core_v5.0.pdf)
 - [Bluetooth Core Specification v5.1](../files/bluetooth/Core_v5.1.pdf)
