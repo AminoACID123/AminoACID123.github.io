@@ -75,6 +75,7 @@ This page contains papers relevant to my research interest.
   - [VulHawk: Cross-architecture Vulnerability Detection with Entropy-based Binary Code Search](#vulhawk-cross-architecture-vulnerability-detection-with-entropy-based-binary-code-search)
 
 - **USENIX SEC**
+  - [BLEEM: Packet Sequence Oriented Fuzzing for Protocol Implementations](#bleem-packet-sequence-oriented-fuzzing-for-protocol-implementations)
   - [UNIFUZZ: A Holistic and Pragmatic Metrics-Driven Platform for Evaluating Fuzzers (2022)](#unifuzz-a-holistic-and-pragmatic-metrics-driven-platform-for-evaluating-fuzzers)
   - [Arbiter: Bridging the Static and Dynamic Divide in Vulnerability Discovery on Binary Programs (2022)](#arbiter-bridging-the-static-and-dynamic-divide-in-vulnerability-discovery-on-binary-programs)
   - [Automatic Firmware Emulation through Invalidity-guided Knowledge Inference (2021)](#automatic-firmware-emulation-through-invalidity-guided-knowledge-inference)
@@ -776,6 +777,11 @@ cover major app functionalities. To this end, we propose (1) a probabilistic mod
 on two popular industrial apps (with billions of user installations),
 Douyin and Toutiao, shows that Fastbot2 outperforms the state-of-the-art testing tools (Monkey, Ape and Stoat) in both activity coverage and fault detection in the context of continuous testing. To date, Fastbot2 has been deployed in the CI pipeline at ByteDance for nearly two years, and 50.8% of the developer-fixed crash bugs
 were reported by Fastbot2, which significantly improves app quality. Fastbot2 has been made publicly available to benefit the community at: https:// github.com/ bytedance/ Fastbot_Androi
+
+### BLEEM: Packet Sequence Oriented Fuzzing for Protocol Implementations
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/bleem.pdf)
+* **Abstract:** Protocol implementations are essential components in network infrastructures. Flaws hidden in the implementations can easily render devices vulnerable to adversaries. Therefore, guaranteeing their correctness is important. However, commonly used vulnerability detection techniques, such as fuzz testing, face increasing challenges in testing these implementations due to ineffective feedback mechanisms and insufficient protocol state-space exploration techniques.  
+This paper presents BLEEM, a packet-sequence-oriented black-box fuzzer for vulnerability detection of protocol implementations. Instead of focusing on individual packet generation, BLEEM generates packets on a sequence level. It provides an effective feedback mechanism by analyzing the system output sequence noninvasively, supports guided fuzzing by resorting to state-space tracking that encompasses all parties timely, and utilizes interactive traffic information to generate protocol-logic-aware packet sequences. We evaluate BLEEM on 15 widely-used implementations of well-known protocols (e.g., TLS and QUIC). Results show that, compared to the state-of-the-art protocol fuzzers such as Peach, BLEEM achieves substantially higher branch coverage (up to 174.93% improvement) within 24 hours. Furthermore, BLEEM exposed 15 security-critical vulnerabilities in prominent protocol implementations, with 10 CVEs assigned.
 
 #Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
