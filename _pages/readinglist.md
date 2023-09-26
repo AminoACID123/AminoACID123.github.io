@@ -32,6 +32,9 @@ This page contains papers relevant to my research interest.
   - Understanding Performance Problems in Deep Learning Systems
   - Fuzzing Deep-Learning Libraries via Automated Relational API Inference
   
+- **TSE**
+  - [Deep Reinforcement Learning for Black-box Testing of Android Apps]
+
 - **ASE**  
   - B-AIS: An Automated Process for Black-box Evaluation of AI-enabled Software Systems against Domain Semantics
   - Boosting the Revealing of Detected Violations in Deep Learning Testing: A Diversity-Guided Method
@@ -100,8 +103,10 @@ This page contains papers relevant to my research interest.
 - **ACSAC**
   - [FirmAE: Towards Large-Scale Emulation of IoT Firmware for Dynamic Analysis (2020)](#firmae-towards-large-scale-emulation-of-iot-firmware-for-dynamic-analysis)
 
-  **TOPLAS**
+- **TOPLAS**
   - [WYSINWYX: What you see is not what you eXecute]
+
+
 
 - **Computers & Security**
   - [VERI: A Large-scale Open-Source Components Vulnerability Detection in IoT Firmware](#veri-a-large-scale-open-source-components-vulnerability-detection-in-iot-firmware)
@@ -766,6 +771,10 @@ and the maximum length of any counterexample provided by the Teacher. It is
 shown that in a stochastic setting the ability of the Teacher to test conjectures may
 be replaced by a random sampling oracle, EX( ). A polynomial-time learning
 algorithm is shown for a particular problem of context-free language identification.
+
+### Deep Reinforcement Learning for Black-box Testing of Android Apps
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Deep_Reinforcement_Learning_for_Black-box_Testing.pdf)
+* **Abstract:** The state space of Android apps is huge, and its thorough exploration during testing remains a significant challenge. The best exploration strategy is highly dependent on the features of the app under test. Reinforcement Learning (RL) is a machine learning technique that learns the optimal strategy to solve a task by trial and error, guided by positive or negative reward, rather than explicit supervision. Deep RL is a recent extension of RL that takes advantage of the learning capabilities of neural networks. Such capabilities make Deep RL suitable for complex exploration spaces such as one of Android apps. However, state-of-the-art, publicly available tools only support basic, Tabular RL. We have developed ARES, a Deep RL approach for black-box testing of Android apps. Experimental results show that it achieves higher coverage and fault revelation than the baselines, including state-of-the-art tools, such as TimeMachine and Q-Testing. We also investigated the reasons behind such performance qualitatively, and we have identified the key features of Android apps that make Deep RL particularly effective on them to be the presence of chained and blocking activities. Moreover, we have developed FATE to fine-tune the hyperparameters of Deep RL algorithms on simulated apps, since it is computationally expensive to carry it out on real apps.
 
 #Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
