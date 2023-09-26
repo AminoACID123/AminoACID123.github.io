@@ -33,7 +33,7 @@ This page contains papers relevant to my research interest.
   - Fuzzing Deep-Learning Libraries via Automated Relational API Inference
   
 - **TSE**
-  - [Deep Reinforcement Learning for Black-box Testing of Android Apps]
+  - [Deep Reinforcement Learning for Black-box Testing of Android Apps](#deep-reinforcement-learning-for-black-box-testing-of-android-apps)
 
 - **ASE**  
   - B-AIS: An Automated Process for Black-box Evaluation of AI-enabled Software Systems against Domain Semantics
