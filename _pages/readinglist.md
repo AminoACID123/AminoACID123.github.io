@@ -43,6 +43,7 @@ This page contains papers relevant to my research interest.
   - Unveiling the Hidden Defection of DNN Testing with Decision-Based Metamorphic Oracle
   - [FIRMGUIDE: Boosting the Capability of Rehosting Embedded Linux Kernels through Model-Guided Kernel Execution](#firmguide-boosting-the-capability-of-rehosting-embedded-linux-kernels-through-model-guided-kernel-execution)
   - [Sorry, I don't understand: Improving Voice User Interface Testing](#sorry-i-dont-understand-improving-voice-user-interface-testing-ase-2022)
+  - [Fastbot2: Reusable Automated Model-based GUI Testing for Android Enhanced by Reinforcement Learn](#fastbot2-reusable-automated-model-based-gui-testing-for-android-enhanced-by-reinforcement-learn)
 
 - **ICSE**
   - Adaptive Test Selection for Deep Neural Networks
@@ -77,6 +78,7 @@ This page contains papers relevant to my research interest.
   - [VulHawk: Cross-architecture Vulnerability Detection with Entropy-based Binary Code Search](#vulhawk-cross-architecture-vulnerability-detection-with-entropy-based-binary-code-search)
 
 - **USENIX SEC**
+  - [BLEEM: Packet Sequence Oriented Fuzzing for Protocol Implementations](#bleem-packet-sequence-oriented-fuzzing-for-protocol-implementations)
   - [UNIFUZZ: A Holistic and Pragmatic Metrics-Driven Platform for Evaluating Fuzzers (2022)](#unifuzz-a-holistic-and-pragmatic-metrics-driven-platform-for-evaluating-fuzzers)
   - [Arbiter: Bridging the Static and Dynamic Divide in Vulnerability Discovery on Binary Programs (2022)](#arbiter-bridging-the-static-and-dynamic-divide-in-vulnerability-discovery-on-binary-programs)
   - [Automatic Firmware Emulation through Invalidity-guided Knowledge Inference (2021)](#automatic-firmware-emulation-through-invalidity-guided-knowledge-inference)
@@ -775,6 +777,19 @@ algorithm is shown for a particular problem of context-free language identificat
 ### Deep Reinforcement Learning for Black-box Testing of Android Apps
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Deep_Reinforcement_Learning_for_Black-box_Testing.pdf)
 * **Abstract:** The state space of Android apps is huge, and its thorough exploration during testing remains a significant challenge. The best exploration strategy is highly dependent on the features of the app under test. Reinforcement Learning (RL) is a machine learning technique that learns the optimal strategy to solve a task by trial and error, guided by positive or negative reward, rather than explicit supervision. Deep RL is a recent extension of RL that takes advantage of the learning capabilities of neural networks. Such capabilities make Deep RL suitable for complex exploration spaces such as one of Android apps. However, state-of-the-art, publicly available tools only support basic, Tabular RL. We have developed ARES, a Deep RL approach for black-box testing of Android apps. Experimental results show that it achieves higher coverage and fault revelation than the baselines, including state-of-the-art tools, such as TimeMachine and Q-Testing. We also investigated the reasons behind such performance qualitatively, and we have identified the key features of Android apps that make Deep RL particularly effective on them to be the presence of chained and blocking activities. Moreover, we have developed FATE to fine-tune the hyperparameters of Deep RL algorithms on simulated apps, since it is computationally expensive to carry it out on real apps.
+
+### Fastbot2: Reusable Automated Model-based GUI Testing for Android Enhanced by Reinforcement Learn
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/fastbot2.pdf)
+* **Abstract:** We introduce a reusable automated model-based GUI testing technique for Android apps to accelerate the testing cycle. Our key insight is that the knowledge of event-activity transitions from the previous testing runs, i.e., executing which events can reach which activities, is valuable for guiding the follow-up testing runs to quickly
+cover major app functionalities. To this end, we propose (1) a probabilistic model to memorize and leverage this knowledge during testing, and (2) design a model-based guided testing strategy (enhanced by a reinforcement learning algorithm). We implemented our technique as an automated testing tool named Fastbot2. The evaluation
+on two popular industrial apps (with billions of user installations),
+Douyin and Toutiao, shows that Fastbot2 outperforms the state-of-the-art testing tools (Monkey, Ape and Stoat) in both activity coverage and fault detection in the context of continuous testing. To date, Fastbot2 has been deployed in the CI pipeline at ByteDance for nearly two years, and 50.8% of the developer-fixed crash bugs
+were reported by Fastbot2, which significantly improves app quality. Fastbot2 has been made publicly available to benefit the community at: https:// github.com/ bytedance/ Fastbot_Androi
+
+### BLEEM: Packet Sequence Oriented Fuzzing for Protocol Implementations
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/bleem.pdf)
+* **Abstract:** Protocol implementations are essential components in network infrastructures. Flaws hidden in the implementations can easily render devices vulnerable to adversaries. Therefore, guaranteeing their correctness is important. However, commonly used vulnerability detection techniques, such as fuzz testing, face increasing challenges in testing these implementations due to ineffective feedback mechanisms and insufficient protocol state-space exploration techniques.  
+This paper presents BLEEM, a packet-sequence-oriented black-box fuzzer for vulnerability detection of protocol implementations. Instead of focusing on individual packet generation, BLEEM generates packets on a sequence level. It provides an effective feedback mechanism by analyzing the system output sequence noninvasively, supports guided fuzzing by resorting to state-space tracking that encompasses all parties timely, and utilizes interactive traffic information to generate protocol-logic-aware packet sequences. We evaluate BLEEM on 15 widely-used implementations of well-known protocols (e.g., TLS and QUIC). Results show that, compared to the state-of-the-art protocol fuzzers such as Peach, BLEEM achieves substantially higher branch coverage (up to 174.93% improvement) within 24 hours. Furthermore, BLEEM exposed 15 security-critical vulnerabilities in prominent protocol implementations, with 10 CVEs assigned.
 
 #Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
