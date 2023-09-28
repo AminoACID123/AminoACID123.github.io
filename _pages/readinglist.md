@@ -35,6 +35,9 @@ This page contains papers relevant to my research interest.
 - **TSE**
   - [Deep Reinforcement Learning for Black-box Testing of Android Apps](#deep-reinforcement-learning-for-black-box-testing-of-android-apps)
 
+- **JAIR**
+  - [DESPOT: Online POMDP Planning with Regularization](#despot-online-pomdp-planning-with-regularization)
+
 - **ASE**  
   - B-AIS: An Automated Process for Black-box Evaluation of AI-enabled Software Systems against Domain Semantics
   - Boosting the Revealing of Detected Violations in Deep Learning Testing: A Diversity-Guided Method
@@ -790,6 +793,13 @@ were reported by Fastbot2, which significantly improves app quality. Fastbot2 ha
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/bleem.pdf)
 * **Abstract:** Protocol implementations are essential components in network infrastructures. Flaws hidden in the implementations can easily render devices vulnerable to adversaries. Therefore, guaranteeing their correctness is important. However, commonly used vulnerability detection techniques, such as fuzz testing, face increasing challenges in testing these implementations due to ineffective feedback mechanisms and insufficient protocol state-space exploration techniques.  
 This paper presents BLEEM, a packet-sequence-oriented black-box fuzzer for vulnerability detection of protocol implementations. Instead of focusing on individual packet generation, BLEEM generates packets on a sequence level. It provides an effective feedback mechanism by analyzing the system output sequence noninvasively, supports guided fuzzing by resorting to state-space tracking that encompasses all parties timely, and utilizes interactive traffic information to generate protocol-logic-aware packet sequences. We evaluate BLEEM on 15 widely-used implementations of well-known protocols (e.g., TLS and QUIC). Results show that, compared to the state-of-the-art protocol fuzzers such as Peach, BLEEM achieves substantially higher branch coverage (up to 174.93% improvement) within 24 hours. Furthermore, BLEEM exposed 15 security-critical vulnerabilities in prominent protocol implementations, with 10 CVEs assigned.
+
+
+### DESPOT: Online POMDP Planning with Regularization
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/DESPOT.pdf)
+* **Abstract:** POMDPs provide a principled framework for planning under uncertainty, but are computationally intractable, due to the “curse of dimensionality” and the “curse of history”. This paper presents an online POMDP algorithm that alleviates these difficulties by focusing the search on a set of randomly sampled scenarios. A Determinized Sparse Partially Observable Tree (DESPOT) compactly captures the execution of all policies on these scenarios. Our Regularized DESPOT (R-DESPOT) algorithm searches the DESPOT for a policy, while optimally balancing the size of the policy and its estimated value obtained under the sampled scenarios. We give an output-sensitive performance bound for all policies derived from a DESPOT, and show that R-DESPOT works well if a small optimal policy exists. We also give an anytime algorithm that approximates R-DESPOT. Experiments show strong results, compared with two of the fastest online POMDP algorithms. Source code along with experimental settings are available at http://bigbird.comp.nus.edu.sg/pmwiki/farm/appl/
+
+
 
 #Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
