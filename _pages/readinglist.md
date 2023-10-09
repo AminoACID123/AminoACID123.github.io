@@ -17,6 +17,7 @@ This page contains papers relevant to my research interest.
   - [Efficient greybox fuzzing of applications in Linux-based IoT devices via enhanced user-mode emulation (2022)](#efficient-greybox-fuzzing-of-applications-in-linux-based-iot-devices-via-enhanced-user-mode-emulation-issta-2022)
   - LiRTest: augmenting LiDAR point clouds for automated testing of autonomous driving systems
   - [Binary Code Is Not Easy](#binary-code-is-not-easy)
+  - [Reinforcement Learning Based Curiosity-Driven Testing of Android Application](#reinforcement-learning-based-curiosity-driven-testing-of-android-application)
 
 - **PLDI**
   - [Context Sensitivity without Contexts](#context-sensitivity-without-contexts)
@@ -800,6 +801,11 @@ This paper presents BLEEM, a packet-sequence-oriented black-box fuzzer for vulne
 * **Abstract:** POMDPs provide a principled framework for planning under uncertainty, but are computationally intractable, due to the “curse of dimensionality” and the “curse of history”. This paper presents an online POMDP algorithm that alleviates these difficulties by focusing the search on a set of randomly sampled scenarios. A Determinized Sparse Partially Observable Tree (DESPOT) compactly captures the execution of all policies on these scenarios. Our Regularized DESPOT (R-DESPOT) algorithm searches the DESPOT for a policy, while optimally balancing the size of the policy and its estimated value obtained under the sampled scenarios. We give an output-sensitive performance bound for all policies derived from a DESPOT, and show that R-DESPOT works well if a small optimal policy exists. We also give an anytime algorithm that approximates R-DESPOT. Experiments show strong results, compared with two of the fastest online POMDP algorithms. Source code along with experimental settings are available at http://bigbird.comp.nus.edu.sg/pmwiki/farm/appl/
 
 
+### Reinforcement Learning Based Curiosity-Driven Testing of Android Application
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/qtesting.pdf)
+* **Abstract:** Mobile applications play an important role in our daily life, while it still remains a challenge to guarantee their correctness. Model-based and systematic approaches have been applied to Android GUI testing. However, they do not show significant advantages over random approaches because of limitations such as imprecise models and poor scalability. In this paper, we propose Q-testing, a reinforcement learning based approach which benefits from both
+random and model-based approaches to automated testing of Android applications. Q-testing explores the Android apps with a curiosity-driven strategy that utilizes a memory set to record part of previously visited states and guides the testing towards unfamiliar functionalities. A state comparison module, which is a neural network trained by plenty of collected samples, is novelly employed to divide different states at the granularity of functional scenarios.
+It can determine the reinforcement learning reward in Q-testing and help the curiosity-driven strategy explore different functionalities efficiently. We conduct experiments on 50 open-source applications where Q-testing outperforms the state-of-the-art and state-of-practice Android GUI testing tools in terms of code coverage and fault detection. So far, 22 of our reported faults have been confirmed, among which 7 have been fixed.
 
 #Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
