@@ -32,6 +32,7 @@ This page contains papers relevant to my research interest.
   - Static Executes-Before Analysis for Event Driven Programs
   - Understanding Performance Problems in Deep Learning Systems
   - Fuzzing Deep-Learning Libraries via Automated Relational API Inference
+  - [Guided, Stochastic Model-Based GUI Testing of Android Apps](#guided-stochastic-model-based-gui-testing-of-android-apps)
   
 - **TSE**
   - [Deep Reinforcement Learning for Black-box Testing of Android Apps](#deep-reinforcement-learning-for-black-box-testing-of-android-apps)
@@ -806,6 +807,13 @@ This paper presents BLEEM, a packet-sequence-oriented black-box fuzzer for vulne
 * **Abstract:** Mobile applications play an important role in our daily life, while it still remains a challenge to guarantee their correctness. Model-based and systematic approaches have been applied to Android GUI testing. However, they do not show significant advantages over random approaches because of limitations such as imprecise models and poor scalability. In this paper, we propose Q-testing, a reinforcement learning based approach which benefits from both
 random and model-based approaches to automated testing of Android applications. Q-testing explores the Android apps with a curiosity-driven strategy that utilizes a memory set to record part of previously visited states and guides the testing towards unfamiliar functionalities. A state comparison module, which is a neural network trained by plenty of collected samples, is novelly employed to divide different states at the granularity of functional scenarios.
 It can determine the reinforcement learning reward in Q-testing and help the curiosity-driven strategy explore different functionalities efficiently. We conduct experiments on 50 open-source applications where Q-testing outperforms the state-of-the-art and state-of-practice Android GUI testing tools in terms of code coverage and fault detection. So far, 22 of our reported faults have been confirmed, among which 7 have been fixed.
+
+
+### Guided, Stochastic Model-Based GUI Testing of Android Apps
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Guided_Stochastic_Android_GUI_Testing.pdf)
+* **Abstract:** Mobile apps are ubiquitous, operate in complex environments and are developed under the time-to-market pressure. Ensuring their correctness and reliability thus becomes an important challenge. This paper introduces Stoat, a novel guided approach to perform stochastic model-based testing on Android apps. Stoat operates in two phases: (1) Given an app as input, it uses dynamic analysis enhanced by a weighted UI exploration strategy and static analysis
+to reverse engineer a stochastic model of the app’s GUI interactions; and (2) it adapts Gibbs sampling to iteratively mutate/refine the stochastic model and guides test generation from the mutated models toward achieving high code and model coverage and exhibiting diverse sequences. During testing, system-level events are randomly injected to further enhance the testing effectiveness.  
+Stoat was evaluated on 93 open-source apps. The results show (1) the models produced by Stoat cover 17∼31% more code than those by existing modeling tools; (2) Stoat detects 3X more unique crashes than two state-of-the-art testing tools, Monkey and Sapienz. Furthermore, Stoat tested 1661 most popular Google Play apps, and detected 2110 previously unknown and unique crashes. So far, 43 developers have responded that they are investigating our reports. 20 of reported crashes have been confirmed, and 8 already fixed.
 
 #Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
