@@ -81,6 +81,7 @@ This page contains papers relevant to my research interest.
 - **NDSS**
   - [From Library Portability to Para-rehosting: Natively Executing Microcontroller Software on Commodity Hardware](#from-library-portability-to-para-rehosting-natively-executing-microcontroller-software-on-commodity-hardware)
   - [VulHawk: Cross-architecture Vulnerability Detection with Entropy-based Binary Code Search](#vulhawk-cross-architecture-vulnerability-detection-with-entropy-based-binary-code-search)
+  - [Refining Indirect Call Targets at the Binary Level](#refining-indirect-call-targets-at-the-binary-level)
 
 - **USENIX SEC**
   - [BLEEM: Packet Sequence Oriented Fuzzing for Protocol Implementations](#bleem-packet-sequence-oriented-fuzzing-for-protocol-implementations)
@@ -814,6 +815,12 @@ It can determine the reinforcement learning reward in Q-testing and help the cur
 * **Abstract:** Mobile apps are ubiquitous, operate in complex environments and are developed under the time-to-market pressure. Ensuring their correctness and reliability thus becomes an important challenge. This paper introduces Stoat, a novel guided approach to perform stochastic model-based testing on Android apps. Stoat operates in two phases: (1) Given an app as input, it uses dynamic analysis enhanced by a weighted UI exploration strategy and static analysis
 to reverse engineer a stochastic model of the app’s GUI interactions; and (2) it adapts Gibbs sampling to iteratively mutate/refine the stochastic model and guides test generation from the mutated models toward achieving high code and model coverage and exhibiting diverse sequences. During testing, system-level events are randomly injected to further enhance the testing effectiveness.  
 Stoat was evaluated on 93 open-source apps. The results show (1) the models produced by Stoat cover 17∼31% more code than those by existing modeling tools; (2) Stoat detects 3X more unique crashes than two state-of-the-art testing tools, Monkey and Sapienz. Furthermore, Stoat tested 1661 most popular Google Play apps, and detected 2110 previously unknown and unique crashes. So far, 43 developers have responded that they are investigating our reports. 20 of reported crashes have been confirmed, and 8 already fixed.
+
+
+### Refining Indirect Call Targets at the Binary Level
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/bpa.pdf)
+* **Abstract:** Enforcing fine-grained Control-Flow Integrity (CFI) is critical for increasing software security. However, for commercial off-the-shelf (COTS) binaries, constructing high-precision Control-Flow Graphs (CFGs) is challenging, because there is no source-level information, such as symbols and types, to assist in indirect-branch target inference. The lack of source-level information brings extra challenges to inferring targets for indirect calls compared to other kinds of indirect branches. Points-to analysis could be a promising solution for this problem, but there is no practical points-to analysis framework for inferring indirect call targets at the binary level. Value set analysis (VSA) is the state-of-the-art binary-level points-to analysis but does not scale to large programs. It is also highly conservative by design and thus leads to low-precision CFG construction. In this paper, we present a binary-level points-to analysis framework called BPA to construct sound and high-precision CFGs. It is a new way of performing points-to analysis at the binary level with the focus on resolving indirect call targets. BPA employs several major techniques, including assuming a block memory model and a memory access analysis for partitioning memory into blocks, to achieve a better balance between scalability and precision. In evaluation, we demonstrate that BPA achieves a 34.5% precision improvement rate over the current state-of-the-art technique without introducing false negatives.
+
 
 #Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
