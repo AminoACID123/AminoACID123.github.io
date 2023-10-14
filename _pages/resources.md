@@ -43,3 +43,6 @@ This page contains useful CS learning resources
 - [Draw.io: Flowchart Maker and Online Diagram Software](https://www.draw.io/)
 - [Text to ASCII Art Generator (TAAG)](http://patorjk.com/software/taag/)
 - [CCF Deadlines](https://ccfddl.github.io)
+
+## Prebuilt Binaries
+- [libchrome for building fluoride](../files/bluetooth/libchrome_1094370-1_amd64.deb)
