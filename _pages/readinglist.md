@@ -77,6 +77,7 @@ This page contains papers relevant to my research interest.
   - [KARONTE: Detecting Insecure Multi-binary Interactions in Embedded Firmware (2020)](#karonte-detecting-insecure-multi-binary-interactions-in-embedded-firmware-sp-sp-2020)
   - [All You Ever Wanted to Know About Dynamic Taint Analysis and Forward Symbolic Execution (2010)]
   - [Back in Black: Towards Formal, Black Box Analysis of Sanitizers and Filters](#back-in-black-towards-formal-black-box-analysis-of-sanitizers-and-filters)
+  - [Prospex: Protocol Specification Extraction](#prospex-protocol-specification-extraction)
 
 - **NDSS**
   - [From Library Portability to Para-rehosting: Natively Executing Microcontroller Software on Commodity Hardware](#from-library-portability-to-para-rehosting-natively-executing-microcontroller-software-on-commodity-hardware)
@@ -821,6 +822,37 @@ Stoat was evaluated on 93 open-source apps. The results show (1) the models prod
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/bpa.pdf)
 * **Abstract:** Enforcing fine-grained Control-Flow Integrity (CFI) is critical for increasing software security. However, for commercial off-the-shelf (COTS) binaries, constructing high-precision Control-Flow Graphs (CFGs) is challenging, because there is no source-level information, such as symbols and types, to assist in indirect-branch target inference. The lack of source-level information brings extra challenges to inferring targets for indirect calls compared to other kinds of indirect branches. Points-to analysis could be a promising solution for this problem, but there is no practical points-to analysis framework for inferring indirect call targets at the binary level. Value set analysis (VSA) is the state-of-the-art binary-level points-to analysis but does not scale to large programs. It is also highly conservative by design and thus leads to low-precision CFG construction. In this paper, we present a binary-level points-to analysis framework called BPA to construct sound and high-precision CFGs. It is a new way of performing points-to analysis at the binary level with the focus on resolving indirect call targets. BPA employs several major techniques, including assuming a block memory model and a memory access analysis for partitioning memory into blocks, to achieve a better balance between scalability and precision. In evaluation, we demonstrate that BPA achieves a 34.5% precision improvement rate over the current state-of-the-art technique without introducing false negatives.
 
+### Prospex: Protocol Specification Extraction
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/prospex.pdf)
+* **Abstract:** Protocol reverse engineering is the process of extracting
+application-level specifications for network protocols. Such
+specifications are very useful in a number of security-related
+contexts, for example, to perform deep packet inspection and
+black-box fuzzing, or to quickly understand custom botnet
+command and control (C&C) channels. Since manual reverse engineering is a time-consuming and tedious process,
+a number of systems have been proposed that aim to automate this task. These systems either analyze network traffic
+directly or monitor the execution of the application that
+receives the protocol messages. While previous systems show
+that precise message formats can be extracted automatically,
+they do not provide a protocol specification. The reason is
+that they do not reverse engineer the protocol state machine.  
+In this paper, we focus on closing this gap by presenting
+a system that is capable of automatically inferring state
+machines. This greatly enhances the results of automatic
+protocol reverse engineering, while further reducing the
+need for human interaction. We extend previous work that
+focuses on behavior-based message format extraction, and
+introduce techniques for identifying and clustering different
+types of messages not only based on their structure, but also
+according to the impact of each message on server behavior.
+Moreover, we present an algorithm for extracting the state
+machine. We have applied our techniques to a number of
+real-world protocols, including the command and control
+protocol used by a malicious bot. Our results demonstrate
+that we are able to extract format specifications for different
+types of messages and meaningful protocol state machines.
+We use these protocol specifications to automatically generate input for a stateful fuzzer, allowing us to discover
+security vulnerabilities in real-world applications.
 
 #Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
