@@ -134,6 +134,10 @@ This page contains papers relevant to my research interest.
   - [Challenges and Solutions for Embedded and Networked Aerospace Software Systems](#challenges-and-solutions-for-embedded-and-networked-aerospace-software-systems)
   - [Physical Devices-Agnostic Hybrid Fuzzing of IoT Firmware](#physical-devices-agnostic-hybrid-fuzzing-of-iot-firmware)
   - [Adaptive and Effective Fuzzing: A Data-Driven Approach](#adaptive-and-effective-fuzzing-a-data-driven-approach)
+  - [Learning deterministic probabilistic automata from a model checking perspective](#learning-deterministic-probabilistic-automata-from-a-model-checking-perspective)
+
+
+
 
 ### A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware (ISSTA 2022)
 * <img src="../files/images/pdf_24px.png">[Paper](/files/papers/A_large_scale_empirical_analysis_of_the_vulnerabilities_introduced_by_third_party_components_in_IOT_firmware.pdf)
@@ -825,12 +829,9 @@ Stoat was evaluated on 93 open-source apps. The results show (1) the models prod
 ### Prospex: Protocol Specification Extraction
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/prospex.pdf)
 * **Abstract:** Protocol reverse engineering is the process of extracting
-application-level specifications for network protocols. Such
-specifications are very useful in a number of security-related
-contexts, for example, to perform deep packet inspection and
-black-box fuzzing, or to quickly understand custom botnet
-command and control (C&C) channels. Since manual reverse engineering is a time-consuming and tedious process,
-a number of systems have been proposed that aim to automate this task. These systems either analyze network traffic
+application-level specifications for network protocols. Such specifications are very useful in a number of security-related
+contexts, for example, to perform deep packet inspection and black-box fuzzing, or to quickly understand custom botnet
+command and control (C&C) channels. Since manual reverse engineering is a time-consuming and tedious process, a number of systems have been proposed that aim to automate this task. These systems either analyze network traffic
 directly or monitor the execution of the application that
 receives the protocol messages. While previous systems show
 that precise message formats can be extracted automatically,
@@ -853,6 +854,21 @@ that we are able to extract format specifications for different
 types of messages and meaningful protocol state machines.
 We use these protocol specifications to automatically generate input for a stateful fuzzer, allowing us to discover
 security vulnerabilities in real-world applications.
+
+### Learning deterministic probabilistic automata from a model checking perspective
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Learning_deterministic_probabilistic_automata_from_a_model_checking_perspective.pdf)
+* **Abstract:** Probabilistic automata models play an important role in the formal design and
+analysis of hard- and software systems. In this area of applications, one is often interested in
+formal model-checking procedures for verifying critical system properties. Since adequate
+system models are often difficult to design manually, we are interested in learning models
+from observed system behaviors. To this end we adopt techniques for learning finite probabilistic automata, notably the Alergia algorithm. In this paper we show how to extend
+the basic algorithm to also learn automata models for both reactive and timed systems. A
+key question of our investigation is to what extent one can expect a learned model to be a
+good approximation for the kind of probabilistic properties one wants to verify by model
+checking. We establish theoretical convergence properties for the learning algorithm as well
+as for probability estimates of system properties expressed in linear time temporal logic and
+linear continuous stochastic logic. We empirically compare the learning algorithm with statistical model checking and demonstrate the feasibility of the approach for practical system
+verification.
 
 #Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
