@@ -44,5 +44,6 @@ This page contains useful CS learning resources
 - [Text to ASCII Art Generator (TAAG)](http://patorjk.com/software/taag/)
 - [CCF Deadlines](https://ccfddl.github.io)
 
-## Prebuilt Binaries
-- [libchrome for building fluoride](../files/bluetooth/libchrome_1094370-1_amd64.deb)
+## Misc
+- [CCF Conference/Journal Ranking]
+- [BlueBorne Technical White Paper](../files/bluetooth/blueborne.pdf)
