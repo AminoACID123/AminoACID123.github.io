@@ -98,6 +98,9 @@ This page contains papers relevant to my research interest.
   - [TCP-Fuzz: Detecting Memory and Semantic Bugs in TCP Stacks with Fuzzing (2021)](#tcp-fuzz-detecting-memory-and-semantic-bugs-in-tcp-stacks-with-fuzzing)
   - [SweynTooth: Unleashing Mayhem over Bluetooth Low Energy (2020)]
 
+- **EuroSys**
+  - [Nyx-Net: Network Fuzzing with Incremental Snapshots](#nyx-net-network-fuzzing-with-incremental-snapshots)
+
 - **SANER**
   - [RIBDetector: an RFC-guided Inconsistency Bug Detecting Approach for Protocol Implementations](#ribdetector-an-rfc-guided-inconsistency-bug-detecting-approach-for-protocol-implementations)
 
@@ -878,6 +881,12 @@ technique. However, AFL allocates excessive energy (i.e., the number of test cas
 ### STATEAFL: Greybox fuzzing for stateful network servers
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/stateafl.pdf)
 * **Abstract:** Fuzzing network servers is a technical challenge, since the behavior of the target server depends on its state over a sequence of multiple messages. Existing solutions are costly and difficult to use, as they rely on manually-customized artifacts such as protocol models, protocol parsers, and learning frameworks. The aim of this work is to develop a greybox fuzzer (STATEAFL) for network servers that only relies on lightweight analysis of the target program, with no manual customization, in a similar way to what the AFL fuzzer achieved for stateless programs. The proposed fuzzer instruments the target server at compile-time, to insert probes on memory allocations and network I/O operations. At run-time, it infers the current protocol state of the target server by taking snapshots of long-lived memory areas, and by applying a fuzzy hashing algorithm (Locality-Sensitive Hashing) to map memory contents to a unique state identifier. The fuzzer incrementally builds a protocol state machine for guiding fuzzing. We implemented and released STATEAFL as open-source software. As a basis for reproducible experimentation, we integrated STATEAFL with a large set of network servers for popular protocols, with no manual customization to accomodate for the protocol. The experimental results show that the fuzzer can be applied with no manual customization on a large set of network servers for popular protocols, and that it can achieve comparable, or even better code coverage and bug detection than customized fuzzing. Moreover, our qualitative analysis shows that states inferred from memory better reflect the server behavior than only using response codes from messages.
+
+### Nyx-Net: Network Fuzzing with Incremental Snapshots
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/nyx-net.pdf)
+* **Abstract:** Coverage-guided fuzz testing (“fuzzing”) has become mainstream and we have observed lots of progress in this research area recently. However, it is still challenging to efficiently test network services with existing coverage-guided fuzzing methods. In this paper, we introduce the design and implementation of Nyx-Net, a novel snapshot-based fuzzing approach that can successfully fuzz a wide range of targets spanning servers, clients, games, and even Firefox’s InterProcess Communication (IPC) interface. Compared to stateof-the-art methods, Nyx-Net improves test throughput by up to 300x and coverage found by up to 70%. Additionally, Nyx-Net is able to find crashes in two of ProFuzzBench’s targets that no other fuzzer found previously. When using Nyx-Net to play the game Super Mario, Nyx-Net shows speedups of 10-30x compared to existing work. Moreover, Nyx-Net is able to find previously unknown bugs in servers
+such as Lighttpd, clients such as MySQL client, and even Firefox’s IPC mechanism—demonstrating the strength and versatility of the proposed approach. Lastly, our prototype implementation was awarded a $20.000 bug bounty for enabling fuzzing on previously unfuzzable code in Firefox and solving a long-standing problem at Mozilla.
+
 
 #Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
