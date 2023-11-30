@@ -17,6 +17,7 @@ This page contains papers relevant to my research interest.
   - [Efficient greybox fuzzing of applications in Linux-based IoT devices via enhanced user-mode emulation (2022)](#efficient-greybox-fuzzing-of-applications-in-linux-based-iot-devices-via-enhanced-user-mode-emulation-issta-2022)
   - LiRTest: augmenting LiDAR point clouds for automated testing of autonomous driving systems
   - [Binary Code Is Not Easy](#binary-code-is-not-easy)
+  - [Reinforcement Learning Based Curiosity-Driven Testing of Android Application](#reinforcement-learning-based-curiosity-driven-testing-of-android-application)
 
 - **PLDI**
   - [Context Sensitivity without Contexts](#context-sensitivity-without-contexts)
@@ -31,6 +32,7 @@ This page contains papers relevant to my research interest.
   - Static Executes-Before Analysis for Event Driven Programs
   - Understanding Performance Problems in Deep Learning Systems
   - Fuzzing Deep-Learning Libraries via Automated Relational API Inference
+  - [Guided, Stochastic Model-Based GUI Testing of Android Apps](#guided-stochastic-model-based-gui-testing-of-android-apps)
   
 - **TSE**
   - [Deep Reinforcement Learning for Black-box Testing of Android Apps](#deep-reinforcement-learning-for-black-box-testing-of-android-apps)
@@ -63,6 +65,7 @@ This page contains papers relevant to my research interest.
   - Nessie: Automatically Testing JavaScript APIs with Asynchronous Callbacks
   - PerfSig: Extracting Performance Bug Signatures via Multi-modality Causal Analysis
   - [Testing File System Implementations on Layered Models](#testing-file-system-implementations-on-layered-models)
+  - [Evaluating and Improving Hybrid Fuzzing](#evaluating-and-improving-hybrid-fuzzing)
 
 - **OOPSLA**  
   - Coverage-guided tensor compiler fuzzing with joint IR-pass mutation  
@@ -75,16 +78,19 @@ This page contains papers relevant to my research interest.
   - [KARONTE: Detecting Insecure Multi-binary Interactions in Embedded Firmware (2020)](#karonte-detecting-insecure-multi-binary-interactions-in-embedded-firmware-sp-sp-2020)
   - [All You Ever Wanted to Know About Dynamic Taint Analysis and Forward Symbolic Execution (2010)]
   - [Back in Black: Towards Formal, Black Box Analysis of Sanitizers and Filters](#back-in-black-towards-formal-black-box-analysis-of-sanitizers-and-filters)
+  - [Prospex: Protocol Specification Extraction](#prospex-protocol-specification-extraction)
 
 - **NDSS**
   - [From Library Portability to Para-rehosting: Natively Executing Microcontroller Software on Commodity Hardware](#from-library-portability-to-para-rehosting-natively-executing-microcontroller-software-on-commodity-hardware)
   - [VulHawk: Cross-architecture Vulnerability Detection with Entropy-based Binary Code Search](#vulhawk-cross-architecture-vulnerability-detection-with-entropy-based-binary-code-search)
+  - [Refining Indirect Call Targets at the Binary Level](#refining-indirect-call-targets-at-the-binary-level)
 
 - **USENIX SEC**
   - [BLEEM: Packet Sequence Oriented Fuzzing for Protocol Implementations](#bleem-packet-sequence-oriented-fuzzing-for-protocol-implementations)
   - [UNIFUZZ: A Holistic and Pragmatic Metrics-Driven Platform for Evaluating Fuzzers (2022)](#unifuzz-a-holistic-and-pragmatic-metrics-driven-platform-for-evaluating-fuzzers)
   - [Arbiter: Bridging the Static and Dynamic Divide in Vulnerability Discovery on Binary Programs (2022)](#arbiter-bridging-the-static-and-dynamic-divide-in-vulnerability-discovery-on-binary-programs)
   - [Automatic Firmware Emulation through Invalidity-guided Knowledge Inference (2021)](#automatic-firmware-emulation-through-invalidity-guided-knowledge-inference)
+  - [EcoFuzz: Adaptive Energy-Saving Greybox Fuzzing as a Variant of the Adversarial Multi-Armed Bandit](#ecofuzz-adaptive-energy-saving-greybox-fuzzing-as-a-variant-of-the-adversarial-multi-armed-bandit)
   - [Selectivetaint: Efficient Data Flow Tracking With Static Binary Rewriting](#selectivetaint-efficient-data-flow-tracking-with-static-binary-rewriting)
   - [Sharing More and Checking Less: Leveraging Common Input Keywords to Detect Bugs in Embedded Systems](#sharing-more-and-checking-less-leveraging-common-input-keywords-to-detect-bugs-in-embedded-systems)
   - [FIRM-AFL: High-Throughput Greybox Fuzzing of IoT Firmware via Augmented Process Emulation (2019)](#firm-afl-high-throughput-greybox-fuzzing-of-iot-firmware-via-augmented-process-emulation)
@@ -92,6 +98,9 @@ This page contains papers relevant to my research interest.
 - **USENIX ATC**
   - [TCP-Fuzz: Detecting Memory and Semantic Bugs in TCP Stacks with Fuzzing (2021)](#tcp-fuzz-detecting-memory-and-semantic-bugs-in-tcp-stacks-with-fuzzing)
   - [SweynTooth: Unleashing Mayhem over Bluetooth Low Energy (2020)]
+
+- **EuroSys**
+  - [Nyx-Net: Network Fuzzing with Incremental Snapshots](#nyx-net-network-fuzzing-with-incremental-snapshots)
 
 - **SANER**
   - [RIBDetector: an RFC-guided Inconsistency Bug Detecting Approach for Protocol Implementations](#ribdetector-an-rfc-guided-inconsistency-bug-detecting-approach-for-protocol-implementations)
@@ -111,8 +120,6 @@ This page contains papers relevant to my research interest.
 - **TOPLAS**
   - [WYSINWYX: What you see is not what you eXecute]
 
-
-
 - **Computers & Security**
   - [VERI: A Large-scale Open-Source Components Vulnerability Detection in IoT Firmware](#veri-a-large-scale-open-source-components-vulnerability-detection-in-iot-firmware)
   
@@ -130,6 +137,10 @@ This page contains papers relevant to my research interest.
   - [Challenges and Solutions for Embedded and Networked Aerospace Software Systems](#challenges-and-solutions-for-embedded-and-networked-aerospace-software-systems)
   - [Physical Devices-Agnostic Hybrid Fuzzing of IoT Firmware](#physical-devices-agnostic-hybrid-fuzzing-of-iot-firmware)
   - [Adaptive and Effective Fuzzing: A Data-Driven Approach](#adaptive-and-effective-fuzzing-a-data-driven-approach)
+  - [Learning deterministic probabilistic automata from a model checking perspective](#learning-deterministic-probabilistic-automata-from-a-model-checking-perspective)
+  - [STATEAFL: Greybox fuzzing for stateful network servers](#stateafl-greybox-fuzzing-for-stateful-network-servers)
+
+
 
 ### A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware (ISSTA 2022)
 * <img src="../files/images/pdf_24px.png">[Paper](/files/papers/A_large_scale_empirical_analysis_of_the_vulnerabilities_introduced_by_third_party_components_in_IOT_firmware.pdf)
@@ -800,6 +811,87 @@ This paper presents BLEEM, a packet-sequence-oriented black-box fuzzer for vulne
 * **Abstract:** POMDPs provide a principled framework for planning under uncertainty, but are computationally intractable, due to the “curse of dimensionality” and the “curse of history”. This paper presents an online POMDP algorithm that alleviates these difficulties by focusing the search on a set of randomly sampled scenarios. A Determinized Sparse Partially Observable Tree (DESPOT) compactly captures the execution of all policies on these scenarios. Our Regularized DESPOT (R-DESPOT) algorithm searches the DESPOT for a policy, while optimally balancing the size of the policy and its estimated value obtained under the sampled scenarios. We give an output-sensitive performance bound for all policies derived from a DESPOT, and show that R-DESPOT works well if a small optimal policy exists. We also give an anytime algorithm that approximates R-DESPOT. Experiments show strong results, compared with two of the fastest online POMDP algorithms. Source code along with experimental settings are available at http://bigbird.comp.nus.edu.sg/pmwiki/farm/appl/
 
 
+### Reinforcement Learning Based Curiosity-Driven Testing of Android Application
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/qtesting.pdf)
+* **Abstract:** Mobile applications play an important role in our daily life, while it still remains a challenge to guarantee their correctness. Model-based and systematic approaches have been applied to Android GUI testing. However, they do not show significant advantages over random approaches because of limitations such as imprecise models and poor scalability. In this paper, we propose Q-testing, a reinforcement learning based approach which benefits from both
+random and model-based approaches to automated testing of Android applications. Q-testing explores the Android apps with a curiosity-driven strategy that utilizes a memory set to record part of previously visited states and guides the testing towards unfamiliar functionalities. A state comparison module, which is a neural network trained by plenty of collected samples, is novelly employed to divide different states at the granularity of functional scenarios.
+It can determine the reinforcement learning reward in Q-testing and help the curiosity-driven strategy explore different functionalities efficiently. We conduct experiments on 50 open-source applications where Q-testing outperforms the state-of-the-art and state-of-practice Android GUI testing tools in terms of code coverage and fault detection. So far, 22 of our reported faults have been confirmed, among which 7 have been fixed.
+
+
+### Guided, Stochastic Model-Based GUI Testing of Android Apps
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Guided_Stochastic_Android_GUI_Testing.pdf)
+* **Abstract:** Mobile apps are ubiquitous, operate in complex environments and are developed under the time-to-market pressure. Ensuring their correctness and reliability thus becomes an important challenge. This paper introduces Stoat, a novel guided approach to perform stochastic model-based testing on Android apps. Stoat operates in two phases: (1) Given an app as input, it uses dynamic analysis enhanced by a weighted UI exploration strategy and static analysis
+to reverse engineer a stochastic model of the app’s GUI interactions; and (2) it adapts Gibbs sampling to iteratively mutate/refine the stochastic model and guides test generation from the mutated models toward achieving high code and model coverage and exhibiting diverse sequences. During testing, system-level events are randomly injected to further enhance the testing effectiveness.  
+Stoat was evaluated on 93 open-source apps. The results show (1) the models produced by Stoat cover 17∼31% more code than those by existing modeling tools; (2) Stoat detects 3X more unique crashes than two state-of-the-art testing tools, Monkey and Sapienz. Furthermore, Stoat tested 1661 most popular Google Play apps, and detected 2110 previously unknown and unique crashes. So far, 43 developers have responded that they are investigating our reports. 20 of reported crashes have been confirmed, and 8 already fixed.
+
+
+### Refining Indirect Call Targets at the Binary Level
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/bpa.pdf)
+* **Abstract:** Enforcing fine-grained Control-Flow Integrity (CFI) is critical for increasing software security. However, for commercial off-the-shelf (COTS) binaries, constructing high-precision Control-Flow Graphs (CFGs) is challenging, because there is no source-level information, such as symbols and types, to assist in indirect-branch target inference. The lack of source-level information brings extra challenges to inferring targets for indirect calls compared to other kinds of indirect branches. Points-to analysis could be a promising solution for this problem, but there is no practical points-to analysis framework for inferring indirect call targets at the binary level. Value set analysis (VSA) is the state-of-the-art binary-level points-to analysis but does not scale to large programs. It is also highly conservative by design and thus leads to low-precision CFG construction. In this paper, we present a binary-level points-to analysis framework called BPA to construct sound and high-precision CFGs. It is a new way of performing points-to analysis at the binary level with the focus on resolving indirect call targets. BPA employs several major techniques, including assuming a block memory model and a memory access analysis for partitioning memory into blocks, to achieve a better balance between scalability and precision. In evaluation, we demonstrate that BPA achieves a 34.5% precision improvement rate over the current state-of-the-art technique without introducing false negatives.
+
+### Prospex: Protocol Specification Extraction
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/prospex.pdf)
+* **Abstract:** Protocol reverse engineering is the process of extracting
+application-level specifications for network protocols. Such specifications are very useful in a number of security-related
+contexts, for example, to perform deep packet inspection and black-box fuzzing, or to quickly understand custom botnet
+command and control (C&C) channels. Since manual reverse engineering is a time-consuming and tedious process, a number of systems have been proposed that aim to automate this task. These systems either analyze network traffic
+directly or monitor the execution of the application that
+receives the protocol messages. While previous systems show
+that precise message formats can be extracted automatically,
+they do not provide a protocol specification. The reason is
+that they do not reverse engineer the protocol state machine.  
+In this paper, we focus on closing this gap by presenting
+a system that is capable of automatically inferring state
+machines. This greatly enhances the results of automatic
+protocol reverse engineering, while further reducing the
+need for human interaction. We extend previous work that
+focuses on behavior-based message format extraction, and
+introduce techniques for identifying and clustering different
+types of messages not only based on their structure, but also
+according to the impact of each message on server behavior.
+Moreover, we present an algorithm for extracting the state
+machine. We have applied our techniques to a number of
+real-world protocols, including the command and control
+protocol used by a malicious bot. Our results demonstrate
+that we are able to extract format specifications for different
+types of messages and meaningful protocol state machines.
+We use these protocol specifications to automatically generate input for a stateful fuzzer, allowing us to discover
+security vulnerabilities in real-world applications.
+
+### Learning deterministic probabilistic automata from a model checking perspective
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Learning_deterministic_probabilistic_automata_from_a_model_checking_perspective.pdf)
+* **Abstract:** Probabilistic automata models play an important role in the formal design and
+analysis of hard- and software systems. In this area of applications, one is often interested in
+formal model-checking procedures for verifying critical system properties. Since adequate
+system models are often difficult to design manually, we are interested in learning models
+from observed system behaviors. To this end we adopt techniques for learning finite probabilistic automata, notably the Alergia algorithm. In this paper we show how to extend
+the basic algorithm to also learn automata models for both reactive and timed systems. A
+key question of our investigation is to what extent one can expect a learned model to be a
+good approximation for the kind of probabilistic properties one wants to verify by model
+checking. We establish theoretical convergence properties for the learning algorithm as well
+as for probability estimates of system properties expressed in linear time temporal logic and
+linear continuous stochastic logic. We empirically compare the learning algorithm with statistical model checking and demonstrate the feasibility of the approach for practical system
+verification.
+
+### EcoFuzz: Adaptive Energy-Saving Greybox Fuzzing as a Variant of the Adversarial Multi-Armed Bandit
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/ecofuzz.pdf)
+* **Abstract:** Fuzzing is one of the most effective approaches for identifying security vulnerabilities. As a state-of-the-art coverage-based greybox fuzzer, AFL is a highly effective and widely used
+technique. However, AFL allocates excessive energy (i.e., the number of test cases generated by the seed) to seeds that exercise the high-frequency paths and can not adaptively adjust the energy allocation, thus wasting a significant amount of energy. Moreover, the current Markov model for modeling coverage-based greybox fuzzing is not profound enough. This paper presents a variant of the Adversarial Multi-Armed Bandit model for modeling AFL’s power schedule process. We first explain the challenges in AFL’s scheduling algorithm by using the reward probability that generates a test case for discovering a new path. Moreover, we illustrated the three states of the seeds set and developed a unique adaptive scheduling algorithm as well as a probability-based search strategy. These approaches are implemented on top of AFL in an adaptive energy-saving greybox fuzzer called EcoFuzz. EcoFuzz is examined against other six AFL-type tools on 14 real-world subjects over 490 CPU days. According to the results, EcoFuzz could attain 214% of the path coverage of AFL with reducing 32% test cases generation of that of AFL. Besides, EcoFuzz identified 12 vulnerabilities in GNU Binutils and other software. We also extended EcoFuzz to test some IoT devices and found a new vulnerability in the SNMP component.
+
+
+### STATEAFL: Greybox fuzzing for stateful network servers
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/stateafl.pdf)
+* **Abstract:** Fuzzing network servers is a technical challenge, since the behavior of the target server depends on its state over a sequence of multiple messages. Existing solutions are costly and difficult to use, as they rely on manually-customized artifacts such as protocol models, protocol parsers, and learning frameworks. The aim of this work is to develop a greybox fuzzer (STATEAFL) for network servers that only relies on lightweight analysis of the target program, with no manual customization, in a similar way to what the AFL fuzzer achieved for stateless programs. The proposed fuzzer instruments the target server at compile-time, to insert probes on memory allocations and network I/O operations. At run-time, it infers the current protocol state of the target server by taking snapshots of long-lived memory areas, and by applying a fuzzy hashing algorithm (Locality-Sensitive Hashing) to map memory contents to a unique state identifier. The fuzzer incrementally builds a protocol state machine for guiding fuzzing. We implemented and released STATEAFL as open-source software. As a basis for reproducible experimentation, we integrated STATEAFL with a large set of network servers for popular protocols, with no manual customization to accomodate for the protocol. The experimental results show that the fuzzer can be applied with no manual customization on a large set of network servers for popular protocols, and that it can achieve comparable, or even better code coverage and bug detection than customized fuzzing. Moreover, our qualitative analysis shows that states inferred from memory better reflect the server behavior than only using response codes from messages.
+
+### Nyx-Net: Network Fuzzing with Incremental Snapshots
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/nyx-net.pdf)
+* **Abstract:** Coverage-guided fuzz testing (“fuzzing”) has become mainstream and we have observed lots of progress in this research area recently. However, it is still challenging to efficiently test network services with existing coverage-guided fuzzing methods. In this paper, we introduce the design and implementation of Nyx-Net, a novel snapshot-based fuzzing approach that can successfully fuzz a wide range of targets spanning servers, clients, games, and even Firefox’s InterProcess Communication (IPC) interface. Compared to stateof-the-art methods, Nyx-Net improves test throughput by up to 300x and coverage found by up to 70%. Additionally, Nyx-Net is able to find crashes in two of ProFuzzBench’s targets that no other fuzzer found previously. When using Nyx-Net to play the game Super Mario, Nyx-Net shows speedups of 10-30x compared to existing work. Moreover, Nyx-Net is able to find previously unknown bugs in servers
+such as Lighttpd, clients such as MySQL client, and even Firefox’s IPC mechanism—demonstrating the strength and versatility of the proposed approach. Lastly, our prototype implementation was awarded a $20.000 bug bounty for enabling fuzzing on previously unfuzzable code in Firefox and solving a long-standing problem at Mozilla.
+
+
+### Evaluating and Improving Hybrid Fuzzing
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Evaluating_and_improving_hybrid_fuzzing.pdf)
+* **Abstract:** To date, various hybrid fuzzers have been proposed for maximal program vulnerability exposure by integrating the power of fuzzing strategies and concolic executors. While the existing hybrid fuzzers have shown their superiority over conventional coverage-guided fuzzers, they seldom follow equivalent evaluation setups, e.g., benchmarks and seed corpora. Thus, there is a pressing need for a comprehensive study on the existing hybrid fuzzers to provide implications and guidance for future research in this area. To this end, in this paper, we conduct the first extensive study on state-of-the-art hybrid fuzzers. Surprisingly, our study shows that the performance of existing hybrid fuzzers may not well generalize to other experimental settings. Meanwhile, their performance advantages over conventional coverage-guided fuzzers are overall limited. In addition, instead of simply updating the fuzzing strategies or concolic executors, updating their coordination modes potentially poses crucial performance impact of hybrid fuzzers. Accordingly, we propose CoFuzz to improve the effectiveness of hybrid fuzzers by upgrading their coordination modes. Specifically, based on the baseline hybrid fuzzer QSYM, CoFuzz adopts edge-oriented scheduling to schedule edges for applying concolic execution via an online linear regression model with Stochastic Gradient Descent. It also adopts sampling-augmenting synchronization to derive seeds for applying fuzzing strategies via the interval path abstraction and John walk as well as incrementally updating the model. Our evaluation results indicate that CoFuzz can significantly increase the edge coverage (e.g., 16.31% higher than the best existing hybrid fuzzer in our study) and expose around 2X more unique crashes than all studied hybrid fuzzers. Moreover, CoFuzz successfully detects 37 previously unknown bugs where 30 are confirmed with 8 new CVEs and 20 are fixed.
 
 #Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
