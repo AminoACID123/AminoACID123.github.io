@@ -140,6 +140,7 @@ This page contains papers relevant to my research interest.
   - [Adaptive and Effective Fuzzing: A Data-Driven Approach](#adaptive-and-effective-fuzzing-a-data-driven-approach)
   - [Learning deterministic probabilistic automata from a model checking perspective](#learning-deterministic-probabilistic-automata-from-a-model-checking-perspective)
   - [STATEAFL: Greybox fuzzing for stateful network servers](#stateafl-greybox-fuzzing-for-stateful-network-servers)
+  - [What Every Programmer Should Know About Memory](#what-every-programmer-should-know-about-memory)
 
 
 
@@ -898,6 +899,17 @@ such as Lighttpd, clients such as MySQL client, and even Firefox’s IPC mechani
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/PATA_Fuzzing_with_Path_Aware_Taint_Analysis.pdf)
 * **Abstract:** Taint analysis assists fuzzers in solving complex fuzzing constraints by inferring the influencing input bytes. Execution paths in real-world programs often reach loops, where constraints in these loops can be visited and recorded multiple times. Conventional taint analysis techniques experience difficulties when distinguishing between multiple occurrences of the same constraint. In this paper, we propose PATA, a fuzzer that implements path-aware taint analysis, i.e. one that distinguishes between multiple occurrences of the same variable based on the execution path information. PATA does so using the following steps. First, PATA identifies variables used in constraints and constructs the Representative Variable Sequence (RVS), consisting of occurrences of all representative constraint variables and their values. Next, PATA perturbs the input, matches its RVS with that of the original input, and looks for value changes to identify the influencing input bytes for each entry in the RVS. Finally, PATA mutates the corresponding input bytes to solve constraints in the given path.  
 To demonstrate the effectiveness of PATA over conventional taint analysis methods, we evaluated its performance on the benchmarks Google’s fuzzer-test-suite and LAVA-M against AFL, MOPT, TortoriseFuzz, VUzzer, Angora, REDQUEEN, and GREYONE. On Google’s fuzzer-test-suite, PATA outperformed these state-of-the-art fuzzers by 29%–1830% and 7%–87% in the number of unique paths found and basic blocks covered, respectively. More importantly, it found more bugs than the comparison fuzzers, including 17 unlisted ones. On LAVA-M, PATA performed the best out of all evaluated fuzzers and found 2602 bugs. On open-source projects, PATA found 40 previously unknown bugs, with 12 of them confirmed as CVEs.
+
+
+### What Every Programmer Should Know About Memory
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/cpumemory.pdf)
+* **Abstract:** As CPU cores become both faster and more numerous, the limiting factor for most programs is
+now, and will be for some time, memory access. Hardware designers have come up with ever
+more sophisticated memory handling and acceleration techniques–such as CPU caches–but
+these cannot work optimally without some help from the programmer. Unfortunately, neither
+the structure nor the cost of using the memory subsystem of a computer or the caches on CPUs
+is well understood by most programmers. This paper explains the structure of memory subsystems in use on modern commodity hardware, illustrating why CPU caches were developed, how
+they work, and what programs should do to achieve optimal performance by utilizing them.
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
