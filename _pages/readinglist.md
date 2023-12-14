@@ -66,6 +66,7 @@ This page contains papers relevant to my research interest.
   - PerfSig: Extracting Performance Bug Signatures via Multi-modality Causal Analysis
   - [Testing File System Implementations on Layered Models](#testing-file-system-implementations-on-layered-models)
   - [Evaluating and Improving Hybrid Fuzzing](#evaluating-and-improving-hybrid-fuzzing)
+  - [CONFETTI: Amplifying Concolic Guidance for Fuzzers](#confetti-amplifying-concolic-guidance-for-fuzzers)
 
 - **OOPSLA**  
   - Coverage-guided tensor compiler fuzzing with joint IR-pass mutation  
@@ -910,6 +911,19 @@ these cannot work optimally without some help from the programmer. Unfortunately
 the structure nor the cost of using the memory subsystem of a computer or the caches on CPUs
 is well understood by most programmers. This paper explains the structure of memory subsystems in use on modern commodity hardware, illustrating why CPU caches were developed, how
 they work, and what programs should do to achieve optimal performance by utilizing them.
+
+
+### CONFETTI: Amplifying Concolic Guidance for Fuzzers
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/CONFETTI.pdf)
+* **Abstract:** Fuzz testing (fuzzing) allows developers to detect bugs and vulnerabilities in code by automatically generating defect-revealing inputs. Most fuzzers operate by generating inputs for applications and mutating the bytes of those inputs, guiding the fuzzing process with branch coverage feedback via instrumentation. Whitebox
+guidance (e.g., taint tracking or concolic execution) is sometimes integrated with coverage-guided fuzzing to help cover tricky-to-reach branches that are guarded by complex conditions (so-called “magic values”). This integration typically takes the form of a targeted input mutation, e.g., placing particular byte values at a specific offset of some input in order to cover a branch. However, these dynamic analysis techniques are not perfect in practice, which can result in the loss of important relationships between input bytes and branch predicates, thus reducing the effective power of the technique. We introduce a new, surprisingly simple, but effective technique, global hinting, which allows the fuzzer to insert these interesting bytes not only at a targeted position, but in any position of any input. We implemented this idea in Java, creating Confetti, which uses
+both targeted and global hints for fuzzing. In an empirical comparison with two baseline approaches, a state-of-the-art greybox
+Java fuzzer and a version of Confetti without global hinting, we
+found that Confetti covers more branches and finds 15 previously
+unreported bugs, including 9 that neither baseline could find. By
+conducting a post-mortem analysis of Confetti’s execution, we
+determined that global hinting was at least as effective at revealing
+new coverage as traditional, targeted hinting
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
