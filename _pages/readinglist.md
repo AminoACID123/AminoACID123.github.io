@@ -87,6 +87,7 @@ This page contains papers relevant to my research interest.
   - [From Library Portability to Para-rehosting: Natively Executing Microcontroller Software on Commodity Hardware](#from-library-portability-to-para-rehosting-natively-executing-microcontroller-software-on-commodity-hardware)
   - [VulHawk: Cross-architecture Vulnerability Detection with Entropy-based Binary Code Search](#vulhawk-cross-architecture-vulnerability-detection-with-entropy-based-binary-code-search)
   - [Refining Indirect Call Targets at the Binary Level](#refining-indirect-call-targets-at-the-binary-level)
+  - [VUzzer: Application-aware Evolutionary Fuzzing](#vuzzer-application-aware-evolutionary-fuzzing)
 
 - **USENIX SEC**
   - [BLEEM: Packet Sequence Oriented Fuzzing for Protocol Implementations](#bleem-packet-sequence-oriented-fuzzing-for-protocol-implementations)
@@ -950,6 +951,13 @@ open source programs. Angora found 6, 52, 29, 40 and 48
 new bugs in file, jhead, nm, objdump and size, respectively. We
 measured the coverage of Angora and evaluated how its key
 techniques contribute to its impressive performance.
+
+### VUzzer: Application-aware Evolutionary Fuzzing
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/vuzzer.pdf)
+* **Abstract:** Fuzzing is an effective software testing techniqueto find bugs. Given the size and complexity of real-world
+applications, modern fuzzers tend to be either scalable, but not effective in exploring bugs that lie deeper in the execution, or capable of penetrating deeper in the application, but not scalable.  
+In this paper, we present an application-aware evolutionary fuzzing strategy that does not require any prior knowledge of the
+application or input format. In order to maximize coverage and explore deeper paths, we leverage control- and data-flow features based on static and dynamic analysis to infer fundamental properties of the application. This enables much faster generation of interesting inputs compared to an application-agnostic approach. We implement our fuzzing strategy in VUzzer and evaluate it on three different datasets: DARPA Grand Challenge binaries (CGC), a set of real-world applications (binary input parsers), and the recently released LAVA dataset. On all of these datasets, VUzzer yields significantly better results than state-of-the-art fuzzers, by quickly finding several existing and new bugs.
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
