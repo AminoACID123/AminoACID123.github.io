@@ -81,6 +81,7 @@ This page contains papers relevant to my research interest.
   - [Back in Black: Towards Formal, Black Box Analysis of Sanitizers and Filters](#back-in-black-towards-formal-black-box-analysis-of-sanitizers-and-filters)
   - [Prospex: Protocol Specification Extraction](#prospex-protocol-specification-extraction)
   - [PATA: Fuzzing with Path Aware Taint Analysis](#pata-fuzzing-with-path-aware-taint-analysis)
+  - [Angora: Efficient Fuzzing by Principled Search](#angora-efficient-fuzzing-by-principled-search)
 
 - **NDSS**
   - [From Library Portability to Para-rehosting: Natively Executing Microcontroller Software on Commodity Hardware](#from-library-portability-to-para-rehosting-natively-executing-microcontroller-software-on-commodity-hardware)
@@ -924,6 +925,31 @@ unreported bugs, including 9 that neither baseline could find. By
 conducting a post-mortem analysis of Confetti’s execution, we
 determined that global hinting was at least as effective at revealing
 new coverage as traditional, targeted hinting
+
+### Angora: Efficient Fuzzing by Principled Search
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Angora_Efficient_Fuzzing_by_Principled_Search.pdf)
+* **Abstract:** Fuzzing is a popular technique for finding software
+bugs. However, the performance of the state-of-the-art fuzzers
+leaves a lot to be desired. Fuzzers based on symbolic execution
+produce quality inputs but run slow, while fuzzers based on
+random mutation run fast but have difficulty producing quality
+inputs. We propose Angora, a new mutation-based fuzzer that
+outperforms the state-of-the-art fuzzers by a wide margin.
+The main goal of Angora is to increase branch coverage
+by solving path constraints without symbolic execution. To
+solve path constraints efficiently, we introduce several key
+techniques: scalable byte-level taint tracking, context-sensitive
+branch count, search based on gradient descent, and input
+length exploration. On the LAVA-M data set, Angora found
+almost all the injected bugs, found more bugs than any other
+fuzzer that we compared with, and found eight times as many
+bugs as the second-best fuzzer in the program who. Angora
+also found 103 bugs that the LAVA authors injected but could
+not trigger. We also tested Angora on eight popular, mature
+open source programs. Angora found 6, 52, 29, 40 and 48
+new bugs in file, jhead, nm, objdump and size, respectively. We
+measured the coverage of Angora and evaluated how its key
+techniques contribute to its impressive performance.
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
