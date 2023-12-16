@@ -37,6 +37,9 @@ This page contains papers relevant to my research interest.
 - **TSE**
   - [Deep Reinforcement Learning for Black-box Testing of Android Apps](#deep-reinforcement-learning-for-black-box-testing-of-android-apps)
 
+- **TOSEM**
+  - [A Practical Approach for Dynamic Taint Tracking with Control-flow Relationships](#a-practical-approach-for-dynamic-taint-tracking-with-control-flow-relationships)
+
 - **JAIR**
   - [DESPOT: Online POMDP Planning with Regularization](#despot-online-pomdp-planning-with-regularization)
 
@@ -82,6 +85,7 @@ This page contains papers relevant to my research interest.
   - [Prospex: Protocol Specification Extraction](#prospex-protocol-specification-extraction)
   - [PATA: Fuzzing with Path Aware Taint Analysis](#pata-fuzzing-with-path-aware-taint-analysis)
   - [Angora: Efficient Fuzzing by Principled Search](#angora-efficient-fuzzing-by-principled-search)
+  - [PANGOLIN: Incremental Hybrid Fuzzing with Polyhedral Path Abstraction](#pangolin-incremental-hybrid-fuzzing-with-polyhedral-path-abstraction)
 
 - **NDSS**
   - [From Library Portability to Para-rehosting: Natively Executing Microcontroller Software on Commodity Hardware](#from-library-portability-to-para-rehosting-natively-executing-microcontroller-software-on-commodity-hardware)
@@ -958,6 +962,16 @@ techniques contribute to its impressive performance.
 applications, modern fuzzers tend to be either scalable, but not effective in exploring bugs that lie deeper in the execution, or capable of penetrating deeper in the application, but not scalable.  
 In this paper, we present an application-aware evolutionary fuzzing strategy that does not require any prior knowledge of the
 application or input format. In order to maximize coverage and explore deeper paths, we leverage control- and data-flow features based on static and dynamic analysis to infer fundamental properties of the application. This enables much faster generation of interesting inputs compared to an application-agnostic approach. We implement our fuzzing strategy in VUzzer and evaluate it on three different datasets: DARPA Grand Challenge binaries (CGC), a set of real-world applications (binary input parsers), and the recently released LAVA dataset. On all of these datasets, VUzzer yields significantly better results than state-of-the-art fuzzers, by quickly finding several existing and new bugs.
+
+### PANGOLIN: Incremental Hybrid Fuzzing with Polyhedral Path Abstraction
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/pangolin.pdf)
+* **Abstract:** Hybrid fuzzing, which combines the merits of both fuzzing and concolic execution, has become one of the most
+important trends in coverage-guided fuzzing techniques. Despite the tremendous research on hybrid fuzzers, we observe that existing techniques are still inefficient. One important reason is that these techniques, which we refer to as non-incremental fuzzers, cache and reuse few computation results and, thus, lose many optimization opportunities. To be incremental, we propose “polyhedral path abstraction”, which preserves the exploration state in the concolic execution stage and allows more effective mutation and constraint solving over existing techniques. We have implemented our idea as a tool, namely PANGOLIN, and evaluated it using LAVA-M as well as nine real-world programs. The evaluation results showed that PANGOLIN outperforms the state-of-the-art fuzzing techniques with the improvement of coverage rate ranging from 10% to 30%. Moreover, PANGOLIN found 400 more bugs in LAVA-M and discovered 41 unseen bugs with 8 of them assigned with the CVE IDs.
+
+
+### A Practical Approach for Dynamic Taint Tracking with Control-flow Relationships
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/A_Practical_Approach_for_Dynamic_Taint_Tracking_with_Controlflow_Relationships.pdf)
+* **Abstract:** Dynamic taint tracking, a technique that traces relationships between values as a program executes, has been used to support a variety of software engineering tasks. Some taint tracking systems only consider data flows and ignore control flows. As a result, relationships between some values are not reflected by the analysis. Many applications of taint tracking either benefit from or rely on these relationships being traced, but past works have found that tracking control flows resulted in over-tainting, dramatically reducing the precision of the taint tracking system. In this article, we introduce Conflux, alternative semantics for propagating taint tags along control flows. Conflux aims to reduce over-tainting by decreasing the scope of control flows and providing a heuristic for reducing loop-related over-tainting. We created a Java implementation of Conflux and performed a case study exploring the effect of Conflux on a concrete application of taint tracking, automated debugging. In addition to this case study, we evaluated Conflux’s accuracy using a novel benchmark consisting of popular, real-world programs. We compared Conflux against existing taint propagation policies, including a state-of-the-art approach for reducing control-flow-related over-tainting, finding that Conflux had the highest F1 score on 43 out of the 48 total tests.
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
