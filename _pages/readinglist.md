@@ -93,6 +93,7 @@ This page contains papers relevant to my research interest.
   - [Refining Indirect Call Targets at the Binary Level](#refining-indirect-call-targets-at-the-binary-level)
   - [VUzzer: Application-aware Evolutionary Fuzzing](#vuzzer-application-aware-evolutionary-fuzzing)
   - [Large Language Model guided Protocol Fuzzing](#large-language-model-guided-protocol-fuzzing)
+  - [REDQUEEN: Fuzzing with Input-to-State Correspondence](#redqueen-fuzzing-with-input-to-state-correspondence)
 
 - **USENIX SEC**
   - [BLEEM: Packet Sequence Oriented Fuzzing for Protocol Implementations](#bleem-packet-sequence-oriented-fuzzing-for-protocol-implementations)
@@ -1001,6 +1002,31 @@ We evaluate LIGHTBLUE on four different Bluetooth hosts and three different Blue
 * **Abstract:** How to find security flaws in a protocol implementation without a machine-readable specification of the protocol? Facing the internet, protocol implementations are particularly security-critical software systems where inputs must adhere to a specific structure and order that is often informally specified in hundreds of pages in natural language (RFC). Without some machine-readable version of that protocol, it is difficult to automatically generate valid test inputs for its implementation that follow the required structure and order. It is possible to partially alleviate this challenge using mutational fuzzing on a set of recorded message sequences as seed inputs. However, the set of available seeds is often quite limited and will hardly cover the great diversity of protocol states and input structures.  
 In this paper, we explore the opportunities of systematic interaction with pre-trained large language models (LLMs), which have ingested millions of pages of human-readable protocol specifications, to draw out machine-readable information about the protocol that can be used during protocol fuzzing. We use the knowledge of the LLMs about protocol message types for well-known protocols. We also checked the LLM’s capability in detecting “states” for stateful protocol implementations by generating sequences of messages and predicting response codes. Based on these observations, we have developed an LLM-guided protocol implementation fuzzing engine. Our protocol fuzzer CHATAFL constructs grammars for each message type in a protocol, and then mutates messages or predicts the next messages in a message sequence via interactions with LLMs. Experiments on a wide range of real-world protocols from PROFUZZBENCH
 show significant efficacy in state and code coverage. Our LLMguided stateful fuzzer was compared with state-of-the-art fuzzers AFLNET and NSFUZZ. CHATAFL covers 47.60% and 42.69% more state transitions, 29.55% and 25.75% more states, and 5.81% and 6.74% more code, respectively. Apart from enhanced coverage, CHATAFL discovered nine distinct and previously unknown vulnerabilities in widely-used and extensively-tested protocol implementations while AFLNET and NSFUZZ only discovered three and four of them, respectively.
+
+### REDQUEEN: Fuzzing with Input-to-State Correspondence
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/redqueen.pdf)
+* **Abstract:** Automated software testing based on fuzzing has experienced a revival in recent years. Especially feedback-driven fuzzing has become well-known for its ability to efficiently perform randomized testing with limited input corpora. Despite a lot of progress, two common problems are magic numbers and (nested) checksums .  Computationally expensive methods such as taint tracking and symbolic execution are typically used to overcome such roadblocks. Unfortunately, such methods often require access to source code, a rather precise description of the environment (e.g., behavior of library calls or the underlying OS), or the exact semantics of the platform’s instruction set.  
+In this paper, we introduce a lightweight, yet very effective
+alternative to taint tracking and symbolic execution to facilitate
+and optimize state-of-the-art feedback fuzzing that easily scales
+to large binary applications and unknown environments. We
+observe that during the execution of a given program, parts
+of the input often end up directly (i.e., nearly unmodified)
+in the program state. This input-to-state correspondence can
+be exploited to create a robust method to overcome common
+fuzzing roadblocks in a highly effective and efficient manner.
+Our prototype implementation, called REDQUEEN, is able to
+solve magic bytes and (nested) checksum tests automatically
+for a given binary executable. Additionally, we show that our
+techniques outperform various state-of-the-art tools on a wide
+variety of targets across different privilege levels (kernel-space
+and userland) with no platform-specific code. REDQUEEN is the
+first method to find more than 100% of the bugs planted in
+LAVA-M across all targets. Furthermore, we were able to discover
+65 new bugs and obtained 16 CVEs in multiple programs and
+OS kernel drivers. Finally, our evaluation demonstrates that
+REDQUEEN is fast, widely applicable and outperforms concurrent
+approaches by up to three orders of magnitude.
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
