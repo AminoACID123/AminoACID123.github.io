@@ -137,6 +137,9 @@ This page contains papers relevant to my research interest.
 
 - **Computers & Security**
   - [VERI: A Large-scale Open-Source Components Vulnerability Detection in IoT Firmware](#veri-a-large-scale-open-source-components-vulnerability-detection-in-iot-firmware)
+
+- **ACM Computing Survey**
+  - [Fuzzing of Embedded Systems: A Survey](#fuzzing-of-embedded-systems-a-survey)
   
 - **MISC**
   - [Automatic Vulnerability Detection in Embedded Devices and Firmware: Survey and Layered Taxonomies](#automatic-vulnerability-detection-in-embedded-devices-and-firmware-survey-and-layered-taxonomies)  
@@ -544,6 +547,10 @@ In this paper, we propose, UTOPIA, an open-source tool and analysis algorithm th
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/btsok.pdf)
 * **Abstract:** Named after the Viking King Harald Bluetooth, Bluetooth is the de facto standard for short-range wireless communications. The introduction of Bluetooth Low Energy (BLE) and Mesh protocols has further paved the way for its domination in the era of IoT and 5G. Meanwhile, attacks against Bluetooth, such as BlueBorne, BleedingBit, KNOB, BIAS, and BLESA, have been booming in the past few years, impacting billions of devices. While Bluetooth security has drawn significant attention from the security research community, a systematic understanding of this field is still missing, impeding the advancement of this field.  
 In this paper, we first summarize the evolution of Bluetooth security in the specification in the past 24 years. Then, we provide a systematization of Bluetooth security by diving into 76 attacks and 33 defenses presented by previous research in this area. We first categorize attacks and defenses based on their affected layers and protocols in the Bluetooth stack as well as their threat models. Then, we cross-check the attacks and defenses to have a big picture of Bluetooth security. Based on the systematization, we find that the existing formal analyses of Bluetooth do not cover most of the security aspects of Bluetooth Mesh. Lastly, we take a step towards securing Bluetooth Mesh by designing and implementing a comprehensive formal model of Bluetooth Mesh covering all its security-related protocols. Our systematization reveals, for instance, that the security of Bluetooth pairing faces challenges caused by users’ mistakes, and that Bluetooth fuzzing is effective yet not comprehensive. Based on the systematization, we provide promising future directions to shed some light on future Bluetooth security research.
+
+### Fuzzing of Embedded Systems: A Survey
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/fuzzing_of_embedded_systems_a_survey.pdf)
+* **Abstract:** Security attacks abuse software vulnerabilities of IoT devices; hence, detecting and eliminating these vulnerabilities immediately are crucial. Fuzzing is an efficient method to identify vulnerabilities automatically, and many publications have been released to date. However, fuzzing for embedded systems has not been studied extensively owing to various obstacles, such as multi-architecture support, crash detection difficulties, and limited resources. Thus, the article introduces fuzzing techniques for embedded systems and the fuzzing differences for desktop and embedded systems. Further, we collect state-of-the-art technologies, discuss their advantages and disadvantages, and classify embedded system fuzzing tools. Finally, future directions for fuzzing research of embedded systems are predicted and discussed.
 
 
 # Researchers
