@@ -162,6 +162,8 @@ This page contains papers relevant to my research interest.
   - [STATEAFL: Greybox fuzzing for stateful network servers](#stateafl-greybox-fuzzing-for-stateful-network-servers)
   - [What Every Programmer Should Know About Memory](#what-every-programmer-should-know-about-memory)
   - [A survey of protocol fuzzing](#a-survey-of-protocol-fuzzing)
+  - [InternalBlue – Bluetooth Binary Patching and Experimentation Framework](#internalblue-–-bluetooth-binary-patching-and-experimentation-framework)
+  - [ToothPicker: Apple Picking in the iOS Bluetooth Stack](#toothpicker-apple-picking-in-the-ios-bluetooth-stack)
 
 
 
@@ -566,6 +568,17 @@ In this paper, we first summarize the evolution of Bluetooth security in the spe
 ### LABRADOR: Response Guided Directed Fuzzing for Black-box IoT Devices
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/LABRADOR.pdf)
 * **Abstract:** Fuzzing is a popular solution to finding vulnerabilities in software including IoT firmware. However, due to the challenges of emulating or rehosting firmware, some IoT devices (e g., enterprise-level devices) can only be fuzzed in a black-box manner, which makes fuzzers blind and inefficient due to missing feedbacks (e.g., code coverage or distance). In this paper, we present a novel response guided directed fuzzing solution LABRADOR, able to test black-box IoT devices efficiently. Specifically, we leverage the network response to infer the execution trace of firmware and deduce the code coverage of testing. Second, we leverage the test case (i.e., request) and its response to estimate the distance to the target sensitive code (i.e., sink). Lastly, we further leverage the distance to guide test case mutation, which efficiently drives directed fuzzing toward candidate vulnerable code. We have implemented a prototype of LABRADOR and evaluated it on 14 different enterprise-level IoT devices. Results showed that LABRADOR significantly outperforms state-of-the-art (SOTA) solutions. It finds 44X more vulnerabilities than SNIPUZZ, BOOFUZZ and FIRM-AFL and 8.57X more vulnerabilities than SaTC. In total, it discovered 79 unknown vulnerabilities, of which 61 were assigned with CVEs.
+
+### InternalBlue – Bluetooth Binary Patching and Experimentation Framework
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/InternalBlue.pdf)
+* **Abstract:** Bluetooth is one of the most established technologies for short range digital wireless data transmission. With the advent of wearables and the Internet of Things (IoT), Bluetooth has again gained importance, which makes security research and protocol optimizations imperative. Surprisingly, there is a lack of openly available tools and experimental platforms to scrutinize Bluetooth. In particular, system aspects and close to hardware protocol layers are mostly uncovered.  
+We reverse engineer multiple Broadcom Bluetooth chipsets that are widespread in off-the-shelf devices. Thus, we offer deep insights into the internal architecture of a popular commercial family of Bluetooth controllers used in smartphones, wearables, and IoT platforms. Reverse engineered functions can then be altered with our InternalBlue Python framework—outperforming evaluation kits, which are limited to documented and vendor-defined functions. The modified Bluetooth stack remains fully functional and highperformance. Hence, it provides a portable low-cost research platform.
+InternalBlue is a versatile framework and we demonstrate its abilities by implementing tests and demos for known Bluetooth vulnerabilities. Moreover, we discover a novel critical security issue affecting a large selection of Broadcom chipsets that allows executing code within the attacked Bluetooth firmware. We further show how to use our framework to fix bugs in chipsets out of vendor support and how to add new security features to Bluetooth firmware.
+
+### ToothPicker: Apple Picking in the iOS Bluetooth Stack
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/ToothPicker.pdf)
+* **Abstract:** Bluetooth enables basic communication prior to pairing as well as low-energy information exchange with multiple devices. The Apple ecosystem is extensively using Bluetooth for coordination tasks that run in the background and enable seamless device handover. To this end, Apple established proprietary protocols. Since their implementation is closedsource and over-the-air fuzzers are very limited, these protocols are largely unexplored and not publicly tested for security. In this paper, we summarize the current state of Apple’s Bluetooth protocols. Based on this, we build the iOS in-process fuzzer ToothPicker and evaluate the implementation security of these protocols. We find a zero-click Remote Code Execution (RCE) that was fixed in iOS 13.5 and simple crashes.
+
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
