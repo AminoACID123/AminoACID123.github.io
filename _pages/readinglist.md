@@ -10,6 +10,7 @@ This page contains papers relevant to my research interest.
 #All Papers(Classification according to Publication)
 
 - **ISSTA**  
+  - [Icicle: A Re-designed Emulator for Grey-Box Firmware Fuzzing](#icicle-a-re-designed-emulator-for-grey-box-firmware-fuzzing)
   - [A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware](#a-large-scale-empirical-analysis-of-the-vulnerabilities-introduced-by-third-party-components-in-iot-firmware-issta-2022)
   - [An Empirical Study on the Effectiveness of Static C Code Analyzers for Vulnerability Detection](#an-empirical-study-on-the-effectiveness-of-static-c-code-analyzers-for-vulnerability-detection-issta-2022)
   - [BET: Black-Box Efficient Testing for Convolutional Neural Networks (2022)](#bet-black-box-efficient-testing-for-convolutional-neural-networks-issta-2022)
@@ -578,6 +579,11 @@ InternalBlue is a versatile framework and we demonstrate its abilities by implem
 ### ToothPicker: Apple Picking in the iOS Bluetooth Stack
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/ToothPicker.pdf)
 * **Abstract:** Bluetooth enables basic communication prior to pairing as well as low-energy information exchange with multiple devices. The Apple ecosystem is extensively using Bluetooth for coordination tasks that run in the background and enable seamless device handover. To this end, Apple established proprietary protocols. Since their implementation is closedsource and over-the-air fuzzers are very limited, these protocols are largely unexplored and not publicly tested for security. In this paper, we summarize the current state of Apple’s Bluetooth protocols. Based on this, we build the iOS in-process fuzzer ToothPicker and evaluate the implementation security of these protocols. We find a zero-click Remote Code Execution (RCE) that was fixed in iOS 13.5 and simple crashes.
+
+### Icicle: A Re-designed Emulator for Grey-Box Firmware Fuzzing
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/icicle.pdf)
+* **Abstract:** Emulation-based fuzzers enable testing binaries without source code and facilitate testing embedded applications where automated execution on the target hardware architecture is difficult and slow. The instrumentation techniques added to extract feedback and guide input mutations towards generating effective test cases is at the core of modern fuzzers. But, modern emulation-based fuzzers have evolved by re-purposing general-purpose emulators; consequently, developing and integrating fuzzing techniques, such as instrumentation methods, is difficult and often added in an ad-hoc manner, specific to an instruction set architecture (ISA). This limits state-of-the-art fuzzing techniques to a few ISAs such as x86/x86-64 or ARM/AArch64; a significant problem for firmware fuzzing of diverse ISAs.  
+This study presents our efforts to re-think emulation for fuzzing. We design and implement a fuzzing-specific, multi-architecture emulation framework—Icicle. We demonstrate the capability to add instrumentation once, in an architecture agnostic manner, with low execution overhead. We employ Icicle as the emulator for a state-of-the-art ARM firmware fuzzer—Fuzzware—and replicate results. Significantly, we demonstrate the availability of new instrumentation in Icicle enabled the discovery of new bugs. We demonstrate the fidelity of Icicle and efficacy of architecture agnostic instrumentation by discovering bugs in benchmarks that require a known and specific operational capability of instrumentation techniques, across a diverse set of instruction set architectures (x86, ARM AArch64, RISC-V, MIPS). Further, to demonstrate the effectiveness of Icicle to discover bugs in a currently unsupported architecture in emulation-based fuzzers, we perform a fuzzing campaign with real-world firmware binaries for Texas Instruments’ MSP430 ISA and discovered 7 new bugs.
 
 
 # Researchers
