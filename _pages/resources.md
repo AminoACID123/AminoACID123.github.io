@@ -24,6 +24,7 @@ This page contains useful CS learning resources
 
 ## RTFM
 - Intel® 64 and IA-32 Architectures Software Developer’s Manual
+- [ELF64 Manual](../files/elf-64.pdf)
 - [ARM Cortex-A Series Programmer's Guide for ARMv7-A](../files/arm-cortex-v7A.pdf)
 - [LLVM Language Reference Manual](https://llvm.org/docs/LangRef.html)
 - [QEMU TCG Reference Manual](https://www.qemu.org/docs/master/devel/tcg-ops.html#tcg-ops-ref)
