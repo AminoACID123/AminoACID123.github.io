@@ -39,6 +39,7 @@ This page contains papers relevant to my research interest.
   - [Deep Reinforcement Learning for Black-box Testing of Android Apps](#deep-reinforcement-learning-for-black-box-testing-of-android-apps)
 
 - **TOSEM**
+  - [Battling against Protocol Fuzzing: Protecting Networked Embedded Devices from Dynamic Fuzzers](#battling-against-protocol-fuzzing-protecting-networked-embedded-devices-from-dynamic-fuzzers)
   - [A Practical Approach for Dynamic Taint Tracking with Control-flow Relationships](#a-practical-approach-for-dynamic-taint-tracking-with-control-flow-relationships)
 
 - **JAIR**
@@ -606,6 +607,21 @@ Given RCE on a Bluetooth chip, attackers may escalate their privileges beyond th
 ### ParDiff: Practical Static Differential Analysis of Network Protocol Parsers
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/ParDiff_Practical_Static_Differential_Analysis_of_Network_Protocol_Parsers.pdf)
 * **Abstract:** Countless devices all over the world are connected by networks and communicated via network protocols. Just like common software, protocol implementations suffer from bugs, many of which only cause silent data corruption instead of crashes. Hence, existing automated bug-finding techniques focused on memory safety, such as fuzzing, can hardly detect them. In this work, we propose a static differential analysis called ParDiff to find protocol implementation bugs, especially silent ones hidden in message parsers. Our key observation is that a network protocol often has multiple implementations and any semantic discrepancy between them may indicate bugs. However, different implementations are often written in disparate styles, e.g., using different data structures or written with different control structures, making it challenging to directly compare two implementations of even the same protocol. To exploit this observation and effectively compare multiple protocol implementations, ParDiff (1) automatically extracts finite state machines from programs to represent protocol format specifications, and (2) then leverages bisimulation and SMT solvers to find fine-grained and semantic inconsistencies between them. We have extensively evaluated ParDiff using 14 network protocols. The results show that ParDiff outperforms both differential symbolic execution and differential fuzzing tools. To date, we have detected 41 bugs with 25 confirmed by developers
+
+### Battling against Protocol Fuzzing: Protecting Networked Embedded Devices from Dynamic Fuzzers
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Battling_against_protocol_fuzzing_protecting_network_embedded_devices_from_dynamic_fuzzers.pdf)
+* **Abstract:** Networked Embedded Devices (NEDs) are increasingly targeted by cyberattacks, mainly due to their widespread use in our daily lives. Vulnerabilities in NEDs are the root causes of these cyberattacks. Although deployed NEDs go through thorough
+code audits, there can still be considerable exploitable vulnerabilities. Existing mitigation measures like code encryption and
+obfuscation adopted by vendors can resist static analysis on deployed NEDs, but are inefective against protocol fuzzing.
+Attackers can easily apply protocol fuzzing to discover vulnerabilities and compromise deployed NEDs. Unfortunately, prior
+anti-fuzzing techniques are impractical as they signiicantly slow down NEDs, hampering NED availability.  
+To address this issue, we propose ArmorÐthe irst anti-fuzzing technique speciically designed for NEDs. First, we design
+three adversarial primitivesÐdelay, fake coverage, and forged exceptionÐto break the fundamental mechanisms on which
+fuzzing relies to efectively ind vulnerabilities. Second, based on our observation that inputs from normal users consistent
+with the protocol speciication and certain program paths are rarely executed with normal inputs, we design static and
+dynamic strategies to decide whether to activate the adversarial primitives. Extensive evaluations show that Armor incurs
+negligible time overhead and efectively reduces the code coverage (e.g., line coverage by 22%-61%) for fuzzing, signiicantly
+outperforming the state-of-the-art.
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
