@@ -58,7 +58,7 @@ This page contains papers relevant to my research interest.
 - **ICSE**
   - Adaptive Test Selection for Deep Neural Networks
   - A Grounded Theory Based Approach to Characterize Software Attack Surfaces
-  - BeDivFuzz: Integrating Behavioral Diversity into Generator-based Fuzzing
+  - [BeDivFuzz: Integrating Behavioral Diversity into Generator-based Fuzzing](#bedivfuzz-integrating-behavioral-diversity-into-generator-based-fuzzing)
   - DeepState: Selecting Test Suites to Enhance the Robustness of Recurrent Neural Networks
   - Demystifying the Dependency Challenge in Kernel Fuzzing
   - EAGLE: Creating Equivalent Graphs to Test Deep Learning
@@ -622,6 +622,10 @@ with the protocol speciication and certain program paths are rarely executed wit
 dynamic strategies to decide whether to activate the adversarial primitives. Extensive evaluations show that Armor incurs
 negligible time overhead and efectively reduces the code coverage (e.g., line coverage by 22%-61%) for fuzzing, signiicantly
 outperforming the state-of-the-art.
+
+### BeDivFuzz: Integrating Behavioral Diversity into Generator-based Fuzzing
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/BeDivFuzz_Integrating_Behavior_Diversity_into_Generator_based_Fuzzing.pdf)
+* **Abstract:** A popular metric to evaluate the performance of fuzzers is branch coverage. However, we argue that focusing solely on covering many different branches (i.e., the richness) is not sufficient since the majority of the covered branches may have been exercised only once, which does not inspire a high confidence in the reliability of the covered code. Instead, the distribution of the executed branches (i.e., the evenness) should also be considered. That is, behavioral diversity is only given if the generated inputs not only trigger many different branches, but also trigger them evenly often with diverse inputs. We introduce BeDivFuzz, a feedback-driven fuzzing technique for generator-based fuzzers. BeDivFuzz distinguishes between structure-preserving and structure-changing mutations in the space of syntactically valid inputs, and biases its mutation strategy towards validity and behavioral diversity based on the received program feedback. We have evaluated BeDivFuzz on Ant, Maven, Rhino, Closure, Nashorn, and Tomcat. The results show that BeDivFuzz achieves better behavioral diversity than the state of the art, measured by established biodiversity metrics, namely the Hill numbers, from the field of ecology.
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
