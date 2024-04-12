@@ -21,8 +21,3 @@ Publications
 - [High-precision Data Race Detection Method for Large Scale Programs](https://kns.cnki.net/kcms/detail/detail.aspx?doi=10.13328/j.cnki.jos.006260)  
 Fengjuan Gao, Yu Wang Jinguo Zhou, **Anzi Xu**, Linzhang Wang, Rongxin Wu, Charles Zhang, Zhendong Su  
 Journal of Software 32, no. 7 (2021): 2039-2055.
-
-Resources
-=====
-- [CCF Conference/Journal Ranking](/files/ccf.pdf)
-- CS Learning Materials

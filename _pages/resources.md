@@ -47,5 +47,5 @@ This page contains useful CS learning resources
 - [CCF Deadlines](https://ccfddl.github.io)
 
 ## Misc
-- [CCF Conference/Journal Ranking]
+- [CCF Conference/Journal Ranking](../files/ccf2022.pdf)
 - [BlueBorne Technical White Paper](../files/bluetooth/blueborne.pdf)
