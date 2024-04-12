@@ -20,6 +20,9 @@ This page contains papers relevant to my research interest.
   - [Binary Code Is Not Easy](#binary-code-is-not-easy)
   - [Reinforcement Learning Based Curiosity-Driven Testing of Android Application](#reinforcement-learning-based-curiosity-driven-testing-of-android-application)
 
+- **TDSC**
+  - [A Framework of High-speed Network Protocol Fuzzing based on Shared Memory](#a-framework-of-high-speed-network-protocol-fuzzing-based-on-shared-memory)
+
 - **PLDI**
   - [Context Sensitivity without Contexts](#context-sensitivity-without-contexts)
   - Finding typing compiler bugs
@@ -612,18 +615,7 @@ Given RCE on a Bluetooth chip, attackers may escalate their privileges beyond th
 
 ### Battling against Protocol Fuzzing: Protecting Networked Embedded Devices from Dynamic Fuzzers
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Battling_against_protocol_fuzzing_protecting_network_embedded_devices_from_dynamic_fuzzers.pdf)
-* **Abstract:** Networked Embedded Devices (NEDs) are increasingly targeted by cyberattacks, mainly due to their widespread use in our daily lives. Vulnerabilities in NEDs are the root causes of these cyberattacks. Although deployed NEDs go through thorough
-code audits, there can still be considerable exploitable vulnerabilities. Existing mitigation measures like code encryption and
-obfuscation adopted by vendors can resist static analysis on deployed NEDs, but are inefective against protocol fuzzing.
-Attackers can easily apply protocol fuzzing to discover vulnerabilities and compromise deployed NEDs. Unfortunately, prior
-anti-fuzzing techniques are impractical as they signiicantly slow down NEDs, hampering NED availability.  
-To address this issue, we propose ArmorÐthe irst anti-fuzzing technique speciically designed for NEDs. First, we design
-three adversarial primitivesÐdelay, fake coverage, and forged exceptionÐto break the fundamental mechanisms on which
-fuzzing relies to efectively ind vulnerabilities. Second, based on our observation that inputs from normal users consistent
-with the protocol speciication and certain program paths are rarely executed with normal inputs, we design static and
-dynamic strategies to decide whether to activate the adversarial primitives. Extensive evaluations show that Armor incurs
-negligible time overhead and efectively reduces the code coverage (e.g., line coverage by 22%-61%) for fuzzing, signiicantly
-outperforming the state-of-the-art.
+* **Abstract:** Networked Embedded Devices (NEDs) are increasingly targeted by cyberattacks, mainly due to their widespread use in our daily lives. Vulnerabilities in NEDs are the root causes of these cyberattacks. Although deployed NEDs go through thorough code audits, there can still be considerable exploitable vulnerabilities. Existing mitigation measures like code encryption and obfuscation adopted by vendors can resist static analysis on deployed NEDs, but are inefective against protocol fuzzing. Attackers can easily apply protocol fuzzing to discover vulnerabilities and compromise deployed NEDs. Unfortunately, prior anti-fuzzing techniques are impractical as they signiicantly slow down NEDs, hampering NED availability.   To address this issue, we propose ArmorÐthe irst anti-fuzzing technique speciically designed for NEDs. First, we design three adversarial primitivesÐdelay, fake coverage, and forged exceptionÐto break the fundamental mechanisms on which fuzzing relies to efectively ind vulnerabilities. Second, based on our observation that inputs from normal users consistent with the protocol speciication and certain program paths are rarely executed with normal inputs, we design static and dynamic strategies to decide whether to activate the adversarial primitives. Extensive evaluations show that Armor incurs negligible time overhead and efectively reduces the code coverage (e.g., line coverage by 22%-61%) for fuzzing, signiicantly outperforming the state-of-the-art.
 
 ### BeDivFuzz: Integrating Behavioral Diversity into Generator-based Fuzzing
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/BeDivFuzz_Integrating_Behavior_Diversity_into_Generator_based_Fuzzing.pdf)
@@ -634,6 +626,11 @@ outperforming the state-of-the-art.
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/hydra.pdf)
 * **Abstract:** File systems are too large to be bug free. Although handwritten test suites have been widely used to stress file systems, they can hardly keep up with the rapid increase in file system size and complexity, leading to new bugs being introduced and reported regularly. These bugs come in various flavors: simple buffer overflows to sophisticated semantic bugs. Although bug-specific checkers exist, they generally lack a way to explore file system states thoroughly. More importantly, no turnkey solution exists that unifies the checking effort of various aspects of a file system under one umbrella.  
 In this paper, we highlight the potential of applying fuzzing to find not just memory errors but, in theory, any type of file system bugs with an extensible fuzzing framework: Hydra. Hydra provides building blocks for file system fuzzing, including input mutators, feedback engines, a libOS-based executor, and a bug reproducer with test case minimization. As a result, developers only need to focus on building the core logic for finding bugs of their own interests. We showcase the effectiveness of Hydra with four checkers that hunt crash inconsistency, POSIX violations, logic assertion failures, and memory errors. So far, Hydra has discovered 91 new bugs in Linux file systems, including one in a verified file system (FSCQ), as well as four POSIX violations.
+
+### A Framework of High-speed Network Protocol Fuzzing based on Shared Memory
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/A_Framework_of_High-Speed_Network_Protocol_Fuzzing_Based_on_Shared_Memory.pdf)
+* **Abstract:** In recent years, security test of network protocols based on fuzzing has been attracting more and more attentions. This is very challenging compared with the stateless software fuzzing and most early network protocol fuzzers are of low speed and poor test effect. Since the first greybox and stateful fuzzer named AFLNET was proposed, several new schemes have been designed to improve its performance from different aspects. During the research, a great challenge is how to greatly improve the fuzzing efficiency. Based on the basic analysis in SNPSFuzzer, this paper provides a more thorough analysis about the time consumption in a fuzzing iteration for 13 network protocols and then we design a High-speed Network Protocol Fuzzer named HNPFuzzer. In HNPFuzzer, the test cases and response messages between the client and server are transmitted through the shared memory, guided by a precise synchronizer, rather than the socket interfaces. This greatly shorten the period of an iteration. Moreover, we design a persistent mode attempting to fuzz the service instances in the memory more than one time based on analyzing the side effect information. This mode further improves the speed of fuzzing. Experiment results illustrate that our scheme can improve the fuzzing throughput by about 39.66 times in average and triggers a large number of crashes including 2 new vulnerabilities which cannot discovered by existing fuzzers. Note that, the existing network protocol fuzzing schemes proposed in different directions do not compete with each other and on the contrary, they can collaborate with each other to improve the overall fuzzing effect and efficiency. Consequently, more existing tools can be integrated into our framework to get better network protocol fuzzing effect
+
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
