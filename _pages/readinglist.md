@@ -47,6 +47,7 @@ This page contains papers relevant to my research interest.
 - **TOSEM**
   - [Battling against Protocol Fuzzing: Protecting Networked Embedded Devices from Dynamic Fuzzers](#battling-against-protocol-fuzzing-protecting-networked-embedded-devices-from-dynamic-fuzzers)
   - [A Practical Approach for Dynamic Taint Tracking with Control-flow Relationships](#a-practical-approach-for-dynamic-taint-tracking-with-control-flow-relationships)
+  - [Dissecting American Fuzzy Lop: A FuzzBench Evaluation](#dissecting-american-fuzzy-lop-a-fuzzbench-evaluation)
 
 - **JAIR**
   - [DESPOT: Online POMDP Planning with Regularization](#despot-online-pomdp-planning-with-regularization)
@@ -630,6 +631,17 @@ In this paper, we highlight the potential of applying fuzzing to find not just m
 ### A Framework of High-speed Network Protocol Fuzzing based on Shared Memory
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/A_Framework_of_High-Speed_Network_Protocol_Fuzzing_Based_on_Shared_Memory.pdf)
 * **Abstract:** In recent years, security test of network protocols based on fuzzing has been attracting more and more attentions. This is very challenging compared with the stateless software fuzzing and most early network protocol fuzzers are of low speed and poor test effect. Since the first greybox and stateful fuzzer named AFLNET was proposed, several new schemes have been designed to improve its performance from different aspects. During the research, a great challenge is how to greatly improve the fuzzing efficiency. Based on the basic analysis in SNPSFuzzer, this paper provides a more thorough analysis about the time consumption in a fuzzing iteration for 13 network protocols and then we design a High-speed Network Protocol Fuzzer named HNPFuzzer. In HNPFuzzer, the test cases and response messages between the client and server are transmitted through the shared memory, guided by a precise synchronizer, rather than the socket interfaces. This greatly shorten the period of an iteration. Moreover, we design a persistent mode attempting to fuzz the service instances in the memory more than one time based on analyzing the side effect information. This mode further improves the speed of fuzzing. Experiment results illustrate that our scheme can improve the fuzzing throughput by about 39.66 times in average and triggers a large number of crashes including 2 new vulnerabilities which cannot discovered by existing fuzzers. Note that, the existing network protocol fuzzing schemes proposed in different directions do not compete with each other and on the contrary, they can collaborate with each other to improve the overall fuzzing effect and efficiency. Consequently, more existing tools can be integrated into our framework to get better network protocol fuzzing effect
+
+### Dissecting American Fuzzy Lop: A FuzzBench Evaluation
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Dissecting_American_Fuzzy_Lop_A_FuzzBench_Evaluation.pdf)
+* **Abstract:** AFL is one of the most used and extended fuzzers, adopted by industry and academic researchers alike. Although the community agrees on AFL’s effectiveness at discovering new vulnerabilities and its outstanding usability, many of its internal design choices remain untested to date. Security practitioners often clone the project “as-is” and use it as a starting point to develop new techniques, usually taking everything under the hood for granted. Instead, we believe that a careful analysis of the different parameters could help modern fuzzers improve their performance and explain how each choice can affect the outcome of security testing, either negatively or positively.  
+The goal of this work is to provide a comprehensive understanding of the internal mechanisms of AFL by
+performing experiments and by comparing different metrics used to evaluate fuzzers. This can help to show
+the effectiveness of some techniques and to clarify which aspects are instead outdated. To perform our study,
+we performed nine unique experiments that we carried out on the popular Fuzzbench platform. Each test
+focuses on a different aspect of AFL, ranging from its mutation approach to the feedback encoding scheme
+and its scheduling methodologies.  
+Our findings show that each design choice affects different factors of AFL. Some of these are positively correlated with the number of detected bugs or the coverage of the target application, whereas other features are related to usability and reliability. Most important, we believe that the outcome of our experiments indicates which parts of AFL we should preserve in the design of modern fuzzers.
 
 
 # Researchers
