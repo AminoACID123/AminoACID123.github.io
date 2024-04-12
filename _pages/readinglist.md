@@ -29,7 +29,7 @@ This page contains papers relevant to my research interest.
   - Odin: On-Demand Instrumentation with On-the-Fly Recompilation
 
 - **PLDI**
-  - [Finding semantic bugs in file systems with an extensible fuzzing framework]
+  - [Finding semantic bugs in file systems with an extensible fuzzing framework](#finding-semantic-bugs-in-file-systems-with-an-extensible-fuzzing-framework)
 
 - **ESEC/FSE**
   - Fuzzing Deep-Learning Libraries via Automated Relational API Inference
@@ -113,6 +113,7 @@ This page contains papers relevant to my research interest.
   - [REDQUEEN: Fuzzing with Input-to-State Correspondence](#redqueen-fuzzing-with-input-to-state-correspondence)
 
 - **USENIX SEC**
+- [Greenhouse: Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation](#greenhouse-single-service-rehosting-of-linux-based-firmware-binaries-in-user-space-emulation)
   - [BLEEM: Packet Sequence Oriented Fuzzing for Protocol Implementations](#bleem-packet-sequence-oriented-fuzzing-for-protocol-implementations)
   - [UNIFUZZ: A Holistic and Pragmatic Metrics-Driven Platform for Evaluating Fuzzers (2022)](#unifuzz-a-holistic-and-pragmatic-metrics-driven-platform-for-evaluating-fuzzers)
   - [Arbiter: Bridging the Static and Dynamic Divide in Vulnerability Discovery on Binary Programs (2022)](#arbiter-bridging-the-static-and-dynamic-divide-in-vulnerability-discovery-on-binary-programs)
@@ -646,6 +647,12 @@ Our findings show that each design choice affects different factors of AFL. Some
 ### DYNPRE: Protocol Reverse Engineering via Dynamic Inference
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/DYNPRE_Protocol_Reverse_Engineering_via_Dynamic_Inference.pdf)
 * **Abstract:** Automatic protocol reverse engineering is essential for various security applications. While many existing techniques achieve this task by analyzing static network traces, they face increasing challenges due to their dependence on high-quality samples. This paper introduces DYNPRE, a protocol reverse engineering tool that exploits the interactive capabilities of protocol servers to obtain more semantic information and additional traffic for dynamic inference. DYNPRE first processes the initial input network traces and learns the rules for interacting with the server in different contexts based on session-specific identifier detection and adaptive message rewriting. It then applies exploratory request crafting to obtain semantic information and supplementary samples and performs real-time analysis. Our evaluation on 12 widely used protocols shows that DYNPRE identifies fields with a perfection score of 0.50 and infers message types with a V-measure of 0.94, significantly outperforming state-of-the-art methods like Netzob, Netplier, FieldHunter, BinaryInferno, and Nemesys, which achieve average perfection and V-measure scores of (0.15, 0 72), (0.16, 0.73), (0.15, 0.83), (0.15, -), and (0.31, -), respectively. Furthermore, case studies on unknown protocols highlight the effectiveness of DYNPRE in real-world applications.
+
+
+### Greenhouse: Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/GreenHouse_Single_Service_Rehosting_of_Linux_Based_Firmware_Binaries_in_User_Space_Emulation.pdf)
+* **Abstract:** As IoT devices grow more widespread, scaling current analysis techniques to match becomes an increasingly critical task. Part of this challenge involves not only rehosting the firmware of these embedded devices in an emulated environment, but to do so and discover real vulnerabilities. Current state-of-the-art approaches for rehosting must account for the discrepancies between emulated and physical devices, and thus generally focus on improving the emulation fidelity. However, this pursuit of fidelity ignores other potential solutions.  
+In this paper, we propose a novel rehosting technique, user-space single-service rehosting, which emulates a single firmware service in user space. We study the rehosting process involved in hundreds of firmware samples to generalize a set of roadblocks that prevent emulation and create interventions to resolve them. Our prototype Greenhouse automatically rehosts 2,841 (39.7%) of our collected 7,140 firmware images from nine different vendors. Our approach sidesteps many of the challenges encountered by previous rehosting techniques and enables us to apply common vulnerability discovery techniques to our rehosted images such as user-space coverage-guided fuzzing. Using these techniques, we find 717 N-day vulnerabilities and 26 zero-day vulnerabilities on a subset of our rehosted firmware services.
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
