@@ -672,3 +672,5 @@ In this article, I establish an unexpected connection with the otherwise unrelat
 - [Le Guan](https://guanle.org/)
 - [ShouLing Ji](https://person.zju.edu.cn/sji/698179.html)
 - [Chao Zhang](http://netsec.ccert.edu.cn/chs/people/chaoz/)
+- [Marcel Böhme](https://mboehme.github.io)
+- [Abhik Roychoudhury](https://abhikrc.com/)
