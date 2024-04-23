@@ -10,6 +10,7 @@ This page contains useful CS learning resources
 ## Online Courses
 - [Operating Systems: Design and Implementation](https://www.bilibili.com/video/BV1Cm4y1d7Ur/?spm_id_from=333.337.search-card.all.click&vd_source=98ed1b5c2b4b22a2d50bba400b48cc28)
 - [The Missing Semester of Your CS Education](https://www.bilibili.com/video/BV1x7411H7wa/?spm_id_from=333.337.search-card.all.click&vd_source=98ed1b5c2b4b22a2d50bba400b48cc28)
+- [The Fuzzing Book](https://www.fuzzingbook.org/)
 
 
 ## E-Books
