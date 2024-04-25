@@ -115,7 +115,7 @@ This page contains papers relevant to my research interest.
   - [Large Language Model guided Protocol Fuzzing](#large-language-model-guided-protocol-fuzzing)
   - [REDQUEEN: Fuzzing with Input-to-State Correspondence](#redqueen-fuzzing-with-input-to-state-correspondence)
 
-- **USENIX SEC**
+- **USENIX Security**
 - [Greenhouse: Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation](#greenhouse-single-service-rehosting-of-linux-based-firmware-binaries-in-user-space-emulation)
   - [BLEEM: Packet Sequence Oriented Fuzzing for Protocol Implementations](#bleem-packet-sequence-oriented-fuzzing-for-protocol-implementations)
   - [UNIFUZZ: A Holistic and Pragmatic Metrics-Driven Platform for Evaluating Fuzzers (2022)](#unifuzz-a-holistic-and-pragmatic-metrics-driven-platform-for-evaluating-fuzzers)
@@ -129,6 +129,7 @@ This page contains papers relevant to my research interest.
   - [Extracting Protocol Format as State Machine via Controlled Static Loop Analysis](#extracting-protocol-format-as-state-machine-via-controlled-static-loop-analysis)
   - [LIGHTBLUE: Automatic Profile-Aware Debloating of Bluetooth Stacks](#lightblue-automatic-profile-aware-debloating-of-bluetooth-stacks)
   - [Frankenstein: Advanced Wireless Fuzzing to Exploit New Bluetooth Escalation Targets](#frankenstein-advanced-wireless-fuzzing-to-exploit-new-bluetooth-escalation-targets)
+  - [Stateful greybox fuzzing](#stateful-greybox-fuzzing)
 
 - **USENIX ATC**
   - [TCP-Fuzz: Detecting Memory and Semantic Bugs in TCP Stacks with Fuzzing (2021)](#tcp-fuzz-detecting-memory-and-semantic-bugs-in-tcp-stacks-with-fuzzing)
@@ -671,6 +672,12 @@ In this article, I establish an unexpected connection with the otherwise unrelat
 * **Abstract:** In this paper, we take the fundamental perspective of fuzzing as a learning process. Suppose before fuzzing, we know nothing about the behaviors of a program P: What does it do? Executing the first test input, we learn how P behaves for this input. Executing the next input, we either observe the same or discover a new behavior. As such, each execution reveals łsome amountž of information about P’s behaviors. A classic measure of information is Shannon’s entropy. Measuring entropy allows us to quantify how much is learned from each generated test input about the behaviors of the program. Within a probabilistic model of fuzzing, we show how entropy also measures fuzzer efficiency. Specifically, it measures the general rate at which the fuzzer discovers new behaviors. Intuitively, efficient fuzzers maximize information.  
 From this information theoretic perspective, we develop Entropic, an entropy-based power schedule for greybox fuzzing which assigns more energy to seeds that maximize information. We implemented Entropic into the popular greybox fuzzer LibFuzzer. Our experiments with more than 250 open-source programs (60 million LoC) demonstrate a substantially improved efficiency and confirm our hypothesis that an efficient fuzzer maximizes information. Entropic has been independently evaluated and invited for integration into main-line LibFuzzer. Entropic now runs on more than 25,000 machines fuzzing hundreds of security-critical software systems simultaneously and continuously.
 
+### Stateful Greybox Fuzzing
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Stateful_Greybox_Fuzzing.pdf)
+* **Abstract:** Many protocol implementations are reactive systems, where the protocol process is in continuous interaction with other processes and the environment. If a bug can be exposed only in a certain state, a fuzzer needs to provide a specific sequence of events as inputs that would take protocol into this state before the bug is manifested. We call these bugs as "stateful" bugs. Usually, when we are testing a protocol implementation, we do not have a detailed formal specification of the protocol to rely upon. Without knowledge of the protocol, it is inherently difficult for a fuzzer to discover such stateful bugs. A key challenge then is to cover the state space with- out an explicit specification of the protocol. Finding stateful bugs in protocol implementations would thus involve partiallyuncovering the state space of the protocol. Fuzzing stateful software systems would need to incorporate strategies for state identification. Such state identification may follow from manual guidance, or from automatic analysis.  
+In this work, we posit that manual annotations for state identification can be avoided for stateful protocol fuzzing. Specifically, we rely on a programmatic intuition that the state variables used in protocol implementations often appear in enum type variables whose values (the state names) come from named constants. In our analysis of the Top-50 most widely used open-source protocol implementations, we found that every implementation uses state variables that are assigned named constants (with easy to comprehend names such as INIT, READY) to represent the current state. In this work, we propose to automatically identify such state variables and track the sequence of values assigned to them during fuzzing to produce a "map" of the explored state space.   
+Our experiments confirm that our stateful fuzzer discovers stateful bugs twice as fast as the baseline greybox fuzzer that we extended. Starting from the initial state, our fuzzer exercises one order of magnitude more state/transition sequences and covers code two times faster than the baseline fuzzer.
+Several zero-day bugs in prominent protocol implementations were found by our fuzzer, and 8 CVEs have been assigned.
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
