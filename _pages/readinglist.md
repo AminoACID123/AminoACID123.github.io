@@ -28,7 +28,7 @@ This page contains papers relevant to my research interest.
   - Finding typing compiler bugs
   - Odin: On-Demand Instrumentation with On-the-Fly Recompilation
 
-- **PLDI**
+- **SOSP**
   - [Finding semantic bugs in file systems with an extensible fuzzing framework](#finding-semantic-bugs-in-file-systems-with-an-extensible-fuzzing-framework)
 
 - **ESEC/FSE**
