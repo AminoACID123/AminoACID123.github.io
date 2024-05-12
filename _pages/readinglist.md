@@ -148,6 +148,7 @@ This page contains papers relevant to my research interest.
   - [ECMO: Peripheral Transplantation to Rehost Embedded Linux Kernels](#ecmo-peripheral-transplantation-to-rehost-embedded-linux-kernels-ccs-2021)
   - [SFADiff: Automated Evasion Attacks and Fingerprinting Using Black-box Differential Automata Learning](#sfadiff-automated-evasion-attacks-and-fingerprinting-using-black-box-differential-automata-learning)
   - [Lifting Network Protocol Implementation to Precise Format Specification with Security Applications](#lifting-network-protocol-implementation-to-precise-format-specification-with-security-applications)
+  - [Directed Greybox Fuzzing](#directed-greybox-fuzzing)
 
 - **DSN**
   - [L2Fuzz: Discovering Bluetooth L2CAP Vulnerabilities Using Stateful Fuzz Testing](#l2fuzz-discovering-bluetooth-l2cap-vulnerabilities-using-stateful-fuzz-testing-dsn-2022)
@@ -685,6 +686,11 @@ Several zero-day bugs in prominent protocol implementations were found by our fu
 * **Abstract:** OS fuzzers primarily test the system-call interface between the OS kernel and user-level applications for security vulnerabilities. The effectiveness of all existing evolutionary OS fuzzers depends heavily on the quality and diversity of their seed system call sequences. However, generating good seeds for OS fuzzing is a hard problem as the behavior of each system call depends heavily on the OS kernel state created by the previously executed system calls. Therefore, popular evolutionary OS fuzzers often rely on hand-coded rules for generating valid seed sequences of system calls that can bootstrap the fuzzing process. Unfortunately, this approach severely restricts the diversity of the seed system call sequences and therefore limits the effectiveness of the fuzzers.  
 In this paper, we develop MoonShine, a novel strategy for distilling seeds for OS fuzzers from system call traces of real-world programs while still preserving the dependencies across the system calls. MoonShine leverages light-weight static analysis for efficiently detecting dependencies across different system calls.  
 We designed and implemented MoonShine as an extension to Syzkaller, a state-of-the-art evolutionary fuzzer for the Linux kernel. Starting from traces containing 2.8 million system calls gathered from 3,220 real-world programs, MoonShine distilled down to just over 14,000 calls while preserving 86% of the original code coverage. Using these distilled seed system call sequences, MoonShine was able to improve Syzkaller’s achieved code coverage for the Linux kernel by 13% on average. MoonShine also found 17 new vulnerabilities in the Linux kernel that were not found by Syzkaller.
+
+### Directed Greybox Fuzzing
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/AFLGo.pdf)
+* **Abstract:** Existing Greybox Fuzzers (GF) cannot be effectively directed, for instance, towards problematic changes or patches, towards critical system calls or dangerous locations, or towards functions in the stacktrace of a reported vulnerability that we wish to reproduce.  
+In this paper, we introduce Directed Greybox Fuzzing (DGF) which generates inputs with the objective of reaching a given set of target program locations efficiently. We develop and evaluate a simulated annealing-based power schedule that gradually assigns more energy to seeds that are closer to the target locations while reducing energy for seeds that are further away. Experiments with our implementation AFLGo demonstrate that DGF outperforms both directed symbolic-execution-based whitebox fuzzing and undirected greybox fuzzing. We show applications of DGF to patch testing and crash reproduction, and discuss the integration of AFLGo into Google’s continuous fuzzing platform OSS-Fuzz. Due to its directedness, AFLGo could find 39 bugs in several well-fuzzed, security-critical projects like LibXML2. 17 CVEs were assigned.
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
