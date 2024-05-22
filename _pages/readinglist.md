@@ -24,6 +24,7 @@ This page contains papers relevant to my research interest.
   - [A Framework of High-speed Network Protocol Fuzzing based on Shared Memory](#a-framework-of-high-speed-network-protocol-fuzzing-based-on-shared-memory)
 
 - **PLDI**
+  - [Boosting Compiler Testing by Injecting Real-world Code](#boosting-compiler-testing-by-injecting-real-world-code)
   - [Context Sensitivity without Contexts](#context-sensitivity-without-contexts)
   - Finding typing compiler bugs
   - Odin: On-Demand Instrumentation with On-the-Fly Recompilation
@@ -192,7 +193,6 @@ This page contains papers relevant to my research interest.
   - [InternalBlue – Bluetooth Binary Patching and Experimentation Framework](#internalblue-–-bluetooth-binary-patching-and-experimentation-framework)
   - [ToothPicker: Apple Picking in the iOS Bluetooth Stack](#toothpicker-apple-picking-in-the-ios-bluetooth-stack)
   - [A Tutorial on Abstract Interpretation](/files/papers/A_Tutorial_on_Abstract_Interpretation.pdf)
-
 
 
 ### A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware (ISSTA 2022)
@@ -717,8 +717,12 @@ developers as previously unknown.
 ### A Theoretical Foundation of Sensitivity in an Abstract Interpretation Framework
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/A_Theoretical_Foundation_of_Sensitivity_in_an_Abstraction_Interpretation_Framework.pdf)
 * **Abstract:** Program analyses often utilize various forms of sensitivity such as context sensitivity, call-site sensitivity, and object sensitivity. These techniques all allow for more precise program analyses, that are able to compute more precise program invariants, and to verify stronger properties. Despite the fact that sensitivity techniques are now part of the standard toolkit of static analyses designers and implementers, no comprehensive frameworks allow the description of all common forms of sensitivity. As a consequence, the soundness proofs of static analysis tools involving sensitivity often rely on ad hoc formalization, which are not always carried out in an abstract interpretation framework. Moreover, this also means that opportunities to identify similarities between analysis techniques to better improve abstractions or to tune static analysis tools can easily be missed.  
-In this article, we present and formalize a framework for the description of sensitivity in static analysis. Our framework is based on a powerful abstract domain construction, and utilizes reduced cardinal power to tie basic abstract predicates to the properties analyses are sensitive to. We formalize this abstraction, and the main abstract operations that are needed to turn it into a generic abstract domain construction. We demonstrate that our approach can allow for a more precise description of program states, and that it can also describe a large set of sensitivity techniques, both when sensitivity criteria are static (known before the analysis) or dynamic (inferred as part of the analysis), and sensitive analysis tuning parameters. Last, we show that sensitivity techniques used in state-of-the-art static analysis tools can be described in our framework
+In this article, we present and formalize a framework for the description of sensitivity in static analysis. Our framework is based on a powerful abstract domain construction, and utilizes reduced cardinal power to tie basic abstract predicates to the properties analyses are sensitive to. We formalize this abstraction, and the main abstract operations that are needed to turn it into a generic abstract domain construction. We demonstrate that our approach can allow for a more precise description of program states, and that it can also describe a large set of sensitivity techniques, both when sensitivity criteria are static (known before the analysis) or dynamic (inferred as part of the analysis), and sensitive analysis tuning parameters. Last, we show that sensitivity techniques used in state-of-the-art static analysis tools can be described in our framework.
 
+### Boosting Compiler Testing by Injecting Real-world Code
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Boosting_Compiler_Testing_by_Injecting_Real_world_Code.pdf)
+* **Abstract:** We introduce a novel approach for testing optimizing compilers with code from real-world applications. The main idea is to construct well-formed programs by fusing multiple code snippets from various real-world projects. The key insight is backed by the fact that the large volume of real-world code exercises rich syntactical and semantic language features, which current engineering-intensive approaches like random program generators are hard to fully support. To construct well-formed programs from real-world code, our approach works by (1) extracting real-world code at the granularity of function, (2) injecting function calls into seed programs, and (3) leveraging dynamic execution information to maintain the semantics and build complex data dependencies between injected functions and the seed program.  
+We implement our idea in a tool, Creal, to test C compilers. In a nine-month testing period, we have reported 132 bugs to GCC and LLVM, two of the most popular and well-tested C compilers. At the time of writing, 121 of them have been confirmed as unknown bugs, and 97 of them have been fixed. Most of these bugs were miscompilations, and many were recognized as long-latent and critical. Our evaluation results evidently demonstrate the significant advantage of using real-world code to stress-test compilers. We believe this idea will benefit the general compiler testing direction and will be directly applicable to other compilers.
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
