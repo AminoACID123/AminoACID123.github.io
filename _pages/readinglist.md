@@ -86,8 +86,8 @@ This page contains papers relevant to my research interest.
   - [WindRanger: A Directed Greybox Fuzzer driven by Deviation Basic Blocks](#windranger-a-directed-greybox-fuzzer-driven-by-deviation-basic-blocks)
   - [Fuzz4All: Universal Fuzzing with Large Language Models](#fuzz4all-universal-fuzzing-with-large-language-models)
 
-- **ICSE**
-  -[AFLNET: A Greybox Fuzzer for Network Protocols](#aflnet-a-greybox-fuzzer-for-network-protocols)
+- **ICST**
+  - [AFLNET: A Greybox Fuzzer for Network Protocols](#aflnet-a-greybox-fuzzer-for-network-protocols)
 
 - **OOPSLA**  
   - [ParDiff: Practical Static Differential Analysis of Network Protocol Parsers](#pardiff-practical-static-differential-analysis-of-network-protocol-parsers)
