@@ -7,7 +7,29 @@ author_profile: true
 
 This page contains papers relevant to my research interest.
 
-## All Papers (Classified by venue)
+## All Papers (Classified by Topic)
+
+- **Fuzzing**  
+
+  - **Protocol Fuzzing**  
+
+  - **Bluetooth Fuzzing**  
+
+  - **ML Fuzzing**  
+
+  - **ADS Fuzzing**
+
+  - **OS Kernel Fuzzing**  
+
+- **Static Analysis**  
+
+  - **Binary Analysis**  
+
+  - **Protocol Analysis**  
+
+  - **Firmware Emulation**  
+
+## All Papers (Classified by Venue)
 
 - **ISSTA**  
   - [Icicle: A Re-designed Emulator for Grey-Box Firmware Fuzzing](#icicle-a-re-designed-emulator-for-grey-box-firmware-fuzzing)
@@ -419,12 +441,8 @@ In this paper, we systematize binary disassembly through the study of nine popul
 
 ### SFADiff: Automated Evasion Attacks and Fingerprinting Using Black-box Differential Automata Learning
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/SFADiff.pdf)
-* **Abstract:** Finding differences between programs with similar functionality is an important security problem as such differences can be used for fingerprinting or creating evasion attacks against security software like Web Application Firewalls (WAFs)
-which are designed to detect malicious inputs to web applications. In this paper, we present SFADiff, a black-box
-differential testing framework based on Symbolic Finite Automata (SFA) learning. SFADiff can automatically find differences between a set of programs with comparable functionality. Unlike existing differential testing techniques, instead of searching for each difference individually, SFADiff infers SFA models of the target programs using black-box queries and systematically enumerates the differences between the inferred SFA models. All differences between the inferred models are checked against the corresponding programs. Any difference between the models, that does not result in a difference between the corresponding programs,
-is used as a counterexample for further refinement of the inferred models. SFADiff’s model-based approach, unlike existing differential testing tools, also support fully automated root cause analysis in a domain-independent manner.  
-We evaluate SFADiff in three different settings for finding discrepancies between: (i) three TCP implementations,
-(ii) four WAFs, and (iii) HTML/JavaScript parsing implementations in WAFs and web browsers. Our results demonstrate that SFADiff is able to identify and enumerate the differences systematically and eciently in all these settings. We show that SFADiff is able to find differences not only between different WAFs but also between different versions of the same WAF. SFADiff is also able to discover three previously-unknown differences between the HTML/JavaScript parsers of two popular WAFs (PHPIDS 0.7 and Expose 2.4.0) and the corresponding parsers of Google Chrome, Firefox, Safari, and Internet Explorer. We confirm that all these differences can be used to evade the WAFs and launch successful cross-site scripting attacks.
+* **Abstract:** Finding differences between programs with similar functionality is an important security problem as such differences can be used for fingerprinting or creating evasion attacks against security software like Web Application Firewalls (WAFs) which are designed to detect malicious inputs to web applications. In this paper, we present SFADiff, a black-box differential testing framework based on Symbolic Finite Automata (SFA) learning. SFADiff can automatically find differences between a set of programs with comparable functionality. Unlike existing differential testing techniques, instead of searching for each difference individually, SFADiff infers SFA models of the target programs using black-box queries and systematically enumerates the differences between the inferred SFA models. All differences between the inferred models are checked against the corresponding programs. Any difference between the models, that does not result in a difference between the corresponding programs, is used as a counterexample for further refinement of the inferred models. SFADiff’s model-based approach, unlike existing differential testing tools, also support fully automated root cause analysis in a domain-independent manner.  
+We evaluate SFADiff in three different settings for finding discrepancies between: (i) three TCP implementations, (ii) four WAFs, and (iii) HTML/JavaScript parsing implementations in WAFs and web browsers. Our results demonstrate that SFADiff is able to identify and enumerate the differences systematically and eciently in all these settings. We show that SFADiff is able to find differences not only between different WAFs but also between different versions of the same WAF. SFADiff is also able to discover three previously-unknown differences between the HTML/JavaScript parsers of two popular WAFs (PHPIDS 0.7 and Expose 2.4.0) and the corresponding parsers of Google Chrome, Firefox, Safari, and Internet Explorer. We confirm that all these differences can be used to evade the WAFs and launch successful cross-site scripting attacks.
 
 
 ### Back in Black: Towards Formal, Black Box Analysis of Sanitizers and Filters
