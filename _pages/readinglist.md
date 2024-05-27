@@ -9,25 +9,195 @@ This page contains papers relevant to my research interest.
 
 ## All Papers (Classified by Topic)
 
-- **Fuzzing**  
+- **Dynamic Testing / Fuzzing**  
+  - [Boosting Fuzzer Efficiency: An Information Theoretic Perspective](#boosting-fuzzer-efficiency-an-information-theoretic-perspective)
+  - [Coverage-based Greybox Fuzzing as Markov Chain](#coverage-based-greybox-fuzzing-as-markov-chain)
+  - [Dissecting American Fuzzy Lop: A FuzzBench Evaluation](#dissecting-american-fuzzy-lop-a-fuzzbench-evaluation)
+  - [Fuzz4All: Universal Fuzzing with Large Language Models](#fuzz4all-universal-fuzzing-with-large-language-models)
+  - [WindRanger: A Directed Greybox Fuzzer driven by Deviation Basic Blocks](#windranger-a-directed-greybox-fuzzer-driven-by-deviation-basic-blocks)
+  - [REDQUEEN: Fuzzing with Input-to-State Correspondence](#redqueen-fuzzing-with-input-to-state-correspondence)
+  - [Evaluating and Improving Hybrid Fuzzing](#evaluating-and-improving-hybrid-fuzzing)
+  - [BeDivFuzz: Integrating Behavioral Diversity into Generator-based Fuzzing](#bedivfuzz-integrating-behavioral-diversity-into-generator-based-fuzzing)
+  - [UNIFUZZ: A Holistic and Pragmatic Metrics-Driven Platform for Evaluating Fuzzers (2022)](#unifuzz-a-holistic-and-pragmatic-metrics-driven-platform-for-evaluating-fuzzers)
+  - [Constraint-guided Directed Greybox Fuzzing](#constraint-guided-directed-greybox-fuzzing)
+  - [EcoFuzz: Adaptive Energy-Saving Greybox Fuzzing as a Variant of the Adversarial Multi-Armed Bandit](#ecofuzz-adaptive-energy-saving-greybox-fuzzing-as-a-variant-of-the-adversarial-multi-armed-bandit)
+  - [VUzzer: Application-aware Evolutionary Fuzzing](#vuzzer-application-aware-evolutionary-fuzzing)
+  - [Adaptive and Effective Fuzzing: A Data-Driven Approach](#adaptive-and-effective-fuzzing-a-data-driven-approach)
+  - [STADS: Software Testing as Species Discovery](#stads-software-testing-as-species-discovery)
+  - [CONFETTI: Amplifying Concolic Guidance for Fuzzers](#confetti-amplifying-concolic-guidance-for-fuzzers)
+  - [Directed Greybox Fuzzing](#directed-greybox-fuzzing)
+  - [A Practical Approach for Dynamic Taint Tracking with Control-flow Relationships](#a-practical-approach-for-dynamic-taint-tracking-with-control-flow-relationships)
+  - [SFADiff: Automated Evasion Attacks and Fingerprinting Using Black-box Differential Automata Learning](#sfadiff-automated-evasion-attacks-and-fingerprinting-using-black-box-differential-automata-learning)
+  - [All You Ever Wanted to Know About Dynamic Taint Analysis and Forward Symbolic Execution (2010)]
+  - Linear-time Temporal Logic guided Greybox Fuzzing
+  - Evaluating and Improving Neural Program-Smoothing-based Fuzzing
+  - Nessie: Automatically Testing JavaScript APIs with Asynchronous Callbacks
+
 
   - **Protocol Fuzzing**  
+    - [Battling against Protocol Fuzzing: Protecting Networked Embedded Devices from Dynamic Fuzzers](#battling-against-protocol-fuzzing-protecting-networked-embedded-devices-from-dynamic-fuzzers)
+    - [AFLNET: A Greybox Fuzzer for Network Protocols](#aflnet-a-greybox-fuzzer-for-network-protocols)
+    - [BLEEM: Packet Sequence Oriented Fuzzing for Protocol Implementations](#bleem-packet-sequence-oriented-fuzzing-for-protocol-implementations)
+    - [Nyx-Net: Network Fuzzing with Incremental Snapshots](#nyx-net-network-fuzzing-with-incremental-snapshots)
+    - [A Framework of High-speed Network Protocol Fuzzing based on Shared Memory](#a-framework-of-high-speed-network-protocol-fuzzing-based-on-shared-memory)
+    - [PATA: Fuzzing with Path Aware Taint Analysis](#pata-fuzzing-with-path-aware-taint-analysis)
+    - [Angora: Efficient Fuzzing by Principled Search](#angora-efficient-fuzzing-by-principled-search)
+    - [PANGOLIN: Incremental Hybrid Fuzzing with Polyhedral Path Abstraction](#pangolin-incremental-hybrid-fuzzing-with-polyhedral-path-abstraction)
+    - [UTOPIA: Automatic Generation of Fuzz Driver using Unit Tests](#utopia-automatic-generation-of-fuzz-driver-using-unit-tests)
+    - [Large Language Model guided Protocol Fuzzing](#large-language-model-guided-protocol-fuzzing)
+    - [Stateful greybox fuzzing](#stateful-greybox-fuzzing)
+    - [A survey of protocol fuzzing](#a-survey-of-protocol-fuzzing)
+    - [TCP-Fuzz: Detecting Memory and Semantic Bugs in TCP Stacks with Fuzzing (2021)](#tcp-fuzz-detecting-memory-and-semantic-bugs-in-tcp-stacks-with-fuzzing)
+    - [STATEAFL: Greybox fuzzing for stateful network servers](#stateafl-greybox-fuzzing-for-stateful-network-servers)
+
+  - **Firmware Fuzzing**  
+    - [Icicle: A Re-designed Emulator for Grey-Box Firmware Fuzzing (ISSTA)](#icicle-a-re-designed-emulator-for-grey-box-firmware-fuzzing)
+    - [FIRMGUIDE: Boosting the Capability of Rehosting Embedded Linux Kernels through Model-Guided Kernel Execution](#firmguide-boosting-the-capability-of-rehosting-embedded-linux-kernels-through-model-guided-kernel-execution)
+    - [Greenhouse: Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation](#greenhouse-single-service-rehosting-of-linux-based-firmware-binaries-in-user-space-emulation)
+    - [LABRADOR: Response Guided Directed Fuzzing for Black-box IoT Devices](#labrador-response-guided-directed-fuzzing-for-black-box-iot-devices)
+    - [From Library Portability to Para-rehosting: Natively Executing Microcontroller Software on Commodity Hardware](#from-library-portability-to-para-rehosting-natively-executing-microcontroller-software-on-commodity-hardware)
+    - [Efficient greybox fuzzing of applications in Linux-based IoT devices via enhanced user-mode emulation (2022)](#efficient-greybox-fuzzing-of-applications-in-linux-based-iot-devices-via-enhanced-user-mode-emulation-issta-2022)
+    - [FirmAE: Towards Large-Scale Emulation of IoT Firmware for Dynamic Analysis](#firmae-towards-large-scale-emulation-of-iot-firmware-for-dynamic-analysis)
+    - [Automatic Firmware Emulation through Invalidity-guided Knowledge Inference (2021)](#automatic-firmware-emulation-through-invalidity-guided-knowledge-inference)
+    - [Fuzzing of Embedded Systems: A Survey](#fuzzing-of-embedded-systems-a-survey)
+    - [What Your Firmware Tells You Is Not How You Should Emulate It: A Speciﬁcation-Guided Approach for Firmware Emulation](#what-your-firmware-tells-you-is-not-how-you-should-emulate-it-a-speciﬁcation-guided-approach-for-firmware-emulation)
+    - [MetaEmu: An Architecture Agnostic Rehosting Framework for Automotive Firmware](#metaemu-an-architecture-agnostic-rehosting-framework-for-automotive-firmware)
+    - [ECMO: Peripheral Transplantation to Rehost Embedded Linux Kernels](#ecmo-peripheral-transplantation-to-rehost-embedded-linux-kernels-ccs-2021)
+    - [Fuzzing of Embedded Systems: A Survey](#fuzzing-of-embedded-systems-a-survey)
+    - [Physical Devices-Agnostic Hybrid Fuzzing of IoT Firmware](#physical-devices-agnostic-hybrid-fuzzing-of-iot-firmware)
+    - [FIRM-AFL: High-Throughput Greybox Fuzzing of IoT Firmware via Augmented Process Emulation (2019)](#firm-afl-high-throughput-greybox-fuzzing-of-iot-firmware-via-augmented-process-emulation)
+    - [Automatic Vulnerability Detection in Embedded Devices and Firmware: Survey and Layered Taxonomies](#automatic-vulnerability-detection-in-embedded-devices-and-firmware-survey-and-layered-taxonomies)  
+    - [Challenges in Firmware Re-Hosting, Emulation, and Analysis](#challenges-in-firmware-re-hosting-emulation-and-analysis)
+    - [Sorry, I don't understand: Improving Voice User Interface Testing](#sorry-i-dont-understand-improving-voice-user-interface-testing-ase-2022)
 
   - **Bluetooth Fuzzing**  
+    - [ToothPicker: Apple Picking in the iOS Bluetooth Stack](#toothpicker-apple-picking-in-the-ios-bluetooth-stack)
+    - [Fingerprinting Bluetooth Low Energy Devices via Active Automata Learning](#fingerprinting-bluetooth-low-energy-devices-via-active-automata-learning)
+    - [Stateful Black-Box Fuzzing of Bluetooth Devices Using Automata Learning](#stateful-black-box-fuzzing-of-bluetooth-devices-using-automata-learning)
+    - [SweynTooth: Unleashing Mayhem over Bluetooth Low Energy (2020)]
+    - [Frankenstein: Advanced Wireless Fuzzing to Exploit New Bluetooth Escalation Targets](#frankenstein-advanced-wireless-fuzzing-to-exploit-new-bluetooth-escalation-targets)
+    - [L2Fuzz: Discovering Bluetooth L2CAP Vulnerabilities Using Stateful Fuzz Testing](#l2fuzz-discovering-bluetooth-l2cap-vulnerabilities-using-stateful-fuzz-testing-dsn-2022)
+    - [SoK: The Long Journey of Exploiting and Defending the Legacy of King Harald Bluetooth](#sok-the-long-journey-of-exploiting-and-defending-the-legacy-of-king-harald-bluetooth)
+
 
   - **ML Fuzzing**  
+    - [BET: Black-Box Efficient Testing for Convolutional Neural Networks (2022)](#bet-black-box-efficient-testing-for-convolutional-neural-networks-issta-2022)
+    - Fuzzing Deep-Learning Libraries via Automated Relational API Inference
+    - Unveiling the Hidden Defection of DNN Testing with Decision-Based Metamorphic Oracle
+    - Fuzzing Deep-Learning Libraries via Automated Relational API Inference
+    - Muffin: Testing Deep Learning Libraries via Neural Architecture Fuzzing
+    - Boosting the Revealing of Detected Violations in Deep Learning Testing: A Diversity-Guided Method
+    - Adaptive Test Selection for Deep Neural Networks
+    - DeepState: Selecting Test Suites to Enhance the Robustness of Recurrent Neural Networks
+    - EAGLE: Creating Equivalent Graphs to Test Deep Learning
+
 
   - **ADS Fuzzing**
+    - [Detecting Multi-sensor Fusion Errors in Advanced Driver-Assistance Systems (2022)](#detecting-multi-sensor-fusion-errors-in-advanced-driver-assistance-systems-issta-2022)
+    - MOSAT: Finding Safety Violations of Autonomous Driving Systems Using Multi-Objective Genetic Algorithm
+    - Scenario-based Test Reduction and Prioritization for Multi-Module Autonomous Driving Systems
+    - LiRTest: augmenting LiDAR point clouds for automated testing of autonomous driving systems
+    - [Systematic Testing of Autonomous Driving Systems Using Map Topology-Based Scenario Classification](#systematic-testing-of-autonomous-driving-systems-using-map-topology-based-scenario-classification)
+    - LawBreaker: An Approach for Specifying Traffic Laws and Fuzzing Autonomous Vehicles
+    - ThirdEye: Attention Maps for Safe Autonomous Driving Systems
 
   - **OS Kernel Fuzzing**  
+    - [Finding semantic bugs in file systems with an extensible fuzzing framework](#finding-semantic-bugs-in-file-systems-with-an-extensible-fuzzing-framework)
+    - [To Boldly Go Where No Fuzzer Has Gone Before: Finding Bugs in Linux’ Wireless Stacks through VirtIO Devices](#to-boldly-go-where-no-fuzzer-has-gone-before-finding-bugs-in-linux-wireless-stacks-through-virtio-devices)
+    - [Fuzzing File Systems via Two-Dimensional Input Space Exploration](#fuzzing-file-systems-via-two-dimensional-input-space-exploration)
+    - [Testing File System Implementations on Layered Models](#testing-file-system-implementations-on-layered-models)
+    - [MoonShine: Optimizing OS Fuzzer Seed Selection with Trace Distillation](#moonshine-optimizing-os-fuzzer-seed-selection-with-trace-distillation)
+    - Demystifying the Dependency Challenge in Kernel Fuzzing
+    - [LFuzz: Exploiting Locality-Enabled Techniques for File-System Fuzzing](#lfuzz-exploiting-locality-enabled-techniques-for-file-system-fuzzing)
+
+
+  - **Android Testing**  
+    - [Deep Reinforcement Learning for Black-box Testing of Android Apps](#deep-reinforcement-learning-for-black-box-testing-of-android-apps)
+    - [Reinforcement Learning Based Curiosity-Driven Testing of Android Application](#reinforcement-learning-based-curiosity-driven-testing-of-android-application)
+    - [Guided, Stochastic Model-Based GUI Testing of Android Apps](#guided-stochastic-model-based-gui-testing-of-android-apps)
+    - [Fastbot2: Reusable Automated Model-based GUI Testing for Android Enhanced by Reinforcement Learn](#fastbot2-reusable-automated-model-based-gui-testing-for-android-enhanced-by-reinforcement-learn)
+
+
+  - **Compiler Testing**  
+    - [Boosting Compiler Testing by Injecting Real-world Code](#boosting-compiler-testing-by-injecting-real-world-code)
+    - Coverage-guided tensor compiler fuzzing with joint IR-pass mutation  
+    - Finding typing compiler bugs
+
 
 - **Static Analysis**  
+  - [Context Sensitivity without Contexts](#context-sensitivity-without-contexts)
+  - [An Empirical Study on the Effectiveness of Static C Code Analyzers for Vulnerability Detection](#an-empirical-study-on-the-effectiveness-of-static-c-code-analyzers-for-vulnerability-detection-issta-2022)
+  - [A Theoretical Foundation of Sensitivity in an Abstract Interpretation Framework](#a-theoretical-foundation-of-sensitivity-in-an-abstract-interpretation-framework)
+  - [Back in Black: Towards Formal, Black Box Analysis of Sanitizers and Filters](#back-in-black-towards-formal-black-box-analysis-of-sanitizers-and-filters)
+  - [A Tutorial on Abstract Interpretation](/files/papers/A_Tutorial_on_Abstract_Interpretation.pdf)
 
-  - **Binary Analysis**  
-
+  - **Static Binary Analysis**  
+    - [SoK: All You Ever Wanted to Know About x86/x64 Binary Disassembly But Were Afraid to Ask](#sok-all-you-ever-wanted-to-know-about-x86x64-binary-disassembly-but-were-afraid-to-ask)
+    - [BDA: Practical Dependence Analysis for Binary Executables by Unbiased Whole-Program Path Sampling and Per-Path Abstract Interpretation (2019)](#bda-practical-dependence-analysis-for-binary-executables-by-unbiased-whole-program-path-sampling-and-per-path-abstract-interpretation)
+    - [Binary Code Is Not Easy](#binary-code-is-not-easy)
+    - [Recovery of Variable and Data Structure via Probabilistic Analysis for Stripped Binary](#recovery-of-variable-and-data-structure-via-probabilistic-analysis-for-stripped-binary)
+    - [Arbiter: Bridging the Static and Dynamic Divide in Vulnerability Discovery on Binary Programs (2022)](#arbiter-bridging-the-static-and-dynamic-divide-in-vulnerability-discovery-on-binary-programs)
+    - [VulHawk: Cross-architecture Vulnerability Detection with Entropy-based Binary Code Search](#vulhawk-cross-architecture-vulnerability-detection-with-entropy-based-binary-code-search)
+    - [Refining Indirect Call Targets at the Binary Level](#refining-indirect-call-targets-at-the-binary-level)
+    - [Selectivetaint: Efficient Data Flow Tracking With Static Binary Rewriting](#selectivetaint-efficient-data-flow-tracking-with-static-binary-rewriting)
+    - [Decompilation of Binaries into LLVM IR for Automated Analysis](#decompilation-of-binaries-into-llvm-ir-for-automated-analysis)
+    - [WYSINWYX: What you see is not what you eXecute]
+    - [Analyzing Memory Accesses in x86 Executables](#analyzing-memory-accesses-in-x86-executables)
+    - [A Formal Semantics for P-Code]
+        
   - **Protocol Analysis**  
+    - [DYNPRE: Protocol Reverse Engineering via Dynamic Inference](#dynpre-protocol-reverse-engineering-via-dynamic-inference)
+    - [ParDiff: Practical Static Differential Analysis of Network Protocol Parsers](#pardiff-practical-static-differential-analysis-of-network-protocol-parsers)
+    - [RIBDetector: an RFC-guided Inconsistency Bug Detecting Approach for Protocol Implementations](#ribdetector-an-rfc-guided-inconsistency-bug-detecting-approach-for-protocol-implementations)
+    - [Lifting Network Protocol Implementation to Precise Format Specification with Security Applications](#lifting-network-protocol-implementation-to-precise-format-specification-with-security-applications)
+    - [Prospex: Protocol Specification Extraction](#prospex-protocol-specification-extraction)
+    - [Extracting Protocol Format as State Machine via Controlled Static Loop Analysis](#extracting-protocol-format-as-state-machine-via-controlled-static-loop-analysis)
+    - [LIGHTBLUE: Automatic Profile-Aware Debloating of Bluetooth Stacks](#lightblue-automatic-profile-aware-debloating-of-bluetooth-stacks)
 
-  - **Firmware Emulation**  
+  - **Bluetooth Analysis**  
+    - [InternalBlue – Bluetooth Binary Patching and Experimentation Framework](#internalblue-–-bluetooth-binary-patching-and-experimentation-framework)
+    - [BLEDiff: Scalable and Property-Agnostic Noncompliance Checking for BLE Implementations](#blediff-scalable-and-property-agnostic-noncompliance-checking-for-ble-implementations)
+
+  - **Firmware Analysis**  
+    - [A Large-Scale Empirical Analysis of the Vulnerabilities Introduced by Third-Party Components in IoT Firmware](#a-large-scale-empirical-analysis-of-the-vulnerabilities-introduced-by-third-party-components-in-iot-firmware-issta-2022)
+    - [KARONTE: Detecting Insecure Multi-binary Interactions in Embedded Firmware (2020)](#karonte-detecting-insecure-multi-binary-interactions-in-embedded-firmware-sp-sp-2020)
+    - [Sharing More and Checking Less: Leveraging Common Input Keywords to Detect Bugs in Embedded Systems](#sharing-more-and-checking-less-leveraging-common-input-keywords-to-detect-bugs-in-embedded-systems)
+    - [VERI: A Large-scale Open-Source Components Vulnerability Detection in IoT Firmware](#veri-a-large-scale-open-source-components-vulnerability-detection-in-iot-firmware)
+
+- **MISC**
+  - [What Every Programmer Should Know About Memory](#what-every-programmer-should-know-about-memory)
+  - [Learning Regular Sets from Queries and Counterexamples](#learning-regular-sets-from-queries-and-counterexamples)
+  - [Generating models of infinite-state communication protocols using regular inference with abstraction](#generating-models-of-infinite-state-communication-protocols-using-regular-inference-with-abstraction)
+  - [Challenges and Solutions for Embedded and Networked Aerospace Software Systems](#challenges-and-solutions-for-embedded-and-networked-aerospace-software-systems)
+  - [Learning deterministic probabilistic automata from a model checking perspective](#learning-deterministic-probabilistic-automata-from-a-model-checking-perspective)
+  - [DESPOT: Online POMDP Planning with Regularization](#despot-online-pomdp-planning-with-regularization)
+  - [Compiler-assisted Code Randomization]
+
+
+- **PLDI**
+  - Odin: On-Demand Instrumentation with On-the-Fly Recompilation
+
+
+- **ESEC/FSE**
+  - Generating Realistic Vulnerabilities via Neural Code Editing: An Empirical Study
+  - Understanding Performance Problems in Deep Learning Systems
+
+- **ASE**  
+  - B-AIS: An Automated Process for Black-box Evaluation of AI-enabled Software Systems against Domain Semantics
+
+
+
+
+- **ICSE**
+  - A Grounded Theory Based Approach to Characterize Software Attack Surfaces
+
+  - Large-scale Security Measurements on the Android Firmware Ecosystem
+  - MVD: Memory-Related Vulnerability Detection Based on Flow-Sensitive Graph Neural Networks
+  - PerfSig: Extracting Performance Bug Signatures via Multi-modality Causal Analysis
+
+
+
+
 
 ## All Papers (Classified by Venue)
 
@@ -59,7 +229,6 @@ This page contains papers relevant to my research interest.
   - Generating Realistic Vulnerabilities via Neural Code Editing: An Empirical Study
   - MOSAT: Finding Safety Violations of Autonomous Driving Systems Using Multi-Objective Genetic Algorithm
   - Scenario-based Test Reduction and Prioritization for Multi-Module Autonomous Driving Systems
-  - Static Executes-Before Analysis for Event Driven Programs
   - Understanding Performance Problems in Deep Learning Systems
   - Fuzzing Deep-Learning Libraries via Automated Relational API Inference
   - [Guided, Stochastic Model-Based GUI Testing of Android Apps](#guided-stochastic-model-based-gui-testing-of-android-apps)
@@ -191,9 +360,11 @@ This page contains papers relevant to my research interest.
 - **Computers & Security**
   - [VERI: A Large-scale Open-Source Components Vulnerability Detection in IoT Firmware](#veri-a-large-scale-open-source-components-vulnerability-detection-in-iot-firmware)
 
+- **ESORICS**
+  - [LFuzz: Exploiting Locality-Enabled Techniques for File-System Fuzzing](#lfuzz-exploiting-locality-enabled-techniques-for-file-system-fuzzing)
+
 - **ACM Computing Survey**
-  - [Fuzzing of Embedded Systems: A Survey](#fuzzing-of-embedded-systems-a-survey)
-  
+
 - **MISC**
   - [Automatic Vulnerability Detection in Embedded Devices and Firmware: Survey and Layered Taxonomies](#automatic-vulnerability-detection-in-embedded-devices-and-firmware-survey-and-layered-taxonomies)  
   - [Challenges in Firmware Re-Hosting, Emulation, and Analysis](#challenges-in-firmware-re-hosting-emulation-and-analysis)
@@ -741,6 +912,13 @@ In this article, we present and formalize a framework for the description of sen
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Boosting_Compiler_Testing_by_Injecting_Real_world_Code.pdf)
 * **Abstract:** We introduce a novel approach for testing optimizing compilers with code from real-world applications. The main idea is to construct well-formed programs by fusing multiple code snippets from various real-world projects. The key insight is backed by the fact that the large volume of real-world code exercises rich syntactical and semantic language features, which current engineering-intensive approaches like random program generators are hard to fully support. To construct well-formed programs from real-world code, our approach works by (1) extracting real-world code at the granularity of function, (2) injecting function calls into seed programs, and (3) leveraging dynamic execution information to maintain the semantics and build complex data dependencies between injected functions and the seed program.  
 We implement our idea in a tool, Creal, to test C compilers. In a nine-month testing period, we have reported 132 bugs to GCC and LLVM, two of the most popular and well-tested C compilers. At the time of writing, 121 of them have been confirmed as unknown bugs, and 97 of them have been fixed. Most of these bugs were miscompilations, and many were recognized as long-latent and critical. Our evaluation results evidently demonstrate the significant advantage of using real-world code to stress-test compilers. We believe this idea will benefit the general compiler testing direction and will be directly applicable to other compilers.
+
+### LFuzz: Exploiting Locality-Enabled Techniques for File-System Fuzzing
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/LFuzz_Exploiting_Locality_Enabled_Techiniques_for_File_System_Fuzzing.pdf)
+* **Abstract:** File systems (FSes) store crucial data. However, FS bugs can lead to data loss and security vulnerabilities. FS fuzzing is an effective technique for identifying FS bugs that may be difficult to detect through traditional regression suites and human testing. FS fuzzing involves two parts: (1) File image fuzzing often involves altering bits of an FS at random storage locations; (2) File operation fuzzing typically issues random sequences of file operations to an FS image.  
+Since leading FS fuzzers tend to access a small set of files to encourage the exploration of deep code branches, the accessed FS image locations tend to be clustered and localized. Thus, altering bits at random FS locations is ineffective in triggering bugs, as these locations are often not referenced by file operations. Furthermore, the minimum FS image is insufficiently small for frequent image saves and restores due to performance and storage overhead.  
+In this paper, we introduce LFuzz, which exploits the locality shown in typical FS fuzzing workloads. LFuzz tracks recently accessed image locations and nearby locations to predict which locations will soon be referenced. The scheme is adaptive to migrating file access patterns.Moreover, since modified image locations are localized, LFuzz can compactly and incrementally accumulate FS image changes so that FS states can be fuzzed from intermediary images instead of top-level seed images. LFuzz further explores the use of partially updated images to simulate corrupted FSes with mixed versions of metadata.  
+We applied LFuzz to ext4, BTRFS, and F2FS and found 21 new bugs. Compared to JANUS, LFuzz reduced the fuzzing area by up to 8x with unique edges deviated by up to 15%.
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
