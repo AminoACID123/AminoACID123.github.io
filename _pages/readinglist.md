@@ -90,7 +90,8 @@ This page contains papers relevant to my research interest.
     - Adaptive Test Selection for Deep Neural Networks
     - DeepState: Selecting Test Suites to Enhance the Robustness of Recurrent Neural Networks
     - EAGLE: Creating Equivalent Graphs to Test Deep Learning
-
+    - Generating Realistic Vulnerabilities via Neural Code Editing: An Empirical Study
+    - Understanding Performance Problems in Deep Learning Systems
 
   - **ADS Fuzzing**
     - [Detecting Multi-sensor Fusion Errors in Advanced Driver-Assistance Systems (2022)](#detecting-multi-sensor-fusion-errors-in-advanced-driver-assistance-systems-issta-2022)
@@ -172,25 +173,9 @@ This page contains papers relevant to my research interest.
   - [Learning deterministic probabilistic automata from a model checking perspective](#learning-deterministic-probabilistic-automata-from-a-model-checking-perspective)
   - [DESPOT: Online POMDP Planning with Regularization](#despot-online-pomdp-planning-with-regularization)
   - [Compiler-assisted Code Randomization]
-
-
-- **PLDI**
   - Odin: On-Demand Instrumentation with On-the-Fly Recompilation
-
-
-- **ESEC/FSE**
-  - Generating Realistic Vulnerabilities via Neural Code Editing: An Empirical Study
-  - Understanding Performance Problems in Deep Learning Systems
-
-- **ASE**  
   - B-AIS: An Automated Process for Black-box Evaluation of AI-enabled Software Systems against Domain Semantics
-
-
-
-
-- **ICSE**
   - A Grounded Theory Based Approach to Characterize Software Attack Surfaces
-
   - Large-scale Security Measurements on the Android Firmware Ecosystem
   - MVD: Memory-Related Vulnerability Detection Based on Flow-Sensitive Graph Neural Networks
   - PerfSig: Extracting Performance Bug Signatures via Multi-modality Causal Analysis
