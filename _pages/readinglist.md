@@ -55,7 +55,7 @@ This page contains papers relevant to my research interest.
     - [FIRMGUIDE: Boosting the Capability of Rehosting Embedded Linux Kernels through Model-Guided Kernel Execution (ASE 2021)](#firmguide-boosting-the-capability-of-rehosting-embedded-linux-kernels-through-model-guided-kernel-execution-ase-2021)
     - [Greenhouse: Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation (USENIX Security 2023)](#greenhouse-single-service-rehosting-of-linux-based-firmware-binaries-in-user-space-emulation-usenix-security-2023)
     - [LABRADOR: Response Guided Directed Fuzzing for Black-box IoT Devices (S&P 2024)](#labrador-response-guided-directed-fuzzing-for-black-box-iot-devices-sp-2024)
-    - [From Library Portability to Para-rehosting: Natively Executing Microcontroller Software on Commodity Hardware (NDSS 2021)](#from-library-portability-to-para-rehosting-natively-executing-microcontroller-software-on-commodity-hardware)
+    - [From Library Portability to Para-rehosting: Natively Executing Microcontroller Software on Commodity Hardware (NDSS 2021)](#from-library-portability-to-para-rehosting-natively-executing-microcontroller-software-on-commodity-hardware-ndss-2021)
     - [Efficient greybox fuzzing of applications in Linux-based IoT devices via enhanced user-mode emulation (2022)](#efficient-greybox-fuzzing-of-applications-in-linux-based-iot-devices-via-enhanced-user-mode-emulation-issta-2022)
     - [FirmAE: Towards Large-Scale Emulation of IoT Firmware for Dynamic Analysis](#firmae-towards-large-scale-emulation-of-iot-firmware-for-dynamic-analysis)
     - [Automatic Firmware Emulation through Invalidity-guided Knowledge Inference (2021)](#automatic-firmware-emulation-through-invalidity-guided-knowledge-inference)
