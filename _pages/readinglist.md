@@ -112,6 +112,7 @@ This page contains papers relevant to my research interest.
     - [MoonShine: Optimizing OS Fuzzer Seed Selection with Trace Distillation](#moonshine-optimizing-os-fuzzer-seed-selection-with-trace-distillation)
     - Demystifying the Dependency Challenge in Kernel Fuzzing
     - [LFuzz: Exploiting Locality-Enabled Techniques for File-System Fuzzing](#lfuzz-exploiting-locality-enabled-techniques-for-file-system-fuzzing)
+    - [Cross-checking Semantic Correctness: The Case of Finding File System Bugs (SOSP 2015)](#cross-checking-semantic-correctness-the-case-of-finding-file-system-bugs-sosp-2015)
 
 
   - **Android Testing**  
@@ -212,6 +213,7 @@ This page contains papers relevant to my research interest.
 
 - **SOSP**
   - [Finding semantic bugs in file systems with an extensible fuzzing framework](#finding-semantic-bugs-in-file-systems-with-an-extensible-fuzzing-framework)
+  - [Cross-checking Semantic Correctness: The Case of Finding File System Bugs (2015)](#cross-checking-semantic-correctness-the-case-of-finding-file-system-bugs-sosp-2015)
 
 - **ESEC/FSE**
   - [Fuzzing Deep-Learning Libraries via Automated Relational API Inference (2022)](#fuzzing-deep-learning-libraries-via-automated-relational-api-inference-esecfse-2022)
@@ -943,6 +945,11 @@ In this paper, we proposed an adaptive test selection method, namely ATS, for de
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/A_grounded_theory_based_approach_to_characterize_software_attack_surfaces.pdf)
 * **Abstract:** The notion of Attack Surface refers to the critical points on the boundary of a software system which are accessible from outside or contain valuable content for attackers. The ability to identify attack surface components of software system has a signi�cant role in eectiveness of vulnerability analysis approaches. Most prior works focus on vulnerability techniques that use an approximation of attack surfaces and there have not been many attempts to create a comprehensive list of attack surface components. Although limited number of studies have focused on attack surface analysis, they defined attack surface components based on project speci�c hypotheses to evaluate security risk of specific types of software applications. In this study, we leverage a qualitative analysis approach to empirically identify an extensive list of attack surface components. To this end, we conduct a Grounded Theory (GT) analysis on 1444 previously published vulnerability reports and weaknesses with a team of three software developers and security experts. We extract vulnerability information from two publicly available repositories: 1) Common Vulnerabilities and Exposures (CVE) and 2) Common Weakness Enumeration (CWE). We ask three key questions: where the attacks come from, what they target, and how they emerge, and to help answer these questions we define three core categories for attack surface components: Entry points, Targets, and Mechanisms. We extract attack surface concepts related to each category from collected vulnerability information using the GT analysis and provide a comprehensive categorization that
 represents attack surface components of software systems from various perspectives. The paper introduces 254 new attack surface components that did not exist in the literature. The comparison of the proposed attack surface model with prior works indicates that only 6.7% of the identi�ed Code level attack surface components are studied before.
+
+### Cross-checking Semantic Correctness: The Case of Finding File System Bugs (SOSP 2015)
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Cross_Checking_Semantic_Correctness_The_Case_of_Finding_File_System_Bugs.pdf)
+* **Abstract:** Today, systems software is too complex to be bug-free. To find bugs in systems software, developers often rely on code checkers, like Linux’s Sparse. However, the capability of existing tools used in commodity, large-scale systems is limited to finding only shallow bugs that tend to be introduced by simple programmer mistakes, and so do not require a deep understanding of code to find them. Unfortunately, the majority of bugs as well as those that are difficult to find are semantic ones, which violate high-level rules or invariants (e.g., missing a permission check). Thus, it is difficult for code checkers lacking the understanding of a programmer’strue intention to reason about semantic correctness.  
+To solve this problem, we present JUXTA, a tool that automatically infers high-level semantics directly from source code. The key idea in JUXTA is to compare and contrast multiple existing implementations that obey latent yet implicit high-level semantics. For example, the implementation of open() at the file system layer expects to handle an outof-space error from the disk in all file systems. We applied JUXTA to 54 file systems in the stock Linux kernel (680K LoC), found 118 previously unknown semantic bugs (one bug per 5.8K LoC), and provided corresponding patches to 39 different file systems, including mature, popular ones like ext4, btrfs, XFS, and NFS. These semantic bugs are not easy to locate, as all the ones found by JUXTA have existed for over 6.2 years on average. Not only do our empirical results look promising, but the design of JUXTA is generic enough to be extended easily beyond file systems to any software that has multiple implementations, like Web browsers or protocols at the same layer of a network stack.
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
