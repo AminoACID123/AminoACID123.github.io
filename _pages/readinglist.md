@@ -42,7 +42,7 @@ This page contains papers relevant to my research interest.
     - [UTOPIA: Automatic Generation of Fuzz Driver using Unit Tests (S&P 2023)](#utopia-automatic-generation-of-fuzz-driver-using-unit-tests-sp-2023)
     - [Nyx-Net: Network Fuzzing with Incremental Snapshots (EuroSys 2022)](#nyx-net-network-fuzzing-with-incremental-snapshots-eurosys-2022)
     - [PATA: Fuzzing with Path Aware Taint Analysis (S&P 2022)](#pata-fuzzing-with-path-aware-taint-analysis-sp-2022)
-      - [Stateful greybox fuzzing (USENIX Security 2022)](#stateful-greybox-fuzzing-usenix-security-2022)
+    - [Stateful greybox fuzzing (USENIX Security 2022)](#stateful-greybox-fuzzing-usenix-security-2022)
     - [STATEAFL: Greybox fuzzing for stateful network servers (ESE 2022)](#stateafl-greybox-fuzzing-for-stateful-network-servers-ese-2022)
     - [TCP-Fuzz: Detecting Memory and Semantic Bugs in TCP Stacks with Fuzzing (USENIX ATC 2021)](#tcp-fuzz-detecting-memory-and-semantic-bugs-in-tcp-stacks-with-fuzzing-usenix-atc-2021)
     - [AFLNET: A Greybox Fuzzer for Network Protocols (ICST 2020)](#aflnet-a-greybox-fuzzer-for-network-protocols-icst-2020)
@@ -60,8 +60,8 @@ This page contains papers relevant to my research interest.
     - [FIRMGUIDE: Boosting the Capability of Rehosting Embedded Linux Kernels through Model-Guided Kernel Execution (ASE 2021)](#firmguide-boosting-the-capability-of-rehosting-embedded-linux-kernels-through-model-guided-kernel-execution-ase-2021)
     - [From Library Portability to Para-rehosting: Natively Executing Microcontroller Software on Commodity Hardware (NDSS 2021)](#from-library-portability-to-para-rehosting-natively-executing-microcontroller-software-on-commodity-hardware-ndss-2021)
 
-    - [FirmAE: Towards Large-Scale Emulation of IoT Firmware for Dynamic Analysis](#firmae-towards-large-scale-emulation-of-iot-firmware-for-dynamic-analysis)
-    - [Automatic Firmware Emulation through Invalidity-guided Knowledge Inference (2021)](#automatic-firmware-emulation-through-invalidity-guided-knowledge-inference)
+    - [FirmAE: Towards Large-Scale Emulation of IoT Firmware for Dynamic Analysis (ACSAC 2020)](#firmae-towards-large-scale-emulation-of-iot-firmware-for-dynamic-analysis-acsac-2020)
+    - [Automatic Firmware Emulation through Invalidity-guided Knowledge Inference (USENIX Security 2021)](#automatic-firmware-emulation-through-invalidity-guided-knowledge-inference-usenix-security-2021)
     - [Fuzzing of Embedded Systems: A Survey](#fuzzing-of-embedded-systems-a-survey)
     - [What Your Firmware Tells You Is Not How You Should Emulate It: A Speciﬁcation-Guided Approach for Firmware Emulation](#what-your-firmware-tells-you-is-not-how-you-should-emulate-it-a-speciﬁcation-guided-approach-for-firmware-emulation)
     - [MetaEmu: An Architecture Agnostic Rehosting Framework for Automotive Firmware](#metaemu-an-architecture-agnostic-rehosting-framework-for-automotive-firmware)
@@ -310,7 +310,7 @@ This page contains papers relevant to my research interest.
   - [UNIFUZZ: A Holistic and Pragmatic Metrics-Driven Platform for Evaluating Fuzzers (2022)](#unifuzz-a-holistic-and-pragmatic-metrics-driven-platform-for-evaluating-fuzzers)
   - [Arbiter: Bridging the Static and Dynamic Divide in Vulnerability Discovery on Binary Programs (2022)](#arbiter-bridging-the-static-and-dynamic-divide-in-vulnerability-discovery-on-binary-programs)
   - [Constraint-guided Directed Greybox Fuzzing](#constraint-guided-directed-greybox-fuzzing)
-  - [Automatic Firmware Emulation through Invalidity-guided Knowledge Inference (2021)](#automatic-firmware-emulation-through-invalidity-guided-knowledge-inference)
+  - [Automatic Firmware Emulation through Invalidity-guided Knowledge Inference (2021)](#automatic-firmware-emulation-through-invalidity-guided-knowledge-inference-usenix-security-2021)
   - [EcoFuzz: Adaptive Energy-Saving Greybox Fuzzing as a Variant of the Adversarial Multi-Armed Bandit](#ecofuzz-adaptive-energy-saving-greybox-fuzzing-as-a-variant-of-the-adversarial-multi-armed-bandit)
   - [Selectivetaint: Efficient Data Flow Tracking With Static Binary Rewriting](#selectivetaint-efficient-data-flow-tracking-with-static-binary-rewriting)
   - [Sharing More and Checking Less: Leveraging Common Input Keywords to Detect Bugs in Embedded Systems](#sharing-more-and-checking-less-leveraging-common-input-keywords-to-detect-bugs-in-embedded-systems)
@@ -343,7 +343,7 @@ This page contains papers relevant to my research interest.
   - [L2Fuzz: Discovering Bluetooth L2CAP Vulnerabilities Using Stateful Fuzz Testing](#l2fuzz-discovering-bluetooth-l2cap-vulnerabilities-using-stateful-fuzz-testing-dsn-2022)
 
 - **ACSAC**
-  - [FirmAE: Towards Large-Scale Emulation of IoT Firmware for Dynamic Analysis (2020)](#firmae-towards-large-scale-emulation-of-iot-firmware-for-dynamic-analysis)
+  - [FirmAE: Towards Large-Scale Emulation of IoT Firmware for Dynamic Analysis (2020)](#firmae-towards-large-scale-emulation-of-iot-firmware-for-dynamic-analysis-acsac-2020)
 
 - **TOPLAS**
   - [WYSINWYX: What you see is not what you eXecute]
@@ -495,7 +495,7 @@ We implemented our technique, making several advancements in the analysis of bin
 * **Abstract:** Cyber attacks against IoT devices are a severe threat. These attacks exploit software vulnerabilities in IoT firmware. Fuzzing is an effective software testing technique for vulnerability discovery. In this work, we present FIRM-AFL, the first high-throughput greybox fuzzer for IoT firmware. FIRMAFL addresses two fundamental problems in IoT fuzzing. First, it addresses compatibility issues by enabling fuzzing for POSIX-compatible firmware that can be emulated in a system emulator. Second, it addresses the performance bottleneck caused by system-mode emulation with a novel technique called augmented process emulation. By combining systemmode emulation and user-mode emulation in a novel way, augmented process emulation provides high compatibility as system-mode emulation and high throughput as user-mode emulation. Our evaluation results show that (1) FIRM-AFL is fully functional and capable of finding real-world vulnerabilities in IoT programs; (2) the throughput of FIRM-AFL is on average 8.2 times higher than system-mode emulation based fuzzing; and (3) FIRM-AFL is able to find 1-day vulnerabilities much faster than system-mode emulation based fuzzing, and is able to find 0-day vulnerabilities.
 
 
-### Automatic Firmware Emulation through Invalidity-guided Knowledge Inference
+### Automatic Firmware Emulation through Invalidity-guided Knowledge Inference (USENIX Security 2021)
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/uemu.pdf)
 * **Abstract:** Emulating firmware for microcontrollers is challenging due to the tight coupling between the hardware and firmware. This has greatly impeded the application of dynamic analysis tools to firmware analysis. The state-of-the-art work automatically models unknown peripherals by observing their access patterns, and then leverages heuristics to calculate the appropriate responses when unknown peripheral registers are accessed. However, we empirically found that this approach and the corresponding heuristics are frequently insufficient to emulate firmware. In this work, we propose a new approach called µEmu to emulate firmware with unknown peripherals. Unlike existing work that attempts to build a general model for each peripheral, our approach learns how to correctly emulate firmware execution at individual peripheral access points. It takes the image as input and symbolically executes it by representing unknown peripheral registers as symbols. During symbolic execution, it infers the rules to respond to unknown peripheral accesses. These rules are stored in a knowledge base, which is referred to during the dynamic firmware analysis. µEmu achieved a passing rate of 95% in a set of unit tests for peripheral drivers without any manual assistance. We also evaluated µEmu with real-world firmware samples and new bugs were discovered.
 
@@ -514,7 +514,7 @@ In this paper, we design a novel fuzzing framework named TCP-Fuzz, to effectivel
 false positives and false negatives.  
 In this paper, we propose a novel static taint checking solution, SaTC, to effectively detect security vulnerabilities in web services provided by embedded devices. Our key insight is that, string literals on web interfaces are commonly shared between front-end files and back-end binaries to encode user input. We thus extract such common keywords from the frontend, and use them to locate reference points in the back-end, which indicate the input entry. Then, we apply targeted dataflow analysis to accurately detect dangerous uses of the untrusted user input. We implemented a prototype of SaTC and evaluated it on 39 embedded system firmwares from six popular vendors. SaTC discovered 33 unknown bugs, of which 30 are confirmed by CVE/CNVD/PSV. Compared to the state-ofthe-art tool KARONTE, SaTC found significantly more bugs on the test set. It shows that, SaTC is effective in discovering bugs in embedded systems.
 
-### FirmAE: Towards Large-Scale Emulation of IoT Firmware for Dynamic Analysis
+### FirmAE: Towards Large-Scale Emulation of IoT Firmware for Dynamic Analysis (ACSAC 2020)
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/FirmAE.pdf)
 * **Abstract:** One approach to assess the security of embedded IoT devices is applying dynamic analysis such as fuzz testing to their firmware in scale. To this end, existing approaches aim to provide an emulation environment that mimics the behavior of real hardware/peripherals.  
 Nonetheless, in practice, such approaches can emulate only a small fraction of firmware images. For example, Firmadyne, a state-of-the-art tool, can only run 183 (16.28%) of 1,124 wireless router/IP-camera images that we collected from the top eight manufacturers. Such a low emulation success rate is caused by discrepancy in the real and emulated firmware execution environment.  
