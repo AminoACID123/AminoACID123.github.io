@@ -36,58 +36,60 @@ This page contains papers relevant to my research interest.
 
   - **Protocol Fuzzing**  
     - [Battling against Protocol Fuzzing: Protecting Networked Embedded Devices from Dynamic Fuzzers (TOSEM 2024)](#battling-against-protocol-fuzzing-protecting-networked-embedded-devices-from-dynamic-fuzzers-tosem-2024)
-    - [AFLNET: A Greybox Fuzzer for Network Protocols (ICST 2020)](#aflnet-a-greybox-fuzzer-for-network-protocols-icst-2020)
-    - [BLEEM: Packet Sequence Oriented Fuzzing for Protocol Implementations (USENIX Security 2023)](#bleem-packet-sequence-oriented-fuzzing-for-protocol-implementations-usenix-security-2023)
-    - [Nyx-Net: Network Fuzzing with Incremental Snapshots (EuroSys 2022)](#nyx-net-network-fuzzing-with-incremental-snapshots-eurosys-2022)
-    - [A Framework of High-speed Network Protocol Fuzzing based on Shared Memory (TDSC 2023)](#a-framework-of-high-speed-network-protocol-fuzzing-based-on-shared-memory-tdsc-2023)
-    - [PATA: Fuzzing with Path Aware Taint Analysis (S&P 2022)](#pata-fuzzing-with-path-aware-taint-analysis-sp-2022)
-    - [Angora: Efficient Fuzzing by Principled Search (S&P 2018)](#angora-efficient-fuzzing-by-principled-search-sp-2018)
-    - [PANGOLIN: Incremental Hybrid Fuzzing with Polyhedral Path Abstraction (S&P 2020)](#pangolin-incremental-hybrid-fuzzing-with-polyhedral-path-abstraction-sp-2020)
-    - [UTOPIA: Automatic Generation of Fuzz Driver using Unit Tests (S&P 2023)](#utopia-automatic-generation-of-fuzz-driver-using-unit-tests-sp-2023)
     - [Large Language Model guided Protocol Fuzzing (NDSS 2024)](#large-language-model-guided-protocol-fuzzing-ndss-2024)
-    - [Stateful greybox fuzzing (USENIX Security 2022)](#stateful-greybox-fuzzing-usenix-security-2022)
-    - [A survey of protocol fuzzing](#a-survey-of-protocol-fuzzing)
-    - [TCP-Fuzz: Detecting Memory and Semantic Bugs in TCP Stacks with Fuzzing (USENIX ATC 2021)](#tcp-fuzz-detecting-memory-and-semantic-bugs-in-tcp-stacks-with-fuzzing-usenix-atc-2021)
+    - [BLEEM: Packet Sequence Oriented Fuzzing for Protocol Implementations (USENIX Security 2023)](#bleem-packet-sequence-oriented-fuzzing-for-protocol-implementations-usenix-security-2023)
+    - [A Framework of High-speed Network Protocol Fuzzing based on Shared Memory (TDSC 2023)](#a-framework-of-high-speed-network-protocol-fuzzing-based-on-shared-memory-tdsc-2023)
+    - [UTOPIA: Automatic Generation of Fuzz Driver using Unit Tests (S&P 2023)](#utopia-automatic-generation-of-fuzz-driver-using-unit-tests-sp-2023)
+    - [Nyx-Net: Network Fuzzing with Incremental Snapshots (EuroSys 2022)](#nyx-net-network-fuzzing-with-incremental-snapshots-eurosys-2022)
+    - [PATA: Fuzzing with Path Aware Taint Analysis (S&P 2022)](#pata-fuzzing-with-path-aware-taint-analysis-sp-2022)
+      - [Stateful greybox fuzzing (USENIX Security 2022)](#stateful-greybox-fuzzing-usenix-security-2022)
     - [STATEAFL: Greybox fuzzing for stateful network servers (ESE 2022)](#stateafl-greybox-fuzzing-for-stateful-network-servers-ese-2022)
+    - [TCP-Fuzz: Detecting Memory and Semantic Bugs in TCP Stacks with Fuzzing (USENIX ATC 2021)](#tcp-fuzz-detecting-memory-and-semantic-bugs-in-tcp-stacks-with-fuzzing-usenix-atc-2021)
+    - [AFLNET: A Greybox Fuzzer for Network Protocols (ICST 2020)](#aflnet-a-greybox-fuzzer-for-network-protocols-icst-2020)
+    - [PANGOLIN: Incremental Hybrid Fuzzing with Polyhedral Path Abstraction (S&P 2020)](#pangolin-incremental-hybrid-fuzzing-with-polyhedral-path-abstraction-sp-2020)
+    - [Angora: Efficient Fuzzing by Principled Search (S&P 2018)](#angora-efficient-fuzzing-by-principled-search-sp-2018)
+    - [A survey of protocol fuzzing](#a-survey-of-protocol-fuzzing)
+
 
   - **Firmware Fuzzing**  
-    - [Icicle: A Re-designed Emulator for Grey-Box Firmware Fuzzing (ISSTA 2023)](#icicle-a-re-designed-emulator-for-grey-box-firmware-fuzzing-issta-2023)
-    - [FIRMGUIDE: Boosting the Capability of Rehosting Embedded Linux Kernels through Model-Guided Kernel Execution (ASE 2021)](#firmguide-boosting-the-capability-of-rehosting-embedded-linux-kernels-through-model-guided-kernel-execution-ase-2021)
-    - [Greenhouse: Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation (USENIX Security 2023)](#greenhouse-single-service-rehosting-of-linux-based-firmware-binaries-in-user-space-emulation-usenix-security-2023)
     - [LABRADOR: Response Guided Directed Fuzzing for Black-box IoT Devices (S&P 2024)](#labrador-response-guided-directed-fuzzing-for-black-box-iot-devices-sp-2024)
-    - [From Library Portability to Para-rehosting: Natively Executing Microcontroller Software on Commodity Hardware (NDSS 2021)](#from-library-portability-to-para-rehosting-natively-executing-microcontroller-software-on-commodity-hardware-ndss-2021)
+    - [Icicle: A Re-designed Emulator for Grey-Box Firmware Fuzzing (ISSTA 2023)](#icicle-a-re-designed-emulator-for-grey-box-firmware-fuzzing-issta-2023)
+    - [Greenhouse: Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation (USENIX Security 2023)](#greenhouse-single-service-rehosting-of-linux-based-firmware-binaries-in-user-space-emulation-usenix-security-2023)
     - [Efficient greybox fuzzing of applications in Linux-based IoT devices via enhanced user-mode emulation (2022)](#efficient-greybox-fuzzing-of-applications-in-linux-based-iot-devices-via-enhanced-user-mode-emulation-issta-2022)
+    - [Sorry, I don't understand: Improving Voice User Interface Testing (ASE 2022)](#sorry-i-dont-understand-improving-voice-user-interface-testing-ase-2022)
+    - [FIRMGUIDE: Boosting the Capability of Rehosting Embedded Linux Kernels through Model-Guided Kernel Execution (ASE 2021)](#firmguide-boosting-the-capability-of-rehosting-embedded-linux-kernels-through-model-guided-kernel-execution-ase-2021)
+    - [From Library Portability to Para-rehosting: Natively Executing Microcontroller Software on Commodity Hardware (NDSS 2021)](#from-library-portability-to-para-rehosting-natively-executing-microcontroller-software-on-commodity-hardware-ndss-2021)
+
     - [FirmAE: Towards Large-Scale Emulation of IoT Firmware for Dynamic Analysis](#firmae-towards-large-scale-emulation-of-iot-firmware-for-dynamic-analysis)
     - [Automatic Firmware Emulation through Invalidity-guided Knowledge Inference (2021)](#automatic-firmware-emulation-through-invalidity-guided-knowledge-inference)
     - [Fuzzing of Embedded Systems: A Survey](#fuzzing-of-embedded-systems-a-survey)
     - [What Your Firmware Tells You Is Not How You Should Emulate It: A Speciﬁcation-Guided Approach for Firmware Emulation](#what-your-firmware-tells-you-is-not-how-you-should-emulate-it-a-speciﬁcation-guided-approach-for-firmware-emulation)
     - [MetaEmu: An Architecture Agnostic Rehosting Framework for Automotive Firmware](#metaemu-an-architecture-agnostic-rehosting-framework-for-automotive-firmware)
-    - [ECMO: Peripheral Transplantation to Rehost Embedded Linux Kernels](#ecmo-peripheral-transplantation-to-rehost-embedded-linux-kernels-ccs-2021)
+    - [ECMO: Peripheral Transplantation to Rehost Embedded Linux Kernels (CCS 2021)](#ecmo-peripheral-transplantation-to-rehost-embedded-linux-kernels-ccs-2021)
     - [Fuzzing of Embedded Systems: A Survey](#fuzzing-of-embedded-systems-a-survey)
     - [Physical Devices-Agnostic Hybrid Fuzzing of IoT Firmware](#physical-devices-agnostic-hybrid-fuzzing-of-iot-firmware)
     - [FIRM-AFL: High-Throughput Greybox Fuzzing of IoT Firmware via Augmented Process Emulation (2019)](#firm-afl-high-throughput-greybox-fuzzing-of-iot-firmware-via-augmented-process-emulation)
     - [Automatic Vulnerability Detection in Embedded Devices and Firmware: Survey and Layered Taxonomies](#automatic-vulnerability-detection-in-embedded-devices-and-firmware-survey-and-layered-taxonomies)  
-    - [Challenges in Firmware Re-Hosting, Emulation, and Analysis](#challenges-in-firmware-re-hosting-emulation-and-analysis)
-    - [Sorry, I don't understand: Improving Voice User Interface Testing](#sorry-i-dont-understand-improving-voice-user-interface-testing-ase-2022)
+    - [Challenges in Firmware Re-Hosting, Emulation, and Analysis (ACM Computing Surveys 2020)](#challenges-in-firmware-re-hosting-emulation-and-analysis-acm-computing-surveys-2020)
+
 
   - **Bluetooth Fuzzing**  
     - [ToothPicker: Apple Picking in the iOS Bluetooth Stack](#toothpicker-apple-picking-in-the-ios-bluetooth-stack)
     - [Fingerprinting Bluetooth Low Energy Devices via Active Automata Learning](#fingerprinting-bluetooth-low-energy-devices-via-active-automata-learning)
     - [Stateful Black-Box Fuzzing of Bluetooth Devices Using Automata Learning](#stateful-black-box-fuzzing-of-bluetooth-devices-using-automata-learning)
-    - [SweynTooth: Unleashing Mayhem over Bluetooth Low Energy (2020)]
+    - [SweynTooth: Unleashing Mayhem over Bluetooth Low Energy (2020)](#sweyntooth-unleashing-mayhem-over-bluetooth-low-energy)
     - [Frankenstein: Advanced Wireless Fuzzing to Exploit New Bluetooth Escalation Targets](#frankenstein-advanced-wireless-fuzzing-to-exploit-new-bluetooth-escalation-targets)
     - [L2Fuzz: Discovering Bluetooth L2CAP Vulnerabilities Using Stateful Fuzz Testing](#l2fuzz-discovering-bluetooth-l2cap-vulnerabilities-using-stateful-fuzz-testing-dsn-2022)
     - [SoK: The Long Journey of Exploiting and Defending the Legacy of King Harald Bluetooth](#sok-the-long-journey-of-exploiting-and-defending-the-legacy-of-king-harald-bluetooth)
 
 
   - **ML Fuzzing**  
-    - [BET: Black-Box Efficient Testing for Convolutional Neural Networks (2022)](#bet-black-box-efficient-testing-for-convolutional-neural-networks-issta-2022)
-    - Fuzzing Deep-Learning Libraries via Automated Relational API Inference
-    - Unveiling the Hidden Defection of DNN Testing with Decision-Based Metamorphic Oracle
-    - Fuzzing Deep-Learning Libraries via Automated Relational API Inference
-    - Muffin: Testing Deep Learning Libraries via Neural Architecture Fuzzing
+    - [BET: Black-Box Efficient Testing for Convolutional Neural Networks (ISSTA 2022)](#bet-black-box-efficient-testing-for-convolutional-neural-networks-issta-2022)
+    - [Fuzzing Deep-Learning Libraries via Automated Relational API Inference (ESEC/FSE 2022)](#fuzzing-deep-learning-libraries-via-automated-relational-api-inference-esecfse-2022)
+    - [Unveiling Hidden DNN Defects with Decision-Based Metamorphic Testing (ASE 2022)](#unveiling-hidden-dnn-defects-with-decision-based-metamorphic-testing-ase-2022)
+    - [Muffin: Testing Deep Learning Libraries via Neural Architecture Fuzzing (ICSE 2022)](#muffin-testing-deep-learning-libraries-via-neural-architecture-fuzzing-icse-2022)
     - Boosting the Revealing of Detected Violations in Deep Learning Testing: A Diversity-Guided Method
-    - Adaptive Test Selection for Deep Neural Networks
+    - [Adaptive Test Selection for Deep Neural Networks (ICSE 2022)](#adaptive-test-selection-for-deep-neural-networks-icse-2022)
     - DeepState: Selecting Test Suites to Enhance the Robustness of Recurrent Neural Networks
     - EAGLE: Creating Equivalent Graphs to Test Deep Learning
     - Generating Realistic Vulnerabilities via Neural Code Editing: An Empirical Study
@@ -177,7 +179,7 @@ This page contains papers relevant to my research interest.
   - [Compiler-assisted Code Randomization]
   - Odin: On-Demand Instrumentation with On-the-Fly Recompilation
   - B-AIS: An Automated Process for Black-box Evaluation of AI-enabled Software Systems against Domain Semantics
-  - A Grounded Theory Based Approach to Characterize Software Attack Surfaces
+  - [A Grounded Theory Based Approach to Characterize Software Attack Surfaces (ICSE 2022)](#a-grounded-theory-based-approach-to-characterize-software-attack-surfaces-icse-2022)
   - Large-scale Security Measurements on the Android Firmware Ecosystem
   - MVD: Memory-Related Vulnerability Detection Based on Flow-Sensitive Graph Neural Networks
   - PerfSig: Extracting Performance Bug Signatures via Multi-modality Causal Analysis
@@ -212,12 +214,11 @@ This page contains papers relevant to my research interest.
   - [Finding semantic bugs in file systems with an extensible fuzzing framework](#finding-semantic-bugs-in-file-systems-with-an-extensible-fuzzing-framework)
 
 - **ESEC/FSE**
-  - Fuzzing Deep-Learning Libraries via Automated Relational API Inference
+  - [Fuzzing Deep-Learning Libraries via Automated Relational API Inference (2022)](#fuzzing-deep-learning-libraries-via-automated-relational-api-inference-esecfse-2022)
   - Generating Realistic Vulnerabilities via Neural Code Editing: An Empirical Study
   - MOSAT: Finding Safety Violations of Autonomous Driving Systems Using Multi-Objective Genetic Algorithm
   - Scenario-based Test Reduction and Prioritization for Multi-Module Autonomous Driving Systems
   - Understanding Performance Problems in Deep Learning Systems
-  - Fuzzing Deep-Learning Libraries via Automated Relational API Inference
   - [Guided, Stochastic Model-Based GUI Testing of Android Apps](#guided-stochastic-model-based-gui-testing-of-android-apps)
   - [Boosting Fuzzer Efficiency: An Information Theoretic Perspective](#boosting-fuzzer-efficiency-an-information-theoretic-perspective)
   
@@ -239,14 +240,14 @@ This page contains papers relevant to my research interest.
   - Boosting the Revealing of Detected Violations in Deep Learning Testing: A Diversity-Guided Method
   - LawBreaker: An Approach for Specifying Traffic Laws and Fuzzing Autonomous Vehicles
   - ThirdEye: Attention Maps for Safe Autonomous Driving Systems
-  - Unveiling the Hidden Defection of DNN Testing with Decision-Based Metamorphic Oracle
+  - [Unveiling Hidden DNN Defects with Decision-Based Metamorphic Testing (2022)](#unveiling-hidden-dnn-defects-with-decision-based-metamorphic-testing-ase-2022)
   - [FIRMGUIDE: Boosting the Capability of Rehosting Embedded Linux Kernels through Model-Guided Kernel Execution](#firmguide-boosting-the-capability-of-rehosting-embedded-linux-kernels-through-model-guided-kernel-execution)
   - [Sorry, I don't understand: Improving Voice User Interface Testing](#sorry-i-dont-understand-improving-voice-user-interface-testing-ase-2022)
   - [Fastbot2: Reusable Automated Model-based GUI Testing for Android Enhanced by Reinforcement Learn](#fastbot2-reusable-automated-model-based-gui-testing-for-android-enhanced-by-reinforcement-learn)
 
 - **ICSE**
-  - Adaptive Test Selection for Deep Neural Networks
-  - A Grounded Theory Based Approach to Characterize Software Attack Surfaces
+  - [Adaptive Test Selection for Deep Neural Networks (2022)](#adaptive-test-selection-for-deep-neural-networks-icse-2022)
+  - [A Grounded Theory Based Approach to Characterize Software Attack Surfaces (2022)](#a-grounded-theory-based-approach-to-characterize-software-attack-surfaces-icse-2022)
   - [BeDivFuzz: Integrating Behavioral Diversity into Generator-based Fuzzing (2022)](#bedivfuzz-integrating-behavioral-diversity-into-generator-based-fuzzing-icse-2022)
   - DeepState: Selecting Test Suites to Enhance the Robustness of Recurrent Neural Networks
   - Demystifying the Dependency Challenge in Kernel Fuzzing
@@ -254,7 +255,7 @@ This page contains papers relevant to my research interest.
   - [Evaluating and Improving Neural Program-Smoothing-based Fuzzing (2022)](#evaluating-and-improving-neural-program-smoothing-based-fuzzing-icse-2022)
   - Large-scale Security Measurements on the Android Firmware Ecosystem
   - [Linear-time Temporal Logic guided Greybox Fuzzing (2022)](#linear-time-temporal-logic-guided-greybox-fuzzing-icse-2022)
-  - Muffin: Testing Deep Learning Libraries via Neural Architecture Fuzzing
+  - [Muffin: Testing Deep Learning Libraries via Neural Architecture Fuzzing (2022)](#muffin-testing-deep-learning-libraries-via-neural-architecture-fuzzing-icse-2022)
   - MVD: Memory-Related Vulnerability Detection Based on Flow-Sensitive Graph Neural Networks
   - [Nessie: Automatically Testing JavaScript APIs with Asynchronous Callbacks (2022)](#nessie-automatically-testing-javascript-apis-with-asynchronous-callbacks-icse-2022)
   - PerfSig: Extracting Performance Bug Signatures via Multi-modality Causal Analysis
@@ -323,7 +324,7 @@ This page contains papers relevant to my research interest.
   - [SweynTooth: Unleashing Mayhem over Bluetooth Low Energy (2020)]
 
 - **EuroSys**
-  - [Nyx-Net: Network Fuzzing with Incremental Snapshots](#nyx-net-network-fuzzing-with-incremental-snapshots)
+  - [Nyx-Net: Network Fuzzing with Incremental Snapshots](#nyx-net-network-fuzzing-with-incremental-snapshots-eurosys-2022)
 
 - **SANER**
   - [RIBDetector: an RFC-guided Inconsistency Bug Detecting Approach for Protocol Implementations](#ribdetector-an-rfc-guided-inconsistency-bug-detecting-approach-for-protocol-implementations)
@@ -416,7 +417,7 @@ This assists us in the manual correction of the problematic rules. We have imple
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Nessie_automatically_testing_JavaScript_APIs_with_asynchronous_callbacks.pdf)
 * **Abstract:** Previous algorithms for feedback-directed unit test generation iteratively create sequences of API calls by executing partial tests and by adding new API calls at the end of the test. These algorithms are challenged by a popular class of APIs: higher-order functions that receive callback arguments, which often are invoked asynchronously. Existing test generators cannot effectively test such APIs because they only sequence API calls, but do not nest one call into the callback function of another. This paper presents Nessie, the first feedback-directed unit test generator that supports nesting of API calls and that tests asynchronous callbacks. Nesting API calls enables a test to use values produced by an API that are available only once a callback has been invoked, and is often necessary to ensure that methods are invoked in a specific order. The core contributions of our approach are a tree-based representation of unit tests with callbacks and a novel algorithm to iteratively generate such tests in a feedback-directed manner. We evaluate our approach on ten popular JavaScript libraries with both asynchronous and synchronous callbacks. The results show that, in a comparison with LambdaTester, a state of the art test generation technique that only considers sequencing of method calls, Nessie finds more behavioral differences and achieves slightly higher coverage. Notably, Nessie needs to generate significantly fewer tests to achieve and exceed the coverage achieved by the state of the art.
 
-### Challenges in Firmware Re-Hosting, Emulation, and Analysis
+### Challenges in Firmware Re-Hosting, Emulation, and Analysis (ACM Computing Surveys 2020)
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Challenges_in_firmware_rehosting_emulation_and_analysis.pdf)
 * **Abstract:** System emulation and firmware re-hosting have become popular techniques to answer various security and performance related questions, such as determining whether a firmware contain security vulnerabilities or meet timing requirements when run on a specific hardware platform. While this motivation for emulation and binary analysis has previously been explored and reported, starting to either work or research in the field is difficult. To this end, we provide a comprehensive guide for the practitioner or system emulation researcher. We layout common challenges faced during firmware re-hosting, explaining successive steps and surveying common tools used to overcome these challenges. We provide classification techniques on five different axes, including emulator methods, system type, fidelity, emulator purpose, and control. These classifications and comparison criteria enable the practitioner to determine the appropriate tool for emulation. We use our classifications to categorize popular works in the field and present 28 common challenges faced when creating, emulating, and analyzing a system from obtaining firmwares to post emulation analysis.
 
@@ -455,7 +456,7 @@ We show that the flexibility afforded by our approach does not lead to a perform
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/ASE2022VUI.pdf)
 * **Abstract:** Voice-based virtual assistants are becoming increasingly popular. Such systems provide frameworks to developers on which they can build their own apps. End-users can interact with such apps through a Voice User Interface (VUI), which allows to use natural language commands to perform actions. Testing such apps is far from trivial: The same command can be expressed in different ways. To support developers in testing VUIs, Deep Learning (DL)-based tools have been integrated in the development environments (e.g., the Alexa Developer Console, or ADC) to generate paraphrases for the commands (seed utterances) specified by the developers. Such tools, however, generate few paraphrases that do not always cover corner cases. In this paper, we introduce VUIUPSET, a novel approach that aims at adapting chatbot-testing approaches to VUI-testing. Both systems, indeed, provide a similar natural-language-based interface to users. We conducted an empirical study to understand how VUI-UPSET compares to existing approaches in terms of (i) correctness of the generated paraphrases, and (ii) capability of revealing bugs. Multiple authors analyzed 5,872 generated paraphrases, with a total of 13,310 manual evaluations required for such a process. Our results show that, while the DLbased tool integrated in the ADC generates a higher percentage of meaningful paraphrases compared to VUI-UPSET, VUI-UPSET generates more bug-revealing paraphrases. This allows developers to test more thoroughly their apps at the cost of discarding a higher number of irrelevant paraphrases.
 
-### Fuzzing Deep-Learning Libraries via Automated Relational API Inference
+### Fuzzing Deep-Learning Libraries via Automated Relational API Inference (ESEC/FSE 2022)
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Fuzzing_deep_learning_libraries_via_automated_relational_api_inference.pdf)
 * **Abstract:** Deep Learning (DL) has gained wide attention in recent years. Meanwhile, bugs in DL systems can lead to serious consequences, and may even threaten human lives. As a result, a growing body of research has been dedicated to DL model testing. However, there is still limited work on testing DL libraries, e.g., PyTorch and TensorFlow, which serve as the foundations for building, training, and running DL models. Prior work on fuzzing DL libraries can only generate tests for APIs which have been invoked by documentation examples, developer tests, or DL models, leaving a large number of APIs untested. In this paper, we propose DeepREL, the first approach to automatically inferring relational APIs for more effective DL library fuzzing. Our basic hypothesis is that for a DL library under test, there may exist a number of APIs sharing similar input parameters and outputs; in this way, we can easily “borrow” test inputs from invoked APIs to test other relational APIs. Furthermore, we formalize the notion of value equivalence and status equivalence for relational APIs to serve as the oracle for effective bug finding.  
 We have implemented DeepREL as a fully automated end-to-end relational API inference and fuzzing technique for DL libraries, which
@@ -923,6 +924,25 @@ Our LTL-Fuzzer tool, built on top of the AFL fuzzer, is shown to be effective in
 ### Evaluating and Improving Neural Program-Smoothing-based Fuzzing (ICSE 2022)
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Evaluating_and_improving_neural_program_smoothing_based_fuzzing.pdf)
 * **Abstract:** Fuzzing nowadays has been commonly modeled as an optimization problem, e.g., maximizing code coverage under a given time budget via typical search-based solutions such as evolutionary algorithms. However, such solutions are widely argued to cause inefficient computing resource usage, i.e., inefficient mutations. To address this issue, two neural program-smoothing-based fuzzers, Neuzz and MTFuzz, have been recently proposed to approximate program branching behaviors via neural network models, which input byte sequences of a seed and output vectors representing program branching behaviors. Moreover, assuming that mutating the bytes with larger gradients can better explore branching behaviors, they develop strategies to mutate such bytes for generating new seeds as test cases. Meanwhile, although they have been shown to be effective in the original papers, they were only evaluated upon a limited dataset. In addition, it is still unclear how their key technical components and whether other factors can impact fuzzing performance. To further investigate neural program-smoothing-based fuzzing, we first construct a large-scale benchmark suite with a total of 28 popular open-source projects. Then, we extensively evaluate Neuzz and MTFuzz on such benchmarks. The evaluation results suggest that their edge coverage performance can be unstable. Moreover, neither neural network models nor mutation strategies can be consistently effective, and the power of their gradient-guidance mechanisms have been compromised. Inspired by such findings, we propose a simplistic technique, PreFuzz, which improves neural program-smoothing-based fuzzers with a resource-efficient edge selection mechanism to enhance their gradient guidance and a probabilistic byte selection mechanism to further boost mutation effectiveness. Our evaluation results indicate that PreFuzz can significantly increase the edge coverage of Neuzz/MTFuzz, and also reveal multiple practical guidelines to advance future research on neural program-smoothing-based fuzzing.
+
+### Unveiling Hidden DNN Defects with Decision-Based Metamorphic Testing (ASE 2022)
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Unveiling_Hidden_DNN_Defects_with_Decision_Based_Metamorphic_Testing.pdf)
+* **Abstract:** Contemporary DNN testing works are frequently conducted using metamorphic testing (MT). In general, de facto MT frameworks mutate DNN input images using semantics-preserving mutations and determine if DNNs can yield consistent predictions. Nevertheless, we find that DNNs may rely on erroneous decisions (certain components on the DNN inputs) to make predictions, which may still retain the outputs by chance. Such DNN defects would be neglected by existing MT frameworks. Erroneous decisions, however, would likely result in successive mis-predictions over diverse images that may exist in real-life scenarios.  
+This research aims to unveil the pervasiveness of hidden DNN defects caused by incorrect DNN decisions (but retaining consistent DNN predictions). To do so, we tailor and optimize modern eXplainable AI (XAI) techniques to identify visual concepts that represent regions in an input image upon which the DNN makes predictions. Then, we extend existing MT-based DNN testing frameworks to check the consistency of DNN decisions made over a test input and its mutated inputs. Our evaluation shows that existing MT frameworks are oblivious to a considerable number of DNN defects caused by erroneous decisions. We conduct human evaluations to justify the validity of our findings and to elucidate their characteristics. Through the lens of DNN decision-based metamorphic relations, we re-examine the effectiveness of metamorphic transformations proposed by existing MT frameworks. We summarize lessons from this study, which can provide insights and guidelines for future DNN testing.
+
+### Muffin: Testing Deep Learning Libraries via Neural Architecture Fuzzing (ICSE 2022)
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Muffin_testing_deep_learning_libraries_via_neural_architecture_fuzzing.pdf)
+* **Abstract:** Deep learning (DL) techniques are proven effective in many challenging tasks, and become widely-adopted in practice. However, previous work has shown that DL libraries, the basis of building and executing DL models, contain bugs and can cause severe con- sequences. Unfortunately, existing testing approaches still cannot comprehensively exercise DL libraries. They utilize existing trained models and only detect bugs in model inference phase. In this work we propose Muffin to address these issues. To this end, Muffin applies a specifically-designed model fuzzing approach, which allows it to generate diverse DL models to explore the target library, instead of relying only on existing trained models. Muffin makes differential testing feasible in the model training phase by tailoring a set of metrics to measure the inconsistencies between different DL libraries. In this way, Muffin can best exercise the library code to detect more bugs. To evaluate the effectiveness of Muffin, we conduct experiments on three widely-used DL libraries. The results demonstrate that Muffin can detect 39 new bugs in the latest release versions of popular DL libraries, including Tensorflow, CNTK, and Theano.
+
+### Adaptive Test Selection for Deep Neural Networks (ICSE 2022)
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Adaptive_Test_Selection_for_Deep_Neural_Networks.pdf)
+* **Abstract:** Deep neural networks (DNN) have achieved tremendous development in the past decade. While many DNN-driven software applications have been deployed to solve various tasks, they could also produce incorrect behaviors and result in massive losses. To reveal the incorrect behaviors and improve the quality of DNN-driven applications, developers often need rich labeled data for the testing and optimization of DNN models. However, in practice, collecting diverse data from application scenarios and labeling them properly is often a highly expensive and time-consuming task.  
+In this paper, we proposed an adaptive test selection method, namely ATS, for deep neural networks to alleviate this problem. ATS leverages the difference between the model outputs to measure the behavior diversity of DNN test data. And it aims at selecting a subset with diverse tests from a massive unlabelled dataset. We experiment ATS with four well-designed DNN models and four widely-used datasets in comparison with various kinds of neuron coverage (NC). The results demonstrate that ATS can significantly outperform all test selection methods in assessing both fault detection and model improvement capability of test suites. It is promising to save the data labeling and model retraining costs for deep neural networks.
+
+### A Grounded Theory Based Approach to Characterize Software Attack Surfaces (ICSE 2022)
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/A_grounded_theory_based_approach_to_characterize_software_attack_surfaces.pdf)
+* **Abstract:** The notion of Attack Surface refers to the critical points on the boundary of a software system which are accessible from outside or contain valuable content for attackers. The ability to identify attack surface components of software system has a signi�cant role in eectiveness of vulnerability analysis approaches. Most prior works focus on vulnerability techniques that use an approximation of attack surfaces and there have not been many attempts to create a comprehensive list of attack surface components. Although limited number of studies have focused on attack surface analysis, they defined attack surface components based on project speci�c hypotheses to evaluate security risk of specific types of software applications. In this study, we leverage a qualitative analysis approach to empirically identify an extensive list of attack surface components. To this end, we conduct a Grounded Theory (GT) analysis on 1444 previously published vulnerability reports and weaknesses with a team of three software developers and security experts. We extract vulnerability information from two publicly available repositories: 1) Common Vulnerabilities and Exposures (CVE) and 2) Common Weakness Enumeration (CWE). We ask three key questions: where the attacks come from, what they target, and how they emerge, and to help answer these questions we define three core categories for attack surface components: Entry points, Targets, and Mechanisms. We extract attack surface concepts related to each category from collected vulnerability information using the GT analysis and provide a comprehensive categorization that
+represents attack surface components of software systems from various perspectives. The paper introduces 254 new attack surface components that did not exist in the literature. The comparison of the proposed attack surface model with prior works indicates that only 6.7% of the identi�ed Code level attack surface components are studied before.
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
