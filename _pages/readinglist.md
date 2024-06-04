@@ -62,7 +62,7 @@ This page contains papers relevant to my research interest.
     - [FirmAE: Towards Large-Scale Emulation of IoT Firmware for Dynamic Analysis (ACSAC 2020)](#firmae-towards-large-scale-emulation-of-iot-firmware-for-dynamic-analysis-acsac-2020)
     - [Fuzzing of Embedded Systems: A Survey](#fuzzing-of-embedded-systems-a-survey)
     - [What Your Firmware Tells You Is Not How You Should Emulate It: A Speciﬁcation-Guided Approach for Firmware Emulation](#what-your-firmware-tells-you-is-not-how-you-should-emulate-it-a-speciﬁcation-guided-approach-for-firmware-emulation)
-    - [MetaEmu: An Architecture Agnostic Rehosting Framework for Automotive Firmware](#metaemu-an-architecture-agnostic-rehosting-framework-for-automotive-firmware)
+    - [MetaEmu: An Architecture Agnostic Rehosting Framework for Automotive Firmware (CCS 2022)](#metaemu-an-architecture-agnostic-rehosting-framework-for-automotive-firmware-ccs-2022)
     - [ECMO: Peripheral Transplantation to Rehost Embedded Linux Kernels (CCS 2021)](#ecmo-peripheral-transplantation-to-rehost-embedded-linux-kernels-ccs-2021)
     - [Fuzzing of Embedded Systems: A Survey](#fuzzing-of-embedded-systems-a-survey)
     - [Physical Devices-Agnostic Hybrid Fuzzing of IoT Firmware](#physical-devices-agnostic-hybrid-fuzzing-of-iot-firmware)
@@ -107,34 +107,32 @@ This page contains papers relevant to my research interest.
     - [Demystifying the Dependency Challenge in Kernel Fuzzing (ICSE 2022)](#demystifying-the-dependency-challenge-in-kernel-fuzzing-icse-2022)
     - [Testing File System Implementations on Layered Models (ICSE 2020)](#testing-file-system-implementations-on-layered-models-icse-2020)
     - [Finding semantic bugs in file systems with an extensible fuzzing framework (SOSP 2019)](#finding-semantic-bugs-in-file-systems-with-an-extensible-fuzzing-framework-sosp-2019)
-
     - [Fuzzing File Systems via Two-Dimensional Input Space Exploration (S&P 2019)](#fuzzing-file-systems-via-two-dimensional-input-space-exploration-sp-2019)
-
-    - [MoonShine: Optimizing OS Fuzzer Seed Selection with Trace Distillation](#moonshine-optimizing-os-fuzzer-seed-selection-with-trace-distillation)
-
+    - [MoonShine: Optimizing OS Fuzzer Seed Selection with Trace Distillation (USENIX Security 2018)](#moonshine-optimizing-os-fuzzer-seed-selection-with-trace-distillation-usenix-security-2018)
     - [Cross-checking Semantic Correctness: The Case of Finding File System Bugs (SOSP 2015)](#cross-checking-semantic-correctness-the-case-of-finding-file-system-bugs-sosp-2015)
 
 
   - **Android Testing**  
     - [Deep Reinforcement Learning for Black-box Testing of Android Apps (TOSEM 2022)](#deep-reinforcement-learning-for-black-box-testing-of-android-apps-tosem-2022)
-    - [Reinforcement Learning Based Curiosity-Driven Testing of Android Application](#reinforcement-learning-based-curiosity-driven-testing-of-android-application)
-    - [Guided, Stochastic Model-Based GUI Testing of Android Apps](#guided-stochastic-model-based-gui-testing-of-android-apps)
-    - [Fastbot2: Reusable Automated Model-based GUI Testing for Android Enhanced by Reinforcement Learn](#fastbot2-reusable-automated-model-based-gui-testing-for-android-enhanced-by-reinforcement-learn)
-
+    - [Fastbot2: Reusable Automated Model-based GUI Testing for Android Enhanced by Reinforcement Learn (ASE 2022)](#fastbot2-reusable-automated-model-based-gui-testing-for-android-enhanced-by-reinforcement-learn-ase-2022)
+    - [Reinforcement Learning Based Curiosity-Driven Testing of Android Application (ISSTA 2020)](#reinforcement-learning-based-curiosity-driven-testing-of-android-application-issta-2020)
+    - [Guided, Stochastic Model-Based GUI Testing of Android Apps (ESEC/FSE 2017)](#guided-stochastic-model-based-gui-testing-of-android-apps-esecfse-2017)
+  
 
   - **Compiler Testing**  
     - [Boosting Compiler Testing by Injecting Real-world Code](#boosting-compiler-testing-by-injecting-real-world-code)
     - Coverage-guided tensor compiler fuzzing with joint IR-pass mutation  
-    - Finding typing compiler bugs
+    - [Finding typing compiler bugs (PLDI 2022)](#finding-typing-compiler-bugs-pldi-2022)
 
 
 - **Static Analysis**  
-  - [Context Sensitivity without Contexts](#context-sensitivity-without-contexts)
-  - [An Empirical Study on the Effectiveness of Static C Code Analyzers for Vulnerability Detection](#an-empirical-study-on-the-effectiveness-of-static-c-code-analyzers-for-vulnerability-detection-issta-2022)
-  - [A Theoretical Foundation of Sensitivity in an Abstract Interpretation Framework](#a-theoretical-foundation-of-sensitivity-in-an-abstract-interpretation-framework)
+  - [Context Sensitivity without Contexts (PLDI 2023)](#context-sensitivity-without-contexts-pldi-2023)
+  - [An Empirical Study on the Effectiveness of Static C Code Analyzers for Vulnerability Detection (ISSTA 2022)](#an-empirical-study-on-the-effectiveness-of-static-c-code-analyzers-for-vulnerability-detection-issta-2022)
+  - [A Theoretical Foundation of Sensitivity in an Abstract Interpretation Framework (TOPLAS 2018)](#a-theoretical-foundation-of-sensitivity-in-an-abstract-interpretation-framework-toplas-2018)
   - [Back in Black: Towards Formal, Black Box Analysis of Sanitizers and Filters](#back-in-black-towards-formal-black-box-analysis-of-sanitizers-and-filters)
   - [A Tutorial on Abstract Interpretation](/files/papers/A_Tutorial_on_Abstract_Interpretation.pdf)
   - [Enhancing Static Analysis for Practical Bug Detection: An LLM-Integrated Approach](#enhancing-static-analysis-for-practical-bug-detection-an-llm-integrated-approach-oopsla-2024)
+  - [Simple Generation of Static Single-Assignment Form (CC 2000)](#simple-generation-of-static-single-assignment-form-cc-2000)
 
   - **Static Binary Analysis**  
     - [SoK: All You Ever Wanted to Know About x86/x64 Binary Disassembly But Were Afraid to Ask (S&P 2021)](#sok-all-you-ever-wanted-to-know-about-x86x64-binary-disassembly-but-were-afraid-to-ask-sp-2021)
@@ -143,7 +141,7 @@ This page contains papers relevant to my research interest.
     - [Recovery of Variable and Data Structure via Probabilistic Analysis for Stripped Binary](#recovery-of-variable-and-data-structure-via-probabilistic-analysis-for-stripped-binary)
     - [Arbiter: Bridging the Static and Dynamic Divide in Vulnerability Discovery on Binary Programs (2022)](#arbiter-bridging-the-static-and-dynamic-divide-in-vulnerability-discovery-on-binary-programs)
     - [VulHawk: Cross-architecture Vulnerability Detection with Entropy-based Binary Code Search](#vulhawk-cross-architecture-vulnerability-detection-with-entropy-based-binary-code-search)
-    - [Selectivetaint: Efficient Data Flow Tracking With Static Binary Rewriting](#selectivetaint-efficient-data-flow-tracking-with-static-binary-rewriting)
+    - [Selectivetaint: Efficient Data Flow Tracking With Static Binary Rewriting (USENIX Security 2021)](#selectivetaint-efficient-data-flow-tracking-with-static-binary-rewriting-usenix-security-2021)
     - [Decompilation of Binaries into LLVM IR for Automated Analysis](#decompilation-of-binaries-into-llvm-ir-for-automated-analysis)
     - [WYSINWYX: What you see is not what you eXecute (TOPLAS 2010)](#wysinwyx-what-you-see-is-not-what-you-execute-toplas-2010)
     - [Analyzing Memory Accesses in x86 Executables](#analyzing-memory-accesses-in-x86-executables)
@@ -201,15 +199,15 @@ This page contains papers relevant to my research interest.
   - [Efficient greybox fuzzing of applications in Linux-based IoT devices via enhanced user-mode emulation (2022)](#efficient-greybox-fuzzing-of-applications-in-linux-based-iot-devices-via-enhanced-user-mode-emulation-issta-2022)
   - LiRTest: augmenting LiDAR point clouds for automated testing of autonomous driving systems
   - [Binary Code Is Not Easy](#binary-code-is-not-easy)
-  - [Reinforcement Learning Based Curiosity-Driven Testing of Android Application](#reinforcement-learning-based-curiosity-driven-testing-of-android-application)
+  - [Reinforcement Learning Based Curiosity-Driven Testing of Android Application (2020)](#reinforcement-learning-based-curiosity-driven-testing-of-android-application-issta-2020)
 
 - **TDSC**
-  - [A Framework of High-speed Network Protocol Fuzzing based on Shared Memory](#a-framework-of-high-speed-network-protocol-fuzzing-based-on-shared-memory)
+  - [A Framework of High-speed Network Protocol Fuzzing based on Shared Memory (2023)](#a-framework-of-high-speed-network-protocol-fuzzing-based-on-shared-memory-tdsc-2023)
 
 - **PLDI**
   - [Boosting Compiler Testing by Injecting Real-world Code (2024)](#boosting-compiler-testing-by-injecting-real-world-code-pldi-2024)
-  - [Context Sensitivity without Contexts](#context-sensitivity-without-contexts)
-  - Finding typing compiler bugs
+  - [Context Sensitivity without Contexts (2023)](#context-sensitivity-without-contexts-pldi-2023)
+  - [Finding typing compiler bugs (2022)](#finding-typing-compiler-bugs-pldi-2022)
   - Odin: On-Demand Instrumentation with On-the-Fly Recompilation
 
 - **SOSP**
@@ -222,7 +220,7 @@ This page contains papers relevant to my research interest.
   - MOSAT: Finding Safety Violations of Autonomous Driving Systems Using Multi-Objective Genetic Algorithm
   - Scenario-based Test Reduction and Prioritization for Multi-Module Autonomous Driving Systems
   - Understanding Performance Problems in Deep Learning Systems
-  - [Guided, Stochastic Model-Based GUI Testing of Android Apps](#guided-stochastic-model-based-gui-testing-of-android-apps)
+  - [Guided, Stochastic Model-Based GUI Testing of Android Apps (2017)](#guided-stochastic-model-based-gui-testing-of-android-apps-esecfse-2017)
   - [Boosting Fuzzer Efficiency: An Information Theoretic Perspective](#boosting-fuzzer-efficiency-an-information-theoretic-perspective)
   
 - **TSE**
@@ -246,7 +244,7 @@ This page contains papers relevant to my research interest.
   - [Unveiling Hidden DNN Defects with Decision-Based Metamorphic Testing (2022)](#unveiling-hidden-dnn-defects-with-decision-based-metamorphic-testing-ase-2022)
   - [FIRMGUIDE: Boosting the Capability of Rehosting Embedded Linux Kernels through Model-Guided Kernel Execution](#firmguide-boosting-the-capability-of-rehosting-embedded-linux-kernels-through-model-guided-kernel-execution)
   - [Sorry, I don't understand: Improving Voice User Interface Testing](#sorry-i-dont-understand-improving-voice-user-interface-testing-ase-2022)
-  - [Fastbot2: Reusable Automated Model-based GUI Testing for Android Enhanced by Reinforcement Learn](#fastbot2-reusable-automated-model-based-gui-testing-for-android-enhanced-by-reinforcement-learn)
+  - [Fastbot2: Reusable Automated Model-based GUI Testing for Android Enhanced by Reinforcement Learn (2022)](#fastbot2-reusable-automated-model-based-gui-testing-for-android-enhanced-by-reinforcement-learn-ase-2022)
 
 - **ICSE**
   - [Adaptive Test Selection for Deep Neural Networks (2022)](#adaptive-test-selection-for-deep-neural-networks-icse-2022)
@@ -313,7 +311,7 @@ This page contains papers relevant to my research interest.
   - [Constraint-guided Directed Greybox Fuzzing](#constraint-guided-directed-greybox-fuzzing)
   - [Automatic Firmware Emulation through Invalidity-guided Knowledge Inference (2021)](#automatic-firmware-emulation-through-invalidity-guided-knowledge-inference-usenix-security-2021)
   - [EcoFuzz: Adaptive Energy-Saving Greybox Fuzzing as a Variant of the Adversarial Multi-Armed Bandit](#ecofuzz-adaptive-energy-saving-greybox-fuzzing-as-a-variant-of-the-adversarial-multi-armed-bandit)
-  - [Selectivetaint: Efficient Data Flow Tracking With Static Binary Rewriting](#selectivetaint-efficient-data-flow-tracking-with-static-binary-rewriting)
+  - [Selectivetaint: Efficient Data Flow Tracking With Static Binary Rewriting (2021)](#selectivetaint-efficient-data-flow-tracking-with-static-binary-rewriting-usenix-security-2021)
   - [Sharing More and Checking Less: Leveraging Common Input Keywords to Detect Bugs in Embedded Systems](#sharing-more-and-checking-less-leveraging-common-input-keywords-to-detect-bugs-in-embedded-systems)
   - [FIRM-AFL: High-Throughput Greybox Fuzzing of IoT Firmware via Augmented Process Emulation (2019)](#firm-afl-high-throughput-greybox-fuzzing-of-iot-firmware-via-augmented-process-emulation-usenix-security-2019)
   - [Extracting Protocol Format as State Machine via Controlled Static Loop Analysis](#extracting-protocol-format-as-state-machine-via-controlled-static-loop-analysis)
@@ -335,7 +333,7 @@ This page contains papers relevant to my research interest.
 
 - **CCS**
   - [What Your Firmware Tells You Is Not How You Should Emulate It: A Speciﬁcation-Guided Approach for Firmware Emulation](#what-your-firmware-tells-you-is-not-how-you-should-emulate-it-a-speciﬁcation-guided-approach-for-firmware-emulation)
-  - [MetaEmu: An Architecture Agnostic Rehosting Framework for Automotive Firmware](#metaemu-an-architecture-agnostic-rehosting-framework-for-automotive-firmware)
+  - [MetaEmu: An Architecture Agnostic Rehosting Framework for Automotive Firmware (2022)](#metaemu-an-architecture-agnostic-rehosting-framework-for-automotive-firmware-ccs-2022)
   - [ECMO: Peripheral Transplantation to Rehost Embedded Linux Kernels](#ecmo-peripheral-transplantation-to-rehost-embedded-linux-kernels-ccs-2021)
   - [SFADiff: Automated Evasion Attacks and Fingerprinting Using Black-box Differential Automata Learning](#sfadiff-automated-evasion-attacks-and-fingerprinting-using-black-box-differential-automata-learning)
   - [Lifting Network Protocol Implementation to Precise Format Specification with Security Applications](#lifting-network-protocol-implementation-to-precise-format-specification-with-security-applications)
@@ -367,7 +365,7 @@ This page contains papers relevant to my research interest.
   - [Stateful Black-Box Fuzzing of Bluetooth Devices Using Automata Learning](#stateful-black-box-fuzzing-of-bluetooth-devices-using-automata-learning)
   - [Learning Regular Sets from Queries and Counterexamples](#learning-regular-sets-from-queries-and-counterexamples)
   - [Decompilation of Binaries into LLVM IR for Automated Analysis](#decompilation-of-binaries-into-llvm-ir-for-automated-analysis)
-  - [Analyzing Memory Accesses in x86 Executables](#analyzing-memory-accesses-in-x86-executables)
+  - [Analyzing Memory Accesses in x86 Executables](#analyzing-memory-accesses-in-x86-executables-cc-2004)
   - [A Formal Semantics for P-Code](#a-formal-semantics-for-p-code)
   - [Generating models of infinite-state communication protocols using regular inference with abstraction](#generating-models-of-infinite-state-communication-protocols-using-regular-inference-with-abstraction)
   - [Challenges and Solutions for Embedded and Networked Aerospace Software Systems](#challenges-and-solutions-for-embedded-and-networked-aerospace-software-systems)
@@ -533,7 +531,7 @@ In this study, we analyzed the emulation failure cases in a large-scale dataset 
 ### Decompilation of Binaries into LLVM IR for Automated Analysis
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/ghidra2llvm.pdf)
 
-### Analyzing Memory Accesses in x86 Executables
+### Analyzing Memory Accesses in x86 Executables (CC 2004)
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Analyzing_Memory_Accesses_in_x86_Executables.pdf)
 * **Abstract:** This paper concerns static-analysis algorithms for analyzing x86 executables. The aim of the work is to recover intermediate representations that are similar to those that can be created for a program written in a high-level language. Our goal is to perform this task for programs such as plugins, mobile code, worms, and virus-infected code. For such programs, symbol-table and debugging information is either entirely absent, or cannot be relied upon if present; hence, the technique described in the paper makes no use of symboltable/debugging information. Instead, an analysis is carried out to recover information about the contents of memory locations and how they are manipulated by the executable.
 
@@ -551,11 +549,11 @@ The contributions of this paper are two-fold. First, we precisely describe the a
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Pcode.pdf)
 * **Abstract:** Decompilation is currently a widely used tool in reverse engineering and exploit detection in binaries. Ghidra, developed by the National Security Agency, is one of the most popular decompilers. It decompiles binaries to high P-Code, from which the final decompilation output in C code is generated. Ghidra allows users to work with P-Code, so users can analyze the intermediate representation directly. Several projects make use of this to build tools that perform verification, decompilation, taint analysis and emulation, to name a few. P-Code lacks a formal semantics, and its documentation is limited. It has a notoriously subtle semantics, which makes it hard to do any sort of analysis on P-Code. We show that P-Code, as-is, cannot be given an executable semantics. In this paper, we augment P-Code and define a complete, executable, formal semantics for it. This is done by looking at the documentation and the decompilation results of binaries with known source code. The development of a formal P-Code semantics uncovered several issues in Ghidra, P-Code, and the documentation. We show that these issues affect projects that rely on Ghidra and P-Code. We evaluate the executability of our semantics by building a P-Code interpreter that directly uses our semantics. Our work uncovered several issues in Ghidra and allows Ghidra users to better leverage P-Code.
 
-### Selectivetaint: Efficient Data Flow Tracking With Static Binary Rewriting
+### Selectivetaint: Efficient Data Flow Tracking With Static Binary Rewriting (USENIX Security 2021)
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/SelectiveTaint.pdf)
 * **Abstract:** Taint analysis has been widely used in many security applications such as exploit detection, information flow tracking, malware analysis, and protocol reverse engineering. State-of-the-art taint analysis tools are usually built atop dynamic binary instrumentation, which instruments at every possible instruction, and rely on runtime information to decide whether a particular instruction involves taint or not, thereby usually having high performance overhead. This paper presents SELECTIVE-TAINT, an efficient selective taint analysis framework for binary executables. The key idea is to selectively instrument the instructions involving taint analysis using static binary rewriting instead of dynamic binary instrumentation. At a high level, SELECTIVETAINT statically scans taint sources of interest in the binary code, leverages value set analysis to conservatively determine whether an instruction operand needs to be tainted or not, and then selectively taints the instructions of interest. We have implemented SELECTIVETAINT and evaluated it with a set of binary programs including 16 coreutils (focusing on file I/O) and five network daemon programs (focusing on network I/O) such as nginx web server. Our evaluation results show that the binaries statically instrumented by SELECTIVETAINT has superior performance compared to the state-of-the-art dynamic taint analysis frameworks (e.g., 1.7x faster than that of libdft).
 
-### Context Sensitivity without Contexts
+### Context Sensitivity without Contexts (PLDI 2023)
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Context_Sensitivity_without_Contexts.pdf)
 * **Abstract:** Over the past decades, context sensitivity has been considered as one of the most effective ideas for improving the precision of pointer analysis for Java. Different from the extremely fast context-insensitivity approach, context sensitivity requires every program method to be analyzed under different contexts for separating the static abstractions of different dynamic instantiations of the method’s variables and heap objects, and thus reducing spurious object flows introduced by method calls. However, despite great precision benefits, as each method is equivalently cloned and analyzed under each context, context sensitivity brings heavy efficiency costs. Recently, numerous selective context-sensitive approaches have been put forth for scaling pointer analysis to large and complex Java programs by applying contexts only to the selected methods while analyzing the remaining ones context-insensitively; however, because the selective approaches do not fundamentally alter the primary methodology of context sensitivity (and do not thus remove its efficiency bottleneck), they produce much improved but still limited results.  
 In this work, we present a fundamentally different approach called Cut-Shortcut for fast and precise pointer analysis for Java. Its insight is simple: the main effect of cloning methods under different contexts is to filter spurious object flows that have been merged inside a callee method; from the view of a typical pointer flow graph (PFG), such effect can be simulated by cutting off (Cut) the edges that introduce precision loss to certain pointers and adding Shortcut edges directly from source pointers to the target ones circumventing the method on PFG. As a result, we can achieve the effect of context sensitivity without contexts. We identify three general program patterns and develop algorithms based on them to safely cut off and add shortcut edges on PFG, formalize them and formally prove the soundness. To comprehensively validate Cut-Shortcut’s effectiveness, we implement two versions of Cut-Shortcut for two state-of-the-art pointer analysis frameworks for Java, one in Datalog for the declarative Doop and the other in Java for the imperative Tai-e, and we consider all the large and complex programs used in recent literatures that meet the experimental requirements. The evaluation results are extremely promising: Cut-Shortcut is even able to run faster than context insensitivity for most evaluated programs while obtaining high precision that is comparable to context sensitivity (if scalable) in both frameworks. This is for the first time that we have been able to achieve such a good efficiency and precision trade-off for those hard-to-analyze programs, and we hope Cut-Shortcut could offer new perspectives for developing more effective pointer analysis for Java in the future.
@@ -619,7 +617,7 @@ For the case of string sanitizers, we show that existing algorithms for inferrin
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Deep_Reinforcement_Learning_for_Black-box_Testing.pdf)
 * **Abstract:** The state space of Android apps is huge, and its thorough exploration during testing remains a significant challenge. The best exploration strategy is highly dependent on the features of the app under test. Reinforcement Learning (RL) is a machine learning technique that learns the optimal strategy to solve a task by trial and error, guided by positive or negative reward, rather than explicit supervision. Deep RL is a recent extension of RL that takes advantage of the learning capabilities of neural networks. Such capabilities make Deep RL suitable for complex exploration spaces such as one of Android apps. However, state-of-the-art, publicly available tools only support basic, Tabular RL. We have developed ARES, a Deep RL approach for black-box testing of Android apps. Experimental results show that it achieves higher coverage and fault revelation than the baselines, including state-of-the-art tools, such as TimeMachine and Q-Testing. We also investigated the reasons behind such performance qualitatively, and we have identified the key features of Android apps that make Deep RL particularly effective on them to be the presence of chained and blocking activities. Moreover, we have developed FATE to fine-tune the hyperparameters of Deep RL algorithms on simulated apps, since it is computationally expensive to carry it out on real apps.
 
-### Fastbot2: Reusable Automated Model-based GUI Testing for Android Enhanced by Reinforcement Learn
+### Fastbot2: Reusable Automated Model-based GUI Testing for Android Enhanced by Reinforcement Learn (ASE 2022)
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/fastbot2.pdf)
 * **Abstract:** We introduce a reusable automated model-based GUI testing technique for Android apps to accelerate the testing cycle. Our key insight is that the knowledge of event-activity transitions from the previous testing runs, i.e., executing which events can reach which activities, is valuable for guiding the follow-up testing runs to quickly
 cover major app functionalities. To this end, we propose (1) a probabilistic model to memorize and leverage this knowledge during testing, and (2) design a model-based guided testing strategy (enhanced by a reinforcement learning algorithm). We implemented our technique as an automated testing tool named Fastbot2. The evaluation
@@ -638,14 +636,14 @@ This paper presents BLEEM, a packet-sequence-oriented black-box fuzzer for vulne
 * **Abstract:** POMDPs provide a principled framework for planning under uncertainty, but are computationally intractable, due to the “curse of dimensionality” and the “curse of history”. This paper presents an online POMDP algorithm that alleviates these difficulties by focusing the search on a set of randomly sampled scenarios. A Determinized Sparse Partially Observable Tree (DESPOT) compactly captures the execution of all policies on these scenarios. Our Regularized DESPOT (R-DESPOT) algorithm searches the DESPOT for a policy, while optimally balancing the size of the policy and its estimated value obtained under the sampled scenarios. We give an output-sensitive performance bound for all policies derived from a DESPOT, and show that R-DESPOT works well if a small optimal policy exists. We also give an anytime algorithm that approximates R-DESPOT. Experiments show strong results, compared with two of the fastest online POMDP algorithms. Source code along with experimental settings are available at http://bigbird.comp.nus.edu.sg/pmwiki/farm/appl/
 
 
-### Reinforcement Learning Based Curiosity-Driven Testing of Android Application
+### Reinforcement Learning Based Curiosity-Driven Testing of Android Application (ISSTA 2020)
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/qtesting.pdf)
 * **Abstract:** Mobile applications play an important role in our daily life, while it still remains a challenge to guarantee their correctness. Model-based and systematic approaches have been applied to Android GUI testing. However, they do not show significant advantages over random approaches because of limitations such as imprecise models and poor scalability. In this paper, we propose Q-testing, a reinforcement learning based approach which benefits from both
 random and model-based approaches to automated testing of Android applications. Q-testing explores the Android apps with a curiosity-driven strategy that utilizes a memory set to record part of previously visited states and guides the testing towards unfamiliar functionalities. A state comparison module, which is a neural network trained by plenty of collected samples, is novelly employed to divide different states at the granularity of functional scenarios.
 It can determine the reinforcement learning reward in Q-testing and help the curiosity-driven strategy explore different functionalities efficiently. We conduct experiments on 50 open-source applications where Q-testing outperforms the state-of-the-art and state-of-practice Android GUI testing tools in terms of code coverage and fault detection. So far, 22 of our reported faults have been confirmed, among which 7 have been fixed.
 
 
-### Guided, Stochastic Model-Based GUI Testing of Android Apps
+### Guided, Stochastic Model-Based GUI Testing of Android Apps (ESEC/FSE 2017)
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Guided_Stochastic_Android_GUI_Testing.pdf)
 * **Abstract:** Mobile apps are ubiquitous, operate in complex environments and are developed under the time-to-market pressure. Ensuring their correctness and reliability thus becomes an important challenge. This paper introduces Stoat, a novel guided approach to perform stochastic model-based testing on Android apps. Stoat operates in two phases: (1) Given an app as input, it uses dynamic analysis enhanced by a weighted UI exploration strategy and static analysis
 to reverse engineer a stochastic model of the app’s GUI interactions; and (2) it adapts Gibbs sampling to iteratively mutate/refine the stochastic model and guides test generation from the mutated models toward achieving high code and model coverage and exhibiting diverse sequences. During testing, system-level events are randomly injected to further enhance the testing effectiveness.  
@@ -888,7 +886,7 @@ In this paper, we propose a technique called WindRanger which leverages deviatio
 * **Abstract:** Fuzzing has achieved tremendous success in discovering bugs and vulnerabilities in various software systems. Systems under test (SUTs) that take in programming or formal language as inputs, e.g., compilers, runtime engines, constraint solvers, and software libraries with accessible APIs, are especially important as they are fundamental building blocks of software development. However, existing fuzzers for such systems often target a specific language, and thus cannot be easily applied to other languages or even other versions of the same language. Moreover, the inputs generated by existing fuzzers are often limited to specific features of the input language, and thus can hardly reveal bugs related to other or new features. This paper presents Fuzz4All, the first fuzzer that is universal in the sense that it can target many different input languages and many different features of these languages. The key idea behind Fuzz4All is to leverage large language models (LLMs) as an input generation and mutation engine, which enables the approach to produce diverse and realistic inputs for any practically relevant language. To realize this potential, we present a novel autoprompting technique, which creates LLM prompts that are wellsuited for fuzzing, and a novel LLM-powered fuzzing loop, which iteratively updates the prompt to create new fuzzing inputs. We evaluate Fuzz4All on nine systems under test that take in six different languages (C, C++, Go, SMT2, Java, and Python) as inputs. The evaluation shows, across all six languages, that universal fuzzing achieves higher coverage than existing, language-specific fuzzers. Furthermore, Fuzz4All has identified 98 bugs in widely used systems, such as GCC, Clang, Z3, CVC5, OpenJDK, and the Qiskit quantum computing platform, with 64 bugs already confirmed by
 developers as previously unknown.
 
-### A Theoretical Foundation of Sensitivity in an Abstract Interpretation Framework
+### A Theoretical Foundation of Sensitivity in an Abstract Interpretation Framework (TOPLAS 2018)
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/A_Theoretical_Foundation_of_Sensitivity_in_an_Abstraction_Interpretation_Framework.pdf)
 * **Abstract:** Program analyses often utilize various forms of sensitivity such as context sensitivity, call-site sensitivity, and object sensitivity. These techniques all allow for more precise program analyses, that are able to compute more precise program invariants, and to verify stronger properties. Despite the fact that sensitivity techniques are now part of the standard toolkit of static analyses designers and implementers, no comprehensive frameworks allow the description of all common forms of sensitivity. As a consequence, the soundness proofs of static analysis tools involving sensitivity often rely on ad hoc formalization, which are not always carried out in an abstract interpretation framework. Moreover, this also means that opportunities to identify similarities between analysis techniques to better improve abstractions or to tune static analysis tools can easily be missed.  
 In this article, we present and formalize a framework for the description of sensitivity in static analysis. Our framework is based on a powerful abstract domain construction, and utilizes reduced cardinal power to tie basic abstract predicates to the properties analyses are sensitive to. We formalize this abstraction, and the main abstract operations that are needed to turn it into a generic abstract domain construction. We demonstrate that our approach can allow for a more precise description of program states, and that it can also describe a large set of sensitivity techniques, both when sensitivity criteria are static (known before the analysis) or dynamic (inferred as part of the analysis), and sensitive analysis tuning parameters. Last, we show that sensitivity techniques used in state-of-the-art static analysis tools can be described in our framework.
@@ -974,9 +972,18 @@ nearly no false positives when performing alias analysis.
 
 ### A Tough call: Mitigating Advanced Code-Reuse Attacks At The Binary Level (S&P 2016)
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/A_Tough_Call_Mitigating_Advanced_Code-Reuse_Attacks_at_the_Binary_Level.pdf)
-* **Abstract:** Current binary-level Control-Flow Integrity (CFI) techniques are weak in determining the set of valid targets for indirect control flow transfers on the forward edge. In particular, the lack of source code forces existing techniques to resort to a conservative address-taken policy that over- approximates this set. In contrast, source-level solutions can accurately infer the targets of indirect callsites and thus detect malicious control-flow transfers more precisely. Given that source code is not always available, however, offering similar quality of protection at the binary level is important, but, unquestionably, more challenging than ever: recent work demonstrates powerful attacks, such as Counterfeit Object-oriented Programming (COOP), which made the community believe that protecting software against control-flow diversion attacks at the binary level is impossible.  
+* **Abstract:** Current binary-level Control-Flow Integrity (CFI) techniques are weak in determining the set of valid targets for indirect control flow transfers on the forward edge. In particular, the lack of source code forces existing techniques to resort to a conservative address-taken policy that over-approximates this set. In contrast, source-level solutions can accurately infer the targets of indirect callsites and thus detect malicious control-flow transfers more precisely. Given that source code is not always available, however, offering similar quality of protection at the binary level is important, but, unquestionably, more challenging than ever: recent work demonstrates powerful attacks, such as Counterfeit Object-oriented Programming (COOP), which made the community believe that protecting software against control-flow diversion attacks at the binary level is impossible.  
 In this paper, we propose binary-level analysis techniques to significantly reduce the number of possible targets for indirect callsites. More specifically, we reconstruct a conservative approximation of target function prototypes by means of use-def analysis at possible callees. We then couple this with liveness analysis at each indirect callsite to derive a many-to-many relationship between callsites and target callees with a much higher precision compared to prior binary-level solutions.  
 Experimental results on popular server programs and on SPEC CPU2006 show that TypeArmor, a prototype implementation of our approach, is efficient—with a runtime overhead of less than 3%. Furthermore, we evaluate to what extent TypeArmor can mitigate COOP and other advanced attacks and show that our approach can significantly reduce the number of targets on the forward edge. Moreover, we show that TypeArmor breaks published COOP exploits, providing concrete evidence that strict binary-level CFI can still mitigate advanced attacks, despite the absence of source information or C++ semantics.
+
+### Finding typing compiler bugs (PLDI 2022)
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Finding_typing_compiler_bugs.pdf)
+* **Abstract:** We propose a testing framework for validating static typing procedures in compilers. Our core component is a program generator suitably crafted for producing programs that are likely to trigger typing compiler bugs. One of our main contributions is that our program generator gives rise to transformation-based compiler testing for finding typing bugs. We present two novel approaches (type erasure mutation and type overwriting mutation) that apply targeted transformations to an input program to reveal type inference and soundness compiler bugs respectively. Both approaches are guided by an intra-procedural type inference analysis used to capture type information flow.  
+We implement our techniques as a tool, which we call Hephaestus. The extensibility of Hephaestus enables us to test the compilers of three popular JVM languages: Java, Kotlin, and Groovy. Within nine months of testing, we have found 156 bugs (137 confirmed and 85 fixed) with divers manifestations and root causes in all the examined compilers. Most of the discovered bugs lie in the heart of many critical components related to static typing, such as type inference.
+
+### Simple Generation of Static Single-Assignment Form (CC 2000)
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Simple_Generation_of_Static_Single_Assignment_Form.pdf)
+* **Abstract:** The static single-assignment (SSA) form of a program provides data flow information in a form which makes some compiler optimizations easy to perform. In this paper we present a new, simple method for converting to SSA form, which produces correct solutions for nonreducible control-flow graphs, and produces minimal solutions for reducible ones. Our timing results show that, despite its simplicity, our algorithm is competitive with more established techniques.
 
 # Researchers
 - [ZhenDong Su](https://people.inf.ethz.ch/suz/)
