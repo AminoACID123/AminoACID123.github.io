@@ -93,11 +93,11 @@ This page contains papers relevant to my research interest.
     - Understanding Performance Problems in Deep Learning Systems
 
   - **ADS Fuzzing**
-    - [Detecting Multi-sensor Fusion Errors in Advanced Driver-Assistance Systems (2022)](#detecting-multi-sensor-fusion-errors-in-advanced-driver-assistance-systems-issta-2022)
+    - [Detecting Multi-sensor Fusion Errors in Advanced Driver-Assistance Systems (2022)]   (#detecting-multi-sensor-fusion-errors-in-advanced-driver-assistance-systems-issta-2022)
     - MOSAT: Finding Safety Violations of Autonomous Driving Systems Using Multi-Objective Genetic Algorithm
     - Scenario-based Test Reduction and Prioritization for Multi-Module Autonomous Driving Systems
     - LiRTest: augmenting LiDAR point clouds for automated testing of autonomous driving systems
-    - [Systematic Testing of Autonomous Driving Systems Using Map Topology-Based Scenario Classification](#systematic-testing-of-autonomous-driving-systems-using-map-topology-based-scenario-classification)
+    - [Systematic Testing of Autonomous Driving Systems Using Map Topology-Based Scenario Classification (ASE 2021)](#systematic-testing-of-autonomous-driving-systems-using-map-topology-based-scenario-classification-ase-2021)
     - LawBreaker: An Approach for Specifying Traffic Laws and Fuzzing Autonomous Vehicles
     - ThirdEye: Attention Maps for Safe Autonomous Driving Systems
 
@@ -245,6 +245,7 @@ This page contains papers relevant to my research interest.
   - [FIRMGUIDE: Boosting the Capability of Rehosting Embedded Linux Kernels through Model-Guided Kernel Execution](#firmguide-boosting-the-capability-of-rehosting-embedded-linux-kernels-through-model-guided-kernel-execution)
   - [Sorry, I don't understand: Improving Voice User Interface Testing](#sorry-i-dont-understand-improving-voice-user-interface-testing-ase-2022)
   - [Fastbot2: Reusable Automated Model-based GUI Testing for Android Enhanced by Reinforcement Learn (2022)](#fastbot2-reusable-automated-model-based-gui-testing-for-android-enhanced-by-reinforcement-learn-ase-2022)
+  - [Systematic Testing of Autonomous Driving Systems Using Map Topology-Based Scenario Classification (2021)](#systematic-testing-of-autonomous-driving-systems-using-map-topology-based-scenario-classification-ase-2021)
 
 - **ICSE**
   - [Adaptive Test Selection for Deep Neural Networks (2022)](#adaptive-test-selection-for-deep-neural-networks-icse-2022)
@@ -360,7 +361,6 @@ This page contains papers relevant to my research interest.
 - **MISC**
   - [Automatic Vulnerability Detection in Embedded Devices and Firmware: Survey and Layered Taxonomies](#automatic-vulnerability-detection-in-embedded-devices-and-firmware-survey-and-layered-taxonomies)  
   - [Challenges in Firmware Re-Hosting, Emulation, and Analysis](#challenges-in-firmware-re-hosting-emulation-and-analysis)
-  - [Systematic Testing of Autonomous Driving Systems Using Map Topology-Based Scenario Classification](#systematic-testing-of-autonomous-driving-systems-using-map-topology-based-scenario-classification)
   - [Fingerprinting Bluetooth Low Energy Devices via Active Automata Learning](#fingerprinting-bluetooth-low-energy-devices-via-active-automata-learning)
   - [Stateful Black-Box Fuzzing of Bluetooth Devices Using Automata Learning](#stateful-black-box-fuzzing-of-bluetooth-devices-using-automata-learning)
   - [Learning Regular Sets from Queries and Counterexamples](#learning-regular-sets-from-queries-and-counterexamples)
@@ -423,8 +423,8 @@ This assists us in the manual correction of the problematic rules. We have imple
 * <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Challenges_in_firmware_rehosting_emulation_and_analysis.pdf)
 * **Abstract:** System emulation and firmware re-hosting have become popular techniques to answer various security and performance related questions, such as determining whether a firmware contain security vulnerabilities or meet timing requirements when run on a specific hardware platform. While this motivation for emulation and binary analysis has previously been explored and reported, starting to either work or research in the field is difficult. To this end, we provide a comprehensive guide for the practitioner or system emulation researcher. We layout common challenges faced during firmware re-hosting, explaining successive steps and surveying common tools used to overcome these challenges. We provide classification techniques on five different axes, including emulator methods, system type, fidelity, emulator purpose, and control. These classifications and comparison criteria enable the practitioner to determine the appropriate tool for emulation. We use our classifications to categorize popular works in the field and present 28 common challenges faced when creating, emulating, and analyzing a system from obtaining firmwares to post emulation analysis.
 
-### Systematic Testing of Autonomous Driving Systems Using Map Topology-Based Scenario Classification
-* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Systematica_testing_of_autonomous_driving_systems_using_map_topology_based_scenario_classification.pdf)
+### Systematic Testing of Autonomous Driving Systems Using Map Topology-Based Scenario Classification (ASE 2021)
+* <img src="../files/images/pdf_24px.png">[Paper](../files/papers/Systematic_Testing_of_Autonomous_Driving_Systems_Using_Map_Topology-Based_Scenario_Classification.pdf)
 * **Abstract:** Autonomous Driving Systems (ADSs), which replace humans to drive vehicles, are complex software systems deployed in autonomous vehicles (AVs). Since the execution of ADSs highly relies on maps, it is essential to perform global map-based testing for ADSs to guarantee their correctness and AVs’ safety in different situations. Existing methods focus more on specific scenarios rather than global testing throughout the map. Testing on a global map is challenging since the complex lane connections in a map can generate enormous scenarios. In this work, we propose ATLAS, an approach to ADSs’ collision avoidance testing using map topology-based scenario classification. The core insight of ATLAS is to generate diverse testing scenarios by classifying junction lanes according to their topology-based interaction patterns. First, ATLAS divides the junction lanes into different classes such that an ADS can execute similar collision avoidance maneuvers on the lanes in the same class. Second, for each class, ATLAS selects one junction lane to construct the testing scenario and generate test cases using a genetic algorithm. Finally, we implement and evaluate ATLAS on Baidu Apollo with the LGSVL simulator on the San Francisco map. Results show that ATLAS exposes nine types of real issues in Apollo 6.0 and reduces the number of junction lanes for testing by 98%.
 
 ### FIRMGUIDE: Boosting the Capability of Rehosting Embedded Linux Kernels through Model-Guided Kernel Execution (ASE 2021)
